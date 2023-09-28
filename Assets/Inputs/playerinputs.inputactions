@@ -1,0 +1,54 @@
+{
+    "name": "playerinputs",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "dba0285f-c3e4-42a4-8ff5-c898cd84f05c",
+            "actions": [
+                {
+                    "name": "Touch",
+                    "type": "PassThrough",
+                    "id": "62fd5432-a83d-47b9-9fd8-abf623632e96",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Mouse",
+                    "type": "Button",
+                    "id": "e27d9175-abd7-4120-85a2-4296270d7280",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "2e764f4e-d0fa-409a-b550-0f49bcf4d50f",
+                    "path": "<Touchscreen>/primaryTouch",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Touch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c56c1c71-c47a-44ae-8d64-26b218283a8f",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Mouse",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
