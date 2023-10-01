@@ -12,12 +12,21 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Mouse",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "e27d9175-abd7-4120-85a2-4296270d7280",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "MouseButton",
+                    "type": "Button",
+                    "id": "9eed0da1-a3ee-49b3-8544-c4f7db366e26",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -38,12 +47,82 @@
                 },
                 {
                     "name": "",
-                    "id": "c56c1c71-c47a-44ae-8d64-26b218283a8f",
-                    "path": "<Mouse>/leftButton",
+                    "id": "ced6f12b-7f89-4ccc-833a-f9cabb20e106",
+                    "path": "<Mouse>/delta",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Mouse",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "faa4c2ed-caf2-4cb4-9b5e-9bf4069226c3",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MouseButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "UI",
+            "id": "fa68a009-7cc5-48d4-86a7-2a34181544b6",
+            "actions": [
+                {
+                    "name": "Point",
+                    "type": "PassThrough",
+                    "id": "d647ba52-534a-4eb7-a3b7-d1c05e0106e9",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Click",
+                    "type": "PassThrough",
+                    "id": "76e18b92-ff3f-460d-a4b7-0ca715f6e402",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b89a2db4-60a1-4c15-831b-574aa3bf5c09",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Point",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "183606b5-a22b-4fbd-9bc7-d8fac9823d36",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "91474bca-cbc3-4f3c-b173-22bacba90d4b",
+                    "path": "<Touchscreen>/primaryTouch/tap",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
