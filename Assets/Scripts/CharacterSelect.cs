@@ -40,7 +40,7 @@ public class CharacterSelect : MonoBehaviour
     }
 
     public void ChooseBotOption(int option) {
-        //Options: 1 = Male, 2 = Neutral, 3 = Female
+        //Options: 1 = Male, 2 = Female
         botoption = option;
         choosebotmenu.SetActive(false);
         chooseoutfitmenu.SetActive(true);
@@ -70,9 +70,6 @@ public class CharacterSelect : MonoBehaviour
             botchoicetext.text = "Male";
         }
         if (botoption == 2) {
-            botchoicetext.text = "Neutral";
-        }
-        if (botoption == 3) {
             botchoicetext.text = "Female";
         }
         if (outfitoption == 1) {
