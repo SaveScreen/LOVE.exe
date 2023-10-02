@@ -8,4 +8,9 @@ public class AptSceneMenu : MonoBehaviour
     public void GoToMenu() {
         SceneManager.LoadScene("MenuScreen");
     }
+
+    public void Quit() {
+        Application.Quit();
+        Debug.Log("Quit");
+    }
 }

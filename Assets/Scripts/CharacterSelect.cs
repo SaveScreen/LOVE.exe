@@ -41,11 +41,19 @@ public class CharacterSelect : MonoBehaviour
             choosebotmenu.SetActive(true);
             //chooseoutfitmenu.SetActive(false);
             //choosedatemenu.SetActive(false);
+            //choosenamemenu.SetActive(false);
         }
         else {
             playergamescreen.SetActive(true);
         }
          
+    }
+
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            Application.Quit();
+            Debug.Log("Quit");
+        }
     }
 
     public void ChooseBotOption(int option) {
