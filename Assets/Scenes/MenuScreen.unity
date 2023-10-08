@@ -2163,6 +2163,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   section: {fileID: 935472559}
   scroller: {fileID: 537753423}
+  xMinimum: -1000
+  xMaximum: 0
 --- !u!1 &465468767
 GameObject:
   m_ObjectHideFlags: 0
@@ -4673,6 +4675,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   section: {fileID: 1619814894}
   scroller: {fileID: 1804509375}
+  xMinimum: -1000
+  xMaximum: 0
 --- !u!1 &1411235744
 GameObject:
   m_ObjectHideFlags: 0
