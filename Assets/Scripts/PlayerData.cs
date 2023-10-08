@@ -21,4 +21,21 @@ public class PlayerData : MonoBehaviour
     public void PlayerNameSelection(string selection) {
         playername = selection;
     }
+
+    public int GetPlayerBot()
+    {
+        return playerbot;
+    }
+    public int GetPlayerOutfit()
+    {
+        return playeroutfit;
+    }
+    public int GetPlayerDate()
+    {
+        return playerdate;
+    }
+    public string GetPlayerName()
+    {
+        return playername;
+    }
 }

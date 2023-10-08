@@ -25,7 +25,7 @@ public class CharacterSelect : MonoBehaviour
     public TextMeshProUGUI datechoicetext;
     public TextMeshProUGUI namechoicetext;
     public GameObject playerdatacontainer;
-    private PlayerData playerdata;
+    public PlayerData playerdata;
     
 
     // Start is called before the first frame update
@@ -119,7 +119,7 @@ public class CharacterSelect : MonoBehaviour
         playerdata.PlayerOutfitSelection(outfitoption);
         playerdata.PlayerDateSelection(dateoption);
         playerdata.PlayerNameSelection(nameoption);
-        SceneManager.LoadScene("AptScene");
+        SceneManager.LoadScene("VisualNovel");
     }
 
     public void StartOver() {
@@ -132,6 +132,6 @@ public class CharacterSelect : MonoBehaviour
     }
 
     public void PlayGame() {
-        SceneManager.LoadScene("AptScene");
+        SceneManager.LoadScene("VisualNovel");
     }
 }
