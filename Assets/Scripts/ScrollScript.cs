@@ -1,50 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
+using UnityEditor.Experimental.GraphView;
 using UnityEditor.U2D.Sprites;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
 
 public class ScrollScript : MonoBehaviour
 {
-    [SerializeField] private InputActionAsset inputs;
+    
     public GameObject outfits; //Put only the Choose Outfit game object here
-    private InputAction mouse;
-    private InputAction click;
-    private InputAction hold;
-    private bool clicked;
-    private bool holding;
-    private Vector2 mousePosition;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        click = inputs.FindAction("Player/MouseButton");
-        hold = inputs.FindAction("Player/TouchHold");
-        mouse = inputs.FindAction("Player/Mouse");
+    public GameObject dates; //Put only the Choose Date game object here
+    public Scrollbar outfitsscrollbar;
+    public Scrollbar datesscrollbar;
+    private float outfitsscrollval;
+    private float datesscrollval;
+    
+    public void OutfitsScroll() {
+        outfitsscrollval = outfitsscrollbar.value;
+        outfits.transform.localPosition = new Vector2(Mathf.Lerp(-1000,0,outfitsscrollval),outfits.transform.localPosition.y);
     }
 
-    private void OnEnable()
-    {
-        inputs.Enable();
-    }
-
-    private void OnDisable()
-    {
-        inputs.Disable();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        clicked = click.WasPressedThisFrame();
-        holding = hold.IsPressed();
-        if (holding)
-        {
-            mousePosition = mouse.ReadValue<Vector2>();
-        }
-        
-        
+    public void DatesScroll() {
+        datesscrollval = datesscrollbar.value;
+        dates.transform.localPosition = new Vector2(Mathf.Lerp(-1000,0,datesscrollval),dates.transform.localPosition.y);
     }
 }
