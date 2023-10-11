@@ -11,16 +11,18 @@ public class FootballMinigameScript : MonoBehaviour
     public GameObject powertriangle;
     private float trianglemaxposition;
     private float triangleminposition;
+    //private float accuracyminposition;
+    //private float accuracymaxposition;
     private bool isgoingup;
+    private bool enableaccuracy;
     public GameObject accuracymeter;
-    [SerializeField] private float timer; //set to 3 seconds
+    [SerializeField] private float timer;
     private int timerinseconds;
     public TextMeshProUGUI countdowntimer;
     private bool gamestarted;
     public float powermeterspeed;
     public InputActionAsset inputs;
-    private float interpolation = 0;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +34,7 @@ public class FootballMinigameScript : MonoBehaviour
         trianglemaxposition = 1.4f;
         triangleminposition = -1.4f;
         isgoingup = true;
+        enableaccuracy = false;
     }
 
     void OnEnable() {
@@ -64,55 +67,62 @@ public class FootballMinigameScript : MonoBehaviour
             }
         }
         else {
-            powermeter.SetActive(true);
 
-            if (isgoingup)
+            if (!enableaccuracy)
             {
-                if (powertriangle.transform.localPosition.y < trianglemaxposition)
+                powermeter.SetActive(true);
+                if (isgoingup)
                 {
-                    powertriangle.transform.localPosition = new Vector2(powertriangle.transform.localPosition.x, Mathf.MoveTowards(powertriangle.transform.localPosition.y, trianglemaxposition, powermeterspeed * Time.deltaTime));
+                    if (powertriangle.transform.localPosition.y < trianglemaxposition)
+                    {
+                        powertriangle.transform.localPosition = new Vector2(powertriangle.transform.localPosition.x, Mathf.MoveTowards(powertriangle.transform.localPosition.y, trianglemaxposition, powermeterspeed * Time.deltaTime));
+                    }
+                    else
+                    {
+                        isgoingup = false;
+                    }
                 }
                 else
                 {
-                    isgoingup = false;
+                    if (powertriangle.transform.localPosition.y > triangleminposition)
+                    {
+                        powertriangle.transform.localPosition = new Vector2(powertriangle.transform.localPosition.x, Mathf.MoveTowards(powertriangle.transform.localPosition.y, triangleminposition, powermeterspeed * Time.deltaTime));
+                    }
+                    else
+                    {
+                        isgoingup = true;
+                        enableaccuracy = true;
+                    }
                 }
+
             }
             else
             {
-                if (powertriangle.transform.localPosition.y > triangleminposition)
+                powermeter.SetActive(false);
+                accuracymeter.SetActive(true);
+                if (isgoingup)
                 {
-                    powertriangle.transform.localPosition = new Vector2(powertriangle.transform.localPosition.x, Mathf.MoveTowards(powertriangle.transform.localPosition.y, triangleminposition, powermeterspeed * Time.deltaTime));
+                    if (accuracymeter.transform.position.x < trianglemaxposition)
+                    {
+                        accuracymeter.transform.position = new Vector2(accuracymeter.transform.position.x, Mathf.MoveTowards(accuracymeter.transform.position.y, trianglemaxposition, powermeterspeed * Time.deltaTime));
+                    }
+                    else
+                    {
+                        isgoingup = false;
+                    }
                 }
                 else
                 {
-                    isgoingup = true;
+                    if (accuracymeter.transform.position.x > triangleminposition)
+                    {
+                        accuracymeter.transform.position = new Vector2(accuracymeter.transform.position.x, Mathf.MoveTowards(accuracymeter.transform.position.y, triangleminposition, powermeterspeed * Time.deltaTime));
+                    }
+                    else
+                    {
+                        isgoingup = false;
+                    }
                 }
             }
-            
-            
-            /*
-            if (isgoingup) {
-                if (interpolation < 1.0f) {
-                    powertriangle.transform.localPosition = new Vector2(powertriangle.transform.localPosition.x,Mathf.Lerp(powertriangle.transform.localPosition.y,trianglemaxposition,interpolation));
-                    interpolation += powermeterspeed ;
-                    //Debug.Log(powertriangle.transform.localPosition.y.ToString());
-                    Debug.Log(interpolation);
-                }
-                else {
-                    isgoingup = false;
-                }
-                
-            }
-            else {
-                if (interpolation > 0) {
-                    powertriangle.transform.localPosition = new Vector2(powertriangle.transform.localPosition.x,Mathf.Lerp(powertriangle.transform.localPosition.y,triangleminposition,interpolation));
-                    interpolation -= powermeterspeed * Time.deltaTime;
-                    Debug.Log(interpolation);
-                } else {
-                    isgoingup = true;
-                }
-            }
-            */   
 
         }
         
