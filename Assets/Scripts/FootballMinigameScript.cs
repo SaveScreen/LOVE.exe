@@ -66,6 +66,30 @@ public class FootballMinigameScript : MonoBehaviour
         else {
             powermeter.SetActive(true);
 
+            if (isgoingup)
+            {
+                if (powertriangle.transform.localPosition.y < trianglemaxposition)
+                {
+                    powertriangle.transform.localPosition = new Vector2(powertriangle.transform.localPosition.x, Mathf.MoveTowards(powertriangle.transform.localPosition.y, trianglemaxposition, powermeterspeed * Time.deltaTime));
+                }
+                else
+                {
+                    isgoingup = false;
+                }
+            }
+            else
+            {
+                if (powertriangle.transform.localPosition.y > triangleminposition)
+                {
+                    powertriangle.transform.localPosition = new Vector2(powertriangle.transform.localPosition.x, Mathf.MoveTowards(powertriangle.transform.localPosition.y, triangleminposition, powermeterspeed * Time.deltaTime));
+                }
+                else
+                {
+                    isgoingup = true;
+                }
+            }
+            
+            
             /*
             if (isgoingup) {
                 if (interpolation < 1.0f) {

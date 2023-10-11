@@ -148,7 +148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 131002940}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.48, y: 0, z: 0}
+  m_LocalPosition: {x: -0.48, y: -1.4, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.83206}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1046,6 +1046,8 @@ MonoBehaviour:
   accuracymeter: {fileID: 1690019371}
   timer: 3
   countdowntimer: {fileID: 1884730313}
+  powermeterspeed: 2
+  inputs: {fileID: -944628639613478452, guid: b6210dda01cea9c4188498e4a0a55bd9, type: 3}
 --- !u!4 &1764007233
 Transform:
   m_ObjectHideFlags: 0
