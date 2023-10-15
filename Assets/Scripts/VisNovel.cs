@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using UnityEngine.InputSystem;
 
 public class VisNovel : MonoBehaviour
 {
@@ -13,8 +14,6 @@ public class VisNovel : MonoBehaviour
     public GameObject Date3Choice;
     public GameObject playerdatacontainer;
     public PlayerData playerdata;
-    //public Transform datePref;
-    //public GameObject datePrefObj;
     public GameObject Angry1;
     public GameObject Neutral1;
     public GameObject Happy1;
@@ -24,14 +23,31 @@ public class VisNovel : MonoBehaviour
     public GameObject Angry3;
     public GameObject Neutral3;
     public GameObject Happy3;
+    public InputActionAsset inputs;
+    private InputAction click;
+    private bool clicked;
 
     void Start()
     {
         playerdata = playerdatacontainer.GetComponent<PlayerData>();
 
+        click = inputs.FindAction("Player/MouseButton");
+
+        //minigamescore update
+
         DatePref();
       
 
+    }
+
+    void OnEnable()
+    {
+        inputs.Enable();
+    }
+
+    void OnDisable()
+    {
+        inputs.Disable();
     }
 
     public void DatePref()
@@ -41,9 +57,9 @@ public class VisNovel : MonoBehaviour
         playerRating = playerdata.PlayerLikeRating(playerDate);
         int dateState = 0;
 
-        if (playerRating < .2)
+        if (playerRating < .5)
             dateState = 1;
-        else if (playerRating >= .2 && playerRating < 0.5)
+        else if (playerRating >= 0.5 && playerRating < 1)
             dateState = 2;
         else
             dateState = 3;
@@ -64,7 +80,6 @@ public class VisNovel : MonoBehaviour
                 break;
 
         }
-
     }
 
 
@@ -125,6 +140,10 @@ public class VisNovel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        clicked = click.WasPressedThisFrame();
+        if (clicked)
+            SceneManager.LoadScene("FootballMinigame");
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();

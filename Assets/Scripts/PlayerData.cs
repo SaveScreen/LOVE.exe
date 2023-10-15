@@ -9,6 +9,7 @@ public class PlayerData : MonoBehaviour
     public static int playerdate = 0;
     public static string playername = "";
     public static float playerRating = 0;
+    public static bool firstLoad = false;
 
     public void PlayerBotSelection(int selection) {
         playerbot = selection;
@@ -21,6 +22,10 @@ public class PlayerData : MonoBehaviour
     }
     public void PlayerNameSelection(string selection) {
         playername = selection;
+    }
+    public void PlayerFirstLoad()
+    {
+        firstLoad = true;
     }
 
     public int GetPlayerBot()
@@ -45,35 +50,63 @@ public class PlayerData : MonoBehaviour
         switch(dateNum)
         {
             case 1: //Cowboy
-                if (playeroutfit == 1)
-                    playerRating += 0.5f;
-                else if (playeroutfit == 2)
-                    playerRating += 0.2f;
-                else
-                    playerRating += 0;
+                if (firstLoad)
+                {
+                    if (playeroutfit == 1)
+                        playerRating += 1f;
+                    else if (playeroutfit == 2)
+                        playerRating += 0.5f;
+                    else
+                        playerRating += 0;
+                    Debug.Log("Firstloaded");
+                }
+                firstLoad = false;
+                Debug.Log("Player Rating: " + playerRating);
                 return playerRating;
 
             case 2: //Goth
-                if (playeroutfit == 2)
-                    playerRating += 0.5f;
-                else if (playeroutfit == 3)
-                    playerRating += 0.2f;
-                else
-                    playerRating += 0;
+                if (firstLoad)
+                {
+                    if (playeroutfit == 2)
+                        playerRating += 1f;
+                    else if (playeroutfit == 3)
+                        playerRating += 0.5f;
+                    else
+                        playerRating += 0;
+                    Debug.Log("Firstloaded");
+                }
+                firstLoad = false;
+                Debug.Log("Player Rating: " + playerRating);
                 return playerRating;
 
             case 3: //Fancy
-                if (playeroutfit == 3)
-                    playerRating += 0.5f;
-                else if (playeroutfit == 1)
-                    playerRating += 0.2f;
-                else
-                    playerRating += 0;
+                if (firstLoad)
+                {
+                    if (playeroutfit == 3)
+                        playerRating += 1f;
+                    else if (playeroutfit == 1)
+                        playerRating += 0.5f;
+                    else
+                        playerRating += 0;
+                    Debug.Log("Firstloaded");
+                }
+                firstLoad = false;
+                Debug.Log("Player Rating: " + playerRating);
                 return playerRating;
 
             default:
                 return 0;
         }
-
     }
+
+    public void UpdatePlayerDateScore(bool didWin)
+    {
+        if (didWin)
+            playerRating += .6f;
+        else
+            playerRating -= .3f;
+
+        Debug.Log("Player Rating: " + playerRating);
+    }
+
 }

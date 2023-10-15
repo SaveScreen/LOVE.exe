@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FootballMinigameScript : MonoBehaviour
 {
@@ -30,10 +31,16 @@ public class FootballMinigameScript : MonoBehaviour
     private bool kickingtime;
     private float accuracy;
     private float power;
-    
+
+    private bool didWin;
+    public PlayerData playerdata;
+    public GameObject playerdatacontainer;
+
     // Start is called before the first frame update
     void Start()
     {
+        playerdata = playerdatacontainer.GetComponent<PlayerData>();
+
         gamestarted = false;
         countdowntimer.text = timerinseconds.ToString();
         powermeter.SetActive(false);
@@ -179,10 +186,12 @@ public class FootballMinigameScript : MonoBehaviour
                 //THE KICK IS GOOD!
                 countdowntimer.enabled = true;
                 countdowntimer.text = "Kick is good :)";
+                didWin = true;
             } else {
                 //THE KICK IS NO GOOD!
                 countdowntimer.enabled = true;
                 countdowntimer.text = "Kick is no good :(";
+                didWin = false;
             }
             restartbutton.SetActive(true);
         }
@@ -190,6 +199,8 @@ public class FootballMinigameScript : MonoBehaviour
     }
 
     public void RestartGame() {
+        playerdata.UpdatePlayerDateScore(didWin);
+
         gamestarted = false;
         countdowntimer.text = timerinseconds.ToString();
         timerinseconds = 3;
@@ -204,6 +215,7 @@ public class FootballMinigameScript : MonoBehaviour
         timer = 3;
         powertriangle.transform.localPosition = new Vector2(powertriangle.transform.localPosition.x,triangleminposition);
         accuracymeter.transform.position = new Vector2(accuracyminposition, accuracymeter.transform.position.y);
+        SceneManager.LoadScene("VisualNovel");
     }
 
     IEnumerator TimerText() {
