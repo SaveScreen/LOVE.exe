@@ -29,95 +29,95 @@ public class VisNovel : MonoBehaviour
     {
         playerdata = playerdatacontainer.GetComponent<PlayerData>();
 
+        DatePref();
+      
 
-        switch (playerdata.GetPlayerDate())
+    }
+
+    public void DatePref()
+    {
+        float playerRating;
+        int playerDate = playerdata.GetPlayerDate();
+        playerRating = playerdata.PlayerLikeRating(playerDate);
+        int dateState = 0;
+
+        if (playerRating < .2)
+            dateState = 1;
+        else if (playerRating >= .2 && playerRating < 0.5)
+            dateState = 2;
+        else
+            dateState = 3;
+
+
+        switch (playerDate)
         {
             case 1:
-                Date1Pref();
+                Date1(dateState);
                 break;
             case 2:
-                Date2Pref();
+                Date2(dateState);
                 break;
             case 3:
-                Date3Pref();
+                Date3(dateState);
                 break;
             default:
                 break;
 
         }
 
-
     }
 
-    public void Date1Pref()
+
+    
+    public void Date1(int state)
     {
         Date1Choice.SetActive(true);
-        if (playerdata.GetPlayerBot() == 2 && playerdata.GetPlayerOutfit() == 1)
+        switch (state)
         {
-            Happy1.SetActive(true);
+            case 1:
+                Angry1.SetActive(true);
+                break; 
+            case 2:
+                Neutral1.SetActive(true);
+                break;
+            case 3:
+                Happy1.SetActive(true);
+                break;
         }
-        else if (playerdata.GetPlayerBot() == 1 && playerdata.GetPlayerOutfit() == 1 || playerdata.GetPlayerBot() == 2 && playerdata.GetPlayerOutfit() != 1)
-        {
-            Neutral1.SetActive(true);
-        }
-        else
-        {
-            Angry1.SetActive(true);
-        }
-
-        /*
-        if (playerdata.GetPlayerBot() == 2 && playerdata.GetPlayerOutfit() == 1)
-        {
-            datePrefObj = transform.Find("Date1Happy").gameObject;
-            datePrefObj.SetActive(true);
-        } else if (playerdata.GetPlayerBot() == 1 && playerdata.GetPlayerOutfit() == 1 || playerdata.GetPlayerBot() == 2 && playerdata.GetPlayerOutfit() != 1)
-        {
-            datePrefObj = transform.Find("Date1Neutral").gameObject;
-            datePrefObj.SetActive(true);
-        } else
-        {
-            datePrefObj = transform.Find("Date1Angry").gameObject;
-            datePrefObj.SetActive(true);
-        }
-        */
-
-
-
     }
 
-    public void Date2Pref()
+    public void Date2(int state)
     {
         Date2Choice.SetActive(true);
-        if (playerdata.GetPlayerOutfit() == 3)
+        switch (state)
         {
-            Happy2.SetActive(true);
-        }
-        else if (playerdata.GetPlayerOutfit() != 3)
-        {
-            Angry2.SetActive(true);
-        }
-        else
-        {
-            Neutral2.SetActive(true);
+            case 1:
+                Angry2.SetActive(true);
+                break;
+            case 2:
+                Neutral2.SetActive(true);
+                break;
+            case 3:
+                Happy2.SetActive(true);
+                break;
         }
     }
 
-    public void Date3Pref()
+    public void Date3(int state)
     {
         Date3Choice.SetActive(true);
-        if (playerdata.GetPlayerBot() == 1 && playerdata.GetPlayerOutfit() == 2)
+        switch (state)
         {
-            Happy3.SetActive(true);
+            case 1:
+                Angry3.SetActive(true);
+                break;
+            case 2:
+                Neutral3.SetActive(true);
+                break;
+            case 3:
+                Happy3.SetActive(true);
+                break;
         }
-        else if (playerdata.GetPlayerBot() == 2 && playerdata.GetPlayerOutfit() == 2 || playerdata.GetPlayerBot() == 1 && playerdata.GetPlayerOutfit() != 2)
-        {
-            Neutral3.SetActive(true);
-        }
-        else
-        {
-            Angry3.SetActive(true);
-        }
-
     }
 
 

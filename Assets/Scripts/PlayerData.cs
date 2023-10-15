@@ -8,6 +8,7 @@ public class PlayerData : MonoBehaviour
     public static int playeroutfit = 0;
     public static int playerdate = 0;
     public static string playername = "";
+    public static float playerRating = 0;
 
     public void PlayerBotSelection(int selection) {
         playerbot = selection;
@@ -37,5 +38,42 @@ public class PlayerData : MonoBehaviour
     public string GetPlayerName()
     {
         return playername;
+    }
+
+    public float PlayerLikeRating(int dateNum)
+    {
+        switch(dateNum)
+        {
+            case 1: //Cowboy
+                if (playeroutfit == 1)
+                    playerRating += 0.5f;
+                else if (playeroutfit == 2)
+                    playerRating += 0.2f;
+                else
+                    playerRating += 0;
+                return playerRating;
+
+            case 2: //Goth
+                if (playeroutfit == 2)
+                    playerRating += 0.5f;
+                else if (playeroutfit == 3)
+                    playerRating += 0.2f;
+                else
+                    playerRating += 0;
+                return playerRating;
+
+            case 3: //Fancy
+                if (playeroutfit == 3)
+                    playerRating += 0.5f;
+                else if (playeroutfit == 1)
+                    playerRating += 0.2f;
+                else
+                    playerRating += 0;
+                return playerRating;
+
+            default:
+                return 0;
+        }
+
     }
 }
