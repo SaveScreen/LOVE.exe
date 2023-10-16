@@ -23,6 +23,7 @@ public class FootballMinigameScript : MonoBehaviour
     private int timerinseconds;
     public TextMeshProUGUI countdowntimer;
     public GameObject restartbutton;
+    public GameObject continuebutton;
     private bool gamestarted;
     public float powermeterspeed;
     public InputActionAsset inputs;
@@ -50,6 +51,7 @@ public class FootballMinigameScript : MonoBehaviour
         powermeter.SetActive(false);
         accuracymeter.SetActive(false);
         restartbutton.SetActive(false);
+        continuebutton.SetActive(false);
         timerinseconds = 3;
 
         trianglemaxposition = 1.4f;
@@ -193,25 +195,30 @@ public class FootballMinigameScript : MonoBehaviour
     }
 
     void KickBall() {
+        
         if (donekicking == false) {
+            Debug.Log("Kicking");
             
             if (power > -0.5f) {
                 //Kick is high and center
                 if (accuracy > -1.4f && accuracy < 1.4f) {
                     if (ballScript.animating == false) {
                         ballScript.BallAnimation(1);
+                        StartCoroutine(AnimDelay());
                     }
                 }
                 //Kick is left
                 else if (accuracy < -1.4f) {
                     if (ballScript.animating == false) {
                         ballScript.BallAnimation(3);
+                        StartCoroutine(AnimDelay());
                     }
                 }
                 //Kick is right
                 else if (accuracy > 1.4f) {
                     if (ballScript.animating == false) {
                         ballScript.BallAnimation(4);
+                        StartCoroutine(AnimDelay());
                     }
                 }
             }
@@ -220,6 +227,7 @@ public class FootballMinigameScript : MonoBehaviour
             else {
                 if (ballScript.animating == false) {
                     ballScript.BallAnimation(2);
+                    StartCoroutine(AnimDelay());
                 }
                 
             }
@@ -258,28 +266,34 @@ public class FootballMinigameScript : MonoBehaviour
                 didWin = false;
             }
             restartbutton.SetActive(true);
+            continuebutton.SetActive(true);
         }
        
     }
 
     public void RestartGame() {
-        playerdata.UpdatePlayerDateScore(didWin);
-        playerdata.IncreaseGameCount();
-
         gamestarted = false;
         countdowntimer.text = timerinseconds.ToString();
         timerinseconds = 3;
         powermeter.SetActive(false);
         accuracymeter.SetActive(false);
         restartbutton.SetActive(false);
+        continuebutton.SetActive(false);
         isgoingup = true;
         enableaccuracy = false;
         kickingtime = false;
+        donekicking = false;
         power = 0;
         accuracy = 0;
         timer = 3;
+        
         powertriangle.transform.localPosition = new Vector2(powertriangle.transform.localPosition.x,triangleminposition);
         accuracymeter.transform.position = new Vector2(accuracyminposition, accuracymeter.transform.position.y);
+    }
+    public void Continue() {
+        playerdata.UpdatePlayerDateScore(didWin);
+        playerdata.IncreaseGameCount();
+
         SceneManager.LoadScene("VisualNovel");
     }
 
@@ -288,5 +302,12 @@ public class FootballMinigameScript : MonoBehaviour
         countdowntimer.enabled = false;
         gamestarted = true;
         StopCoroutine(TimerText());
+    }
+
+    IEnumerator AnimDelay() {
+        yield return new WaitForSeconds(3f);
+        donekicking = true;
+        ballScript.ResetBallAnimation();
+        StopCoroutine(AnimDelay());
     }
 }

@@ -20,4 +20,8 @@ public class BallScript : MonoBehaviour
         animator.SetInteger("State",animstate);
         animating = true;
     }
+    public void ResetBallAnimation() {
+        animator.SetInteger("State",0);
+        animating = false;
+    }
 }
