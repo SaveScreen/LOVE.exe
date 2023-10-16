@@ -12,17 +12,22 @@ public class VisNovel : MonoBehaviour
     public GameObject Date1Choice;
     public GameObject Date2Choice;
     public GameObject Date3Choice;
+
     public GameObject playerdatacontainer;
     public PlayerData playerdata;
+
     public GameObject Angry1;
     public GameObject Neutral1;
     public GameObject Happy1;
+
     public GameObject Angry2;
     public GameObject Neutral2;
     public GameObject Happy2;
+
     public GameObject Angry3;
     public GameObject Neutral3;
     public GameObject Happy3;
+
     public InputActionAsset inputs;
     private InputAction click;
     private bool clicked;
@@ -142,7 +147,20 @@ public class VisNovel : MonoBehaviour
     {
         clicked = click.WasPressedThisFrame();
         if (clicked)
-            SceneManager.LoadScene("FootballMinigame");
+        {
+            if(playerdata.GetGameCount() <= 3)
+            {
+                playerdata.IncreaseGameCount();
+                SceneManager.LoadScene("FootballMinigame");
+            }
+            else
+            {
+                playerdata.ResetGameCount();
+                SceneManager.LoadScene("ResultScreen");
+            }
+
+        }
+            
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {

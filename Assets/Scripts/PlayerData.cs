@@ -10,6 +10,7 @@ public class PlayerData : MonoBehaviour
     public static string playername = "";
     public static float playerRating = 0;
     public static bool firstLoad = false;
+    public static int gameCount = 0;
 
     public void PlayerBotSelection(int selection) {
         playerbot = selection;
@@ -27,6 +28,14 @@ public class PlayerData : MonoBehaviour
     {
         firstLoad = true;
     }
+    public void IncreaseGameCount()
+    {
+        gameCount++;
+    }
+    public void ResetGameCount()
+    {
+        gameCount = 0;
+    }
 
     public int GetPlayerBot()
     {
@@ -43,6 +52,14 @@ public class PlayerData : MonoBehaviour
     public string GetPlayerName()
     {
         return playername;
+    }
+    public int GetGameCount()
+    {
+        return gameCount;
+    }
+    public float GetPlayerRating()
+    {
+        return playerRating;
     }
 
     public float PlayerLikeRating(int dateNum)

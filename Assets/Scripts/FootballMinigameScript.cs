@@ -264,6 +264,7 @@ public class FootballMinigameScript : MonoBehaviour
 
     public void RestartGame() {
         playerdata.UpdatePlayerDateScore(didWin);
+        playerdata.IncreaseGameCount();
 
         gamestarted = false;
         countdowntimer.text = timerinseconds.ToString();
