@@ -148,7 +148,7 @@ public class VisNovel : MonoBehaviour
         clicked = click.WasPressedThisFrame();
         if (clicked)
         {
-            if(playerdata.GetGameCount() <= 3)
+            if(playerdata.GetGameCount() <= 4)
             {
                 playerdata.IncreaseGameCount();
                 SceneManager.LoadScene("FootballMinigame");

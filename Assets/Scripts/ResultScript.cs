@@ -9,6 +9,9 @@ using UnityEngine.InputSystem;
 
 public class ResultScript : MonoBehaviour
 {
+    public TMP_Text SuccessType;
+    public TMP_Text FinalScore;
+
     public GameObject Date1;
     public GameObject Date2;
     public GameObject Date3;
@@ -45,6 +48,8 @@ public class ResultScript : MonoBehaviour
 
     public void DisplayResult()
     {
+        FinalScore.SetText("Score: " + playerdata.GetPlayerRating().ToString());
+
         switch (playerdata.GetPlayerDate())
         {
             case 1:
@@ -116,12 +121,24 @@ public class ResultScript : MonoBehaviour
         float rate = playerdata.GetPlayerRating();
 
         if (rate < 1)
+        {
+            SuccessType.SetText("FAIL");
             return 0;
+        }
         else if (rate >= 1 && rate < 2)
+        {
+            SuccessType.SetText("PASS");
             return 1;
+        }
         else if (rate >= 2 && rate < 2.5f)
+        {
+            SuccessType.SetText("GREAT");
             return 2;
+        }
         else
+        {
+            SuccessType.SetText("PERFECT");
             return 3;
+        }
     }
 }
