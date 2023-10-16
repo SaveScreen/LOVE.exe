@@ -141,4 +141,9 @@ public class ResultScript : MonoBehaviour
             return 3;
         }
     }
+
+    public void Restart() {
+        playerdata.ResetAllData();
+        SceneManager.LoadScene("MenuScreen");
+    }
 }

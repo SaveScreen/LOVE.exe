@@ -126,4 +126,14 @@ public class PlayerData : MonoBehaviour
         Debug.Log("Player Rating: " + playerRating);
     }
 
+    public void ResetAllData() {
+        playerbot = 0;
+        playeroutfit = 0;
+        playerdate = 0;
+        playername = "";
+        playerRating = 0;
+        firstLoad = false;
+        gameCount = 0;
+    }
+
 }

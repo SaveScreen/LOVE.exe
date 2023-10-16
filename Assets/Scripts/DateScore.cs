@@ -15,4 +15,8 @@ public class DateScore : MonoBehaviour
     {
         
     }
+
+    public void DoSomething() {
+        Debug.Log("Did something");
+    }
 }
