@@ -26,7 +26,10 @@ public class CharacterSelect : MonoBehaviour
     public TextMeshProUGUI namechoicetext;
     public GameObject playerdatacontainer;
     public PlayerData playerdata;
-    
+
+    public GameObject leftArrow;
+    public GameObject rightArrow;
+
 
     // Start is called before the first frame update
     void Start()
@@ -80,6 +83,8 @@ public class CharacterSelect : MonoBehaviour
         choosedatemenu.SetActive(false);
         choosenamemenu.SetActive(true);
         Debug.Log("Chose date " + dateoption);
+        rightArrow.SetActive(false);
+        leftArrow.SetActive(false);
     }
 
     public void ChooseNameOption() {
