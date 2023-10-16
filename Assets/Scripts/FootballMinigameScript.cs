@@ -29,17 +29,21 @@ public class FootballMinigameScript : MonoBehaviour
     private InputAction click;
     private bool clicked;
     private bool kickingtime;
+    private bool donekicking;
     private float accuracy;
     private float power;
 
     private bool didWin;
     public PlayerData playerdata;
     public GameObject playerdatacontainer;
+    public GameObject ball;
+    private BallScript ballScript;
 
     // Start is called before the first frame update
     void Start()
     {
         playerdata = playerdatacontainer.GetComponent<PlayerData>();
+        ballScript = ball.GetComponent<BallScript>();
 
         gamestarted = false;
         countdowntimer.text = timerinseconds.ToString();
@@ -55,6 +59,7 @@ public class FootballMinigameScript : MonoBehaviour
         isgoingup = true;
         enableaccuracy = false;
         kickingtime = false;
+        donekicking = false;
 
         click = inputs.FindAction("Player/MouseButton");
     }
@@ -182,12 +187,71 @@ public class FootballMinigameScript : MonoBehaviour
         }
         //When the kick starts
         else if (gamestarted && kickingtime) {
-            if (power > -0.5f && accuracy > -1.4f && accuracy < 1.4f) {
-                //THE KICK IS GOOD!
-                countdowntimer.enabled = true;
-                countdowntimer.text = "Kick is good :)";
-                didWin = true;
-            } else {
+            KickBall();
+        }
+        
+    }
+
+    void KickBall() {
+        if (donekicking == false) {
+            
+            if (power > -0.5f) {
+                //Kick is high and center
+                if (accuracy > -1.4f && accuracy < 1.4f) {
+                    if (ballScript.animating == false) {
+                        ballScript.BallAnimation(1);
+                    }
+                }
+                //Kick is left
+                else if (accuracy < -1.4f) {
+                    if (ballScript.animating == false) {
+                        ballScript.BallAnimation(3);
+                    }
+                }
+                //Kick is right
+                else if (accuracy > 1.4f) {
+                    if (ballScript.animating == false) {
+                        ballScript.BallAnimation(4);
+                    }
+                }
+            }
+
+            //Kick is too low
+            else {
+                if (ballScript.animating == false) {
+                    ballScript.BallAnimation(2);
+                }
+                
+            }
+        }
+        else {
+            
+            if (power > -0.5f) {
+                //Kick is high and center
+                if (accuracy > -1.4f && accuracy < 1.4f) {
+                    //THE KICK IS GOOD!
+                    countdowntimer.enabled = true;
+                    countdowntimer.text = "Kick is good :)";
+                    didWin = true;
+                }
+                //Kick is left
+                else if (accuracy < -1.4f) {
+                    //THE KICK IS WIDE LEFT!
+                    countdowntimer.enabled = true;
+                    countdowntimer.text = "Kick is no good :(";
+                    didWin = false;
+                }
+                //Kick is right
+                else if (accuracy > 1.4f) {
+                    //THE KICK IS WIDE RIGHT!
+                    countdowntimer.enabled = true;
+                    countdowntimer.text = "Kick is no good :(";
+                    didWin = false;
+                }
+            }
+
+            //Kick is too low
+            else {
                 //THE KICK IS NO GOOD!
                 countdowntimer.enabled = true;
                 countdowntimer.text = "Kick is no good :(";
@@ -195,7 +259,7 @@ public class FootballMinigameScript : MonoBehaviour
             }
             restartbutton.SetActive(true);
         }
-        
+       
     }
 
     public void RestartGame() {
