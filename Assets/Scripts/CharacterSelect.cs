@@ -77,7 +77,7 @@ public class CharacterSelect : MonoBehaviour
     }
 
     public void ChooseDateOption(int option) {
-        //Options: 1 = Cowboy, 2 = Fancy, 3 = Goth
+        //Options: 1 = Cowboy, 2 = Goth, 3 = Fancy
         dateoption = option;
         
         choosedatemenu.SetActive(false);
@@ -110,10 +110,10 @@ public class CharacterSelect : MonoBehaviour
             datechoicetext.text = "Cowboy";
         }
         if (dateoption == 2) {
-            datechoicetext.text = "Fancy";
+            datechoicetext.text = "Goth";
         }
         if (dateoption == 3) {
-            datechoicetext.text = "Goth";
+            datechoicetext.text = "Fancy";
         }
         namechoicetext.text = nameoption;
         Debug.Log("Name chosen as " + nameoption);

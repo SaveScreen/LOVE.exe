@@ -562,6 +562,7 @@ MonoBehaviour:
   inputs: {fileID: -944628639613478452, guid: b6210dda01cea9c4188498e4a0a55bd9, type: 3}
   textspeed: 0.025
   dialoguefinished: 0
+  dialoguestarted: 0
   visNovel: {fileID: 1028128121}
 --- !u!4 &225620772
 Transform:
@@ -1298,7 +1299,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &904512881
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1731,7 +1732,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1186667728
 RectTransform:
   m_ObjectHideFlags: 0

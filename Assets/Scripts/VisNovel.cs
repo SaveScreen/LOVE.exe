@@ -82,10 +82,10 @@ public class VisNovel : MonoBehaviour
                 Date1(dateState);
                 break;
             case 2:
-                Date3(dateState);
+                Date2(dateState);
                 break;
             case 3:
-                Date2(dateState);
+                Date3(dateState);
                 break;
             default:
                 break;
