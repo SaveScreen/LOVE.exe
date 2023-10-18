@@ -31,15 +31,21 @@ public class VisNovel : MonoBehaviour
     public InputActionAsset inputs;
     private InputAction click;
     private bool clicked;
+    public GameObject dialogueController;
+    private VisNovelDialogueController vndc;
+    public int dateref;
+    public int datemoodref;
 
     void Start()
     {
         playerdata = playerdatacontainer.GetComponent<PlayerData>();
+        vndc = dialogueController.GetComponent<VisNovelDialogueController>();
 
         click = inputs.FindAction("Player/MouseButton");
 
         //minigamescore update
-
+        dateref = 0;
+        datemoodref = 0;
         DatePref();
       
 
@@ -76,10 +82,10 @@ public class VisNovel : MonoBehaviour
                 Date1(dateState);
                 break;
             case 2:
-                Date2(dateState);
+                Date3(dateState);
                 break;
             case 3:
-                Date3(dateState);
+                Date2(dateState);
                 break;
             default:
                 break;
@@ -87,57 +93,74 @@ public class VisNovel : MonoBehaviour
         }
     }
 
-
     
     public void Date1(int state)
     {
         Date1Choice.SetActive(true);
+        dateref = 1;
         switch (state)
         {
             case 1:
                 Angry1.SetActive(true);
+                datemoodref = 1;
                 break; 
             case 2:
                 Neutral1.SetActive(true);
+                datemoodref = 2;
                 break;
             case 3:
                 Happy1.SetActive(true);
+                datemoodref = 3;
                 break;
         }
+        Debug.Log(dateref);
+        Debug.Log(datemoodref);
     }
 
     public void Date2(int state)
     {
         Date2Choice.SetActive(true);
+        dateref = 2;
         switch (state)
         {
             case 1:
                 Angry2.SetActive(true);
+                datemoodref = 1;
                 break;
             case 2:
                 Neutral2.SetActive(true);
+                datemoodref = 2;
                 break;
             case 3:
                 Happy2.SetActive(true);
+                datemoodref = 3;
                 break;
         }
+        Debug.Log(dateref);
+        Debug.Log(datemoodref);
     }
 
     public void Date3(int state)
     {
         Date3Choice.SetActive(true);
+        dateref = 3;
         switch (state)
         {
             case 1:
                 Angry3.SetActive(true);
+                datemoodref = 1;
                 break;
             case 2:
                 Neutral3.SetActive(true);
+                datemoodref = 2;
                 break;
             case 3:
                 Happy3.SetActive(true);
+                datemoodref = 3;
                 break;
         }
+        Debug.Log(dateref);
+        Debug.Log(datemoodref);
     }
 
 
@@ -148,17 +171,18 @@ public class VisNovel : MonoBehaviour
         clicked = click.WasPressedThisFrame();
         if (clicked)
         {
-            if(playerdata.GetGameCount() <= 4)
-            {
-                playerdata.IncreaseGameCount();
-                SceneManager.LoadScene("FootballMinigame");
+            if (vndc.dialoguefinished) {
+                if (playerdata.GetGameCount() <= 4)
+                {
+                    playerdata.IncreaseGameCount();
+                    SceneManager.LoadScene("FootballMinigame");
+                }
+                else
+                {
+                    playerdata.ResetGameCount();
+                    SceneManager.LoadScene("ResultScreen");
+                }
             }
-            else
-            {
-                playerdata.ResetGameCount();
-                SceneManager.LoadScene("ResultScreen");
-            }
-
         }
             
 

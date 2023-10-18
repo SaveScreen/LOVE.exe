@@ -73,26 +73,6 @@ public class ResultScript : MonoBehaviour
                 break;
 
             case 2:
-                Date2.SetActive(true);
-                switch (PlayerRank())
-                {
-                    case 0:
-                        Date2C.SetActive(true);
-                        break;
-                    case 1:
-                        Date2B.SetActive(true);
-                        break;
-                    case 2:
-                        Date2A.SetActive(true);
-                        break;
-                    case 3:
-                        Date2S.SetActive(true);
-                        break;
-                }
-
-                break;
-
-            case 3:
                 Date3.SetActive(true);
                 switch (PlayerRank())
                 {
@@ -109,7 +89,25 @@ public class ResultScript : MonoBehaviour
                         Date3S.SetActive(true);
                         break;
                 }
+                break;
 
+            case 3:
+                Date2.SetActive(true);
+                switch (PlayerRank())
+                {
+                    case 0:
+                        Date2C.SetActive(true);
+                        break;
+                    case 1:
+                        Date2B.SetActive(true);
+                        break;
+                    case 2:
+                        Date2A.SetActive(true);
+                        break;
+                    case 3:
+                        Date2S.SetActive(true);
+                        break;
+                }
                 break;
 
         }
