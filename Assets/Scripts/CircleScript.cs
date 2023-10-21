@@ -17,6 +17,8 @@ public class CircleScript : MonoBehaviour
     public AudioClip snare;
     public InputAction click;
     private Camera maincamera;
+    public bool gameover;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -26,8 +28,8 @@ public class CircleScript : MonoBehaviour
         rms = minigamemaster.GetComponent<RhythmMinigameScript>();
         sprrender = GetComponent<SpriteRenderer>();
         
-
         c = 1;
+        gameover = false;
     }
     
     void OnEnable() {
@@ -40,25 +42,33 @@ public class CircleScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (c > 0f) {
+        if (!gameover) {
+            if (c > 0f) {
             c = Mathf.Lerp(1,0,rate);
             sprrender.color = new Color(1,c,c,1);
             rate += speed * Time.deltaTime;
             //Debug.Log(speed);
             //Debug.Log(c);
-        }
-        else {
-            Destroy(gameObject);
-        }
+            }
+            else {
+                Destroy(gameObject);
+                rms.GameOver();
+            }
 
-        if (click.WasPressedThisFrame()) {
-            var rayHit = Physics2D.GetRayIntersection(maincamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
-            if (!rayHit.collider) return;
+            if (click.WasPressedThisFrame()) {
+                var rayHit = Physics2D.GetRayIntersection(maincamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
+                if (!rayHit.collider) return;
 
-            //Debug.Log(rayHit.collider.gameObject.name);
-            AddScore();
+                //Debug.Log(rayHit.collider.gameObject.name);
+                AddScore();
+            }
+        } else {
+            if (rms.restart == true) {
+                Destroy(gameObject);
+            }
         }
-        
+          
+        gameover = rms.gameover;
     }
     
     public void AddScore() {
@@ -66,7 +76,5 @@ public class CircleScript : MonoBehaviour
         rms.score += 1;
         Destroy(gameObject);
     }
-
-    
 
 }

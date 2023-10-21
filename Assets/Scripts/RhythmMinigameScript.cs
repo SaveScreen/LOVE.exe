@@ -12,9 +12,13 @@ public class RhythmMinigameScript : MonoBehaviour
     //public int amount;
     public float spawnradius;
     public float timer; //Time in between circle spawning
+    private float starttimer;
     private float respawntime;
     public float score;
     private AudioSource audioSource;
+    public GameObject gameoverscreen;
+    public bool gameover;
+    public bool restart;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +28,10 @@ public class RhythmMinigameScript : MonoBehaviour
         respawntime = timer;
         scoretext.text = "Score: ";
         speedtext.text = "Circle/s: " + respawntime;
+
+        gameoverscreen.SetActive(false);
+        restart = false;
+        starttimer = timer;
     }
 
     // Update is called once per frame
@@ -54,5 +62,24 @@ public class RhythmMinigameScript : MonoBehaviour
     }
     public void PlaySound(AudioClip audio) {
         audioSource.PlayOneShot(audio);
+    }
+
+    public void GameOver() {
+        Time.timeScale = 0;
+        gameover = true;
+        gameoverscreen.SetActive(true);
+    }
+
+    public void Restart() {
+        Time.timeScale = 1;
+        gameover = false;
+        restart = true;
+        score = 0;
+        respawntime = starttimer;
+        timer = respawntime;
+        scoretext.text = "Score: " + score;
+        speedtext.text = "Circle/s: " + respawntime;
+        gameoverscreen.SetActive(false);
+        Generate();
     }
 }
