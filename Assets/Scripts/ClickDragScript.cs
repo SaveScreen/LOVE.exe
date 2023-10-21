@@ -10,7 +10,7 @@ public class ClickDragScript : MonoBehaviour
     private Transform toDrag;
 
     //PC controls
-    Vector2 difference = Vector2.zero;
+   
 
     // Update is called once per frame
     void Update()
