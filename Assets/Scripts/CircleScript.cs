@@ -58,9 +58,10 @@ public class CircleScript : MonoBehaviour
             if (click.WasPressedThisFrame()) {
                 var rayHit = Physics2D.GetRayIntersection(maincamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
                 if (!rayHit.collider) return;
-
-                //Debug.Log(rayHit.collider.gameObject.name);
-                AddScore();
+                if (rayHit.collider.gameObject == gameObject) {
+                    AddScore();
+                    Destroy(gameObject);
+                }
             }
         } else {
             if (rms.restart == true) {
@@ -74,7 +75,6 @@ public class CircleScript : MonoBehaviour
     public void AddScore() {
         rms.PlaySound(snare);
         rms.score += 1;
-        Destroy(gameObject);
     }
 
 }
