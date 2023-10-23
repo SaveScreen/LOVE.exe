@@ -212,6 +212,37 @@ public class VisNovelDialogueController : MonoBehaviour
                         break;
                     }
                 break;
+                case 4:
+                    switch (visNovelScript.dateref) {
+                        //Cowboy
+                        case 1:
+                            if (wonlastgame) {
+                                currentlines = cowboywinlines;
+                            }
+                            else {
+                                currentlines = cowboyloselines;
+                            }
+                        break;
+                        //Goth
+                        case 2:
+                            if (wonlastgame) {
+                                currentlines = gothwinlines;
+                            }
+                            else {
+                                currentlines = gothloselines;
+                            }
+                        break;
+                        //Fancy
+                        case 3:
+                            if (wonlastgame) {
+                                currentlines = fancywinlines;
+                            }
+                            else {
+                                currentlines = fancyloselines;
+                            }
+                        break;
+                    }
+                break;
             }
             StartCoroutine(TypeOutCharacters());
             dialoguestarted = true;
