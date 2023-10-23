@@ -3,12 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RhythmMinigameScript : MonoBehaviour
 {
     public GameObject prefab;
     public TextMeshProUGUI scoretext;
     public TextMeshProUGUI speedtext;
+    public GameObject playerdatacontainer;
+    private PlayerData playerdata;
     //public int amount;
     public float spawnradius;
     public float timer; //Time in between circle spawning
@@ -19,10 +22,13 @@ public class RhythmMinigameScript : MonoBehaviour
     public GameObject gameoverscreen;
     public bool gameover;
     public bool restart;
+    private bool didWin;
+    private int gamecount;
 
     // Start is called before the first frame update
     void Start()
     {
+        playerdata = playerdatacontainer.GetComponent<PlayerData>();
         audioSource = GetComponent<AudioSource>();
         Generate();
         respawntime = timer;
@@ -32,6 +38,7 @@ public class RhythmMinigameScript : MonoBehaviour
         gameoverscreen.SetActive(false);
         restart = false;
         starttimer = timer;
+        gamecount = playerdata.GetGameCount();
     }
 
     // Update is called once per frame
@@ -46,6 +53,11 @@ public class RhythmMinigameScript : MonoBehaviour
             ShrinkRespawnTime();
         }
         scoretext.text = "Score: " + score;
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     void Generate() {
@@ -68,6 +80,34 @@ public class RhythmMinigameScript : MonoBehaviour
         Time.timeScale = 0;
         gameover = true;
         gameoverscreen.SetActive(true);
+
+        switch (gamecount) {
+            case 1:
+                if (score > 10) {
+                    didWin = true;
+                }
+                else {
+                    didWin = false;
+                }
+            break;
+            case 2:
+                if (score > 30) {
+                    didWin = true;
+                }
+                else {
+                    didWin = false;
+                }
+            break;
+            case 3:
+                if (score > 50) {
+                    didWin = true;
+                }
+                else {
+                    didWin = false;
+                }
+            break;
+        }
+        
     }
 
     public void Restart() {
@@ -81,5 +121,12 @@ public class RhythmMinigameScript : MonoBehaviour
         speedtext.text = "Circle/s: " + respawntime;
         gameoverscreen.SetActive(false);
         Generate();
+    }
+
+    public void Continue() {
+        playerdata.UpdatePlayerDateScore(didWin);
+        playerdata.IncreaseGameCount();
+
+        SceneManager.LoadScene("VisualNovel");
     }
 }
