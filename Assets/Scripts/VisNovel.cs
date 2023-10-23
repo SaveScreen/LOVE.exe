@@ -177,7 +177,7 @@ public class VisNovel : MonoBehaviour
         if (clicked)
         {
             if (vndc.dialoguefinished) {
-                if (playerdata.GetGameCount() <= 4)
+                if (playerdata.GetGameCount() < 4)
                 {
                     randomNum = rand.Next(2);
                     playerdata.IncreaseGameCount();

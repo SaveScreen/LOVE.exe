@@ -293,8 +293,31 @@ public class FootballMinigameScript : MonoBehaviour
     public void Continue() {
         playerdata.UpdatePlayerDateScore(didWin);
         playerdata.IncreaseGameCount();
+        if (didWin) {
+            playerdata.WonGame();
+        }
+        else {
+            playerdata.LostGame();
+        }
 
         SceneManager.LoadScene("VisualNovel");
+        gamestarted = false;
+        countdowntimer.text = timerinseconds.ToString();
+        timerinseconds = 3;
+        powermeter.SetActive(false);
+        accuracymeter.SetActive(false);
+        restartbutton.SetActive(false);
+        continuebutton.SetActive(false);
+        isgoingup = true;
+        enableaccuracy = false;
+        kickingtime = false;
+        donekicking = false;
+        power = 0;
+        accuracy = 0;
+        timer = 3;
+        
+        powertriangle.transform.localPosition = new Vector2(powertriangle.transform.localPosition.x,triangleminposition);
+        accuracymeter.transform.position = new Vector2(accuracyminposition, accuracymeter.transform.position.y);
     }
 
     IEnumerator TimerText() {

@@ -181,6 +181,7 @@ public class VisNovelDialogueController : MonoBehaviour
                         break;
                     }
                 break;
+                
                 case 3:
                     switch (visNovelScript.dateref) {
                         //Cowboy
@@ -272,6 +273,7 @@ public class VisNovelDialogueController : MonoBehaviour
         }
         else {
             dialoguefinished = true;
+            index = 0;
         }
     }
 
