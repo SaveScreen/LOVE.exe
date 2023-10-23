@@ -26,14 +26,10 @@ public class ScrollScript : MonoBehaviour
     float snapSpeed;
     public float snapForce;
 
-    public GameObject leftArrow;
-    public GameObject rightArrow;
 
     private void Start()
     {
         isSnapped = false;
-        leftArrow.SetActive(true);
-        rightArrow.SetActive(true);
     }
 
     void Update()
@@ -57,22 +53,6 @@ public class ScrollScript : MonoBehaviour
         if (scrollRect.velocity.magnitude > 5)
         {
             isSnapped = false;
-        }
-
-        if (contentPanel.localPosition.x > 0)
-        {
-            leftArrow.SetActive(false);
-            rightArrow.SetActive(true);
-        }
-        if (contentPanel.localPosition.x == 0)
-        {
-            leftArrow.SetActive(true);
-            rightArrow.SetActive(true);
-        }
-        if (contentPanel.localPosition.x < 0)
-        {
-            rightArrow.SetActive(false);
-            leftArrow.SetActive(true);
         }
     }
 
