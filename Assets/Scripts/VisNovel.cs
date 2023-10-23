@@ -36,6 +36,7 @@ public class VisNovel : MonoBehaviour
     private VisNovelDialogueController vndc;
     public int dateref;
     public int datemoodref;
+    public float playerRating;
 
     private System.Random rand = new System.Random();
     private int randomNum;
@@ -67,7 +68,7 @@ public class VisNovel : MonoBehaviour
 
     public void DatePref()
     {
-        float playerRating;
+        
         int playerDate = playerdata.GetPlayerDate();
         playerRating = playerdata.PlayerLikeRating(playerDate);
         int dateState = 0;

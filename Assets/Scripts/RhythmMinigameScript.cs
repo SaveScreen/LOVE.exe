@@ -127,6 +127,13 @@ public class RhythmMinigameScript : MonoBehaviour
         playerdata.UpdatePlayerDateScore(didWin);
         playerdata.IncreaseGameCount();
 
+        if (didWin) {
+            playerdata.WonGame();
+        }
+        else {
+            playerdata.LostGame();
+        }
+
         SceneManager.LoadScene("VisualNovel");
     }
 }

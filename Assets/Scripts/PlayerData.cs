@@ -11,6 +11,7 @@ public class PlayerData : MonoBehaviour
     public static float playerRating = 0;
     public static bool firstLoad = false;
     public static int gameCount = 0;
+    public static bool wonGame = false;
 
     public void PlayerBotSelection(int selection) {
         playerbot = selection;
@@ -37,6 +38,12 @@ public class PlayerData : MonoBehaviour
         gameCount = 0;
     }
 
+    public void WonGame() {
+        wonGame = true;
+    }
+    public void LostGame() {
+        wonGame = false;
+    }
     public int GetPlayerBot()
     {
         return playerbot;
@@ -56,6 +63,9 @@ public class PlayerData : MonoBehaviour
     public int GetGameCount()
     {
         return gameCount;
+    }
+    public bool GetWin() {
+        return wonGame;
     }
     public float GetPlayerRating()
     {

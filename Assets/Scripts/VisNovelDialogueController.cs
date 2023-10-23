@@ -18,6 +18,12 @@ public class VisNovelDialogueController : MonoBehaviour
     public string[] fancyangrylines;
     public string[] fancyneutrallines;
     public string[] fancyhappylines;
+    public string[] cowboyloselines;
+    public string[] cowboywinlines;
+    public string[] gothloselines;
+    public string[] gothwinlines;
+    public string[] fancyloselines;
+    public string[] fancywinlines;
     private int index;
     public InputActionAsset inputs;
     private InputAction click;
@@ -28,11 +34,16 @@ public class VisNovelDialogueController : MonoBehaviour
     public bool dialoguestarted;
     public GameObject visNovel;
     private VisNovel visNovelScript;
+    public GameObject playerdatacontainer;
+    private PlayerData playerdata;
+    private int gamecount;
+    private bool wonlastgame;
 
     // Start is called before the first frame update
     void Start()
     {
         visNovelScript = visNovel.GetComponent<VisNovel>();
+        playerdata = playerdatacontainer.GetComponent<PlayerData>();
         click = inputs.FindAction("Player/MouseButton");
 
         index = 0;
@@ -40,8 +51,8 @@ public class VisNovelDialogueController : MonoBehaviour
         textbox.text = "";
         dialoguestarted = false;
         dialoguefinished = false;
-
-        
+        gamecount = playerdata.GetGameCount();
+        wonlastgame = playerdata.GetWin();
         //currentlines = cowboyangrylines;
         
     }
@@ -58,49 +69,146 @@ public class VisNovelDialogueController : MonoBehaviour
     void Update()
     { 
         if (dialoguestarted == false) {
-            switch (visNovelScript.dateref) {
-                //Cowboy
+            switch (gamecount) {
+                case 0:
+                    switch (visNovelScript.dateref) {
+                        //Cowboy
+                        case 1:
+                            switch (visNovelScript.datemoodref) {
+                                case 1:
+                                    currentlines = cowboyangrylines;
+                                break;
+                                case 2:
+                                    currentlines = cowboyneutrallines;
+                                break;
+
+                                case 3:
+                                    currentlines = cowboyhappylines;
+                                break;
+                            }
+                        break;
+                        //Goth
+                        case 2:
+                            switch (visNovelScript.datemoodref) {
+                                case 1:
+                                    currentlines = gothangrylines;
+                                break;
+                                case 2:
+                                    currentlines = gothneutrallines;
+                                break;
+
+                                case 3:
+                                    currentlines = gothhappylines;
+                                break;
+                            }
+                        break;
+                        //Fancy
+                        case 3:
+                            switch (visNovelScript.datemoodref) {
+                                case 1:
+                                    currentlines = fancyangrylines;
+                                break;
+                                case 2:
+                                    currentlines = fancyneutrallines;
+                                break;
+
+                                case 3:
+                                    currentlines = fancyhappylines;
+                                break;
+                            }
+                        break;
+                    }
+                break;
                 case 1:
-                    switch (visNovelScript.datemoodref) {
+                    switch (visNovelScript.dateref) {
+                        //Cowboy
                         case 1:
-                            currentlines = cowboyangrylines;
+                            if (wonlastgame) {
+                                currentlines = cowboywinlines;
+                            }
+                            else {
+                                currentlines = cowboyloselines;
+                            }
                         break;
+                        //Goth
                         case 2:
-                            currentlines = cowboyneutrallines;
+                            if (wonlastgame) {
+                                currentlines = gothwinlines;
+                            }
+                            else {
+                                currentlines = gothloselines;
+                            }
                         break;
-
+                        //Fancy
                         case 3:
-                            currentlines = cowboyhappylines;
+                            if (wonlastgame) {
+                                currentlines = fancywinlines;
+                            }
+                            else {
+                                currentlines = fancyloselines;
+                            }
                         break;
                     }
                 break;
-                //Goth
                 case 2:
-                    switch (visNovelScript.datemoodref) {
+                    switch (visNovelScript.dateref) {
+                        //Cowboy
                         case 1:
-                            currentlines = gothangrylines;
+                            if (wonlastgame) {
+                                currentlines = cowboywinlines;
+                            }
+                            else {
+                                currentlines = cowboyloselines;
+                            }
                         break;
+                        //Goth
                         case 2:
-                            currentlines = gothneutrallines;
+                            if (wonlastgame) {
+                                currentlines = gothwinlines;
+                            }
+                            else {
+                                currentlines = gothloselines;
+                            }
                         break;
-
+                        //Fancy
                         case 3:
-                            currentlines = gothhappylines;
+                            if (wonlastgame) {
+                                currentlines = fancywinlines;
+                            }
+                            else {
+                                currentlines = fancyloselines;
+                            }
                         break;
                     }
                 break;
-                //Fancy
                 case 3:
-                    switch (visNovelScript.datemoodref) {
+                    switch (visNovelScript.dateref) {
+                        //Cowboy
                         case 1:
-                            currentlines = fancyangrylines;
+                            if (wonlastgame) {
+                                currentlines = cowboywinlines;
+                            }
+                            else {
+                                currentlines = cowboyloselines;
+                            }
                         break;
+                        //Goth
                         case 2:
-                            currentlines = fancyneutrallines;
+                            if (wonlastgame) {
+                                currentlines = gothwinlines;
+                            }
+                            else {
+                                currentlines = gothloselines;
+                            }
                         break;
-
+                        //Fancy
                         case 3:
-                            currentlines = fancyhappylines;
+                            if (wonlastgame) {
+                                currentlines = fancywinlines;
+                            }
+                            else {
+                                currentlines = fancyloselines;
+                            }
                         break;
                     }
                 break;

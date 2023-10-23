@@ -538,32 +538,115 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textbox: {fileID: 1075058875}
   cowboyangrylines:
-  - "When I ordered the services of a bot I wasn\u2019t expecting to be paired with
-    a corpo bootlicker\u2026"
+  - "\"When I ordered the services of a bot I wasn\u2019t expecting to be paired
+    with a corpo bootlicker\u2026\""
+  - "\u201CI am still very new to this, so you\u2019re going to have to excuse me
+    if I am a bit out of touch.\u201D"
+  - '- My systems tell me you are not the biggest fan of new tech Jimothy. How can
+    I assist you in fixing these feelings? '
+  - "\u201CHuh? I guarantee there's nothing about me that needs to be fixed, I\u2019m
+    just looking for a way to kill time.\u201D"
   cowboyneutrallines:
-  - Your services are much-appreciated partner.
+  - '"Your services are much-appreciated partner."'
+  - "\u201CI am still very new to this, so you\u2019re going to have to excuse me
+    if I am a bit out of touch.\u201D"
+  - '- My systems tell me you are not the biggest fan of new tech Jimothy. How can
+    I assist you in fixing these feelings? '
+  - "\u201CHuh? I guarantee there's nothing about me that needs to be fixed, I\u2019m
+    just looking for a way to kill time.\u201D"
   cowboyhappylines:
-  - "It seems to me I\u2019ve ordered the services of a mighty fine bot. *tips cowboy
-    hat*"
+  - "\"It seems to me I\u2019ve ordered the services of a mighty fine bot. *tips
+    cowboy hat*\""
+  - "\u201CI am still very new to this, so you\u2019re going to have to excuse me
+    if I am a bit out of touch.\u201D"
+  - '- My systems tell me you are not the biggest fan of new tech Jimothy. How can
+    I assist you in fixing these feelings? '
+  - "\u201CHuh? I guarantee there's nothing about me that needs to be fixed, I\u2019m
+    just looking for a way to kill time.\u201D"
   gothangrylines:
-  - Ugh, this blows ...
+  - "\u201CAh, this is not what I expected\u2026\u201D"
+  - '- My systems are telling me that you are having trouble expressing your feelings
+    and connecting with others. Would you like to practice with me? '
+  - "\u201COh, well.. people just are very unreliable in this city. CITY NAME isn\u2019t
+    really a place you get a happy ending in, every man for himself y'know? Here,
+    I'll show you one of my favorite spots.\u201D"
+  - '- Humans have a lot more in common than you might believe Jett, would you like
+    to explore it together?'
   gothneutrallines:
-  - That nearly put a smile on my face.
+  - "\u201COh, your vibe is very\u2026different, not bad but not what I was expecting.\u201D"
+  - "\u201CBut I\u2019m also seen as\u2026 different. So perhaps it might not be
+    so bad after all\u2026\u201D"
+  - '- My systems are telling me that you are having trouble expressing your feelings
+    and connecting with others. Would you like to practice with me? '
+  - "\u201COh, well.. people just are very unreliable in this city. CITY NAME isn\u2019t
+    really a place you get a happy ending in, every man for himself y'know? Here,
+    I'll show you one of my favorite spots.\u201D"
+  - '- Humans have a lot more in common than you might believe Jett, would you like
+    to explore it together?'
   gothhappylines:
-  - Y'know? You're kinda cute actually.
+  - "\u201CSick! You look cool.\u201D"
+  - '- My systems are telling me that you are having trouble expressing your feelings
+    and connecting with others. Would you like to practice with me? '
+  - "\u201COh, well.. people just are very unreliable in this city. CITY NAME isn\u2019t
+    really a place you get a happy ending in, every man for himself y'know? Here,
+    I'll show you one of my favorite spots.\u201D"
+  - '- Humans have a lot more in common than you might believe Jett, would you like
+    to explore it together?'
   fancyangrylines:
-  - Oh dear, that is absolutely dreadful, have these boys not given you a lesson
-    in class?
+  - '"Oh dear, that is absolutely dreadful, have these boys not given you a lesson
+    in class?"'
+  - "\u201CI\u2019ve had plenty of robot companions, they\u2019re all so very dull.
+    I hope you will be of some use to me and provide optimal entertainment.\u201D"
+  - '- Frills, you contacted my CEO personally to discuss wanting to have a NORMAL
+    and CASUAL date. My systems are detecting uncertainty in your body language! '
+  - "\u201CWhat- No, there\u2019s nothing wrong with my body language. Is my outfit
+    a mess? Is that why you think that? Or my hair? We\u2019re outside, after all.
+    Maybe this location was a bad idea..\u201D"
   fancyneutrallines:
-  - Your vision is interesting, and the style is there but the formality is lacking. 
-    We can work with this..
+  - '"Your vision is interesting, and the style is there but the formality is lacking. 
+    We can work with this.."'
+  - "\u201CI\u2019ve had plenty of robot companions, they\u2019re all so very dull.
+    I hope you will be of some use to me and provide optimal entertainment.\u201D"
+  - '- Frills, you contacted my CEO personally to discuss wanting to have a NORMAL
+    and CASUAL date. My systems are detecting uncertainty in your body language! '
+  - "\u201CWhat- No, there\u2019s nothing wrong with my body language. Is my outfit
+    a mess? Is that why you think that? Or my hair? We\u2019re outside, after all.
+    Maybe this location was a bad idea..\u201D"
   fancyhappylines:
-  - I see you have exquisite taste darling!  This date shall make headlines!
+  - '"I see you have exquisite taste darling!  This date shall make headlines!"'
+  - "\u201CI\u2019ve had plenty of robot companions, they\u2019re all so very dull.
+    I hope you will be of some use to me and provide optimal entertainment.\u201D"
+  - '- Frills, you contacted my CEO personally to discuss wanting to have a NORMAL
+    and CASUAL date. My systems are detecting uncertainty in your body language! '
+  - "\u201CWhat- No, there\u2019s nothing wrong with my body language. Is my outfit
+    a mess? Is that why you think that? Or my hair? We\u2019re outside, after all.
+    Maybe this location was a bad idea..\u201D"
+  cowboyloselines:
+  - "\u201CYou are going to try harder than that to impress me, partner.\u201D"
+  cowboywinlines:
+  - "\u201CWell pal, you got some mighty spunk in you. This was a great time partner,
+    I\u2019ll see ya soon\u2026\u201D"
+  - '- I assure you I can change your mind in time, partner. Get you to see the you,
+    you want to be! '
+  gothloselines:
+  - "\u201CWhy did I ever trust in a stupid robot? This blows!\u201D"
+  gothwinlines:
+  - "\u201CHa, I didn't think I\u2019d enjoy watching sports. That was different\u2026
+    kind of cool too.\u201D"
+  fancyloselines:
+  - "\u201CUgh, I am contacting my lawyer, your company will never hear the end of
+    this!\u201D"
+  fancywinlines:
+  - '- You seem like you are putting on a facade Frills! It is okay to let loose
+    sometimes and be who you really are!'
+  - "\u201CSitting outside and just playing a measly little sport seems like such
+    a waste of time. I could be making money right now\u2026 But I feel so relaxed.\u201D"
   inputs: {fileID: -944628639613478452, guid: b6210dda01cea9c4188498e4a0a55bd9, type: 3}
   textspeed: 0.025
   dialoguefinished: 0
   dialoguestarted: 0
   visNovel: {fileID: 1028128121}
+  playerdatacontainer: {fileID: 739909380}
 --- !u!4 &225620772
 Transform:
   m_ObjectHideFlags: 0
@@ -1566,6 +1649,7 @@ MonoBehaviour:
   dialogueController: {fileID: 225620770}
   dateref: 0
   datemoodref: 0
+  playerRating: 0
 --- !u!1 &1075058874
 GameObject:
   m_ObjectHideFlags: 0
