@@ -212,17 +212,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89fc4b9b997c1614b800dd62a64d10b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  section: {fileID: 1886107509}
-  scroller: {fileID: 632105720}
-  xMinimum: 0
-  xMaximum: 0
   scrollRect: {fileID: 259867821}
   contentPanel: {fileID: 1886107510}
   sampleListItem: {fileID: 1275121888}
   HLG: {fileID: 1886107512}
+  ItemName: {fileID: 0}
+  ItemNames: []
   snapForce: 2
-  leftArrow: {fileID: 0}
-  rightArrow: {fileID: 0}
 --- !u!114 &259867818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1081,6 +1077,7 @@ GameObject:
   - component: {fileID: 698904829}
   - component: {fileID: 698904828}
   - component: {fileID: 698904830}
+  - component: {fileID: 698904831}
   m_Layer: 5
   m_Name: Square
   m_TagString: Draggable
@@ -1218,6 +1215,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4975047d58ada564fbf57cd3ec579d8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &698904831
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698904825}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 2
 --- !u!1 &858942771
 GameObject:
   m_ObjectHideFlags: 0

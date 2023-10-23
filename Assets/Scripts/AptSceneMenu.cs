@@ -9,6 +9,11 @@ public class AptSceneMenu : MonoBehaviour
         SceneManager.LoadScene("MenuScreen");
     }
 
+    public void GoToStore()
+    {
+        SceneManager.LoadScene("StoreScene");
+    }
+
     public void Quit() {
         Application.Quit();
         Debug.Log("Quit");
