@@ -142,6 +142,6 @@ public class ResultScript : MonoBehaviour
 
     public void Restart() {
         playerdata.ResetAllData();
-        SceneManager.LoadScene("MenuScreen");
+        SceneManager.LoadScene("AptScene");
     }
 }

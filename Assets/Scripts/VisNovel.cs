@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using UnityEngine.InputSystem;
+using System;
 
 public class VisNovel : MonoBehaviour
 {
@@ -35,6 +36,9 @@ public class VisNovel : MonoBehaviour
     private VisNovelDialogueController vndc;
     public int dateref;
     public int datemoodref;
+
+    private System.Random rand = new System.Random();
+    private int randomNum;
 
     void Start()
     {
@@ -174,8 +178,17 @@ public class VisNovel : MonoBehaviour
             if (vndc.dialoguefinished) {
                 if (playerdata.GetGameCount() <= 4)
                 {
+                    randomNum = rand.Next(2);
                     playerdata.IncreaseGameCount();
-                    SceneManager.LoadScene("FootballMinigame");
+                    switch (randomNum)
+                    {
+                        case 0:
+                            SceneManager.LoadScene("FootballMinigame");
+                            break;
+                        case 1:
+                            SceneManager.LoadScene("RhythmMinigame");
+                            break;
+                    }
                 }
                 else
                 {
