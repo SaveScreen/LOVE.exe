@@ -68,7 +68,9 @@ public class VisNovelDialogueController : MonoBehaviour
     // Update is called once per frame
     void Update()
     { 
+        
         if (dialoguestarted == false) {
+            Debug.Log("Game is " + gamecount);
             switch (gamecount) {
                 case 0:
                     switch (visNovelScript.dateref) {
@@ -119,6 +121,7 @@ public class VisNovelDialogueController : MonoBehaviour
                         break;
                     }
                 break;
+                //After playing 1 game
                 case 1:
                     switch (visNovelScript.dateref) {
                         //Cowboy
@@ -150,6 +153,7 @@ public class VisNovelDialogueController : MonoBehaviour
                         break;
                     }
                 break;
+                //After playing 2 games
                 case 2:
                     switch (visNovelScript.dateref) {
                         //Cowboy
@@ -181,7 +185,7 @@ public class VisNovelDialogueController : MonoBehaviour
                         break;
                     }
                 break;
-                
+                //After playing 3 games
                 case 3:
                     switch (visNovelScript.dateref) {
                         //Cowboy
@@ -213,37 +217,7 @@ public class VisNovelDialogueController : MonoBehaviour
                         break;
                     }
                 break;
-                case 4:
-                    switch (visNovelScript.dateref) {
-                        //Cowboy
-                        case 1:
-                            if (wonlastgame) {
-                                currentlines = cowboywinlines;
-                            }
-                            else {
-                                currentlines = cowboyloselines;
-                            }
-                        break;
-                        //Goth
-                        case 2:
-                            if (wonlastgame) {
-                                currentlines = gothwinlines;
-                            }
-                            else {
-                                currentlines = gothloselines;
-                            }
-                        break;
-                        //Fancy
-                        case 3:
-                            if (wonlastgame) {
-                                currentlines = fancywinlines;
-                            }
-                            else {
-                                currentlines = fancyloselines;
-                            }
-                        break;
-                    }
-                break;
+                
             }
             StartCoroutine(TypeOutCharacters());
             dialoguestarted = true;
