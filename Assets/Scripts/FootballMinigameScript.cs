@@ -33,7 +33,7 @@ public class FootballMinigameScript : MonoBehaviour
     private bool donekicking;
     private float accuracy;
     private float power;
-
+    private int gamesPlayed;
     private bool didWin;
     public PlayerData playerdata;
     public GameObject playerdatacontainer;
@@ -62,6 +62,7 @@ public class FootballMinigameScript : MonoBehaviour
         enableaccuracy = false;
         kickingtime = false;
         donekicking = false;
+        gamesPlayed = playerdata.GetGameCount();
 
         click = inputs.FindAction("Player/MouseButton");
     }
@@ -102,6 +103,18 @@ public class FootballMinigameScript : MonoBehaviour
             
             if (!enableaccuracy)
             {
+                switch (gamesPlayed)
+                {
+                    case 1:
+                        powermeterspeed = 4;
+                    break;
+                    case 2:
+                        powermeterspeed = 8;
+                    break;
+                    case 3:
+                        powermeterspeed = 16;
+                    break;
+                }
                 powermeter.SetActive(true);
                 if (isgoingup)
                 {
@@ -233,38 +246,125 @@ public class FootballMinigameScript : MonoBehaviour
             }
         }
         else {
-            
-            if (power > -0.5f) {
-                //Kick is high and center
-                if (accuracy > -1.4f && accuracy < 1.4f) {
-                    //THE KICK IS GOOD!
-                    countdowntimer.enabled = true;
-                    countdowntimer.text = "Kick is good :)";
-                    didWin = true;
-                }
-                //Kick is left
-                else if (accuracy < -1.4f) {
-                    //THE KICK IS WIDE LEFT!
-                    countdowntimer.enabled = true;
-                    countdowntimer.text = "Kick is no good :(";
-                    didWin = false;
-                }
-                //Kick is right
-                else if (accuracy > 1.4f) {
-                    //THE KICK IS WIDE RIGHT!
-                    countdowntimer.enabled = true;
-                    countdowntimer.text = "Kick is no good :(";
-                    didWin = false;
-                }
-            }
+            switch (gamesPlayed)
+            {
+                case 1:
+                    if (power > -0.5f)
+                    {
+                        //Kick is high and center
+                        if (accuracy > -1.4f && accuracy < 1.4f)
+                        {
+                            //THE KICK IS GOOD!
+                            countdowntimer.enabled = true;
+                            countdowntimer.text = "Kick is good :)";
+                            didWin = true;
+                        }
+                        //Kick is left
+                        else if (accuracy < -1.4f)
+                        {
+                            //THE KICK IS WIDE LEFT!
+                            countdowntimer.enabled = true;
+                            countdowntimer.text = "Kick is no good :(";
+                            didWin = false;
+                        }
+                        //Kick is right
+                        else if (accuracy > 1.4f)
+                        {
+                            //THE KICK IS WIDE RIGHT!
+                            countdowntimer.enabled = true;
+                            countdowntimer.text = "Kick is no good :(";
+                            didWin = false;
+                        }
+                    }
 
-            //Kick is too low
-            else {
-                //THE KICK IS NO GOOD!
-                countdowntimer.enabled = true;
-                countdowntimer.text = "Kick is no good :(";
-                didWin = false;
+                    //Kick is too low
+                    else
+                    {
+                        //THE KICK IS NO GOOD!
+                        countdowntimer.enabled = true;
+                        countdowntimer.text = "Kick is no good :(";
+                        didWin = false;
+                    }
+                break;
+
+                case 2:
+                    if (power > -0.2f)
+                    {
+                        //Kick is high and center
+                        if (accuracy > -1f && accuracy < 1f)
+                        {
+                            //THE KICK IS GOOD!
+                            countdowntimer.enabled = true;
+                            countdowntimer.text = "Kick is good :)";
+                            didWin = true;
+                        }
+                        //Kick is left
+                        else if (accuracy < -1f)
+                        {
+                            //THE KICK IS WIDE LEFT!
+                            countdowntimer.enabled = true;
+                            countdowntimer.text = "Kick is no good :(";
+                            didWin = false;
+                        }
+                        //Kick is right
+                        else if (accuracy > 1f)
+                        {
+                            //THE KICK IS WIDE RIGHT!
+                            countdowntimer.enabled = true;
+                            countdowntimer.text = "Kick is no good :(";
+                            didWin = false;
+                        }
+                    }
+
+                    //Kick is too low
+                    else
+                    {
+                        //THE KICK IS NO GOOD!
+                        countdowntimer.enabled = true;
+                        countdowntimer.text = "Kick is no good :(";
+                        didWin = false;
+                    }
+                break;
+                case 3:
+                    if (power > 1.2f)
+                    {
+                        //Kick is high and center
+                        if (accuracy > -0.5f && accuracy < 0.5f)
+                        {
+                            //THE KICK IS GOOD!
+                            countdowntimer.enabled = true;
+                            countdowntimer.text = "Kick is good :)";
+                            didWin = true;
+                        }
+                        //Kick is left
+                        else if (accuracy < -0.5f)
+                        {
+                            //THE KICK IS WIDE LEFT!
+                            countdowntimer.enabled = true;
+                            countdowntimer.text = "Kick is no good :(";
+                            didWin = false;
+                        }
+                        //Kick is right
+                        else if (accuracy > 0.5f)
+                        {
+                            //THE KICK IS WIDE RIGHT!
+                            countdowntimer.enabled = true;
+                            countdowntimer.text = "Kick is no good :(";
+                            didWin = false;
+                        }
+                    }
+
+                    //Kick is too low
+                    else
+                    {
+                        //THE KICK IS NO GOOD!
+                        countdowntimer.enabled = true;
+                        countdowntimer.text = "Kick is no good :(";
+                        didWin = false;
+                    }
+                    break;
             }
+            
             restartbutton.SetActive(true);
             continuebutton.SetActive(true);
         }
