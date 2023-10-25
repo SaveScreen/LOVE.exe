@@ -6,6 +6,7 @@ public class DragScript : MonoBehaviour
 {
 
     Vector2 difference = Vector2.zero;
+
     // Start is called before the first frame update
     private void OnMouseDown()
     {
@@ -14,5 +15,24 @@ public class DragScript : MonoBehaviour
     private void OnMouseDrag()
     {
         transform.position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) - difference;
+    }
+
+    private void Update()
+    {
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "killbox")
+        {
+            Debug.Log("Hit Player");
+        }
+        if (other.tag == "wall")
+        {
+            Debug.Log("cannot move farther");
+
+        }
+
     }
 }
