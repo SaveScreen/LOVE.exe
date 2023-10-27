@@ -13,6 +13,10 @@ public class AptSceneMenu : MonoBehaviour
     {
         SceneManager.LoadScene("StoreScene");
     }
+    public void GoToCloset()
+    {
+        SceneManager.LoadScene("ClosetScene");
+    }
 
     public void Quit() {
         Application.Quit();
