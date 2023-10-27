@@ -21,9 +21,6 @@ public class DragScript1 : MonoBehaviour
 
     public Transform killboxPrefab;
 
-    public GameObject go;
-    public Transform Head;
-    private float behindDistance = 1;
 
     // Start is called before the first frame update
     private void Start()
@@ -55,6 +52,7 @@ public class DragScript1 : MonoBehaviour
         }
     }
 
+    //this is supposed to track the positions of each segment in reverse order, spawning at the end of the sequence
     private void FixedUpdate()
     {
         for (int i= _segments.Count - 1; i > 0; i--)
@@ -64,11 +62,11 @@ public class DragScript1 : MonoBehaviour
         
     }
 
-    
+    //adds a segment
     private void Grow()
     {
         Transform segment = Instantiate(this.killboxPrefab);
-        segment.position = Head.position - (Head.forward * behindDistance);  //_segments[_segments.Count - 1].position;
+        segment.position = _segments[_segments.Count - 1].position;
         
         _segments.Add(segment);
     }
@@ -81,7 +79,7 @@ public class DragScript1 : MonoBehaviour
             gameObject.SetActive(false);
             Canvas.SetActive(true);
         }
-
+        //snakefood == green box
         if (other.tag == "SnakeFood")
         {
             Grow();
