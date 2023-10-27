@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class DinoController : MonoBehaviour
 {
-    private dinoController dino;
+    /*
+    private DinoController dino;
     private Vector3 movement;
 
     public float gravity = 9.81f;
@@ -24,5 +25,5 @@ public class DinoController : MonoBehaviour
     {
 
     }
-
+    */
 }
