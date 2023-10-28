@@ -8,6 +8,7 @@ using UnityEngine.InputSystem;
 public class VisNovelDialogueController : MonoBehaviour
 {
     public TextMeshProUGUI textbox;
+    public TextMeshProUGUI jptextbox;
     private string[] currentlines;
     public string[] cowboyangrylines;
     public string[] cowboyneutrallines;
@@ -24,6 +25,22 @@ public class VisNovelDialogueController : MonoBehaviour
     public string[] gothwinlines;
     public string[] fancyloselines;
     public string[] fancywinlines;
+    public string[] jpcowboyangrylines;
+    public string[] jpcowboyneutrallines;
+    public string[] jpcowboyhappylines;
+    public string[] jpgothangrylines;
+    public string[] jpgothneutrallines;
+    public string[] jpgothhappylines;
+    public string[] jpfancyangrylines;
+    public string[] jpfancyneutrallines;
+    public string[] jpfancyhappylines;
+    public string[] jpcowboyloselines;
+    public string[] jpcowboywinlines;
+    public string[] jpgothloselines;
+    public string[] jpgothwinlines;
+    public string[] jpfancyloselines;
+    public string[] jpfancywinlines;
+    public bool isEnglish;
     private int index;
     public InputActionAsset inputs;
     private InputAction click;
@@ -49,6 +66,7 @@ public class VisNovelDialogueController : MonoBehaviour
         index = 0;
         cutscene = true;
         textbox.text = "";
+        jptextbox.text = "";
         dialoguestarted = false;
         dialoguefinished = false;
         gamecount = playerdata.GetGameCount();
@@ -78,14 +96,32 @@ public class VisNovelDialogueController : MonoBehaviour
                         case 1:
                             switch (visNovelScript.datemoodref) {
                                 case 1:
-                                    currentlines = cowboyangrylines;
+                                    if (isEnglish) {
+                                        currentlines = cowboyangrylines;
+                                    }
+                                    else {
+                                        currentlines = jpcowboyangrylines;
+                                    }
+                                    
                                 break;
                                 case 2:
-                                    currentlines = cowboyneutrallines;
+                                    if (isEnglish) {
+                                        currentlines = cowboyneutrallines;
+                                    }
+                                    else {
+                                        currentlines = jpcowboyneutrallines;
+                                    }
+                                    
                                 break;
 
                                 case 3:
-                                    currentlines = cowboyhappylines;
+                                    if (isEnglish) {
+                                        currentlines = cowboyhappylines;
+                                    }
+                                    else {
+                                        currentlines = jpcowboyhappylines;
+                                    }
+                                    
                                 break;
                             }
                         break;
@@ -93,14 +129,32 @@ public class VisNovelDialogueController : MonoBehaviour
                         case 2:
                             switch (visNovelScript.datemoodref) {
                                 case 1:
-                                    currentlines = gothangrylines;
+                                    if (isEnglish) {
+                                        currentlines = gothangrylines;
+                                    }
+                                    else {
+                                        currentlines = jpgothangrylines;
+                                    }
+                                    
                                 break;
                                 case 2:
-                                    currentlines = gothneutrallines;
+                                    if (isEnglish) {
+                                        currentlines = gothneutrallines;
+                                    }
+                                    else {
+                                        currentlines = jpgothneutrallines;
+                                    }
+                                    
                                 break;
 
                                 case 3:
-                                    currentlines = gothhappylines;
+                                    if (isEnglish) {
+                                        currentlines = gothhappylines;
+                                    }
+                                    else {
+                                        currentlines = jpgothhappylines;
+                                    }
+                                    
                                 break;
                             }
                         break;
@@ -108,14 +162,32 @@ public class VisNovelDialogueController : MonoBehaviour
                         case 3:
                             switch (visNovelScript.datemoodref) {
                                 case 1:
-                                    currentlines = fancyangrylines;
+                                    if (isEnglish) {
+                                        currentlines = fancyangrylines;
+                                    }
+                                    else {
+                                        currentlines = jpfancyangrylines;
+                                    }
+                                    
                                 break;
                                 case 2:
-                                    currentlines = fancyneutrallines;
+                                    if (isEnglish) {
+                                        currentlines = fancyneutrallines;
+                                    }
+                                    else {
+                                        currentlines = jpfancyneutrallines;
+                                    }
+                                    
                                 break;
 
                                 case 3:
-                                    currentlines = fancyhappylines;
+                                    if (isEnglish) {
+                                        currentlines = fancyhappylines;
+                                    }
+                                    else {
+                                        currentlines = jpfancyhappylines;
+                                    }
+                                    
                                 break;
                             }
                         break;
@@ -226,13 +298,25 @@ public class VisNovelDialogueController : MonoBehaviour
             clicked = click.WasPressedThisFrame();
             if (cutscene) {
                 if (clicked) {
-                    if (textbox.text == currentlines[index]) {
+                    if (isEnglish) {
+                        if (textbox.text == currentlines[index]) {
                         NextPage();
+                        }
+                        else {
+                            StopAllCoroutines();
+                            textbox.text = currentlines[index];
+                        }
                     }
                     else {
-                        StopAllCoroutines();
-                        textbox.text = currentlines[index];
+                        if (jptextbox.text == currentlines[index]) {
+                        NextPage();
+                        }
+                        else {
+                            StopAllCoroutines();
+                            jptextbox.text = currentlines[index];
+                        }
                     }
+                    
                 }
             }
         }
@@ -242,7 +326,13 @@ public class VisNovelDialogueController : MonoBehaviour
     void NextPage() {
         if (index < currentlines.Length - 1) {
             index ++;
-            textbox.text = string.Empty;
+            if (isEnglish) {
+                textbox.text = string.Empty;
+            }
+            else {
+                jptextbox.text = string.Empty;
+            }
+            
             StartCoroutine(TypeOutCharacters());
         }
         else {
@@ -253,7 +343,12 @@ public class VisNovelDialogueController : MonoBehaviour
 
     IEnumerator TypeOutCharacters() {
         foreach (char c in currentlines[index].ToCharArray()) {
-            textbox.text += c;
+            if (isEnglish) {
+                textbox.text += c;
+            }
+            else {
+                jptextbox.text += c;
+            }
             yield return new WaitForSeconds(textspeed);
         }
     }
