@@ -13,14 +13,13 @@ public class DragScript1 : MonoBehaviour
     public GameObject Canvas;
     public float distanceFromCamera;
     Rigidbody r;
-    [SerializeField] private float Speed;
 
     //Snake Stuff
-    
+
     private List<Transform> _segments;
 
     public Transform killboxPrefab;
-
+  
 
     // Start is called before the first frame update
     private void Start()
@@ -36,30 +35,34 @@ public class DragScript1 : MonoBehaviour
     Vector3 lastPos;
     private void Update()
     {
-        Speed = (r.velocity.x * r.velocity.y);
-        if (Input.GetMouseButton (0))
-        {
-            Vector3 pos = Input.mousePosition;
-            pos.z = distanceFromCamera;
-            pos = cam.ScreenToWorldPoint(pos);
-            r.velocity = (pos - DragObj.position) * 10;
-           // lastPos = pos;
-           // DragObj.position = pos;
-        }
-        if (Input.GetMouseButtonUp (0))
-        {
-            r.velocity = Vector3.zero;
-        }
+        
     }
 
     //this is supposed to track the positions of each segment in reverse order, spawning at the end of the sequence
     private void FixedUpdate()
     {
-        for (int i= _segments.Count - 1; i > 0; i--)
+
+        for (int i = _segments.Count - 1; i > 0; i--)
         {
-            _segments[1].position = _segments[i - 1].position;
+            _segments[i].position = _segments[i - 1].position;
         }
-        
+
+        if (Input.GetMouseButton(0))
+        {
+            Vector3 pos = Input.mousePosition;
+            pos.z = distanceFromCamera;
+            pos = cam.ScreenToWorldPoint(pos);
+            r.velocity = (pos - DragObj.position) * 10;
+            // lastPos = pos;
+            // DragObj.position = pos;
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            r.velocity = Vector3.zero;
+        }
+        //Looks in direction u r moving
+        Quaternion rotation = Quaternion.LookRotation(r.velocity, Vector3.up);
+        transform.rotation = rotation;
     }
 
     //adds a segment
@@ -73,16 +76,19 @@ public class DragScript1 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        /*
         if (other.gameObject.CompareTag("killbox"))
         {
             Debug.Log("Hit Player");
             gameObject.SetActive(false);
             Canvas.SetActive(true);
         }
+        */
+
         //snakefood == green box
         if (other.tag == "SnakeFood")
         {
-            Grow();
+            Invoke("Grow", .1f);
         }
     }
 }

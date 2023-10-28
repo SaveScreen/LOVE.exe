@@ -1228,14 +1228,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181902083}
-  m_LocalRotation: {x: 0.008727774, y: -0, z: -0, w: 0.9999619}
-  m_LocalPosition: {x: -30.441853, y: 3.1734538, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -30, y: 3, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 1, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1181902089
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1279,11 +1279,8 @@ MonoBehaviour:
   DragObj: {fileID: 1181902087}
   Canvas: {fileID: 1914393924}
   distanceFromCamera: 1
-  Speed: 0
   killboxPrefab: {fileID: 336152391975779685, guid: a44772bceae41e54b96cce68e9e5e471,
     type: 3}
-  go: {fileID: 3213517991056240131, guid: a44772bceae41e54b96cce68e9e5e471, type: 3}
-  Head: {fileID: 1181902087}
 --- !u!1 &1604097658
 GameObject:
   m_ObjectHideFlags: 0
