@@ -89,6 +89,17 @@
                 },
                 {
                     "name": "",
+                    "id": "bb2a2c32-1dec-46d6-b202-ed948dc815b6",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MouseButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "a1a344bc-0485-4648-9bcd-e5a5703dd800",
                     "path": "<Touchscreen>/primaryTouch/tap",
                     "interactions": "",

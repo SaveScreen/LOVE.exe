@@ -121,13 +121,14 @@ MonoBehaviour:
       m_Flags: 0
     - m_Name: 
       m_Id: c7838174-979d-40fe-837d-9d1f5f8c08e2
-      m_Path: <Touchscreen>/primaryTouch/tap
+      m_Path: <Gamepad>/buttonSouth
       m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Click
       m_Flags: 0
     m_Flags: 0
+  gameover: 0
 --- !u!58 &2777049837327204661
 CircleCollider2D:
   m_ObjectHideFlags: 0
