@@ -1769,7 +1769,7 @@ MonoBehaviour:
   playerdatacontainer: {fileID: 40352700}
   wintext: {fileID: 1830696939}
   ethanDelay: 0.1
-  ethanDelayDelta: 0.05
+  ethanDelayDelta: 0.08
   cloneObj: {fileID: 3213517991056240131, guid: a44772bceae41e54b96cce68e9e5e471,
     type: 3}
   littleGuys: []
