@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class SnakeScript : MonoBehaviour
 {
@@ -14,10 +15,12 @@ public class SnakeScript : MonoBehaviour
     public float distanceFromCamera;
     Rigidbody r;
 
+    //Score
+    public TextMeshProUGUI scoretext;
+    public float score;
+
     //Snake Stuff
-
     private List<Transform> _segments;
-
     public Transform killboxPrefab;
 
     //Caden Help Stuff
@@ -62,6 +65,13 @@ public class SnakeScript : MonoBehaviour
     {
         tmpPosition = gameObject.transform.position;
         SetOldPosition();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
+        scoretext.text = "Score: " + score;
     }
 
     Vector3 lastPos;
@@ -76,6 +86,8 @@ public class SnakeScript : MonoBehaviour
 
         _segments = new List<Transform>();
         _segments.Add(this.transform);
+
+        scoretext.text = "Score: ";
     }
     //this is supposed to track the positions of each segment in reverse order, spawning at the end of the sequence
     private void FixedUpdate()
@@ -130,6 +142,7 @@ public class SnakeScript : MonoBehaviour
             Debug.Log("Hit Player");
             gameObject.SetActive(false);
             Canvas.SetActive(true);
+            scoretext.text = "Score: " + score;
         }
         
 
@@ -137,6 +150,12 @@ public class SnakeScript : MonoBehaviour
         if (other.tag == "SnakeFood")
         {
             Invoke("Grow", .1f);
+            AddScore();
         }
+
+    }
+    public void AddScore()
+    {
+        score += 1;
     }
 }
