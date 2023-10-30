@@ -105,13 +105,13 @@ public class FootballMinigameScript : MonoBehaviour
             {
                 switch (gamesPlayed)
                 {
-                    case 1:
+                    case 0:
                         powermeterspeed = 4;
                     break;
-                    case 2:
+                    case 1:
                         powermeterspeed = 8;
                     break;
-                    case 3:
+                    case 2:
                         powermeterspeed = 16;
                     break;
                 }

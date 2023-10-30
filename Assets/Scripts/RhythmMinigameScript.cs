@@ -10,6 +10,8 @@ public class RhythmMinigameScript : MonoBehaviour
     public GameObject prefab;
     public TextMeshProUGUI scoretext;
     public TextMeshProUGUI speedtext;
+    public TextMeshProUGUI wintext;
+
     public GameObject playerdatacontainer;
     private PlayerData playerdata;
     //public int amount;
@@ -35,10 +37,24 @@ public class RhythmMinigameScript : MonoBehaviour
         scoretext.text = "Score: ";
         speedtext.text = "Circle/s: " + respawntime;
 
+        gamecount = playerdata.GetGameCount();
+
+        switch (gamecount)
+        {
+            case 0:
+                wintext.text = "Score at least 10 to pass!";
+                break;
+            case 1:
+                wintext.text = "Score at least 30 to pass!";
+                break;
+            case 2:
+                wintext.text = "Score at least 50 to pass!";
+                break;
+        }
+
         gameoverscreen.SetActive(false);
         restart = false;
         starttimer = timer;
-        gamecount = playerdata.GetGameCount();
     }
 
     // Update is called once per frame
@@ -82,8 +98,16 @@ public class RhythmMinigameScript : MonoBehaviour
         gameoverscreen.SetActive(true);
 
         switch (gamecount) {
+            case 0:
+                if (score >= 10) {
+                    didWin = true;
+                }
+                else {
+                    didWin = false;
+                }
+            break;
             case 1:
-                if (score > 10) {
+                if (score >= 30) {
                     didWin = true;
                 }
                 else {
@@ -91,15 +115,7 @@ public class RhythmMinigameScript : MonoBehaviour
                 }
             break;
             case 2:
-                if (score > 30) {
-                    didWin = true;
-                }
-                else {
-                    didWin = false;
-                }
-            break;
-            case 3:
-                if (score > 50) {
+                if (score >= 50) {
                     didWin = true;
                 }
                 else {

@@ -24,8 +24,12 @@ public class SnakeScript : MonoBehaviour
     public Transform killboxPrefab;
 
     //Caden Help Stuff
-    
-    
+    private bool didWin;
+    private int gamecount;
+    public GameObject playerdatacontainer;
+    private PlayerData playerdata;
+    public TextMeshProUGUI wintext;
+
 
     // ethanDelay = time between first little guy spawn
     [SerializeField] private float ethanDelay = 0.1f;
@@ -78,6 +82,8 @@ public class SnakeScript : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        playerdata = playerdatacontainer.GetComponent<PlayerData>();
+
         oldPosition = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
 
         distanceFromCamera = Vector3.Distance(DragObj.position, cam.transform.position);
@@ -88,6 +94,22 @@ public class SnakeScript : MonoBehaviour
         _segments.Add(this.transform);
 
         scoretext.text = "Score: ";
+        gamecount = playerdata.GetGameCount();
+
+        switch (gamecount)
+        {
+            case 0:
+                wintext.text = "Score at least 10 to pass!";
+                break;
+            case 1:
+                wintext.text = "Score at least 20 to pass!";
+                break;
+            case 2:
+                wintext.text = "Score at least 30 to pass!";
+                break;
+        }
+
+
     }
     //this is supposed to track the positions of each segment in reverse order, spawning at the end of the sequence
     private void FixedUpdate()
@@ -143,13 +165,61 @@ public class SnakeScript : MonoBehaviour
             gameObject.SetActive(false);
             Canvas.SetActive(true);
             scoretext.text = "Score: " + score;
+
+            switch (gamecount)
+            {
+                case 0:
+                    if (score >= 10)
+                    {
+                        didWin = true;
+                    }
+                    else
+                    {
+                        didWin = false;
+                    }
+                    break;
+                case 1:
+                    if (score >= 20)
+                    {
+                        didWin = true;
+                    }
+                    else
+                    {
+                        didWin = false;
+                    }
+                    break;
+                case 2:
+                    if (score >= 30)
+                    {
+                        didWin = true;
+                    }
+                    else
+                    {
+                        didWin = false;
+                    }
+                    break;
+            }
+
+            playerdata.UpdatePlayerDateScore(didWin);
+            playerdata.IncreaseGameCount();
+
+            if (didWin)
+            {
+                playerdata.WonGame();
+            }
+            else
+            {
+                playerdata.LostGame();
+            }
+
+
         }
         
 
         //snakefood == green box
         if (other.tag == "SnakeFood")
         {
-            Invoke("Grow", .1f);
+            Invoke("Grow", .4f);
             AddScore();
         }
 

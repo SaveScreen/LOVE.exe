@@ -179,17 +179,21 @@ public class VisNovel : MonoBehaviour
             if (vndc.dialoguefinished) {
                 if (playerdata.GetGameCount() < 3)
                 {
-                    randomNum = rand.Next(2);
+                    randomNum = rand.Next(3);
                     switch (randomNum)
                     {
                         case 0:
-                        SceneManager.LoadScene("FootballMinigame");
+                            SceneManager.LoadScene("FootballMinigame");
                         
-                        break;
+                            break;
                         case 1:
-                        SceneManager.LoadScene("RhythmMinigame");
+                            SceneManager.LoadScene("RhythmMinigame");
                                 
-                        break;
+                            break;
+                        case 2:
+                            SceneManager.LoadScene("SnakeMinigame");
+
+                            break;
                     }
                     
                 }
