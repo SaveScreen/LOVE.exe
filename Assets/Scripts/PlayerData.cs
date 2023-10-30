@@ -160,6 +160,9 @@ public class PlayerData : MonoBehaviour
         playerRating = 0;
         firstLoad = false;
         gameCount = 0;
+        wonGame = false;
+        playedGame = false;
+        playerSelected = false;
     }
 
 }
