@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class StartMenuController : MonoBehaviour
 {
     public Animator LevelChangerComponent;
     private int levelToLoad;
+
+    //Scrolling BG
+    [SerializeField] private RawImage _img;
+    [SerializeField] private float _x, _y;
 
     private void Update()
     {
@@ -14,6 +19,8 @@ public class StartMenuController : MonoBehaviour
         {
             FadeToLevel(1);
         }
+
+        _img.uvRect = new Rect(_img.uvRect.position + new Vector2(_x, _y) * Time.deltaTime, _img.uvRect.size);
     }
 
     public void FadeToNextLevel (int levelIndex)
