@@ -642,6 +642,30 @@ MonoBehaviour:
     sometimes and be who you really are!'
   - "\u201CSitting outside and just playing a measly little sport seems like such
     a waste of time. I could be making money right now\u2026 But I feel so relaxed.\u201D"
+  cowboydate2lines:
+  - "\u201CHello again, partner. See ya couldn't resist me\u201D"
+  - '- Hello, Jimothy shall we embark on another adventure into the Wild Wild Countryside?'
+  - "\u201CI like your spunk pal, y\u2019know. The world ain\u2019t been so kind
+    to folks like me.\u201D"
+  - "\u201CFolks who just want to live a quiet life in the countryside, riding horses
+    into the sunset.\u201D"
+  - "\u201CNow if you could fix that, you\u2019d be the apple of my eye\u201D"
+  - "\u201CIn fact, I think I have the perfect idea for our time together!\u201D"
+  gothdate2lines:
+  - "\u201CNo one has ever really given me the time of day. I guess that\u2019s why
+    I decided to date a robot.\u201D"
+  - "\u201CMost people are just lame, everyone always just follows the latest trends
+    and focuses on what's the newest thing. We\u2019re all becoming clones y'know?\u201D"
+  fancydate2lines:
+  - "\u201CI\u2019m a person with very refined tastes, I\u2019m used to having extravagant
+    parties every night and going to expensive breakfast meetings with important
+    people every morning!"
+  - '"I love it... Of course I love it!"'
+  - "\u201CMaybe it could be.. Beneficial, to me to use this date as a way to pretend
+    I am a simple citizen in CITY NAME. Yes.. this could be.. Avant-garde in a way.\u201D"
+  cowboydate3lines: []
+  gothdate3lines: []
+  fancydate3lines: []
   jpcowboyangrylines: []
   jpcowboyneutrallines: []
   jpcowboyhappylines: []

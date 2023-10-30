@@ -121,6 +121,7 @@ public class CharacterSelect : MonoBehaviour
         playerdata.PlayerDateSelection(dateoption);
         playerdata.PlayerNameSelection(nameoption);
         playerdata.PlayerFirstLoad();
+        playerdata.PlayerSelected();
         SceneManager.LoadScene("VisualNovel");
     }
 

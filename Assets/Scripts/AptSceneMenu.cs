@@ -5,8 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class AptSceneMenu : MonoBehaviour
 {
+    public GameObject player;
+
     public void GoToMenu() {
-        SceneManager.LoadScene("MenuScreen");
+        PlayerData playerdata = player.GetComponent<PlayerData>();
+        bool playerSelected = playerdata.GetPlayerSelected();
+        //If player is selected already, go straight to the next date.
+        if (playerSelected) {
+            playerdata.ResetPlayedGame();
+            SceneManager.LoadScene("VisualNovel");
+        }
+        else {
+            SceneManager.LoadScene("MenuScreen");
+        }
+        
     }
 
     public void GoToStore()
