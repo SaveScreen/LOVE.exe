@@ -103,31 +103,7 @@ MonoBehaviour:
   speed: 0.5
   clicked: 0
   snare: {fileID: 8300000, guid: 4f5a8b89d0232fd4b8461af28b0a07f5, type: 3}
-  click:
-    m_Name: Click
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: b5dee8b4-0bdb-4f22-b229-0a31449d3473
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 2416ac6a-bfc3-41f4-bfea-0e3f545fa454
-      m_Path: <Mouse>/leftButton
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Click
-      m_Flags: 0
-    - m_Name: 
-      m_Id: c7838174-979d-40fe-837d-9d1f5f8c08e2
-      m_Path: <Gamepad>/buttonSouth
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Click
-      m_Flags: 0
-    m_Flags: 0
+  inputs: {fileID: -944628639613478452, guid: b6210dda01cea9c4188498e4a0a55bd9, type: 3}
   gameover: 0
 --- !u!58 &2777049837327204661
 CircleCollider2D:

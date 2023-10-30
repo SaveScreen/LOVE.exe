@@ -15,7 +15,8 @@ public class CircleScript : MonoBehaviour
     private RhythmMinigameScript rms;
     public bool clicked;
     public AudioClip snare;
-    public InputAction click;
+    public InputActionAsset inputs;
+    private InputAction click;
     private Camera maincamera;
     public bool gameover;
     
@@ -30,18 +31,21 @@ public class CircleScript : MonoBehaviour
         
         c = 1;
         gameover = false;
+        click = inputs.FindAction("Player/MouseButton");
     }
     
     void OnEnable() {
-        click.Enable();
+        inputs.Enable();
     }
     void OnDisable() {
-        click.Disable();
+        inputs.Disable();
     }
 
     // Update is called once per frame
     void Update()
     {
+        clicked = click.WasPressedThisFrame();
+
         if (!gameover) {
             if (c > 0f) {
             c = Mathf.Lerp(1,0,rate);
@@ -55,7 +59,7 @@ public class CircleScript : MonoBehaviour
                 rms.GameOver();
             }
 
-            if (click.WasPressedThisFrame()) {
+            if (clicked) {
                 var rayHit = Physics2D.GetRayIntersection(maincamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
                 if (!rayHit.collider) return;
                 if (rayHit.collider.gameObject == gameObject) {
