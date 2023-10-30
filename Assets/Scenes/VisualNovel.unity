@@ -663,9 +663,22 @@ MonoBehaviour:
   - '"I love it... Of course I love it!"'
   - "\u201CMaybe it could be.. Beneficial, to me to use this date as a way to pretend
     I am a simple citizen in CITY NAME. Yes.. this could be.. Avant-garde in a way.\u201D"
-  cowboydate3lines: []
-  gothdate3lines: []
-  fancydate3lines: []
+  cowboydate3lines:
+  - "\u201CWell, well partner, what are ya thinking we do today?\u201D "
+  - '- Oh! Well, my systems are indicating a fun new activity in the area that we
+    can try together! I believe it will help you get accustomed to THE FUTURE!'
+  - "\u201CWell, be my guest\u2026\u201D"
+  gothdate3lines:
+  - "\u201CBoth of us are just considered weirdos.  I\u2019ve never liked trying,
+    especially when it comes to people. They were all always so judgemental, I\u2019ve
+    always felt alone.\""
+  - "\"I trust you though, if you say people are cool, maybe they might just be.\u201D "
+  fancydate3lines:
+  - '- Hello, Frills! I am excited to bring you along for another date! My systems
+    tell me you have listed NONE for personal hobbies!'
+  - "\"You don\u2019t really need hobbies when you\u2019re making millions sweetheart.
+    I just need you to bring me on a fun and normal date. Whatever you bring your
+    other boring, poor clients to.\""
   jpcowboyangrylines: []
   jpcowboyneutrallines: []
   jpcowboyhappylines: []
