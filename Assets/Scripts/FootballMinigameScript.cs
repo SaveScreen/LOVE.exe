@@ -112,7 +112,7 @@ public class FootballMinigameScript : MonoBehaviour
                         powermeterspeed = 8;
                     break;
                     case 2:
-                        powermeterspeed = 16;
+                        powermeterspeed = 10;
                     break;
                 }
                 powermeter.SetActive(true);
@@ -248,7 +248,7 @@ public class FootballMinigameScript : MonoBehaviour
         else {
             switch (gamesPlayed)
             {
-                case 1:
+                case 0:
                     if (power > -0.5f)
                     {
                         //Kick is high and center
@@ -287,7 +287,7 @@ public class FootballMinigameScript : MonoBehaviour
                     }
                 break;
 
-                case 2:
+                case 1:
                     if (power > -0.2f)
                     {
                         //Kick is high and center
@@ -325,7 +325,7 @@ public class FootballMinigameScript : MonoBehaviour
                         didWin = false;
                     }
                 break;
-                case 3:
+                case 2:
                     if (power > 1.2f)
                     {
                         //Kick is high and center
