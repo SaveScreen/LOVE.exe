@@ -12,6 +12,8 @@ public class PlayerData : MonoBehaviour
     public static bool firstLoad = false;
     public static int gameCount = 0;
     public static bool wonGame = false;
+    public static bool playedGame = false;
+    public static bool playerSelected = false;
 
     public void PlayerBotSelection(int selection) {
         playerbot = selection;
@@ -29,6 +31,9 @@ public class PlayerData : MonoBehaviour
     {
         firstLoad = true;
     }
+    public void PlayerSelected() {
+        playerSelected = true;
+    }
     public void IncreaseGameCount()
     {
         gameCount++;
@@ -37,12 +42,17 @@ public class PlayerData : MonoBehaviour
     {
         gameCount = 0;
     }
+    public void ResetPlayedGame() {
+        playedGame = false;
+    }
 
     public void WonGame() {
         wonGame = true;
+        playedGame = true;
     }
     public void LostGame() {
         wonGame = false;
+        playedGame = true;
     }
     public int GetPlayerBot()
     {
@@ -67,9 +77,15 @@ public class PlayerData : MonoBehaviour
     public bool GetWin() {
         return wonGame;
     }
+    public bool GetPlayedGame() {
+        return playedGame;
+    }
     public float GetPlayerRating()
     {
         return playerRating;
+    }
+    public bool GetPlayerSelected() {
+        return playerSelected;
     }
 
     public float PlayerLikeRating(int dateNum)

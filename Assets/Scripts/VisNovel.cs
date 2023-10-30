@@ -40,6 +40,7 @@ public class VisNovel : MonoBehaviour
 
     private System.Random rand = new System.Random();
     private int randomNum;
+    private bool playedGame;
 
     void Start()
     {
@@ -52,6 +53,7 @@ public class VisNovel : MonoBehaviour
         dateref = 0;
         datemoodref = 0;
         DatePref();
+        playedGame = playerdata.GetPlayedGame();
       
 
     }
@@ -177,30 +179,34 @@ public class VisNovel : MonoBehaviour
         if (clicked)
         {
             if (vndc.dialoguefinished) {
-                if (playerdata.GetGameCount() < 3)
-                {
-                    randomNum = rand.Next(3);
-                    switch (randomNum)
-                    {
-                        case 0:
-                            SceneManager.LoadScene("FootballMinigame");
-                        
-                            break;
-                        case 1:
-                            SceneManager.LoadScene("RhythmMinigame");
-                                
-                            break;
-                        case 2:
-                            SceneManager.LoadScene("SnakeMinigame");
-
-                            break;
-                    }
-                    
+                if (playedGame) {
+                    SceneManager.LoadScene("AptScene");
                 }
-                else
-                {
-                    playerdata.ResetGameCount();
-                    SceneManager.LoadScene("ResultScreen");
+                else {
+                    if (playerdata.GetGameCount() < 3)
+                    {
+                        randomNum = rand.Next(2);
+                        switch (randomNum)
+                        {
+                            case 0:
+                            SceneManager.LoadScene("FootballMinigame");
+                            
+                            break;
+                            case 1:
+                            SceneManager.LoadScene("RhythmMinigame");
+                                    
+                            break;
+                            case 2:
+                            SceneManager.LoadScene("SnakeMinigame");
+                            break;
+                        }
+                        
+                    }
+                    else
+                    {
+                        playerdata.ResetGameCount();
+                        SceneManager.LoadScene("ResultScreen");
+                    }
                 }
             }
         }

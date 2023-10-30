@@ -25,6 +25,12 @@ public class VisNovelDialogueController : MonoBehaviour
     public string[] gothwinlines;
     public string[] fancyloselines;
     public string[] fancywinlines;
+    public string[] cowboydate2lines;
+    public string[] gothdate2lines;
+    public string[] fancydate2lines;
+    public string[] cowboydate3lines;
+    public string[] gothdate3lines;
+    public string[] fancydate3lines;
     public string[] jpcowboyangrylines;
     public string[] jpcowboyneutrallines;
     public string[] jpcowboyhappylines;
@@ -55,6 +61,7 @@ public class VisNovelDialogueController : MonoBehaviour
     private PlayerData playerdata;
     private int gamecount;
     private bool wonlastgame;
+    private bool playedGame;
 
     // Start is called before the first frame update
     void Start()
@@ -71,6 +78,7 @@ public class VisNovelDialogueController : MonoBehaviour
         dialoguefinished = false;
         gamecount = playerdata.GetGameCount();
         wonlastgame = playerdata.GetWin();
+        playedGame = playerdata.GetPlayedGame();
         //currentlines = cowboyangrylines;
         
     }
@@ -195,99 +203,139 @@ public class VisNovelDialogueController : MonoBehaviour
                 break;
                 //After playing 1 game
                 case 1:
-                    switch (visNovelScript.dateref) {
-                        //Cowboy
-                        case 1:
-                            if (wonlastgame) {
-                                currentlines = cowboywinlines;
+                        if (playedGame) {
+                            switch (visNovelScript.dateref) {
+                                //Cowboy
+                                case 1:
+                                    if (wonlastgame) {
+                                        currentlines = cowboywinlines;
+                                    }
+                                    else {
+                                        currentlines = cowboyloselines;
+                                    }
+                                break;
+                                //Goth
+                                case 2:
+                                    if (wonlastgame) {
+                                        currentlines = gothwinlines;
+                                    }
+                                    else {
+                                        currentlines = gothloselines;
+                                    }
+                                break;
+                                //Fancy
+                                case 3:
+                                    if (wonlastgame) {
+                                        currentlines = fancywinlines;
+                                    }
+                                    else {
+                                        currentlines = fancyloselines;
+                                    }
+                                break;
                             }
-                            else {
-                                currentlines = cowboyloselines;
+                        }
+                        //Next Date
+                        else {
+                            switch (visNovelScript.dateref) {
+                                //Cowboy
+                                case 1:
+                                    currentlines = cowboydate2lines;
+                                break;
+                                //Goth
+                                case 2:
+                                    currentlines = gothdate2lines;
+                                break;
+                                //Fancy
+                                case 3:
+                                    currentlines = fancydate2lines;
+                                break;
                             }
-                        break;
-                        //Goth
-                        case 2:
-                            if (wonlastgame) {
-                                currentlines = gothwinlines;
-                            }
-                            else {
-                                currentlines = gothloselines;
-                            }
-                        break;
-                        //Fancy
-                        case 3:
-                            if (wonlastgame) {
-                                currentlines = fancywinlines;
-                            }
-                            else {
-                                currentlines = fancyloselines;
-                            }
-                        break;
-                    }
+                        }
                 break;
                 //After playing 2 games
                 case 2:
-                    switch (visNovelScript.dateref) {
-                        //Cowboy
-                        case 1:
-                            if (wonlastgame) {
-                                currentlines = cowboywinlines;
+                    if (playedGame) {
+                            switch (visNovelScript.dateref) {
+                                //Cowboy
+                                case 1:
+                                    if (wonlastgame) {
+                                        currentlines = cowboywinlines;
+                                    }
+                                    else {
+                                        currentlines = cowboyloselines;
+                                    }
+                                break;
+                                //Goth
+                                case 2:
+                                    if (wonlastgame) {
+                                        currentlines = gothwinlines;
+                                    }
+                                    else {
+                                        currentlines = gothloselines;
+                                    }
+                                break;
+                                //Fancy
+                                case 3:
+                                    if (wonlastgame) {
+                                        currentlines = fancywinlines;
+                                    }
+                                    else {
+                                        currentlines = fancyloselines;
+                                    }
+                                break;
                             }
-                            else {
-                                currentlines = cowboyloselines;
+                        }
+                        //Next Date
+                        else {
+                            switch (visNovelScript.dateref) {
+                                //Cowboy
+                                case 1:
+                                    currentlines = cowboydate3lines;
+                                break;
+                                //Goth
+                                case 2:
+                                    currentlines = gothdate3lines;
+                                break;
+                                //Fancy
+                                case 3:
+                                    currentlines = fancydate3lines;
+                                break;
                             }
-                        break;
-                        //Goth
-                        case 2:
-                            if (wonlastgame) {
-                                currentlines = gothwinlines;
-                            }
-                            else {
-                                currentlines = gothloselines;
-                            }
-                        break;
-                        //Fancy
-                        case 3:
-                            if (wonlastgame) {
-                                currentlines = fancywinlines;
-                            }
-                            else {
-                                currentlines = fancyloselines;
-                            }
-                        break;
-                    }
+                        }
                 break;
                 //After playing 3 games
                 case 3:
-                    switch (visNovelScript.dateref) {
-                        //Cowboy
-                        case 1:
-                            if (wonlastgame) {
-                                currentlines = cowboywinlines;
+                    if (playedGame) {
+                            switch (visNovelScript.dateref) {
+                                //Cowboy
+                                case 1:
+                                    if (wonlastgame) {
+                                        currentlines = cowboywinlines;
+                                    }
+                                    else {
+                                        currentlines = cowboyloselines;
+                                    }
+                                break;
+                                //Goth
+                                case 2:
+                                    if (wonlastgame) {
+                                        currentlines = gothwinlines;
+                                    }
+                                    else {
+                                        currentlines = gothloselines;
+                                    }
+                                break;
+                                //Fancy
+                                case 3:
+                                    if (wonlastgame) {
+                                        currentlines = fancywinlines;
+                                    }
+                                    else {
+                                        currentlines = fancyloselines;
+                                    }
+                                break;
                             }
-                            else {
-                                currentlines = cowboyloselines;
-                            }
-                        break;
-                        //Goth
-                        case 2:
-                            if (wonlastgame) {
-                                currentlines = gothwinlines;
-                            }
-                            else {
-                                currentlines = gothloselines;
-                            }
-                        break;
-                        //Fancy
-                        case 3:
-                            if (wonlastgame) {
-                                currentlines = fancywinlines;
-                            }
-                            else {
-                                currentlines = fancyloselines;
-                            }
-                        break;
-                    }
+                        }
                 break;
                 
             }
