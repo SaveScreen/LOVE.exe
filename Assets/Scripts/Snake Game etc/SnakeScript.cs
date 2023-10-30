@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class SnakeScript : MonoBehaviour
 {
@@ -200,19 +201,6 @@ public class SnakeScript : MonoBehaviour
                     break;
             }
 
-            playerdata.UpdatePlayerDateScore(didWin);
-            playerdata.IncreaseGameCount();
-
-            if (didWin)
-            {
-                playerdata.WonGame();
-            }
-            else
-            {
-                playerdata.LostGame();
-            }
-
-
         }
         
 
@@ -227,5 +215,27 @@ public class SnakeScript : MonoBehaviour
     public void AddScore()
     {
         score += 1;
+    }
+
+    public void GoToDate()
+    {
+        playerdata.UpdatePlayerDateScore(didWin);
+        playerdata.IncreaseGameCount();
+
+        if (didWin)
+        {
+            playerdata.WonGame();
+        }
+        else
+        {
+            playerdata.LostGame();
+        }
+        
+        SceneManager.LoadScene("VisualNovel");
+
+    }
+    public void Restart()
+    {
+        SceneManager.LoadScene("SnakeMinigame");
     }
 }

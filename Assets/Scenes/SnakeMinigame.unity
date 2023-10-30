@@ -1562,8 +1562,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1301544347}
-        m_TargetAssemblyTypeName: SnakeGameController, Assembly-CSharp
+      - m_Target: {fileID: 1181902090}
+        m_TargetAssemblyTypeName: SnakeScript, Assembly-CSharp
         m_MethodName: GoToDate
         m_Mode: 1
         m_Arguments:
@@ -2401,8 +2401,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1301544347}
-        m_TargetAssemblyTypeName: SnakeGameController, Assembly-CSharp
+      - m_Target: {fileID: 1181902090}
+        m_TargetAssemblyTypeName: SnakeScript, Assembly-CSharp
         m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
