@@ -185,7 +185,7 @@ public class VisNovel : MonoBehaviour
                 else {
                     if (playerdata.GetGameCount() < 3)
                     {
-                        randomNum = rand.Next(2);
+                        randomNum = rand.Next(3);
                         switch (randomNum)
                         {
                             case 0:
