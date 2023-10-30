@@ -326,7 +326,7 @@ public class FootballMinigameScript : MonoBehaviour
                     }
                 break;
                 case 3:
-                    if (power > 1.2f)
+                    if (power > 0.5f)
                     {
                         //Kick is high and center
                         if (accuracy > -0.5f && accuracy < 0.5f)

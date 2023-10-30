@@ -179,7 +179,7 @@ public class VisNovel : MonoBehaviour
         if (clicked)
         {
             if (vndc.dialoguefinished) {
-                if (playedGame) {
+                if (playedGame && playerdata.GetGameCount() < 3) {
                     SceneManager.LoadScene("AptScene");
                 }
                 else {
