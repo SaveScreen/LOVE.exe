@@ -34,10 +34,15 @@ public class ResultScript : MonoBehaviour
     public GameObject playerdatacontainer;
     public PlayerData playerdata;
 
+    public GameObject moneyContainer;
+    public MONEYScript moneyData;
+
     // Start is called before the first frame update
     void Start()
     {
+        moneyData = moneyContainer.GetComponent<MONEYScript>();
         DisplayResult();
+
     }
 
     // Update is called once per frame
@@ -121,21 +126,25 @@ public class ResultScript : MonoBehaviour
         if (rate < 1)
         {
             SuccessType.SetText("FAIL");
+            moneyData.AddMoney(100);
             return 0;
         }
         else if (rate >= 1 && rate < 2)
         {
             SuccessType.SetText("PASS");
+            moneyData.AddMoney(300);
             return 1;
         }
         else if (rate >= 2 && rate < 2.5f)
         {
             SuccessType.SetText("GREAT");
+            moneyData.AddMoney(500);
             return 2;
         }
         else
         {
             SuccessType.SetText("PERFECT");
+            moneyData.AddMoney(1000);
             return 3;
         }
     }
