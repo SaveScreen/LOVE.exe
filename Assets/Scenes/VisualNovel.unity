@@ -661,7 +661,7 @@ MonoBehaviour:
   jpgothwinlines: []
   jpfancyloselines: []
   jpfancywinlines: []
-  isEnglish: 0
+  isEnglish: 1
   inputs: {fileID: -944628639613478452, guid: b6210dda01cea9c4188498e4a0a55bd9, type: 3}
   textspeed: 0.025
   dialoguefinished: 0
@@ -2697,7 +2697,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u65B0\u3057\u3044\u306E\u3066"
+  m_text: "\u65B0\u3057\u3044\u306E\u30C6\u30AF\u30B9\u30C8"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 80aaca5ec52218a438c74a1fa999218e, type: 2}
   m_sharedMaterial: {fileID: -1351218409014149344, guid: 80aaca5ec52218a438c74a1fa999218e,
@@ -2731,7 +2731,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 80
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
