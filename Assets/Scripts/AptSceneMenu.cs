@@ -42,6 +42,10 @@ public class AptSceneMenu : MonoBehaviour
     {
         SceneManager.LoadScene("ClosetScene");
     }
+    public void GoToSettings()
+    {
+        SceneManager.LoadScene("SettingsScene");
+    }
 
     public void Quit() {
         Application.Quit();
