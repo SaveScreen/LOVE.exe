@@ -9,7 +9,11 @@ public class VisNovelDialogueController : MonoBehaviour
 {
     public TextMeshProUGUI textbox;
     public TextMeshProUGUI jptextbox;
+    public CharacterData cowboy;
+    public CharacterData goth;
+    public CharacterData fancy;
     private string[] currentlines;
+    /*
     public string[] cowboyangrylines;
     public string[] cowboyneutrallines;
     public string[] cowboyhappylines;
@@ -31,21 +35,7 @@ public class VisNovelDialogueController : MonoBehaviour
     public string[] cowboydate3lines;
     public string[] gothdate3lines;
     public string[] fancydate3lines;
-    public string[] jpcowboyangrylines;
-    public string[] jpcowboyneutrallines;
-    public string[] jpcowboyhappylines;
-    public string[] jpgothangrylines;
-    public string[] jpgothneutrallines;
-    public string[] jpgothhappylines;
-    public string[] jpfancyangrylines;
-    public string[] jpfancyneutrallines;
-    public string[] jpfancyhappylines;
-    public string[] jpcowboyloselines;
-    public string[] jpcowboywinlines;
-    public string[] jpgothloselines;
-    public string[] jpgothwinlines;
-    public string[] jpfancyloselines;
-    public string[] jpfancywinlines;
+    */
     public bool isEnglish;
     private int index;
     public InputActionAsset inputs;
@@ -105,29 +95,29 @@ public class VisNovelDialogueController : MonoBehaviour
                             switch (visNovelScript.datemoodref) {
                                 case 1:
                                     if (isEnglish) {
-                                        currentlines = cowboyangrylines;
+                                        currentlines = cowboy.angrylines;
                                     }
                                     else {
-                                        currentlines = jpcowboyangrylines;
+                                        //currentlines = jpcowboyangrylines;
                                     }
                                     
                                 break;
                                 case 2:
                                     if (isEnglish) {
-                                        currentlines = cowboyneutrallines;
+                                        currentlines = cowboy.neutrallines;
                                     }
                                     else {
-                                        currentlines = jpcowboyneutrallines;
+                                        //currentlines = jpcowboyneutrallines;
                                     }
                                     
                                 break;
 
                                 case 3:
                                     if (isEnglish) {
-                                        currentlines = cowboyhappylines;
+                                        currentlines = cowboy.happylines;
                                     }
                                     else {
-                                        currentlines = jpcowboyhappylines;
+                                        //currentlines = jpcowboyhappylines;
                                     }
                                     
                                 break;
@@ -138,29 +128,29 @@ public class VisNovelDialogueController : MonoBehaviour
                             switch (visNovelScript.datemoodref) {
                                 case 1:
                                     if (isEnglish) {
-                                        currentlines = gothangrylines;
+                                        currentlines = goth.angrylines;
                                     }
                                     else {
-                                        currentlines = jpgothangrylines;
+                                        //currentlines = jpgothangrylines;
                                     }
                                     
                                 break;
                                 case 2:
                                     if (isEnglish) {
-                                        currentlines = gothneutrallines;
+                                        currentlines = goth.neutrallines;
                                     }
                                     else {
-                                        currentlines = jpgothneutrallines;
+                                        //currentlines = jpgothneutrallines;
                                     }
                                     
                                 break;
 
                                 case 3:
                                     if (isEnglish) {
-                                        currentlines = gothhappylines;
+                                        currentlines = goth.happylines;
                                     }
                                     else {
-                                        currentlines = jpgothhappylines;
+                                        //currentlines = jpgothhappylines;
                                     }
                                     
                                 break;
@@ -171,29 +161,29 @@ public class VisNovelDialogueController : MonoBehaviour
                             switch (visNovelScript.datemoodref) {
                                 case 1:
                                     if (isEnglish) {
-                                        currentlines = fancyangrylines;
+                                        currentlines = fancy.angrylines;
                                     }
                                     else {
-                                        currentlines = jpfancyangrylines;
+                                        //currentlines = jpfancyangrylines;
                                     }
                                     
                                 break;
                                 case 2:
                                     if (isEnglish) {
-                                        currentlines = fancyneutrallines;
+                                        currentlines = fancy.neutrallines;
                                     }
                                     else {
-                                        currentlines = jpfancyneutrallines;
+                                        //currentlines = jpfancyneutrallines;
                                     }
                                     
                                 break;
 
                                 case 3:
                                     if (isEnglish) {
-                                        currentlines = fancyhappylines;
+                                        currentlines = fancy.happylines;
                                     }
                                     else {
-                                        currentlines = jpfancyhappylines;
+                                        //currentlines = jpfancyhappylines;
                                     }
                                     
                                 break;
@@ -208,28 +198,28 @@ public class VisNovelDialogueController : MonoBehaviour
                                 //Cowboy
                                 case 1:
                                     if (wonlastgame) {
-                                        currentlines = cowboywinlines;
+                                        currentlines = cowboy.wongamelines;
                                     }
                                     else {
-                                        currentlines = cowboyloselines;
+                                        currentlines = cowboy.lostgamelines;
                                     }
                                 break;
                                 //Goth
                                 case 2:
                                     if (wonlastgame) {
-                                        currentlines = gothwinlines;
+                                        currentlines = goth.wongamelines;
                                     }
                                     else {
-                                        currentlines = gothloselines;
+                                        currentlines = goth.lostgamelines;
                                     }
                                 break;
                                 //Fancy
                                 case 3:
                                     if (wonlastgame) {
-                                        currentlines = fancywinlines;
+                                        currentlines = fancy.wongamelines;
                                     }
                                     else {
-                                        currentlines = fancyloselines;
+                                        currentlines = fancy.lostgamelines;
                                     }
                                 break;
                             }
@@ -239,15 +229,15 @@ public class VisNovelDialogueController : MonoBehaviour
                             switch (visNovelScript.dateref) {
                                 //Cowboy
                                 case 1:
-                                    currentlines = cowboydate2lines;
+                                    currentlines = cowboy.date2pregamelines;
                                 break;
                                 //Goth
                                 case 2:
-                                    currentlines = gothdate2lines;
+                                    currentlines = goth.date2pregamelines;
                                 break;
                                 //Fancy
                                 case 3:
-                                    currentlines = fancydate2lines;
+                                    currentlines = fancy.date2pregamelines;
                                 break;
                             }
                         }
@@ -259,28 +249,28 @@ public class VisNovelDialogueController : MonoBehaviour
                                 //Cowboy
                                 case 1:
                                     if (wonlastgame) {
-                                        currentlines = cowboywinlines;
+                                        currentlines = cowboy.wongamelines;
                                     }
                                     else {
-                                        currentlines = cowboyloselines;
+                                        currentlines = cowboy.lostgamelines;
                                     }
                                 break;
                                 //Goth
                                 case 2:
                                     if (wonlastgame) {
-                                        currentlines = gothwinlines;
+                                        currentlines = goth.wongamelines;
                                     }
                                     else {
-                                        currentlines = gothloselines;
+                                        currentlines = goth.lostgamelines;
                                     }
                                 break;
                                 //Fancy
                                 case 3:
                                     if (wonlastgame) {
-                                        currentlines = fancywinlines;
+                                        currentlines = fancy.wongamelines;
                                     }
                                     else {
-                                        currentlines = fancyloselines;
+                                        currentlines = fancy.lostgamelines;
                                     }
                                 break;
                             }
@@ -290,15 +280,15 @@ public class VisNovelDialogueController : MonoBehaviour
                             switch (visNovelScript.dateref) {
                                 //Cowboy
                                 case 1:
-                                    currentlines = cowboydate3lines;
+                                    currentlines = cowboy.date3pregamelines;
                                 break;
                                 //Goth
                                 case 2:
-                                    currentlines = gothdate3lines;
+                                    currentlines = goth.date3pregamelines;
                                 break;
                                 //Fancy
                                 case 3:
-                                    currentlines = fancydate3lines;
+                                    currentlines = fancy.date3pregamelines;
                                 break;
                             }
                         }
@@ -310,28 +300,28 @@ public class VisNovelDialogueController : MonoBehaviour
                                 //Cowboy
                                 case 1:
                                     if (wonlastgame) {
-                                        currentlines = cowboywinlines;
+                                        currentlines = cowboy.wongamelines;
                                     }
                                     else {
-                                        currentlines = cowboyloselines;
+                                        currentlines = cowboy.lostgamelines;
                                     }
                                 break;
                                 //Goth
                                 case 2:
                                     if (wonlastgame) {
-                                        currentlines = gothwinlines;
+                                        currentlines = goth.wongamelines;
                                     }
                                     else {
-                                        currentlines = gothloselines;
+                                        currentlines = goth.lostgamelines;
                                     }
                                 break;
                                 //Fancy
                                 case 3:
                                     if (wonlastgame) {
-                                        currentlines = fancywinlines;
+                                        currentlines = fancy.wongamelines;
                                     }
                                     else {
-                                        currentlines = fancyloselines;
+                                        currentlines = fancy.lostgamelines;
                                     }
                                 break;
                             }

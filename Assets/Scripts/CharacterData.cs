@@ -7,8 +7,21 @@ public class CharacterData : ScriptableObject
 {
     //What outfit do they like?
     public int outfitPreference;
-    //Who do they prefer when dating?
-    public int datePreference;
-    //How harsh are they?
-    public int judgement;
+
+    //Dialogue Date 1
+    public string[] angrylines;
+    public string[] neutrallines;
+    public string[] happylines;
+
+    //Dialogue Date 2
+    public string[] date2pregamelines;
+    public string[] date2postgamelines;
+
+    //Dialogue Date 3
+    public string[] date3pregamelines;
+    public string[] date3postgamelines;
+
+    //Dialogue for games
+    public string[] wongamelines;
+    public string[] lostgamelines;
 }

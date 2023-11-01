@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f9fbb3627edbde4b97be632b8ce0af8, type: 3}
+  m_Name: Goth
+  m_EditorClassIdentifier: 
+  outfitPreference: 3
+  angrylines:
+  - "\u201CAh, this is not what I expected\u2026\u201D"
+  - '- My systems are telling me that you are having trouble expressing your feelings
+    and connecting with others. Would you like to practice with me? '
+  - "\u201COh, well.. people just are very unreliable in this city. CITY NAME isn\u2019t
+    really a place you get a happy ending in, every man for himself y'know? Here,
+    I'll show you one of my favorite spots.\u201D"
+  - '- Humans have a lot more in common than you might believe Jett, would you like
+    to explore it together?'
+  neutrallines:
+  - "\u201COh, your vibe is very\u2026different, not bad but not what I was expecting.\u201D"
+  - "\u201CBut I\u2019m also seen as\u2026 different. So perhaps it might not be
+    so bad after all\u2026\u201D"
+  - '- My systems are telling me that you are having trouble expressing your feelings
+    and connecting with others. Would you like to practice with me? '
+  - "\u201COh, well.. people just are very unreliable in this city. CITY NAME isn\u2019t
+    really a place you get a happy ending in, every man for himself y'know? Here,
+    I'll show you one of my favorite spots.\u201D"
+  - '- Humans have a lot more in common than you might believe Jett, would you like
+    to explore it together?'
+  happylines:
+  - "\u201CSick! You look cool.\u201D"
+  - '- My systems are telling me that you are having trouble expressing your feelings
+    and connecting with others. Would you like to practice with me? '
+  - "\u201COh, well.. people just are very unreliable in this city. CITY NAME isn\u2019t
+    really a place you get a happy ending in, every man for himself y'know? Here,
+    I'll show you one of my favorite spots.\u201D"
+  - '- Humans have a lot more in common than you might believe Jett, would you like
+    to explore it together?'
+  date2pregamelines: []
+  date2postgamelines: []
+  date3pregamelines: []
+  date3postgamelines: []
+  wongamelines:
+  - "\u201CHa, I didn't think I\u2019d enjoy watching sports. That was different\u2026
+    kind of cool too.\u201D"
+  lostgamelines:
+  - "\u201CWhy did I ever trust in a stupid robot? This blows!\u201D"

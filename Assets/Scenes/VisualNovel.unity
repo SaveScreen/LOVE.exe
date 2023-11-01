@@ -538,6 +538,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textbox: {fileID: 1075058875}
   jptextbox: {fileID: 1721887529}
+  cowboy: {fileID: 11400000, guid: 02fea82172d8241428812b5f91794da5, type: 2}
+  goth: {fileID: 11400000, guid: 61ab6bf405147824c8a6c0229440ad30, type: 2}
+  fancy: {fileID: 11400000, guid: 91febcadefd97b5448478e974b2fd1d4, type: 2}
   cowboyangrylines:
   - "\"When I ordered the services of a bot I wasn\u2019t expecting to be paired
     with a corpo bootlicker\u2026\""

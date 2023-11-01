@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f9fbb3627edbde4b97be632b8ce0af8, type: 3}
+  m_Name: Fancy
+  m_EditorClassIdentifier: 
+  outfitPreference: 2
+  angrylines:
+  - '"Oh dear, that is absolutely dreadful, have these boys not given you a lesson
+    in class?"'
+  - "\u201CI\u2019ve had plenty of robot companions, they\u2019re all so very dull.
+    I hope you will be of some use to me and provide optimal entertainment.\u201D"
+  - '- Frills, you contacted my CEO personally to discuss wanting to have a NORMAL
+    and CASUAL date. My systems are detecting uncertainty in your body language! '
+  - "\u201CWhat- No, there\u2019s nothing wrong with my body language. Is my outfit
+    a mess? Is that why you think that? Or my hair? We\u2019re outside, after all.
+    Maybe this location was a bad idea..\u201D"
+  neutrallines:
+  - '"Your vision is interesting, and the style is there but the formality is lacking. 
+    We can work with this.."'
+  - "\u201CI\u2019ve had plenty of robot companions, they\u2019re all so very dull.
+    I hope you will be of some use to me and provide optimal entertainment.\u201D"
+  - '- Frills, you contacted my CEO personally to discuss wanting to have a NORMAL
+    and CASUAL date. My systems are detecting uncertainty in your body language! '
+  - "\u201CWhat- No, there\u2019s nothing wrong with my body language. Is my outfit
+    a mess? Is that why you think that? Or my hair? We\u2019re outside, after all.
+    Maybe this location was a bad idea..\u201D"
+  happylines:
+  - '"I see you have exquisite taste darling!  This date shall make headlines!"'
+  - "\u201CI\u2019ve had plenty of robot companions, they\u2019re all so very dull.
+    I hope you will be of some use to me and provide optimal entertainment.\u201D"
+  - '- Frills, you contacted my CEO personally to discuss wanting to have a NORMAL
+    and CASUAL date. My systems are detecting uncertainty in your body language! '
+  - "\u201CWhat- No, there\u2019s nothing wrong with my body language. Is my outfit
+    a mess? Is that why you think that? Or my hair? We\u2019re outside, after all.
+    Maybe this location was a bad idea..\u201D"
+  date2pregamelines: []
+  date2postgamelines: []
+  date3pregamelines: []
+  date3postgamelines: []
+  wongamelines:
+  - '- You seem like you are putting on a facade Frills! It is okay to let loose
+    sometimes and be who you really are!'
+  - "\u201CSitting outside and just playing a measly little sport seems like such
+    a waste of time. I could be making money right now\u2026 But I feel so relaxed.\u201D"
+  lostgamelines:
+  - "\u201CUgh, I am contacting my lawyer, your company will never hear the end of
+    this!\u201D"

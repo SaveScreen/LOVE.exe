@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f9fbb3627edbde4b97be632b8ce0af8, type: 3}
+  m_Name: Cowboy
+  m_EditorClassIdentifier: 
+  outfitPreference: 1
+  angrylines:
+  - "\"When I ordered the services of a bot I wasn\u2019t expecting to be paired
+    with a corpo bootlicker\u2026\""
+  - "\u201CI am still very new to this, so you\u2019re going to have to excuse me
+    if I am a bit out of touch.\u201D"
+  - '- My systems tell me you are not the biggest fan of new tech Jimothy. How can
+    I assist you in fixing these feelings? '
+  - "\u201CHuh? I guarantee there's nothing about me that needs to be fixed, I\u2019m
+    just looking for a way to kill time.\u201D"
+  neutrallines:
+  - '"Your services are much-appreciated partner."'
+  - "\u201CI am still very new to this, so you\u2019re going to have to excuse me
+    if I am a bit out of touch.\u201D"
+  - '- My systems tell me you are not the biggest fan of new tech Jimothy. How can
+    I assist you in fixing these feelings? '
+  - "\u201CHuh? I guarantee there's nothing about me that needs to be fixed, I\u2019m
+    just looking for a way to kill time.\u201D"
+  happylines:
+  - "\"It seems to me I\u2019ve ordered the services of a mighty fine bot. *tips
+    cowboy hat*\""
+  - "\u201CI am still very new to this, so you\u2019re going to have to excuse me
+    if I am a bit out of touch.\u201D"
+  - '- My systems tell me you are not the biggest fan of new tech Jimothy. How can
+    I assist you in fixing these feelings? '
+  - "\u201CHuh? I guarantee there's nothing about me that needs to be fixed, I\u2019m
+    just looking for a way to kill time.\u201D"
+  date2pregamelines: []
+  date2postgamelines: []
+  date3pregamelines: []
+  date3postgamelines: []
+  wongamelines:
+  - "\u201CWell pal, you got some mighty spunk in you. This was a great time partner,
+    I\u2019ll see ya soon\u2026\u201D"
+  - '- I assure you I can change your mind in time, partner. Get you to see the you,
+    you want to be! '
+  lostgamelines:
+  - "\u201CYou are going to try harder than that to impress me, partner.\u201D"
