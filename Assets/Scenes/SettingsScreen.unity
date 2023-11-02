@@ -599,8 +599,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 488073887}
   m_HandleRect: {fileID: 187493767}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 100
+  m_MinValue: -80
+  m_MaxValue: 20
   m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
@@ -838,8 +838,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 1490673687}
   m_HandleRect: {fileID: 1388628353}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 20
   m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
@@ -1742,8 +1742,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 1475819344}
   m_HandleRect: {fileID: 1796278377}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 100
+  m_MinValue: -80
+  m_MaxValue: 20
   m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
@@ -2181,9 +2181,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AptSceneMenu, Assembly-CSharp
-        m_MethodName: GoToSettings
+      - m_Target: {fileID: 1163878220}
+        m_TargetAssemblyTypeName: SettingsScript, Assembly-CSharp
+        m_MethodName: Return
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

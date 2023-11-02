@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class SettingsScript : MonoBehaviour
 {
@@ -57,5 +58,10 @@ public class SettingsScript : MonoBehaviour
         mainMixer.SetFloat("SFXParam", sfxSlider.value);
 
         PlayerPrefs.SetFloat("SFXParam", sfxSlider.value);
+    }
+
+    public void Return()
+    {
+        SceneManager.LoadScene("AptScene");
     }
 }
