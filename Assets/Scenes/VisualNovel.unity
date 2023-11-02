@@ -541,166 +541,6 @@ MonoBehaviour:
   cowboy: {fileID: 11400000, guid: 02fea82172d8241428812b5f91794da5, type: 2}
   goth: {fileID: 11400000, guid: 61ab6bf405147824c8a6c0229440ad30, type: 2}
   fancy: {fileID: 11400000, guid: 91febcadefd97b5448478e974b2fd1d4, type: 2}
-  cowboyangrylines:
-  - "\"When I ordered the services of a bot I wasn\u2019t expecting to be paired
-    with a corpo bootlicker\u2026\""
-  - "\u201CI am still very new to this, so you\u2019re going to have to excuse me
-    if I am a bit out of touch.\u201D"
-  - '- My systems tell me you are not the biggest fan of new tech Jimothy. How can
-    I assist you in fixing these feelings? '
-  - "\u201CHuh? I guarantee there's nothing about me that needs to be fixed, I\u2019m
-    just looking for a way to kill time.\u201D"
-  cowboyneutrallines:
-  - '"Your services are much-appreciated partner."'
-  - "\u201CI am still very new to this, so you\u2019re going to have to excuse me
-    if I am a bit out of touch.\u201D"
-  - '- My systems tell me you are not the biggest fan of new tech Jimothy. How can
-    I assist you in fixing these feelings? '
-  - "\u201CHuh? I guarantee there's nothing about me that needs to be fixed, I\u2019m
-    just looking for a way to kill time.\u201D"
-  cowboyhappylines:
-  - "\"It seems to me I\u2019ve ordered the services of a mighty fine bot. *tips
-    cowboy hat*\""
-  - "\u201CI am still very new to this, so you\u2019re going to have to excuse me
-    if I am a bit out of touch.\u201D"
-  - '- My systems tell me you are not the biggest fan of new tech Jimothy. How can
-    I assist you in fixing these feelings? '
-  - "\u201CHuh? I guarantee there's nothing about me that needs to be fixed, I\u2019m
-    just looking for a way to kill time.\u201D"
-  gothangrylines:
-  - "\u201CAh, this is not what I expected\u2026\u201D"
-  - '- My systems are telling me that you are having trouble expressing your feelings
-    and connecting with others. Would you like to practice with me? '
-  - "\u201COh, well.. people just are very unreliable in this city. CITY NAME isn\u2019t
-    really a place you get a happy ending in, every man for himself y'know? Here,
-    I'll show you one of my favorite spots.\u201D"
-  - '- Humans have a lot more in common than you might believe Jett, would you like
-    to explore it together?'
-  gothneutrallines:
-  - "\u201COh, your vibe is very\u2026different, not bad but not what I was expecting.\u201D"
-  - "\u201CBut I\u2019m also seen as\u2026 different. So perhaps it might not be
-    so bad after all\u2026\u201D"
-  - '- My systems are telling me that you are having trouble expressing your feelings
-    and connecting with others. Would you like to practice with me? '
-  - "\u201COh, well.. people just are very unreliable in this city. CITY NAME isn\u2019t
-    really a place you get a happy ending in, every man for himself y'know? Here,
-    I'll show you one of my favorite spots.\u201D"
-  - '- Humans have a lot more in common than you might believe Jett, would you like
-    to explore it together?'
-  gothhappylines:
-  - "\u201CSick! You look cool.\u201D"
-  - '- My systems are telling me that you are having trouble expressing your feelings
-    and connecting with others. Would you like to practice with me? '
-  - "\u201COh, well.. people just are very unreliable in this city. CITY NAME isn\u2019t
-    really a place you get a happy ending in, every man for himself y'know? Here,
-    I'll show you one of my favorite spots.\u201D"
-  - '- Humans have a lot more in common than you might believe Jett, would you like
-    to explore it together?'
-  fancyangrylines:
-  - '"Oh dear, that is absolutely dreadful, have these boys not given you a lesson
-    in class?"'
-  - "\u201CI\u2019ve had plenty of robot companions, they\u2019re all so very dull.
-    I hope you will be of some use to me and provide optimal entertainment.\u201D"
-  - '- Frills, you contacted my CEO personally to discuss wanting to have a NORMAL
-    and CASUAL date. My systems are detecting uncertainty in your body language! '
-  - "\u201CWhat- No, there\u2019s nothing wrong with my body language. Is my outfit
-    a mess? Is that why you think that? Or my hair? We\u2019re outside, after all.
-    Maybe this location was a bad idea..\u201D"
-  fancyneutrallines:
-  - '"Your vision is interesting, and the style is there but the formality is lacking. 
-    We can work with this.."'
-  - "\u201CI\u2019ve had plenty of robot companions, they\u2019re all so very dull.
-    I hope you will be of some use to me and provide optimal entertainment.\u201D"
-  - '- Frills, you contacted my CEO personally to discuss wanting to have a NORMAL
-    and CASUAL date. My systems are detecting uncertainty in your body language! '
-  - "\u201CWhat- No, there\u2019s nothing wrong with my body language. Is my outfit
-    a mess? Is that why you think that? Or my hair? We\u2019re outside, after all.
-    Maybe this location was a bad idea..\u201D"
-  fancyhappylines:
-  - '"I see you have exquisite taste darling!  This date shall make headlines!"'
-  - "\u201CI\u2019ve had plenty of robot companions, they\u2019re all so very dull.
-    I hope you will be of some use to me and provide optimal entertainment.\u201D"
-  - '- Frills, you contacted my CEO personally to discuss wanting to have a NORMAL
-    and CASUAL date. My systems are detecting uncertainty in your body language! '
-  - "\u201CWhat- No, there\u2019s nothing wrong with my body language. Is my outfit
-    a mess? Is that why you think that? Or my hair? We\u2019re outside, after all.
-    Maybe this location was a bad idea..\u201D"
-  cowboyloselines:
-  - "\u201CYou are going to try harder than that to impress me, partner.\u201D"
-  cowboywinlines:
-  - "\u201CWell pal, you got some mighty spunk in you. This was a great time partner,
-    I\u2019ll see ya soon\u2026\u201D"
-  - '- I assure you I can change your mind in time, partner. Get you to see the you,
-    you want to be! '
-  gothloselines:
-  - "\u201CWhy did I ever trust in a stupid robot? This blows!\u201D"
-  gothwinlines:
-  - "\u201CHa, I didn't think I\u2019d enjoy watching sports. That was different\u2026
-    kind of cool too.\u201D"
-  fancyloselines:
-  - "\u201CUgh, I am contacting my lawyer, your company will never hear the end of
-    this!\u201D"
-  fancywinlines:
-  - '- You seem like you are putting on a facade Frills! It is okay to let loose
-    sometimes and be who you really are!'
-  - "\u201CSitting outside and just playing a measly little sport seems like such
-    a waste of time. I could be making money right now\u2026 But I feel so relaxed.\u201D"
-  cowboydate2lines:
-  - "\u201CHello again, partner. See ya couldn't resist me\u201D"
-  - '- Hello, Jimothy shall we embark on another adventure into the Wild Wild Countryside?'
-  - "\u201CI like your spunk pal, y\u2019know. The world ain\u2019t been so kind
-    to folks like me.\u201D"
-  - "\u201CFolks who just want to live a quiet life in the countryside, riding horses
-    into the sunset.\u201D"
-  - "\u201CNow if you could fix that, you\u2019d be the apple of my eye\u201D"
-  - "\u201CIn fact, I think I have the perfect idea for our time together!\u201D"
-  gothdate2lines:
-  - "\u201CNo one has ever really given me the time of day. I guess that\u2019s why
-    I decided to date a robot.\u201D"
-  - "\u201CMost people are just lame, everyone always just follows the latest trends
-    and focuses on what's the newest thing. We\u2019re all becoming clones y'know?\u201D"
-  fancydate2lines:
-  - "\u201CI\u2019m a person with very refined tastes, I\u2019m used to having extravagant
-    parties every night and going to expensive breakfast meetings with important
-    people every morning!"
-  - '"I love it... Of course I love it!"'
-  - "\u201CMaybe it could be.. Beneficial, to me to use this date as a way to pretend
-    I am a simple citizen in CITY NAME. Yes.. this could be.. Avant-garde in a way.\u201D"
-  cowboydate3lines:
-  - "\u201CWell, well partner, what are ya thinking we do today?\u201D "
-  - '- Oh! Well, my systems are indicating a fun new activity in the area that we
-    can try together! I believe it will help you get accustomed to THE FUTURE!'
-  - "\u201CWell, be my guest\u2026\u201D"
-  gothdate3lines:
-  - "\u201CBoth of us are just considered weirdos.  I\u2019ve never liked trying,
-    especially when it comes to people. They were all always so judgemental, I\u2019ve
-    always felt alone.\""
-  - "\"I trust you though, if you say people are cool, maybe they might just be.\u201D "
-  fancydate3lines:
-  - '- Hello, Frills! I am excited to bring you along for another date! My systems
-    tell me you have listed NONE for personal hobbies!'
-  - "\"You don\u2019t really need hobbies when you\u2019re making millions sweetheart.
-    I just need you to bring me on a fun and normal date. Whatever you bring your
-    other boring, poor clients to.\""
-  jpcowboyangrylines: []
-  jpcowboyneutrallines: []
-  jpcowboyhappylines: []
-  jpgothangrylines:
-  - "\u201D\u3048\u3063\u3068...\u9055\u3046\u3053\u3068\u3002\u201D"
-  - "\u201D\u3067\u3082\u3001\u79C1\u3082\u3061\u304C\u3044\u3060\u306D\u2026\u201D"
-  jpgothneutrallines:
-  - "\u201D\u3042\u3001\u3048\u3063\u3068...\u201D"
-  jpgothhappylines:
-  - "\u30AB\u30C3\u30B3\u30A4\u30A4\uFF01"
-  jpfancyangrylines: []
-  jpfancyneutrallines: []
-  jpfancyhappylines: []
-  jpcowboyloselines: []
-  jpcowboywinlines: []
-  jpgothloselines: []
-  jpgothwinlines: []
-  jpfancyloselines: []
-  jpfancywinlines: []
   isEnglish: 1
   inputs: {fileID: -944628639613478452, guid: b6210dda01cea9c4188498e4a0a55bd9, type: 3}
   textspeed: 0.025
@@ -2971,7 +2811,7 @@ GameObject:
   - component: {fileID: 2116459535}
   - component: {fileID: 2116459534}
   m_Layer: 0
-  m_Name: Dialogue
+  m_Name: DialogueMusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2986,7 +2826,8 @@ AudioSource:
   m_GameObject: {fileID: 2116459533}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -6415564691299213510, guid: b5c10e8b51f7d8c43a6b92031de5bab9,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 28b55fd194288524dac57adf3fd52a83, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.177
