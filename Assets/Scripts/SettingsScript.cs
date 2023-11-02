@@ -27,9 +27,9 @@ public class SettingsScript : MonoBehaviour
         sfxSlider.value = volume;
 
 
-        //mastLabel.text = Mathf.RoundToInt(mastSlider.value + 80).ToString();
-        //musicLabel.text = Mathf.RoundToInt(musicSlider.value + 80).ToString();
-        //sfxLabel.text = Mathf.RoundToInt(sfxSlider.value + 80).ToString();
+        mastLabel.text = Mathf.RoundToInt(mastSlider.value + 80).ToString();
+        musicLabel.text = Mathf.RoundToInt(musicSlider.value + 80).ToString();
+        sfxLabel.text = Mathf.RoundToInt(sfxSlider.value + 80).ToString();
 
     }
 
