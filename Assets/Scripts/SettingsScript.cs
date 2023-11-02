@@ -9,23 +9,53 @@ public class SettingsScript : MonoBehaviour
 {
     public AudioMixer mainMixer;
 
-    public TMP_Text masterLabel, musicLabel, sfxLabel;
+    public TMP_Text mastLabel, musicLabel, sfxLabel;
 
-    public Slider masterSlider, musicSlider, sfxSlider;
-    
+    public Slider mastSlider, musicSlider, sfxSlider;
+
     void Start()
     {
+        float volume = 0f;
+        mainMixer.GetFloat("MasterParam", out volume);
+        mastSlider.value = volume;
+
+        mainMixer.GetFloat("MusicParam", out volume);
+        musicSlider.value = volume;
         
+        mainMixer.GetFloat("SFXParam", out volume);
+        sfxSlider.value = volume;
+
+
+        //mastLabel.text = Mathf.RoundToInt(mastSlider.value + 80).ToString();
+        //musicLabel.text = Mathf.RoundToInt(musicSlider.value + 80).ToString();
+        //sfxLabel.text = Mathf.RoundToInt(sfxSlider.value + 80).ToString();
+
     }
 
+    public void setMasterVol()
+    {
+        mastLabel.text = Mathf.RoundToInt(mastSlider.value + 80).ToString();
+
+        mainMixer.SetFloat("MasterParam", mastSlider.value);
+
+        PlayerPrefs.SetFloat("MasterParam", mastSlider.value);
+    }
     
-    void Update()
+    public void setMuiscVol()
     {
-        
-    }
+        musicLabel.text = Mathf.RoundToInt(musicSlider.value + 80).ToString();
 
-    public void SetMasterVolume()
+        mainMixer.SetFloat("MusicParam", musicSlider.value);
+
+        PlayerPrefs.SetFloat("MusicParam", musicSlider.value);
+    }
+    
+    public void setSFXVol()
     {
-        masterLabel.text = masterSlider.value.ToString();
+        sfxLabel.text = Mathf.RoundToInt(sfxSlider.value + 80).ToString();
+
+        mainMixer.SetFloat("SFXParam", sfxSlider.value);
+
+        PlayerPrefs.SetFloat("SFXParam", sfxSlider.value);
     }
 }
