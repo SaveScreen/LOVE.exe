@@ -11,6 +11,9 @@ public class AptSceneMenu : MonoBehaviour
     public TMP_Text moneyText;
     public GameObject player;
 
+    //wear clothes in apartment
+    public GameObject[] RoboWearingAPT;
+
     void Start()
     {
         int howMuch;
@@ -18,6 +21,11 @@ public class AptSceneMenu : MonoBehaviour
         howMuch = moneyData.GetGAINZ();
 
         moneyText.SetText("Money: " + howMuch);
+
+        foreach (GameObject obj in RoboWearingAPT)
+        {
+            obj.SetActive(false);
+        }
     }
 
     public void GoToMenu() {
