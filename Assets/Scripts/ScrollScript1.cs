@@ -24,12 +24,12 @@ public class ScrollScript1 : MonoBehaviour
 
     public HorizontalLayoutGroup HLG;
 
+    //replaces name text w/ appropriate name
     public TMP_Text ItemName;
     public string[] ItemNames;
 
-    //outfit methinks
+    //outfit images array
     public GameObject[] RoboWearing;
-    public List<GameObject> RoboWearingList;
 
     bool isSnapped;
     float snapSpeed;
@@ -38,8 +38,9 @@ public class ScrollScript1 : MonoBehaviour
     //Fun Effect
     public ParticleSystem OutfitClickedParticle;
 
-    //Link to APT scene
-    public AptSceneMenu APTMenuScript;
+    //Link to APT scene thru playerdata
+    public GameObject playerDataContainer;
+    public PlayerData playerdata;
 
     private void Start()
     {
@@ -83,11 +84,7 @@ public class ScrollScript1 : MonoBehaviour
     public void WearButtonClicked()
     {
         OutfitClickedParticle.Play();
-        /*
-        AptSceneMenu RoboWearingAPT = APTMenuScript.GetComponent<AptSceneMenu>();
-        RoboWearingAPT.element.SetActive(true);
-        */
-        //^^^trying to reference the value of the RoboWearing array and assigning the value of the RoboWearingAPT array in the apartment scene
+        playerdata.GetPlayerChibiOutfit(1);
     }
 
     /*

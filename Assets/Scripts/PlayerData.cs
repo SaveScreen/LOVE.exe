@@ -14,6 +14,7 @@ public class PlayerData : MonoBehaviour
     public static bool wonGame = false;
     public static bool playedGame = false;
     public static bool playerSelected = false;
+    public static int playerChibiOutfit;
 
     public void PlayerBotSelection(int selection) {
         playerbot = selection;
@@ -86,6 +87,11 @@ public class PlayerData : MonoBehaviour
     }
     public bool GetPlayerSelected() {
         return playerSelected;
+    }
+
+    public void GetPlayerChibiOutfit(int sel)
+    {
+        playerChibiOutfit = sel;
     }
 
     public float PlayerLikeRating(int dateNum)
