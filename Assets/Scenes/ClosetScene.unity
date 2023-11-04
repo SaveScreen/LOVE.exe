@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5247,6 +5247,7 @@ MonoBehaviour:
   OutfitClickedParticle: {fileID: 24747636}
   playerDataContainer: {fileID: 590584168}
   playerdata: {fileID: 590584169}
+  currentItem: 0
 --- !u!1 &41666552
 GameObject:
   m_ObjectHideFlags: 0
@@ -6847,7 +6848,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619037079}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &619037081
 Camera:
   m_ObjectHideFlags: 0

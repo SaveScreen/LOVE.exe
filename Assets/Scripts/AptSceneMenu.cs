@@ -10,12 +10,15 @@ public class AptSceneMenu : MonoBehaviour
     public MONEYScript moneyData;
     public TMP_Text moneyText;
     public GameObject player;
+    private PlayerData playerdata;
+    private int outfitSelect;
 
     //wear clothes in apartment
     public GameObject[] RoboWearingAPT;
 
     void Start()
     {
+        playerdata = player.GetComponent<PlayerData>();
         int howMuch;
         moneyData = moneyContainer.GetComponent<MONEYScript>();
         howMuch = moneyData.GetGAINZ();
@@ -26,10 +29,15 @@ public class AptSceneMenu : MonoBehaviour
         {
             obj.SetActive(false);
         }
+
+        outfitSelect = playerdata.GetPlayerChibiOutfit();
+
+        GameObject tempObj = RoboWearingAPT[outfitSelect];
+        tempObj.SetActive(true);
+
     }
 
     public void GoToMenu() {
-        PlayerData playerdata = player.GetComponent<PlayerData>();
         bool playerSelected = playerdata.GetPlayerSelected();
         //If player is selected already, go straight to the next date.
         if (playerSelected) {

@@ -42,6 +42,8 @@ public class ScrollScript1 : MonoBehaviour
     public GameObject playerDataContainer;
     public PlayerData playerdata;
 
+    public int currentItem;
+
     private void Start()
     {
         isSnapped = false;
@@ -54,7 +56,7 @@ public class ScrollScript1 : MonoBehaviour
 
     void Update()
     {
-        int currentItem = Mathf.RoundToInt((0 - contentPanel.localPosition.x / (sampleListItem.rect.width + HLG.spacing)));
+        currentItem = Mathf.RoundToInt((0 - contentPanel.localPosition.x / (sampleListItem.rect.width + HLG.spacing)));
         Debug.Log(currentItem);
 
         if (scrollRect.velocity.magnitude < 5 && !isSnapped)
@@ -84,7 +86,7 @@ public class ScrollScript1 : MonoBehaviour
     public void WearButtonClicked()
     {
         OutfitClickedParticle.Play();
-        playerdata.GetPlayerChibiOutfit(1);
+        playerdata.SetPlayerChibiOutfit(currentItem);
     }
 
     /*

@@ -89,9 +89,16 @@ public class PlayerData : MonoBehaviour
         return playerSelected;
     }
 
-    public void GetPlayerChibiOutfit(int sel)
+    public void SetPlayerChibiOutfit(int sel)
     {
         playerChibiOutfit = sel;
+
+        Debug.Log("Outfit Selected: " + sel);
+    }
+
+    public int GetPlayerChibiOutfit()
+    {
+        return playerChibiOutfit;
     }
 
     public float PlayerLikeRating(int dateNum)
