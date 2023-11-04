@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEditor.ShortcutManagement;
+using UnityEngine.InputSystem;
 
 public class AptSceneMenu : MonoBehaviour
 {
@@ -35,6 +37,11 @@ public class AptSceneMenu : MonoBehaviour
         GameObject tempObj = RoboWearingAPT[outfitSelect];
         tempObj.SetActive(true);
 
+    }
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.P)) {
+            SceneManager.LoadScene("DataScene");
+        }
     }
 
     public void GoToMenu() {

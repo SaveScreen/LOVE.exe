@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerData : MonoBehaviour
@@ -15,6 +17,40 @@ public class PlayerData : MonoBehaviour
     public static bool playedGame = false;
     public static bool playerSelected = false;
     public static int playerChibiOutfit;
+    
+    public bool loadingdata = false;
+    public bool restarting = false;
+
+    public void NewGame() {
+        ResetAllData();
+        restarting = true;
+    }
+
+    public void SaveGame() {
+        GameDataStorage gameData = new GameDataStorage();
+        gameData.playerSelected = playerSelected;
+        gameData.playerDate = playerdate;
+        gameData.playerName = playername;
+        gameData.playerOutfit = playeroutfit;
+        gameData.playerRating = playerRating;
+        gameData.playerBot = playerbot;
+
+        string json = JsonUtility.ToJson(gameData,true);
+        File.WriteAllText(Application.dataPath + "/PlayerDataFile.json",json);
+    }
+
+    public void LoadGame() {
+        string json = File.ReadAllText(Application.dataPath + "/PlayerDataFile.json");
+        GameDataStorage gameData = JsonUtility.FromJson<GameDataStorage>(json);
+        playerSelected = gameData.playerSelected;
+        playerdate = gameData.playerDate;
+        playername = gameData.playerName;
+        playeroutfit = gameData.playerOutfit;
+        playerRating = gameData.playerRating;
+        playerbot = gameData.playerBot;
+
+        loadingdata = true;
+    }
 
     public void PlayerBotSelection(int selection) {
         playerbot = selection;
