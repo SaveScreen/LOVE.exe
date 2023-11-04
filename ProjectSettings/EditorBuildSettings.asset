@@ -38,6 +38,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SettingsScreen.unity
     guid: 3efe5b7befc700e49acbce0b9a01d0a5
+  - enabled: 1
+    path: Assets/Scenes/DataScene/DataScene.unity
+    guid: 3a8e3bd6523f29c42ab5e40fd4ec30db
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000,
       guid: 38022e419cf24e949ad742fd66639946, type: 2}
