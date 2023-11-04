@@ -60,7 +60,7 @@ public class AptSceneMenu : MonoBehaviour
     }
     public void GoToSettings()
     {
-        SceneManager.LoadScene("SettingsScene");
+        SceneManager.LoadScene("SettingsScreen");
     }
 
     public void Quit() {
