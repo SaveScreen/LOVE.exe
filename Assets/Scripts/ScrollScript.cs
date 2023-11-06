@@ -38,7 +38,9 @@ public class ScrollScript : MonoBehaviour
 
     private int currentItem;
 
-    public StoreSceneController storeController;
+
+    //Hopefully commenting this does nothing
+    //public StoreSceneController storeController;
 
 
     private void Start()
@@ -72,7 +74,7 @@ public class ScrollScript : MonoBehaviour
             snapSpeed = 0;
         }
     }
-
+    /*
     public void BuyButtonClicked()
     {
         int tempMon = 0;
@@ -126,7 +128,7 @@ public class ScrollScript : MonoBehaviour
 
 
     }
-
+    */
     public bool canAfford(int money)
     {
         if(currentItem <= 2 && money >= 500) {
