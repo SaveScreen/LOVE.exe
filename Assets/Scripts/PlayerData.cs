@@ -21,6 +21,9 @@ public class PlayerData : MonoBehaviour
     public bool loadingdata = false;
     public bool restarting = false;
 
+    public static int rhythmgamehiscore = 0;
+    public static int snakegamehiscore = 0;
+
     public static bool[] isOutfitUnlocked = new bool[7];
 
     public MONEYScript moneyScript;
@@ -42,6 +45,8 @@ public class PlayerData : MonoBehaviour
         gameData.playerBot = playerbot;
         gameData.isOutfitUnlocked = isOutfitUnlocked;
         gameData.money = money;
+        gameData.snakegamehiscore = snakegamehiscore;
+        gameData.rhythmgamehiscore = rhythmgamehiscore;
 
         string json = JsonUtility.ToJson(gameData,false);
         File.WriteAllText(Application.dataPath + "/PlayerDataFile.json",json);
@@ -67,6 +72,8 @@ public class PlayerData : MonoBehaviour
         playeroutfit = gameData.playerOutfit;
         playerRating = gameData.playerRating;
         playerbot = gameData.playerBot;
+        snakegamehiscore = gameData.snakegamehiscore;
+        rhythmgamehiscore = gameData.rhythmgamehiscore;
         isOutfitUnlocked = gameData.isOutfitUnlocked;
         int money = gameData.money;
         moneyScript.SetMoney(money);
@@ -107,6 +114,14 @@ public class PlayerData : MonoBehaviour
     public void UnlockOutfit(int outfitNum)
     {
         isOutfitUnlocked[outfitNum] = true;
+    }
+
+    public void NewRhythmGameHiScore(int score) {
+        rhythmgamehiscore = score;
+    }
+
+    public void NewSnakeGameHiScore(int score) {
+        snakegamehiscore = score;
     }
 
     public void WonGame() {
@@ -165,6 +180,14 @@ public class PlayerData : MonoBehaviour
     public int GetPlayerChibiOutfit()
     {
         return playerChibiOutfit;
+    }
+
+    public int GetRhythmGameHiScore() {
+        return rhythmgamehiscore;
+    }
+
+    public int GetSnakeGameHiScore() {
+        return snakegamehiscore;
     }
 
     public float PlayerLikeRating(int dateNum)
@@ -242,6 +265,9 @@ public class PlayerData : MonoBehaviour
         wonGame = false;
         playedGame = false;
         playerSelected = false;
+        rhythmgamehiscore = 0;
+        snakegamehiscore = 0;
+        moneyScript.SetMoney(0);
     }
 
 }

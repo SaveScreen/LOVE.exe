@@ -11,6 +11,7 @@ public class RhythmMinigameScript : MonoBehaviour
     public TextMeshProUGUI scoretext;
     public TextMeshProUGUI speedtext;
     public TextMeshProUGUI wintext;
+    public TextMeshProUGUI hiscoretext;
 
     public GameObject playerdatacontainer;
     private PlayerData playerdata;
@@ -19,7 +20,8 @@ public class RhythmMinigameScript : MonoBehaviour
     public float timer; //Time in between circle spawning
     private float starttimer;
     private float respawntime;
-    public float score;
+    public int score;
+    private int hiscore;
     private AudioSource audioSource;
     public GameObject gameoverscreen;
     public bool gameover;
@@ -34,7 +36,9 @@ public class RhythmMinigameScript : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         Generate();
         respawntime = timer;
+        hiscore = playerdata.GetRhythmGameHiScore();
         scoretext.text = "Score: ";
+        hiscoretext.text = "Hiscore: " + hiscore;
         speedtext.text = "Circle/s: " + respawntime;
 
         gamecount = playerdata.GetGameCount();
@@ -70,6 +74,11 @@ public class RhythmMinigameScript : MonoBehaviour
         }
         scoretext.text = "Score: " + score;
 
+        if (score > hiscore) {
+            hiscore = score;
+            hiscoretext.text = "Hiscore: " + hiscore;
+        }
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
@@ -83,7 +92,7 @@ public class RhythmMinigameScript : MonoBehaviour
         
     }
     void ShrinkRespawnTime(){
-        respawntime = respawntime - respawntime * 0.035f;
+        respawntime = respawntime - respawntime * 0.01f;
         speedtext.text = "Circle/s: " + respawntime;
 
         Debug.Log(respawntime);
@@ -141,6 +150,9 @@ public class RhythmMinigameScript : MonoBehaviour
 
     public void Continue() {
         playerdata.UpdatePlayerDateScore(didWin);
+        if (hiscore > playerdata.GetRhythmGameHiScore()) {
+            playerdata.NewRhythmGameHiScore(hiscore);
+        }
         playerdata.IncreaseGameCount();
 
         if (didWin) {

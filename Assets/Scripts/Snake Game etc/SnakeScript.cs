@@ -18,7 +18,9 @@ public class SnakeScript : MonoBehaviour
 
     //Score
     public TextMeshProUGUI scoretext;
-    public float score;
+    public TextMeshProUGUI hiscoretext;
+    public int score;
+    private int hiscore;
 
     //Snake Stuff
     private List<Transform> _segments;
@@ -77,6 +79,10 @@ public class SnakeScript : MonoBehaviour
         }
 
         scoretext.text = "Score: " + score;
+        if (score > hiscore) {
+            hiscore = score;
+            hiscoretext.text = "Hiscore: " + hiscore;
+        }
     }
 
     Vector3 lastPos;
@@ -94,7 +100,10 @@ public class SnakeScript : MonoBehaviour
         _segments = new List<Transform>();
         _segments.Add(this.transform);
 
+        hiscore = playerdata.GetSnakeGameHiScore();
+
         scoretext.text = "Score: ";
+        hiscoretext.text = "Hiscore: " + hiscore;
         gamecount = playerdata.GetGameCount();
 
         switch (gamecount)
@@ -220,6 +229,9 @@ public class SnakeScript : MonoBehaviour
     public void GoToDate()
     {
         playerdata.UpdatePlayerDateScore(didWin);
+        if (hiscore > playerdata.GetSnakeGameHiScore()) {
+            playerdata.NewSnakeGameHiScore(hiscore);
+        }
         playerdata.IncreaseGameCount();
 
         if (didWin)

@@ -10,4 +10,7 @@ public class GameDataStorage
     public bool[] isOutfitUnlocked;
     public int money;
 
+    public int rhythmgamehiscore;
+    public int snakegamehiscore;
+
 }
