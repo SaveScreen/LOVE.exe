@@ -149,6 +149,8 @@ public class CharacterSelect : MonoBehaviour
     }
 
     public void ConfirmNewDate() {
+        playerdata.GetPlayerOutfit();
+        playerdata.PlayerFirstLoad();
         playerdata.PlayerDateSelection(dateoption);
         playerdata.SaveGame();
         SceneManager.LoadScene("VisualNovel");

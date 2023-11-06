@@ -162,6 +162,9 @@ public class PlayerData : MonoBehaviour
     {
         return playerRating;
     }
+    public void ResetPlayerRating() {
+        playerRating = 0;
+    }
     public bool GetPlayerSelected() {
         return playerSelected;
     }

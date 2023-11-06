@@ -144,6 +144,7 @@ public class ResultScript : MonoBehaviour
     }
 
     public void Restart() {
+        playerdata.ResetPlayerRating();
         playerdata.SaveGame();
         SceneManager.LoadScene("AptScene");
     }
