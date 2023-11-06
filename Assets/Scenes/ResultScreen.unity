@@ -945,6 +945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadingdata: 0
   restarting: 0
+  moneyScript: {fileID: 1406798395}
 --- !u!4 &642089557
 Transform:
   m_ObjectHideFlags: 0

@@ -21,7 +21,9 @@ public class PlayerData : MonoBehaviour
     public bool loadingdata = false;
     public bool restarting = false;
 
-    public static bool[] isOutfitUnlocked = new bool[7]; 
+    public static bool[] isOutfitUnlocked = new bool[7];
+
+    public MONEYScript moneyScript;
 
     public void NewGame() {
         ResetAllData();
