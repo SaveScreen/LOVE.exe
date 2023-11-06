@@ -163,7 +163,7 @@ public class RhythmMinigameScript : MonoBehaviour
         }
 
         SceneManager.LoadScene("VisualNovel");
-       
+       /*
         Time.timeScale = 1;
         gameover = false;
         restart = true;
@@ -174,6 +174,6 @@ public class RhythmMinigameScript : MonoBehaviour
         speedtext.text = "Circle/s: " + respawntime;
         gameoverscreen.SetActive(false);
         Generate();
-       
+       */
     }
 }
