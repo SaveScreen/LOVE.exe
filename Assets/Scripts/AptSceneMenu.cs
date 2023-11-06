@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
-using UnityEditor.ShortcutManagement;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 

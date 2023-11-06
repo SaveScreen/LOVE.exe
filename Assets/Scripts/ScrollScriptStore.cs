@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ScrollScriptStore : MonoBehaviour
 {
@@ -34,10 +35,17 @@ public class ScrollScriptStore : MonoBehaviour
 
     public StoreSceneController storeController;
 
+    public TMP_Text moneyText;
+
 
     private void Start()
     {
         isSnapped = false;
+        playerdata = playerDataContainer.GetComponent<PlayerData>();
+        int howMuch;
+        moneyData = moneyContainer.GetComponent<MONEYScript>();
+        howMuch = moneyData.GetGAINZ();
+        moneyText.SetText("Money: " + howMuch);
     }
 
     void Update()
@@ -121,6 +129,12 @@ public class ScrollScriptStore : MonoBehaviour
             ItemName.text = "ALREADY UNLOCKED";
         }
 
+        playerdata = playerDataContainer.GetComponent<PlayerData>();
+        int howMuch;
+        moneyData = moneyContainer.GetComponent<MONEYScript>();
+        howMuch = moneyData.GetGAINZ();
+        moneyText.SetText("Money: " + howMuch);
+    
 
     }
 
@@ -137,6 +151,11 @@ public class ScrollScriptStore : MonoBehaviour
         }
 
         return false;
+    }
+
+    public void ReturnToAPT()
+    {
+        SceneManager.LoadScene("AptScene");
     }
 
     /*

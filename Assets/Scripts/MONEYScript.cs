@@ -5,7 +5,7 @@ using UnityEngine;
 public class MONEYScript : MonoBehaviour
 {
 
-    public static int money = 500;
+    public static int money = 0;
     
     public void AddMoney(int gainz)
     {
