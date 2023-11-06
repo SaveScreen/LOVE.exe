@@ -53,15 +53,15 @@ public class AptSceneMenu : MonoBehaviour
     }
 
     public void GoToMenu() {
-        bool playerSelected = playerdata.GetPlayerSelected();
+        //bool playerSelected = playerdata.GetPlayerSelected();
         //If player is selected already, go straight to the next date.
-        if (playerSelected) {
-            playerdata.ResetPlayedGame();
-            SceneManager.LoadScene("VisualNovel");
-        }
-        else {
+        //if (playerSelected) {
+        //    playerdata.ResetPlayedGame();
+        //    SceneManager.LoadScene("VisualNovel");
+        //}
+        //else {
             SceneManager.LoadScene("MenuScreen");
-        }
+        //}
         
     }
 
