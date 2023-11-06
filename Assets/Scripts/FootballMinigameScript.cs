@@ -401,7 +401,7 @@ public class FootballMinigameScript : MonoBehaviour
         }
 
         SceneManager.LoadScene("VisualNovel");
-        /*
+        
         gamestarted = false;
         countdowntimer.text = timerinseconds.ToString();
         timerinseconds = 3;
@@ -419,7 +419,7 @@ public class FootballMinigameScript : MonoBehaviour
         
         powertriangle.transform.localPosition = new Vector2(powertriangle.transform.localPosition.x,triangleminposition);
         accuracymeter.transform.position = new Vector2(accuracyminposition, accuracymeter.transform.position.y);
-        */
+        
     }
 
     IEnumerator TimerText() {
