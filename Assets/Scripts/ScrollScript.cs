@@ -28,6 +28,8 @@ public class ScrollScript : MonoBehaviour
 
     public TMP_Text ItemName;
     public string[] ItemNames;
+    public TMP_Text ItemCost;
+    public string[] ItemCosts;
 
     bool isSnapped;
     float snapSpeed;
@@ -60,6 +62,7 @@ public class ScrollScript : MonoBehaviour
                 contentPanel.localPosition.y, 
                 contentPanel.localPosition.z);
             ItemName.text = ItemNames[currentItem];
+            ItemCost.text = "Cost: "+ ItemCosts[currentItem];
             if (contentPanel.localPosition.x == 0 - (currentItem * (sampleListItem.rect.width + HLG.spacing)))
             {
                 isSnapped = true;
@@ -68,6 +71,7 @@ public class ScrollScript : MonoBehaviour
         if (scrollRect.velocity.magnitude > 5)
         {
             ItemName.text = "_____";
+            ItemCost.text = "Cost:___";
             isSnapped = false;
             snapSpeed = 0;
         }
