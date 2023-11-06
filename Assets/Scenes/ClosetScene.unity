@@ -5930,55 +5930,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 245265051}
   m_CullTransparentMesh: 1
---- !u!1 &304583432
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 304583434}
-  - component: {fileID: 304583433}
-  m_Layer: 0
-  m_Name: AptSceneReferencer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &304583433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 304583432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 462ef1457f5354b4f81252d6f82d2302, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moneyContainer: {fileID: 0}
-  moneyData: {fileID: 0}
-  moneyText: {fileID: 0}
-  player: {fileID: 0}
-  RoboWearingAPT: []
---- !u!4 &304583434
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 304583432}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 553.771, y: 1046.9723, z: 18.768147}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &367903033
 GameObject:
   m_ObjectHideFlags: 0
@@ -6586,6 +6537,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4419479e1a8ed244096f81fbf6d2060e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadingdata: 0
+  restarting: 0
 --- !u!4 &590584170
 Transform:
   m_ObjectHideFlags: 0
@@ -6599,7 +6552,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &591474715
 GameObject:

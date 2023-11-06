@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEditor.ShortcutManagement;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
+
 
 public class AptSceneMenu : MonoBehaviour
 {
@@ -17,6 +19,12 @@ public class AptSceneMenu : MonoBehaviour
 
     //wear clothes in apartment
     public GameObject[] RoboWearingAPT;
+
+    public Animator LevelChangerComponent;
+    private int levelToLoad;
+
+    [SerializeField] private RawImage _img;
+    [SerializeField] private float _x, _y;
 
     void Start()
     {
@@ -42,6 +50,7 @@ public class AptSceneMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P)) {
             SceneManager.LoadScene("DataScene");
         }
+        _img.uvRect = new Rect(_img.uvRect.position + new Vector2(_x, _y) * Time.deltaTime, _img.uvRect.size);
     }
 
     public void GoToMenu() {
@@ -57,21 +66,36 @@ public class AptSceneMenu : MonoBehaviour
         
     }
 
+
     public void GoToStore()
     {
-        SceneManager.LoadScene("StoreScene");
+        FadeToLevel(6);
+       // SceneManager.LoadScene("StoreScene");
     }
     public void GoToCloset()
     {
-        SceneManager.LoadScene("ClosetScene");
+        FadeToLevel(8);
+      //  SceneManager.LoadScene("ClosetScene");
     }
     public void GoToSettings()
     {
-        SceneManager.LoadScene("SettingsScreen");
+        FadeToLevel(10);
+        //SceneManager.LoadScene("SettingsScreen");
     }
 
     public void Quit() {
         Application.Quit();
         Debug.Log("Quit");
+    }
+
+    public void FadeToLevel(int levelIndex)
+    {
+        levelToLoad = levelIndex;
+        LevelChangerComponent.SetTrigger("FadeOut");
+    }
+
+    public void OnFadeComplete()
+    {
+        SceneManager.LoadScene(levelToLoad);
     }
 }
