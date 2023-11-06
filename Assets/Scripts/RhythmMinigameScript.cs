@@ -163,8 +163,9 @@ public class RhythmMinigameScript : MonoBehaviour
         }
 
         SceneManager.LoadScene("VisualNovel");
-       /*
+       
         Time.timeScale = 1;
+        /*
         gameover = false;
         restart = true;
         score = 0;
