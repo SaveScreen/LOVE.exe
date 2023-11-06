@@ -17,7 +17,7 @@ MonoBehaviour:
   - "\u201CAh, this is not what I expected\u2026\u201D"
   - '- My systems are telling me that you are having trouble expressing your feelings
     and connecting with others. Would you like to practice with me? '
-  - "\u201COh, well.. people just are very unreliable in this city. CITY NAME isn\u2019t
+  - "\u201COh, well.. people just are very unreliable in this city. Technopolis isn\u2019t
     really a place you get a happy ending in, every man for himself y'know? Here,
     I'll show you one of my favorite spots.\u201D"
   - '- Humans have a lot more in common than you might believe Jett, would you like
@@ -28,7 +28,7 @@ MonoBehaviour:
     so bad after all\u2026\u201D"
   - '- My systems are telling me that you are having trouble expressing your feelings
     and connecting with others. Would you like to practice with me? '
-  - "\u201COh, well.. people just are very unreliable in this city. CITY NAME isn\u2019t
+  - "\u201COh, well.. people just are very unreliable in this city. Technopolis isn\u2019t
     really a place you get a happy ending in, every man for himself y'know? Here,
     I'll show you one of my favorite spots.\u201D"
   - '- Humans have a lot more in common than you might believe Jett, would you like
@@ -37,17 +37,45 @@ MonoBehaviour:
   - "\u201CSick! You look cool.\u201D"
   - '- My systems are telling me that you are having trouble expressing your feelings
     and connecting with others. Would you like to practice with me? '
-  - "\u201COh, well.. people just are very unreliable in this city. CITY NAME isn\u2019t
+  - "\u201COh, well.. people just are very unreliable in this city. Technopolis isn\u2019t
     really a place you get a happy ending in, every man for himself y'know? Here,
     I'll show you one of my favorite spots.\u201D"
   - '- Humans have a lot more in common than you might believe Jett, would you like
     to explore it together?'
-  date2pregamelines: []
-  date2postgamelines: []
-  date3pregamelines: []
-  date3postgamelines: []
+  date2pregamelines:
+  - "\u201CNo one has ever really given me the time of day. I guess that\u2019s why
+    I decided to date a robot.\u201D"
+  - "\u201CMost people are just lame, everyone always just follows the latest trends
+    and focuses on what's the newest thing. We\u2019re all becoming clones y'know?\u201D"
+  date2postgamelines:
+  - '- Jett, my data system has calculated you might have ABANDONMENT ISSUES. Would
+    you like to work through them with me?'
+  - "\u201CThis arcade game was pretty fun\u2026 never really explored this bar.
+    I have always lived in this city, people come and go. But a robot? You will always
+    stay won\u2019t you?\""
+  - "\"Maybe that\u2019s why I keep talking to you. It feels like you understand
+    me and I might understand you.\" "
+  - '- In my robot opinion, Humans are very interesting and cool! No human is the
+    same, they are all very unique in their own way!'
+  - "\u201CI don\u2019t think I have anything in common with anyone\u2026 But you
+    seem very sure of yourself... Maybe you are right.\u201D"
+  date3pregamelines:
+  - "\u201CBoth of us are just considered weirdos.  I\u2019ve never liked trying,
+    especially when it comes to people. They were all always so judgemental, I\u2019ve
+    always felt alone. I trust you though, if you say people are cool, maybe they
+    might just be.\u201D"
+  - Jett. You need to let loose more. Let us dance!
+  date3postgamelines:
+  - "\u201CI didn\u2019t think it was that much fun to dance\u2026 I really enjoyed
+    myself. Maybe instead of judging others while sitting off to the side by myself,
+    I should just join in with them.\u201D "
+  - '- Jett, you are very understanding and kind. If you were to show this side to
+    others your fear of people disliking you would vanish!'
+  - "\u201CI\u2019ve always felt like a discarded puzzle piece in the wrong set,
+    but maybe I might have found my place after all in this city. It\u2019s all thanks
+    to you, friend.\u201D"
   wongamelines:
   - "\u201CHa, I didn't think I\u2019d enjoy watching sports. That was different\u2026
     kind of cool too.\u201D"
   lostgamelines:
-  - "\u201CWhy did I ever trust in a stupid robot? This blows!\u201D"
+  - "\u201CWhy did I ever trust in a stupid robot? This blows\u201D"

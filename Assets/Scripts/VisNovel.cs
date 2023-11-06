@@ -180,24 +180,25 @@ public class VisNovel : MonoBehaviour
         {
             if (vndc.dialoguefinished) {
                 if (playedGame && playerdata.GetGameCount() < 3) {
-                    SceneManager.LoadScene("AptScene");
+                    vndc.StartNextDatePart();
+                    playedGame = false;
                 }
                 else {
                     if (playerdata.GetGameCount() < 3)
                     {
-                        randomNum = rand.Next(3);
-                        switch (randomNum)
+                        Debug.Log("Goingtonext");
+                        switch (playerdata.GetGameCount())
                         {
                             case 0:
                             SceneManager.LoadScene("FootballMinigame");
                             
                             break;
                             case 1:
-                            SceneManager.LoadScene("RhythmMinigame");
+                            SceneManager.LoadScene("SnakeMinigame");
                                     
                             break;
                             case 2:
-                            SceneManager.LoadScene("SnakeMinigame");
+                            SceneManager.LoadScene("RhythmMinigame");
                             break;
                         }
                         

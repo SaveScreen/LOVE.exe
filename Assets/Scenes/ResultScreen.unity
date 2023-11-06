@@ -943,6 +943,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4419479e1a8ed244096f81fbf6d2060e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadingdata: 0
+  restarting: 0
 --- !u!4 &642089557
 Transform:
   m_ObjectHideFlags: 0
@@ -1471,7 +1473,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play Again
+  m_text: Continue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 499d97042fd94ee4384d480f23e60324, type: 2}
   m_sharedMaterial: {fileID: 5763011166063125080, guid: 499d97042fd94ee4384d480f23e60324,
@@ -1810,7 +1812,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf5bde1f644cd6245a1b0edbac46f3d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 0
 --- !u!4 &1406798396
 Transform:
   m_ObjectHideFlags: 0
