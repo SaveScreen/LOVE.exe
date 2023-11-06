@@ -120,8 +120,8 @@ public class CharacterSelect : MonoBehaviour
         playerdata.PlayerOutfitSelection(outfitoption);
         playerdata.PlayerDateSelection(dateoption);
         playerdata.PlayerNameSelection(nameoption);
-        playerdata.PlayerFirstLoad();
         playerdata.PlayerSelected();
+        playerdata.SaveGame();
         SceneManager.LoadScene("VisualNovel");
     }
 

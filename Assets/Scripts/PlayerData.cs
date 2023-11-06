@@ -36,11 +36,23 @@ public class PlayerData : MonoBehaviour
         gameData.playerOutfit = playeroutfit;
         gameData.playerRating = playerRating;
         gameData.playerBot = playerbot;
+        gameData.isOutfitUnlocked = isOutfitUnlocked;
 
         string json = JsonUtility.ToJson(gameData,false);
         File.WriteAllText(Application.dataPath + "/PlayerDataFile.json",json);
     }
 
+    //Checks if there is a JSON that exists on the system
+    public void InitialFileCheck() {
+        string json = File.ReadAllText(Application.dataPath + "/PlayerDataFile.json");
+        GameDataStorage gameData = JsonUtility.FromJson<GameDataStorage>(json);
+        if (gameData != null) {
+            playerSelected = gameData.playerSelected;
+        }
+        else {
+            playerSelected = false;
+        }
+    }
     public void LoadGame() {
         string json = File.ReadAllText(Application.dataPath + "/PlayerDataFile.json");
         GameDataStorage gameData = JsonUtility.FromJson<GameDataStorage>(json);
@@ -50,6 +62,7 @@ public class PlayerData : MonoBehaviour
         playeroutfit = gameData.playerOutfit;
         playerRating = gameData.playerRating;
         playerbot = gameData.playerBot;
+        isOutfitUnlocked = gameData.isOutfitUnlocked;
 
         loadingdata = true;
     }

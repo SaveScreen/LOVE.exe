@@ -8,6 +8,7 @@ public class StartMenuController : MonoBehaviour
 {
     public Animator LevelChangerComponent;
     private int levelToLoad;
+    public GameObject player;
 
     //Scrolling BG
     [SerializeField] private RawImage _img;
@@ -18,6 +19,8 @@ public class StartMenuController : MonoBehaviour
      if (Input.GetMouseButtonDown(0))
         {
             FadeToLevel(1);
+            PlayerData playerdata = player.GetComponent<PlayerData>();
+            playerdata.InitialFileCheck();
         }
 
         _img.uvRect = new Rect(_img.uvRect.position + new Vector2(_x, _y) * Time.deltaTime, _img.uvRect.size);
@@ -36,12 +39,21 @@ public class StartMenuController : MonoBehaviour
 
     public void OnFadeComplete ()
     {
+        PlayerData playerdata = player.GetComponent<PlayerData>();
+        //playerdata.InitialFileCheck();
+        bool playerSelected = playerdata.GetPlayerSelected();
+        if (playerSelected) {
+            playerdata.LoadGame();
+        }
+        else {
+            playerdata.NewGame();
+        }
         SceneManager.LoadScene(levelToLoad);
     }
 
     public void StartGame()
     {
-
+        
         SceneManager.LoadScene("MenuScreen");
     }
 }

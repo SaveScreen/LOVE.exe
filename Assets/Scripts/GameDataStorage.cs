@@ -7,5 +7,6 @@ public class GameDataStorage
     public string playerName;
     public float playerRating;
     public bool playerSelected;
+    public bool[] isOutfitUnlocked;
 
 }
