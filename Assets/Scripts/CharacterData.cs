@@ -5,8 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Character", menuName = "Character")]
 public class CharacterData : ScriptableObject
 {
-    //What outfit do they like?
-    public int outfitPreference;
 
     //Dialogue Date 1
     public string[] angrylines;

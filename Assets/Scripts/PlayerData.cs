@@ -31,6 +31,8 @@ public class PlayerData : MonoBehaviour
     }
 
     public void SaveGame() {
+        int money = moneyScript.GetGAINZ();
+
         GameDataStorage gameData = new GameDataStorage();
         gameData.playerSelected = playerSelected;
         gameData.playerDate = playerdate;
@@ -39,6 +41,7 @@ public class PlayerData : MonoBehaviour
         gameData.playerRating = playerRating;
         gameData.playerBot = playerbot;
         gameData.isOutfitUnlocked = isOutfitUnlocked;
+        gameData.money = money;
 
         string json = JsonUtility.ToJson(gameData,false);
         File.WriteAllText(Application.dataPath + "/PlayerDataFile.json",json);
@@ -65,6 +68,8 @@ public class PlayerData : MonoBehaviour
         playerRating = gameData.playerRating;
         playerbot = gameData.playerBot;
         isOutfitUnlocked = gameData.isOutfitUnlocked;
+        int money = gameData.money;
+        moneyScript.SetMoney(money);
 
         loadingdata = true;
     }

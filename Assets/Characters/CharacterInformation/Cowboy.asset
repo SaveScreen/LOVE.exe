@@ -18,58 +18,80 @@ MonoBehaviour:
     with a corpo bootlicker\u2026\""
   - "\u201CI am still very new to this, so you\u2019re going to have to excuse me
     if I am a bit out of touch.\u201D"
-  - '- No worries Jimothy, it seems my systems indicate you are 23 years old and
-    have had a lot of time to mesh in with the modern world but look like a modern
-    Griff Wayne. '
-  - "\u201CBOY HOWDY! You know Griff Wayne? Why he\u2019s the inspiration for my
-    rootin\u2019 tootin\u2019 lifestyle\u201D"
-  - '- Griff was labeled an outlaw in many of his movies, is that how you see yourself
-    Jimothy?'
+  - "- No worries Jimothy, I am assessing the services you\u2019ve asked for. It
+    seems you want a \u201Cpartner in crime\u201D. I guarantee we cannot engage in
+    illegal activities Jimothy but I can provide you with companionship! "
+  - "\u201CAin\u2019t you seen old westerns? The greats like Griff Black always had
+    a partner in crime. I figure this may be the best route!\u201D"
+  - '- Well, you have called upon the services of the most reliable bot! My systems
+    are also indicating a slight discomfort with modern technology. '
+  - "\u201CAh, no need to worry about that pal. Lemme just take you to kick some
+    pig skin around!\u201D"
   neutrallines:
   - '"Your services are much-appreciated partner."'
   - "\u201CI am still very new to this, so you\u2019re going to have to excuse me
     if I am a bit out of touch.\u201D"
-  - '- No worries Jimothy, it seems my systems indicate you are 23 years old and
-    have had a lot of time to mesh in with the modern world but look like a modern
-    Griff Wayne. '
-  - "\u201CBOY HOWDY! You know Griff Wayne? Why he\u2019s the inspiration for my
-    rootin\u2019 tootin\u2019 lifestyle\u201D"
-  - '- Griff was labeled an outlaw in many of his movies, is that how you see yourself
-    Jimothy?'
+  - "- No worries Jimothy, I am assessing the services you\u2019ve asked for. It
+    seems you want a \u201Cpartner in crime\u201D. I guarantee we cannot engage in
+    illegal activities Jimothy but I can provide you with companionship! "
+  - "\u201CAin\u2019t you seen old westerns? The greats like Griff Black always had
+    a partner in crime. I figure this may be the best route!\u201D"
+  - '- Well, you have called upon the services of the most reliable bot! My systems
+    are also indicating a slight discomfort with modern technology. '
+  - "\u201CAh, no need to worry about that pal. Lemme just take you to kick some
+    pig skin around!\u201D"
   happylines:
   - "\"It seems to me I\u2019ve ordered the services of a mighty fine bot. *tips
     cowboy hat*\""
   - "\u201CI am still very new to this, so you\u2019re going to have to excuse me
     if I am a bit out of touch.\u201D"
-  - '- No worries Jimothy, it seems my systems indicate you are 23 years old and
-    have had a lot of time to mesh in with the modern world but look like a modern
-    Griff Wayne. '
-  - "\u201CBOY HOWDY! You know Griff Wayne? Why he\u2019s the inspiration for my
-    rootin\u2019 tootin\u2019 lifestyle\u201D"
-  - '- Griff was labeled an outlaw in many of his movies, is that how you see yourself
-    Jimothy?'
+  - "- No worries Jimothy, I am assessing the services you\u2019ve asked for. It
+    seems you want a \u201Cpartner in crime\u201D. I guarantee we cannot engage in
+    illegal activities Jimothy but I can provide you with companionship! "
+  - "\u201CAin\u2019t you seen old westerns? The greats like Griff Black always had
+    a partner in crime. I figure this may be the best route!\u201D"
+  - '- Well, you have called upon the services of the most reliable bot! My systems
+    are also indicating a slight discomfort with modern technology. '
+  - "\u201CAh, no need to worry about that pal. Lemme just take you to kick some
+    pig skin around!\u201D"
   date2pregamelines:
-  - "\u201CHello again, partner, see ya couldn't resist me\u201D "
-  - '- Hello, Jimothy shall we embark on another adventure into the Wild, Wild Countryside?'
-  - "\u201CI like your spunk pal. Y\u2019know, the world ain\u2019t been so kind
-    to folks like me.\u201D"
-  - " \u201CFolks like me just want to live a quiet life in the countryside, y'know.
-    Riding horses into the sunset, and all that.\u201D"
-  - "\u201CNow if you're able to do that, you\u2019d certainly be the apple of my
-    eye\u201D"
-  - "\u201CIn fact, I think I have the perfect idea for our time together!\u201D"
+  - '- Jimothy shall we embark on another adventure into the Wild Wild Countryside?'
+  - "*chuckles* \u201CWhy partner I think we should, in fact, they got a mighty fun
+    saloon cabinet in the back that can invigorate those Cowboy feelings!\u201D"
+  - "\u201CI like your spunk pal. Ever since I was a wee boy, I\u2019ve dreamed of
+    riding horses, drinkin\u2019 moonshine, and swinging my lasso to gather the cattle.\""
+  - "\"My old man told me there\u2019s no such thing as a horse and told me to grow
+    up. Took me to get my first little gadget on my face and told me to 'cyber up'.
+    \u201D"
+  - "\u201COh shoot. That there arcade cabinet looks mighty familiar from my childhood,
+    mind if we go check it out?\""
   date2postgamelines:
-  - '- That was quite fun Jimothy. My systems indicate you are opening up to me more
-    and more. I believe this progress can assist you in opening up to the new world! '
-  - "\u201CI appreciate what you are doing for me bud, I agree with you! This made
-    me feel more free and alive. Thank you kindly!\u201D "
+  - '- I am happy you seem to be opening up to me more Jimothy! Your situation with
+    your Father seems to have led you to mistrust others and stay in your own world.
+    I think if you are kinder to others, they will like you for who you truly are.'
+  - "\u201CI appreciate what you\u2019re doin' for me now bud. I guess it\u2019s
+    scary to branch out, much easier to stay in my own little world and pretend I'm
+    a rootin\u2019 tootin\u2019 cowboy all day long.\u201D"
   date3pregamelines:
-  - FINISH DIALOGUE FOR THIS CHARACTER
+  - '- Jimothy. You do not have to choose between these two worlds. They can coexist
+    as your relationships with others can coexist with your livelihood.'
+  - '- You just have to let them in. Courage is being scared to death and saddling
+    up anyway.'
+  - "\u201CGee partner. You sure do have a way with words. I\u2019ve really appreciated
+    your company now, and It\u2019s got me thinkin\u2019 about a lot of stuff. C\u2019mere
+    you, let\u2019s see if a hunk of metal can square dance\u201D"
   date3postgamelines:
-  - FINISH DIALOGUE FOR THIS CHARACTER
+  - "- YEE YEE! Jimothy, look how much fun you are having with me! You are able to
+    prove you are able to engage in modern-day activities and still have a \u201CHog-killin\u2019
+    Time\u201D "
+  - "\u201CAwh shucks. I started this date with my head as a big bag of nails. You
+    really are an Ace-high partner.\""
+  - "\"It\u2019ll take me a while to reach out and try more modern doo-hickeys, but
+    I feel more free and better than before.\u201D"
+  - "\u201CYou\u2019ve been mighty kind to me, and I could never repay you. Thank
+    you, Sugar. \u201D"
   wongamelines:
-  - "\u201CWell pal, you got some mighty spunk in you. This was a great time partner,
-    I\u2019ll see ya soon\u2026\u201D"
+  - "\u201CWell pal, you got some mighty spunk in you. This was a great time partner.\u201D "
   - '- I assure you I can change your mind in time, partner. Get you to see the you,
     you want to be! '
   lostgamelines:

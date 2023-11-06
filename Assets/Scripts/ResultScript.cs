@@ -45,12 +45,6 @@ public class ResultScript : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void DisplayResult()
     {
         FinalScore.SetText("Score: " + playerdata.GetPlayerRating().ToString());
@@ -150,7 +144,7 @@ public class ResultScript : MonoBehaviour
     }
 
     public void Restart() {
-        playerdata.ResetAllData();
+        playerdata.SaveGame();
         SceneManager.LoadScene("AptScene");
     }
 }

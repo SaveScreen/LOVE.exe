@@ -22,6 +22,10 @@ public class MONEYScript : MonoBehaviour
         return money;
     }
 
+    public void SetMoney(int amount) {
+        money = amount;
+    }
+
 
     void Start()
     {
