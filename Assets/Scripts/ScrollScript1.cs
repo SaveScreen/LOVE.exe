@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ScrollScript1 : MonoBehaviour
 {
@@ -101,11 +102,8 @@ public class ScrollScript1 : MonoBehaviour
         }
     }
 
-    /*
-    public void OutfitsScroll()
+    public void ReturnToAPT()
     {
-        scrollval = scroller.value;
-        section.transform.localPosition = new Vector2(Mathf.Lerp(xMinimum, xMaximum, scrollval), section.transform.localPosition.y);
+        SceneManager.LoadScene("AptScene");
     }
-    */
 }

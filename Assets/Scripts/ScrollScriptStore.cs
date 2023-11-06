@@ -7,16 +7,8 @@ using UnityEngine.UI;
 using UnityEngine.UIElements;
 using TMPro;
 
-public class ScrollScript : MonoBehaviour
+public class ScrollScriptStore : MonoBehaviour
 {
-    /*
-    public GameObject section; //Put only the Choose Outfit game object here
-    public Scrollbar scroller;
-    private float scrollval;
-    public float xMinimum;
-    public float xMaximum;
-    */
-
     //Stuff Ethan Added
     public GameObject moneyContainer;
     public MONEYScript moneyData;
@@ -28,6 +20,8 @@ public class ScrollScript : MonoBehaviour
 
     public TMP_Text ItemName;
     public string[] ItemNames;
+    public TMP_Text ItemCost;
+    public string[] ItemCosts;
 
     bool isSnapped;
     float snapSpeed;
@@ -57,9 +51,10 @@ public class ScrollScript : MonoBehaviour
             snapSpeed += snapForce * Time.deltaTime;
             contentPanel.localPosition = new Vector3(
                 Mathf.MoveTowards(contentPanel.localPosition.x, 0 - currentItem * (sampleListItem.rect.width + HLG.spacing), snapSpeed),
-                contentPanel.localPosition.y, 
+                contentPanel.localPosition.y,
                 contentPanel.localPosition.z);
             ItemName.text = ItemNames[currentItem];
+            ItemCost.text = "Cost: " + ItemCosts[currentItem];
             if (contentPanel.localPosition.x == 0 - (currentItem * (sampleListItem.rect.width + HLG.spacing)))
             {
                 isSnapped = true;
@@ -68,6 +63,7 @@ public class ScrollScript : MonoBehaviour
         if (scrollRect.velocity.magnitude > 5)
         {
             ItemName.text = "_____";
+            ItemCost.text = "Cost:___";
             isSnapped = false;
             snapSpeed = 0;
         }
@@ -77,7 +73,8 @@ public class ScrollScript : MonoBehaviour
     {
         int tempMon = 0;
         tempMon = moneyData.GetGAINZ();
-        if (canAfford(tempMon)){
+        if (canAfford(tempMon))
+        {
             if (!playerdata.getOutfitUnlocked(currentItem))
             {
                 switch (currentItem)
@@ -115,7 +112,7 @@ public class ScrollScript : MonoBehaviour
                 storeController.GetMoney();
             }
         }
-        else if(!playerdata.getOutfitUnlocked(currentItem))
+        else if (!playerdata.getOutfitUnlocked(currentItem))
         {
             ItemName.text = "CANNOT AFFORD";
         }
@@ -129,13 +126,15 @@ public class ScrollScript : MonoBehaviour
 
     public bool canAfford(int money)
     {
-        if(currentItem <= 2 && money >= 500) {
+        if (currentItem <= 2 && money >= 500)
+        {
             return true;
-        } 
+        }
 
-        if(currentItem > 2 && money >= 1500) {
+        if (currentItem > 2 && money >= 1500)
+        {
             return true;
-        } 
+        }
 
         return false;
     }

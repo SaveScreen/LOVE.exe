@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 35596229}
   - component: {fileID: 35596228}
   - component: {fileID: 35596227}
-  - component: {fileID: 35596230}
+  - component: {fileID: 35596231}
   m_Layer: 5
   m_Name: Scroll View
   m_TagString: Untagged
@@ -308,7 +308,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 35596225}
   m_CullTransparentMesh: 1
---- !u!114 &35596230
+--- !u!114 &35596231
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -317,7 +317,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 35596225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89fc4b9b997c1614b800dd62a64d10b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 18eab28121a479147886488eded68635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moneyContainer: {fileID: 1291329536}
@@ -329,12 +329,12 @@ MonoBehaviour:
   ItemName: {fileID: 734579182}
   ItemNames:
   - Cowboy
-  - Goth
   - Fancy
+  - Goth
   - Royal
   - Maid
   - Big Shirt
-  - StarGuy
+  - Star Guy
   ItemCost: {fileID: 37510307}
   ItemCosts:
   - 500
@@ -2740,8 +2740,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 35596230}
-        m_TargetAssemblyTypeName: ScrollScript, Assembly-CSharp
+      - m_Target: {fileID: 35596231}
+        m_TargetAssemblyTypeName: ScrollScriptStore, Assembly-CSharp
         m_MethodName: BuyButtonClicked
         m_Mode: 1
         m_Arguments:
