@@ -18,31 +18,55 @@ MonoBehaviour:
     with a corpo bootlicker\u2026\""
   - "\u201CI am still very new to this, so you\u2019re going to have to excuse me
     if I am a bit out of touch.\u201D"
-  - '- My systems tell me you are not the biggest fan of new tech Jimothy. How can
-    I assist you in fixing these feelings? '
-  - "\u201CHuh? I guarantee there's nothing about me that needs to be fixed, I\u2019m
-    just looking for a way to kill time.\u201D"
+  - '- No worries Jimothy, it seems my systems indicate you are 23 years old and
+    have had a lot of time to mesh in with the modern world but look like a modern
+    Griff Wayne. '
+  - "\u201CBOY HOWDY! You know Griff Wayne? Why he\u2019s the inspiration for my
+    rootin\u2019 tootin\u2019 lifestyle\u201D"
+  - '- Griff was labeled an outlaw in many of his movies, is that how you see yourself
+    Jimothy?'
   neutrallines:
   - '"Your services are much-appreciated partner."'
   - "\u201CI am still very new to this, so you\u2019re going to have to excuse me
     if I am a bit out of touch.\u201D"
-  - '- My systems tell me you are not the biggest fan of new tech Jimothy. How can
-    I assist you in fixing these feelings? '
-  - "\u201CHuh? I guarantee there's nothing about me that needs to be fixed, I\u2019m
-    just looking for a way to kill time.\u201D"
+  - '- No worries Jimothy, it seems my systems indicate you are 23 years old and
+    have had a lot of time to mesh in with the modern world but look like a modern
+    Griff Wayne. '
+  - "\u201CBOY HOWDY! You know Griff Wayne? Why he\u2019s the inspiration for my
+    rootin\u2019 tootin\u2019 lifestyle\u201D"
+  - '- Griff was labeled an outlaw in many of his movies, is that how you see yourself
+    Jimothy?'
   happylines:
   - "\"It seems to me I\u2019ve ordered the services of a mighty fine bot. *tips
     cowboy hat*\""
   - "\u201CI am still very new to this, so you\u2019re going to have to excuse me
     if I am a bit out of touch.\u201D"
-  - '- My systems tell me you are not the biggest fan of new tech Jimothy. How can
-    I assist you in fixing these feelings? '
-  - "\u201CHuh? I guarantee there's nothing about me that needs to be fixed, I\u2019m
-    just looking for a way to kill time.\u201D"
-  date2pregamelines: []
-  date2postgamelines: []
-  date3pregamelines: []
-  date3postgamelines: []
+  - '- No worries Jimothy, it seems my systems indicate you are 23 years old and
+    have had a lot of time to mesh in with the modern world but look like a modern
+    Griff Wayne. '
+  - "\u201CBOY HOWDY! You know Griff Wayne? Why he\u2019s the inspiration for my
+    rootin\u2019 tootin\u2019 lifestyle\u201D"
+  - '- Griff was labeled an outlaw in many of his movies, is that how you see yourself
+    Jimothy?'
+  date2pregamelines:
+  - "\u201CHello again, partner, see ya couldn't resist me\u201D "
+  - '- Hello, Jimothy shall we embark on another adventure into the Wild, Wild Countryside?'
+  - "\u201CI like your spunk pal. Y\u2019know, the world ain\u2019t been so kind
+    to folks like me.\u201D"
+  - " \u201CFolks like me just want to live a quiet life in the countryside, y'know.
+    Riding horses into the sunset, and all that.\u201D"
+  - "\u201CNow if you're able to do that, you\u2019d certainly be the apple of my
+    eye\u201D"
+  - "\u201CIn fact, I think I have the perfect idea for our time together!\u201D"
+  date2postgamelines:
+  - '- That was quite fun Jimothy. My systems indicate you are opening up to me more
+    and more. I believe this progress can assist you in opening up to the new world! '
+  - "\u201CI appreciate what you are doing for me bud, I agree with you! This made
+    me feel more free and alive. Thank you kindly!\u201D "
+  date3pregamelines:
+  - FINISH DIALOGUE FOR THIS CHARACTER
+  date3postgamelines:
+  - FINISH DIALOGUE FOR THIS CHARACTER
   wongamelines:
   - "\u201CWell pal, you got some mighty spunk in you. This was a great time partner,
     I\u2019ll see ya soon\u2026\u201D"

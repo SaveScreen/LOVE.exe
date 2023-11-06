@@ -84,7 +84,7 @@ public class VisNovelDialogueController : MonoBehaviour
     // Update is called once per frame
     void Update()
     { 
-        
+        //Dialogue has not been found yet
         if (dialoguestarted == false) {
             Debug.Log("Game is " + gamecount);
             switch (gamecount) {
@@ -248,30 +248,15 @@ public class VisNovelDialogueController : MonoBehaviour
                             switch (visNovelScript.dateref) {
                                 //Cowboy
                                 case 1:
-                                    if (wonlastgame) {
-                                        currentlines = cowboy.wongamelines;
-                                    }
-                                    else {
-                                        currentlines = cowboy.lostgamelines;
-                                    }
+                                    currentlines = cowboy.date2postgamelines;
                                 break;
                                 //Goth
                                 case 2:
-                                    if (wonlastgame) {
-                                        currentlines = goth.wongamelines;
-                                    }
-                                    else {
-                                        currentlines = goth.lostgamelines;
-                                    }
+                                    currentlines = goth.date2postgamelines;
                                 break;
                                 //Fancy
                                 case 3:
-                                    if (wonlastgame) {
-                                        currentlines = fancy.wongamelines;
-                                    }
-                                    else {
-                                        currentlines = fancy.lostgamelines;
-                                    }
+                                    currentlines = fancy.date2postgamelines;
                                 break;
                             }
                         }
@@ -299,30 +284,15 @@ public class VisNovelDialogueController : MonoBehaviour
                             switch (visNovelScript.dateref) {
                                 //Cowboy
                                 case 1:
-                                    if (wonlastgame) {
-                                        currentlines = cowboy.wongamelines;
-                                    }
-                                    else {
-                                        currentlines = cowboy.lostgamelines;
-                                    }
+                                    currentlines = cowboy.date3postgamelines;
                                 break;
                                 //Goth
                                 case 2:
-                                    if (wonlastgame) {
-                                        currentlines = goth.wongamelines;
-                                    }
-                                    else {
-                                        currentlines = goth.lostgamelines;
-                                    }
+                                    currentlines = goth.date3postgamelines;
                                 break;
                                 //Fancy
                                 case 3:
-                                    if (wonlastgame) {
-                                        currentlines = fancy.wongamelines;
-                                    }
-                                    else {
-                                        currentlines = fancy.lostgamelines;
-                                    }
+                                    currentlines = fancy.date3postgamelines;
                                 break;
                             }
                         }
@@ -332,6 +302,7 @@ public class VisNovelDialogueController : MonoBehaviour
             StartCoroutine(TypeOutCharacters());
             dialoguestarted = true;
         }
+        //When dialogue has been found.
         else {
             clicked = click.WasPressedThisFrame();
             if (cutscene) {
@@ -377,6 +348,14 @@ public class VisNovelDialogueController : MonoBehaviour
             dialoguefinished = true;
             index = 0;
         }
+    }
+
+    public void StartNextDatePart() {
+        playedGame = false;
+        dialoguefinished = false;
+        index = 0;
+        textbox.text = "";
+        dialoguestarted = false;
     }
 
     IEnumerator TypeOutCharacters() {

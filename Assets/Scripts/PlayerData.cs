@@ -37,7 +37,7 @@ public class PlayerData : MonoBehaviour
         gameData.playerRating = playerRating;
         gameData.playerBot = playerbot;
 
-        string json = JsonUtility.ToJson(gameData,true);
+        string json = JsonUtility.ToJson(gameData,false);
         File.WriteAllText(Application.dataPath + "/PlayerDataFile.json",json);
     }
 
