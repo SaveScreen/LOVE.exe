@@ -320,6 +320,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89fc4b9b997c1614b800dd62a64d10b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moneyContainer: {fileID: 1291329536}
+  moneyData: {fileID: 1291329537}
   scrollRect: {fileID: 35596227}
   contentPanel: {fileID: 574482605}
   sampleListItem: {fileID: 1971740828}
@@ -334,6 +336,9 @@ MonoBehaviour:
   - item 6
   - item 7
   snapForce: 2
+  playerDataContainer: {fileID: 789245105}
+  playerdata: {fileID: 789245106}
+  storeController: {fileID: 1719538559}
 --- !u!1 &41666552
 GameObject:
   m_ObjectHideFlags: 0
@@ -2230,6 +2235,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 734579180}
   m_CullTransparentMesh: 1
+--- !u!1 &789245105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 789245107}
+  - component: {fileID: 789245106}
+  m_Layer: 0
+  m_Name: PlayerData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &789245106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789245105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4419479e1a8ed244096f81fbf6d2060e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadingdata: 0
+  restarting: 0
+  isOutfitUnlocked: 00000000000000
+--- !u!4 &789245107
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789245105}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 489.3882, y: 204.57423, z: -819.9814}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &854201429
 GameObject:
   m_ObjectHideFlags: 0
@@ -2542,7 +2594,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1142097004}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 35596230}
+        m_TargetAssemblyTypeName: ScrollScript, Assembly-CSharp
+        m_MethodName: BuyButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1142097004
 MonoBehaviour:
   m_ObjectHideFlags: 0

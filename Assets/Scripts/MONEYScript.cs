@@ -12,6 +12,11 @@ public class MONEYScript : MonoBehaviour
         money += gainz;
     }
 
+    public void LoseMoney(int loss)
+    {
+        money -= loss;
+    }
+
     public int GetGAINZ()
     {
         return money;

@@ -12,8 +12,13 @@ public class StoreSceneController : MonoBehaviour
 
     void Start()
     {
-        int howMuch;
         moneyData = moneyContainer.GetComponent<MONEYScript>();
+        GetMoney();
+    }
+
+    public void GetMoney()
+    {
+        int howMuch;
         howMuch = moneyData.GetGAINZ();
 
         moneyText.SetText("Money: " + howMuch);

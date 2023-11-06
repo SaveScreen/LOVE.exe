@@ -85,8 +85,20 @@ public class ScrollScript1 : MonoBehaviour
 
     public void WearButtonClicked()
     {
-        OutfitClickedParticle.Play();
-        playerdata.SetPlayerChibiOutfit(currentItem);
+        if(currentItem != 0 && playerdata.getOutfitUnlocked(currentItem - 1))
+        {
+            OutfitClickedParticle.Play();
+            playerdata.SetPlayerChibiOutfit(currentItem);
+        }
+        else if(currentItem != 0)
+        {
+            ItemName.text = "NOT UNLOCKED";
+        }
+        else
+        {
+            OutfitClickedParticle.Play();
+            playerdata.SetPlayerChibiOutfit(currentItem);
+        }
     }
 
     /*

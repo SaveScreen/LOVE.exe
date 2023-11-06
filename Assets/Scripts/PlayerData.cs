@@ -21,6 +21,8 @@ public class PlayerData : MonoBehaviour
     public bool loadingdata = false;
     public bool restarting = false;
 
+    public static bool[] isOutfitUnlocked = new bool[7]; 
+
     public void NewGame() {
         ResetAllData();
         restarting = true;
@@ -82,6 +84,10 @@ public class PlayerData : MonoBehaviour
     public void ResetPlayedGame() {
         playedGame = false;
     }
+    public void UnlockOutfit(int outfitNum)
+    {
+        isOutfitUnlocked[outfitNum] = true;
+    }
 
     public void WonGame() {
         wonGame = true;
@@ -123,6 +129,10 @@ public class PlayerData : MonoBehaviour
     }
     public bool GetPlayerSelected() {
         return playerSelected;
+    }
+    public bool getOutfitUnlocked(int fitSlot)
+    {
+        return isOutfitUnlocked[fitSlot];
     }
 
     public void SetPlayerChibiOutfit(int sel)
