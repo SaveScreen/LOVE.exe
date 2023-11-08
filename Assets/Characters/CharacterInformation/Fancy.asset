@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f9fbb3627edbde4b97be632b8ce0af8, type: 3}
   m_Name: Fancy
   m_EditorClassIdentifier: 
-  outfitPreference: 2
   angrylines:
   - '"Oh dear, that is absolutely dreadful, have these boys not given you a lesson
     in class?"'
@@ -23,6 +22,7 @@ MonoBehaviour:
   - "\u201CWhat- No, there\u2019s nothing wrong with my body language. Is my outfit
     a mess? Is that why you think that? Or my hair? We\u2019re outside, after all.
     Maybe this location was a bad idea..\u201D"
+  alWhoistalking: 00000100
   neutrallines:
   - '"Your vision is interesting, and the style is there but the formality is lacking. 
     We can work with this.."'
@@ -33,6 +33,7 @@ MonoBehaviour:
   - "\u201CWhat- No, there\u2019s nothing wrong with my body language. Is my outfit
     a mess? Is that why you think that? Or my hair? We\u2019re outside, after all.
     Maybe this location was a bad idea..\u201D"
+  nlWhoistalking: 00000100
   happylines:
   - '"I see you have exquisite taste darling!  This date shall make headlines!"'
   - "\u201CI\u2019ve had plenty of robot companions, they\u2019re all so very dull.
@@ -42,6 +43,7 @@ MonoBehaviour:
   - "\u201CWhat- No, there\u2019s nothing wrong with my body language. Is my outfit
     a mess? Is that why you think that? Or my hair? We\u2019re outside, after all.
     Maybe this location was a bad idea..\u201D"
+  hlWhoistalking: 00000100
   date2pregamelines:
   - "\u201CI\u2019m a person with very refined tastes. I\u2019m used to having extravagant
     parties every night and going to expensive breakfast meetings with important
@@ -49,8 +51,9 @@ MonoBehaviour:
   - "\"I love it\u2026 of course I love it.\u201D "
   - "\u201CMaybe it could be.. Beneficial, to me to use this date as a way to pretend
     I am a simple citizen in Technopolis.\""
-  - "Yes.. this could be.. Avant garde in a way. Let's try that measly little arcade
+  - "\"Yes.. this could be.. Avant garde in a way. Let's try that measly little arcade
     game common folk like so much!\u201D"
+  date2preWhoistalking: 00000000
   date2postgamelines:
   - '- Frills you have a lot of power! My systems detect EMPTINESS and FALSE EMOTIONS
     in your face. I am here to assist you!'
@@ -61,29 +64,33 @@ MonoBehaviour:
     all of the time. I just want to relax and play games sometimes.\u201D"
   - "\u201CThis is different. I haven\u2019t gotten to talk to someone like this
     for a while... Maybe ever. For that, I must thank you, dearly.\u201D"
+  date2postWhoistalking: 01000000
   date3pregamelines:
   - '- Frills! Let us engage and let loose with dance! My systems tell me you have
     listed NONE for personal hobbies!'
   - "\"You don\u2019t really need hobbies when you\u2019re making millions sweetheart.
     I just need you to bring me on a fun and normal date. Whatever you bring your
     other boring, poor clients to.\""
+  date3preWhoistalking: 0100
   date3postgamelines:
   - '- Who are you Frills? Why did you want to have a CASUAL and NORMAL companion?'
   - "\u201CFine. You\u2019ve got me. I\u2019ve got a business proposal that I need
     to get signed. I\u2019m only used to stuffy business people who are only about
     money this and money that.\""
-  - "This 'new money' guy said he wouldn\u2019t sign the proposal unless I learned
+  - "\"This 'new money' guy said he wouldn\u2019t sign the proposal unless I learned
     to be more 'chill', whatever that means.\u201D"
   - "\u201CIn truth, I guess I don\u2019t really know who I am outside of this life.
     But this has made me feel like a new person.\""
   - "\"I don\u2019t really care whether he signs it or not anymore. Maybe I\u2019ll
     get lucky and get fired. Start anew. Move somewhere else and enjoy myself.\u201D "
   - "\u201CThank you for this. I could never repay you for all you\u2019ve done.\u201D"
+  date3postWhoistalking: 010000000000
   wongamelines:
   - '- You seem like you are putting on a facade Frills! It is okay to let loose
     sometimes and be who you really are!'
   - "\u201CSitting outside and just playing a measly little sport seems like such
     a waste of time. I could be making money right now\u2026 But I feel so relaxed.\u201D"
+  wongameWhoistalking: 0100
   lostgamelines:
   - "\u201CUgh, I am contacting my lawyer, your company will never hear the end of
     this!\u201D"
@@ -91,3 +98,4 @@ MonoBehaviour:
     sometimes and be who you really are!'
   - "\u201CSitting outside and just playing a measly little sport seems like such
     a waste of time. I could be making money right now\u2026 But I feel so relaxed.\u201D"
+  lostgameWhoistalking: 000100

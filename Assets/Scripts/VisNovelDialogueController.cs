@@ -13,29 +13,6 @@ public class VisNovelDialogueController : MonoBehaviour
     public CharacterData goth;
     public CharacterData fancy;
     private string[] currentlines;
-    /*
-    public string[] cowboyangrylines;
-    public string[] cowboyneutrallines;
-    public string[] cowboyhappylines;
-    public string[] gothangrylines;
-    public string[] gothneutrallines;
-    public string[] gothhappylines;
-    public string[] fancyangrylines;
-    public string[] fancyneutrallines;
-    public string[] fancyhappylines;
-    public string[] cowboyloselines;
-    public string[] cowboywinlines;
-    public string[] gothloselines;
-    public string[] gothwinlines;
-    public string[] fancyloselines;
-    public string[] fancywinlines;
-    public string[] cowboydate2lines;
-    public string[] gothdate2lines;
-    public string[] fancydate2lines;
-    public string[] cowboydate3lines;
-    public string[] gothdate3lines;
-    public string[] fancydate3lines;
-    */
     public bool isEnglish;
     private int index;
     public InputActionAsset inputs;

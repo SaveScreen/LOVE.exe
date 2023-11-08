@@ -92,7 +92,7 @@ public class RhythmMinigameScript : MonoBehaviour
         
     }
     void ShrinkRespawnTime(){
-        respawntime = respawntime - respawntime * 0.01f;
+        respawntime = respawntime - respawntime * 0.035f;
         speedtext.text = "Circle/s: " + respawntime;
 
         Debug.Log(respawntime);
@@ -165,16 +165,6 @@ public class RhythmMinigameScript : MonoBehaviour
         SceneManager.LoadScene("VisualNovel");
        
         Time.timeScale = 1;
-        /*
-        gameover = false;
-        restart = true;
-        score = 0;
-        respawntime = starttimer;
-        timer = respawntime;
-        scoretext.text = "Score: " + score;
-        speedtext.text = "Circle/s: " + respawntime;
-        gameoverscreen.SetActive(false);
-        Generate();
-       */
+
     }
 }

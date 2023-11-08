@@ -8,18 +8,30 @@ public class CharacterData : ScriptableObject
 
     //Dialogue Date 1
     public string[] angrylines;
+    public bool[] alWhoistalking;
     public string[] neutrallines;
+    public bool[] nlWhoistalking;
     public string[] happylines;
+    public bool[] hlWhoistalking;
 
     //Dialogue Date 2
     public string[] date2pregamelines;
+    public bool[] date2preWhoistalking;
     public string[] date2postgamelines;
+    public bool[] date2postWhoistalking;
 
     //Dialogue Date 3
     public string[] date3pregamelines;
+    public bool[] date3preWhoistalking;
     public string[] date3postgamelines;
+    public bool[] date3postWhoistalking;
 
     //Dialogue for games
     public string[] wongamelines;
+    public bool[] wongameWhoistalking;
     public string[] lostgamelines;
+    public bool[] lostgameWhoistalking;
+
+    //IF BOOL IS TRUE, THE PLAYER BOT IS TALKING
+
 }
