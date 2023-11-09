@@ -63,7 +63,7 @@ public class CharacterSelect : MonoBehaviour
     }
 
     public void ChooseBotOption(int option) {
-        //Options: 1 = Male, 2 = Female
+        //Options: 1 = Male, 2 = Female, 3 = Neutral
         botoption = option;
         
         choosebotmenu.SetActive(false);

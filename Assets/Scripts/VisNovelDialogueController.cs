@@ -8,6 +8,9 @@ using UnityEngine.InputSystem;
 public class VisNovelDialogueController : MonoBehaviour
 {
     public TextMeshProUGUI textbox;
+    public TextMeshProUGUI bluetextbox;
+    public TextMeshProUGUI pinktextbox;
+    public TextMeshProUGUI yellowtextbox; 
     public TextMeshProUGUI jptextbox;
     public CharacterData cowboy;
     public CharacterData goth;
@@ -353,17 +356,17 @@ public class VisNovelDialogueController : MonoBehaviour
                     switch (playerdata.GetPlayerBot())
                     {
                         case 0:
-                            textbox.color = Color.blue;
-                            Debug.Log("Yes");
-                            break;
+                            
+                            
+                        break;
                         case 1:
-                            textbox.color = new Color(255f, 105f, 180f);
-                            Debug.Log("Yes");
-                            break;
+                            
+
+                        break;
                         case 2:
-                            textbox.color = Color.yellow;
-                            Debug.Log("Yes");
-                            break;
+                            
+                            
+                        break;
                     }
                 }
             }
