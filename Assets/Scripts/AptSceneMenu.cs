@@ -25,6 +25,9 @@ public class AptSceneMenu : MonoBehaviour
     [SerializeField] private RawImage _img;
     [SerializeField] private float _x, _y;
 
+    // make sure fade is turned on
+    public GameObject FadeOBJ;
+
     void Start()
     {
         playerdata = player.GetComponent<PlayerData>();
@@ -43,7 +46,7 @@ public class AptSceneMenu : MonoBehaviour
 
         GameObject tempObj = RoboWearingAPT[outfitSelect];
         tempObj.SetActive(true);
-
+        FadeOBJ.SetActive(true);
     }
     void Update() {
         if (Input.GetKeyDown(KeyCode.P)) {
