@@ -45,8 +45,12 @@ public class VisNovelDialogueController : MonoBehaviour
         cutscene = true;
         textbox.text = "";
         jptextbox.text = "";
+        bluetextbox.text = "";
+        pinktextbox.text = "";
+        yellowtextbox.text = "";
         dialoguestarted = false;
         dialoguefinished = false;
+        
         gamecount = playerdata.GetGameCount();
         wonlastgame = playerdata.GetWin();
         playedGame = playerdata.GetPlayedGame();
@@ -317,17 +321,50 @@ public class VisNovelDialogueController : MonoBehaviour
             if (cutscene) {
                 if (clicked) {
                     if (isEnglish) {
-                        if (textbox.text == currentlines[index]) {
-                        NextPage();
+                        if (whoistalking[index] == false) {
+                            if (textbox.text == currentlines[index]) {
+                                NextPage();
+                            }
+                            else {
+                                StopAllCoroutines();
+                                textbox.text = currentlines[index];
+                            }
                         }
                         else {
-                            StopAllCoroutines();
-                            textbox.text = currentlines[index];
+                            switch (playerdata.GetPlayerBot()) {
+                                case 3:
+                                    if (yellowtextbox.text == currentlines[index]) {
+                                        NextPage();
+                                    }
+                                    else {
+                                        StopAllCoroutines();
+                                        yellowtextbox.text = currentlines[index];
+                                    } 
+                                break;
+                                case 1:
+                                    if (bluetextbox.text == currentlines[index]) {
+                                        NextPage();
+                                    }
+                                    else {
+                                        StopAllCoroutines();
+                                        bluetextbox.text = currentlines[index];
+                                    }
+                                break;
+                                case 2:
+                                    if (pinktextbox.text == currentlines[index]) {
+                                        NextPage();
+                                    }
+                                    else {
+                                        StopAllCoroutines();
+                                        pinktextbox.text = currentlines[index];
+                                    }
+                                break;
+                            }
                         }
                     }
                     else {
                         if (jptextbox.text == currentlines[index]) {
-                        NextPage();
+                            NextPage();
                         }
                         else {
                             StopAllCoroutines();
@@ -346,29 +383,9 @@ public class VisNovelDialogueController : MonoBehaviour
             index ++;
             if (isEnglish) {
                 textbox.text = string.Empty;
-                if (whoistalking[index] == false)
-                {
-                    textbox.color = Color.white;
-                    Debug.Log("Yes");
-                } 
-                else
-                {
-                    switch (playerdata.GetPlayerBot())
-                    {
-                        case 0:
-                            
-                            
-                        break;
-                        case 1:
-                            
-
-                        break;
-                        case 2:
-                            
-                            
-                        break;
-                    }
-                }
+                bluetextbox.text = string.Empty;
+                pinktextbox.text = string.Empty;
+                yellowtextbox.text = string.Empty;
             }
             else {
                 jptextbox.text = string.Empty;
@@ -387,13 +404,30 @@ public class VisNovelDialogueController : MonoBehaviour
         dialoguefinished = false;
         index = 0;
         textbox.text = "";
+        bluetextbox.text = "";
+        pinktextbox.text = "";
+        yellowtextbox.text = "";
         dialoguestarted = false;
     }
 
     IEnumerator TypeOutCharacters() {
         foreach (char c in currentlines[index].ToCharArray()) {
             if (isEnglish) {
-                textbox.text += c;
+                if (whoistalking[index] == false) {
+                    textbox.text += c;
+                } else {
+                    switch (playerdata.GetPlayerBot()) {
+                        case 3:
+                            yellowtextbox.text += c;
+                        break;
+                        case 1:
+                            bluetextbox.text += c;
+                        break;
+                        case 2:
+                            pinktextbox.text += c;
+                        break;
+                    }
+                }
             }
             else {
                 jptextbox.text += c;
