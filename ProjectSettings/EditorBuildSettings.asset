@@ -9,10 +9,13 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScreen.unity
     guid: ceab5f334b9e53542ae5f3d663244bb0
   - enabled: 1
+    path: Assets/Scenes/RoboSelect.unity
+    guid: 200dab85bed8cd644850ca0d48407ca8
+  - enabled: 1
     path: Assets/Scenes/AptScene.unity
     guid: e507df9b0314f794990db3685608b1db
   - enabled: 1
-    path: Assets/Scenes/MenuScreen.unity
+    path: Assets/Scenes/DateSelection.unity
     guid: c850ee8c3b14cc8459e7e186857cf567
   - enabled: 1
     path: Assets/Scenes/VisualNovel.unity

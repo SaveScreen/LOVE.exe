@@ -3,32 +3,20 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
 
 public class CharacterSelect : MonoBehaviour
 {
 
     public GameObject choosebotmenu;
-    public GameObject chooseoutfitmenu;
-    public GameObject choosedatemenu;
     public GameObject choosenamemenu;
     public GameObject confirmscreen;
-    //public GameObject playergamescreen;
-    public GameObject newconfirmscreen;
     public int botoption; //If option is set to 0, it will say no bot has been chosen
-    public int outfitoption;
-    public int dateoption;
     public string nameoption;
     public TMP_InputField nametext;
     public TextMeshProUGUI botchoicetext;
-    public TextMeshProUGUI outfitchoicetext;
-    public TextMeshProUGUI datechoicetext;
-    public TextMeshProUGUI newdatechoicetext;
     public TextMeshProUGUI namechoicetext;
     public GameObject playerdatacontainer;
     private PlayerData playerdata;
-    private bool playerdataselected;
 
 
     // Start is called before the first frame update
@@ -36,73 +24,23 @@ public class CharacterSelect : MonoBehaviour
     {
         playerdata = playerdatacontainer.GetComponent<PlayerData>();
         botoption = 0;
-        outfitoption = 0;
-        dateoption = 0;
         nameoption = "";
-        playerdataselected = playerdata.GetPlayerSelected();
 
-        if (!playerdataselected) {
-            choosebotmenu.SetActive(true);
-            //chooseoutfitmenu.SetActive(false);
-            //choosedatemenu.SetActive(false);
-            //choosenamemenu.SetActive(false);
-        }
-        else {
-            choosedatemenu.SetActive(true);
-            choosebotmenu.SetActive(false);
-            playerdataselected = true;
-        }
-         
+        choosebotmenu.SetActive(true);  
     }
 
     void Update() {
         if (Input.GetKeyDown(KeyCode.Escape)) {
             Application.Quit();
-            Debug.Log("Quit");
         }
     }
 
     public void ChooseBotOption(int option) {
         //Options: 1 = Male, 2 = Female, 3 = Neutral
         botoption = option;
-        
         choosebotmenu.SetActive(false);
-        chooseoutfitmenu.SetActive(true);
+        choosenamemenu.SetActive(true);
         Debug.Log("Chose option " + botoption);
-    }
-
-    public void ChooseOutfitOption(int option) {
-        outfitoption = option;
-        
-        chooseoutfitmenu.SetActive(false);
-        choosedatemenu.SetActive(true);
-        Debug.Log("Chose outfit " + outfitoption);
-    }
-
-    public void ChooseDateOption(int option) {
-        //Options: 1 = Cowboy, 2 = Goth, 3 = Fancy
-        dateoption = option;
-        if (!playerdataselected) {
-            choosedatemenu.SetActive(false);
-            choosenamemenu.SetActive(true);
-        }
-        else {
-            choosedatemenu.SetActive(false);
-            newconfirmscreen.SetActive(true);
-            switch (dateoption) {
-                case 1:
-                    newdatechoicetext.text = "Cowboy";
-                break;
-                case 2:
-                    newdatechoicetext.text = "Goth";
-                break;
-                case 3:
-                    newdatechoicetext.text = "Fancy";
-                break;
-            }
-        }
-        Debug.Log("Chose date " + dateoption);
-        
     }
 
     public void ChooseNameOption() {
@@ -115,23 +53,8 @@ public class CharacterSelect : MonoBehaviour
         if (botoption == 2) {
             botchoicetext.text = "Female";
         }
-        if (outfitoption == 1) {
-            outfitchoicetext.text = "Outfit 1";
-        }
-        if (outfitoption == 2) {
-            outfitchoicetext.text = "Outfit 2";
-        }
-        if (outfitoption == 3) {
-            outfitchoicetext.text = "Outfit 3";
-        }
-        if (dateoption == 1) {
-            datechoicetext.text = "Cowboy";
-        }
-        if (dateoption == 2) {
-            datechoicetext.text = "Goth";
-        }
-        if (dateoption == 3) {
-            datechoicetext.text = "Fancy";
+        if (botoption == 3) {
+            botchoicetext.text = "Neutral";
         }
         namechoicetext.text = nameoption;
         Debug.Log("Name chosen as " + nameoption);
@@ -139,37 +62,18 @@ public class CharacterSelect : MonoBehaviour
 
     public void Confirm() {
         playerdata.PlayerBotSelection(botoption);
-        playerdata.PlayerOutfitSelection(outfitoption);
-        playerdata.PlayerDateSelection(dateoption);
         playerdata.PlayerNameSelection(nameoption);
         playerdata.PlayerFirstLoad();
         playerdata.PlayerSelected();
         playerdata.SaveGame();
-        SceneManager.LoadScene("VisualNovel");
-    }
-
-    public void ConfirmNewDate() {
-        playerdata.GetPlayerOutfit();
-        playerdata.PlayerFirstLoad();
-        playerdata.PlayerDateSelection(dateoption);
-        playerdata.SaveGame();
-        SceneManager.LoadScene("VisualNovel");
+        SceneManager.LoadScene("AptScene");
     }
 
     public void StartOver() {
-        if (playerdataselected) {
-            newconfirmscreen.SetActive(false);
-            choosedatemenu.SetActive(true);
-            dateoption = 0;
-        } 
-        else {
-            confirmscreen.SetActive(false);
-            choosebotmenu.SetActive(true);
-            botoption = 0;
-            outfitoption = 0;
-            dateoption = 0;
-            nameoption = "";
-        } 
+        confirmscreen.SetActive(false);
+        choosebotmenu.SetActive(true);
+        botoption = 0;
+        nameoption = "";  
     }
 
 }

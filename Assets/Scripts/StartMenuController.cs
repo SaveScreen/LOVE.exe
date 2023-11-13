@@ -44,11 +44,13 @@ public class StartMenuController : MonoBehaviour
         bool playerSelected = playerdata.GetPlayerSelected();
         if (playerSelected) {
             playerdata.LoadGame();
+            SceneManager.LoadScene("AptScene");
         }
         else {
             playerdata.NewGame();
+            SceneManager.LoadScene("RoboSelect");
         }
-        SceneManager.LoadScene(levelToLoad);
+        
     }
 
     public void StartGame()
