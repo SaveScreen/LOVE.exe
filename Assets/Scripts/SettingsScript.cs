@@ -64,4 +64,9 @@ public class SettingsScript : MonoBehaviour
     {
         SceneManager.LoadScene("AptScene");
     }
+
+    public void GotoGallery()
+    {
+        SceneManager.LoadScene("Gallery");
+    }
 }
