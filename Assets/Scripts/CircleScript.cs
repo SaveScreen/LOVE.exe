@@ -21,6 +21,7 @@ public class CircleScript : MonoBehaviour
     public bool gameover;
     private bool clicked;
     private Vector2 mousepos;
+    //private bool isOnMobile;
     
 
     // Start is called before the first frame update
@@ -36,6 +37,17 @@ public class CircleScript : MonoBehaviour
         click = inputs.FindAction("Player/MouseButton");
         pos = inputs.FindAction("Player/MousePosition");
 
+        /*
+        if (SystemInfo.deviceType == DeviceType.Handheld) {
+            isOnMobile = true;
+        }
+        else {
+            isOnMobile = false;
+        }
+        */
+        
+        //Debug.Log(SystemInfo.deviceType);
+
     }
     
     void OnEnable() {
@@ -49,11 +61,7 @@ public class CircleScript : MonoBehaviour
     void Update()
     {
         mousepos = pos.ReadValue<Vector2>();
-        Vector2 shrunkmousepos = new Vector2(mousepos.x / 1080, mousepos.y / 1920);
-        //Vector3 mouseposwithz = new Vector3(mousepos.x,mousepos.y,100);
         clicked = click.WasPerformedThisFrame();
-        //Debug.Log(Mouse.current.position.ReadValue());
-        //Debug.Log(clicked);
 
         if (!gameover) {
             if (c > 0f) {
@@ -67,21 +75,37 @@ public class CircleScript : MonoBehaviour
             }
 
             if (clicked) {
-                //var rayHit = Physics2D.GetRayIntersection(maincamera.ScreenPointToRay(shrunkmousepos));
-                var mouserayHit = Physics2D.GetRayIntersection(maincamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
-                
-                //if (!rayHit.collider) return;
-                if (!mouserayHit.collider) return;
-                //if (rayHit.collider.gameObject == gameObject) {
-                    //AddScore();
-                    //Destroy(gameObject);
-                //}
-                if (mouserayHit.collider.gameObject == gameObject) {
+                var rayHit = Physics2D.GetRayIntersection(maincamera.ScreenPointToRay(mousepos));
+
+                if (!rayHit.collider) return;
+                if (rayHit.collider.gameObject == gameObject) {
                     AddScore();
                     Destroy(gameObject);
                 }
+
+                /*
+                if (!isOnMobile) {
+                    var rayHit = Physics2D.GetRayIntersection(maincamera.ScreenPointToRay(mousepos));
+
+                    if (!rayHit.collider) return;
+                    if (rayHit.collider.gameObject == gameObject) {
+                        AddScore();
+                        Destroy(gameObject);
+                    }
+                }
+                else {
+                    var rayHit = Physics2D.GetRayIntersection(maincamera.ScreenPointToRay(mousepos));
+
+                    if (!rayHit.collider) return;
+                    if (rayHit.collider.gameObject == gameObject) {
+                        AddScore();
+                        Destroy(gameObject);
+                    }
+                }
+                */
             }
-        } else {
+        } 
+        else {
             if (rms.restart == true) {
                 Destroy(gameObject);
             }
