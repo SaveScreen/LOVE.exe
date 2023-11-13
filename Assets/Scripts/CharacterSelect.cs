@@ -48,13 +48,13 @@ public class CharacterSelect : MonoBehaviour
         choosenamemenu.SetActive(false);
         confirmscreen.SetActive(true);
         if (botoption == 1) {
-            botchoicetext.text = "Male";
+            botchoicetext.text = "Model_M";
         }
         if (botoption == 2) {
-            botchoicetext.text = "Female";
+            botchoicetext.text = "Model_S";
         }
         if (botoption == 3) {
-            botchoicetext.text = "Neutral";
+            botchoicetext.text = "Model_T";
         }
         namechoicetext.text = nameoption;
         Debug.Log("Name chosen as " + nameoption);
