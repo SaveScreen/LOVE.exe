@@ -67,6 +67,6 @@ public class SettingsScript : MonoBehaviour
 
     public void GotoGallery()
     {
-        SceneManager.LoadScene("Gallery");
+        SceneManager.LoadScene("Gallery2");
     }
 }
