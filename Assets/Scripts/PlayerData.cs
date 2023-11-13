@@ -206,7 +206,9 @@ public class PlayerData : MonoBehaviour
                         playerRating += 1f;
                     else if (playeroutfit == 3)
                         playerRating += 0.5f;
-                    else
+                    else if (playeroutfit > 3)
+                        playerRating += Random.Range(0,1f);
+                    else 
                         playerRating += 0;
                     Debug.Log("Firstloaded");
                 }
@@ -221,6 +223,8 @@ public class PlayerData : MonoBehaviour
                         playerRating += 1f;
                     else if (playeroutfit == 2)
                         playerRating += 0.5f;
+                    else if (playeroutfit > 3)
+                        playerRating += Random.Range(0.0f,1.0f);
                     else
                         playerRating += 0;
                     Debug.Log("Firstloaded");
@@ -236,6 +240,8 @@ public class PlayerData : MonoBehaviour
                         playerRating += 1f;
                     else if (playeroutfit == 1)
                         playerRating += 0.5f;
+                    else if (playeroutfit > 3)
+                        playerRating += Random.Range(0,1f);
                     else
                         playerRating += 0;
                     Debug.Log("Firstloaded");
