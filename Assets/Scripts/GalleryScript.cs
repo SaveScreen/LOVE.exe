@@ -21,7 +21,7 @@ public class GalleryScript : MonoBehaviour
 
     public void Gallery()
     {
-        SceneManager.LoadScene("Gallery");
+        SceneManager.LoadScene("Gallery2");
     }
 
     public void JimClick()
