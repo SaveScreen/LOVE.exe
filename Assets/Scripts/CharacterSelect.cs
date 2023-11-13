@@ -66,7 +66,7 @@ public class CharacterSelect : MonoBehaviour
         playerdata.PlayerFirstLoad();
         playerdata.PlayerSelected();
         playerdata.SaveGame();
-        SceneManager.LoadScene("VisualNovel");
+        SceneManager.LoadScene("AptScene");
     }
 
     public void StartOver() {
