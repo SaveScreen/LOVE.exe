@@ -16,12 +16,12 @@
                 },
                 {
                     "name": "MouseButton",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "7486a5f4-a2d7-48a3-b0e7-23eb3690f415",
-                    "expectedControlType": "Touch",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -38,8 +38,30 @@
                 },
                 {
                     "name": "",
-                    "id": "0542a7b2-6881-4ecb-9941-03095693e3ce",
-                    "path": "<Touchscreen>/primaryTouch",
+                    "id": "b5f22b86-58da-419b-857a-5e555e01b7d9",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MousePosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "36464379-b77c-4f02-abb8-89005c85332f",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MouseButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "74899b05-40fa-4358-ae03-41b970de3bab",
+                    "path": "<Touchscreen>/primaryTouch/tap",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

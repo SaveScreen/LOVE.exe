@@ -49,17 +49,17 @@ public class CircleScript : MonoBehaviour
     void Update()
     {
         mousepos = pos.ReadValue<Vector2>();
+        Vector2 shrunkmousepos = new Vector2(mousepos.x / 1080, mousepos.y / 1920);
+        //Vector3 mouseposwithz = new Vector3(mousepos.x,mousepos.y,100);
         clicked = click.WasPerformedThisFrame();
-        Debug.Log(mousepos);
-        Debug.Log(clicked);
+        //Debug.Log(Mouse.current.position.ReadValue());
+        //Debug.Log(clicked);
 
         if (!gameover) {
             if (c > 0f) {
             c = Mathf.Lerp(1,0,rate);
             sprrender.color = new Color(1,c,c,1);
             rate += speed * Time.deltaTime;
-            //Debug.Log(speed);
-            //Debug.Log(c);
             }
             else {
                 Destroy(gameObject);
@@ -67,15 +67,16 @@ public class CircleScript : MonoBehaviour
             }
 
             if (clicked) {
-                var rayHit = Physics2D.GetRayIntersection(maincamera.ScreenPointToRay(mousepos));
+                //var rayHit = Physics2D.GetRayIntersection(maincamera.ScreenPointToRay(shrunkmousepos));
                 var mouserayHit = Physics2D.GetRayIntersection(maincamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
-                if (!rayHit.collider) return;
+                
+                //if (!rayHit.collider) return;
                 if (!mouserayHit.collider) return;
-                if (rayHit.collider.gameObject == gameObject) {
-                    AddScore();
-                    Destroy(gameObject);
-                }
-                if (rayHit.collider.gameObject == gameObject) {
+                //if (rayHit.collider.gameObject == gameObject) {
+                    //AddScore();
+                    //Destroy(gameObject);
+                //}
+                if (mouserayHit.collider.gameObject == gameObject) {
                     AddScore();
                     Destroy(gameObject);
                 }
