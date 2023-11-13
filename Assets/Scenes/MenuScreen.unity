@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -966,8 +966,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89fc4b9b997c1614b800dd62a64d10b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneyContainer: {fileID: 0}
-  moneyData: {fileID: 0}
   scrollRect: {fileID: 167744424}
   contentPanel: {fileID: 1196206963}
   sampleListItem: {fileID: 169758033}
@@ -978,8 +976,6 @@ MonoBehaviour:
   - Goth
   - Formal
   snapForce: 2
-  playerDataContainer: {fileID: 0}
-  playerdata: {fileID: 0}
 --- !u!1 &169758032
 GameObject:
   m_ObjectHideFlags: 0
@@ -2926,7 +2922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.26415092, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2992,20 +2988,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89fc4b9b997c1614b800dd62a64d10b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneyContainer: {fileID: 0}
-  moneyData: {fileID: 0}
   scrollRect: {fileID: 476223416}
   contentPanel: {fileID: 1994681214}
   sampleListItem: {fileID: 1293957669}
   HLG: {fileID: 1994681215}
   ItemName: {fileID: 558888483}
-  ItemNames:
-  - Model T
-  - Model G
-  - Model S
+  ItemNames: []
   snapForce: 2
-  playerDataContainer: {fileID: 0}
-  playerdata: {fileID: 0}
 --- !u!1 &558173138
 GameObject:
   m_ObjectHideFlags: 0
@@ -9285,8 +9274,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89fc4b9b997c1614b800dd62a64d10b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneyContainer: {fileID: 0}
-  moneyData: {fileID: 0}
   scrollRect: {fileID: 1933944059}
   contentPanel: {fileID: 923683766}
   sampleListItem: {fileID: 1346396871}
@@ -9297,8 +9284,6 @@ MonoBehaviour:
   - Jett Black
   - Frills Gaudy
   snapForce: 2
-  playerDataContainer: {fileID: 0}
-  playerdata: {fileID: 0}
 --- !u!1 &1947649166
 GameObject:
   m_ObjectHideFlags: 0
@@ -10157,7 +10142,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 316018008}
   m_Direction: 0
   m_Value: 0.49999976
-  m_Size: 0.34408602
+  m_Size: 0.34408605
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
