@@ -183,34 +183,34 @@ MonoBehaviour:
       m_Calls: []
   m_text: '// Producer:
 
-    Jojo
+    Jojo Lopez
 
 
     // Creative Director:
 
-    Ethan
+    Ethan Branham
 
 
     //
     Programming:
 
-    Gabe
+    Gaberiel Nash
 
 
     // 2D Art:
 
-    Sammy
-
-
-    // 3D Art:
-
-    Nick
+    Samantha Cuevas
 
 
     //
-    Design:
+    3D Art:
 
-    Jack'
+    Nick Landry
+
+
+    // Design:
+
+    Jack Eason'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5070a30ba6f7f6d408df518ec2b75659, type: 2}
   m_sharedMaterial: {fileID: 6128798763815206256, guid: 5070a30ba6f7f6d408df518ec2b75659,
@@ -1264,6 +1264,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee25e425aa858b04f8964fe729fa2645, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  JimPics: {fileID: 0}
+  JettPics: {fileID: 0}
+  FrillsPics: {fileID: 0}
+  MiscPics: {fileID: 0}
 --- !u!4 &1740404031
 Transform:
   m_ObjectHideFlags: 0

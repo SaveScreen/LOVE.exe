@@ -49,11 +49,12 @@ public class DateSelectionScript : MonoBehaviour
     }
 
     public void Confirm() {
+        SceneManager.LoadScene("VisualNovel");
         playerdata.GetPlayerOutfit();
         playerdata.PlayerFirstLoad();
         playerdata.PlayerDateSelection(dateoption);
         playerdata.SaveGame();
-        SceneManager.LoadScene("VisualNovel");
+        
     }
 
     public void StartOver() {

@@ -48,7 +48,7 @@ public class StartMenuController : MonoBehaviour
         }
         else {
             playerdata.NewGame();
-            SceneManager.LoadScene("RoboSelect");
+            SceneManager.LoadScene("RoboSelect 1");
         }
         
     }

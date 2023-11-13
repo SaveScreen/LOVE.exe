@@ -61,11 +61,17 @@ public class CharacterSelect : MonoBehaviour
     }
 
     public void Confirm() {
+        SceneManager.LoadScene("AptScene");
         playerdata.PlayerBotSelection(botoption);
         playerdata.PlayerNameSelection(nameoption);
         playerdata.PlayerFirstLoad();
         playerdata.PlayerSelected();
         playerdata.SaveGame();
+        
+    }
+
+    public void NewConfirm()
+    {
         SceneManager.LoadScene("AptScene");
     }
 

@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/AptScene.unity
     guid: e507df9b0314f794990db3685608b1db
   - enabled: 1
-    path: Assets/Scenes/DateSelection.unity
-    guid: c850ee8c3b14cc8459e7e186857cf567
+    path: Assets/Scenes/DateSelect2.unity
+    guid: 200dab85bed8cd644850ca0d48407ca8
   - enabled: 1
     path: Assets/Scenes/VisualNovel.unity
     guid: b1c22a4409cba0942a0ed89f59e1d55e
@@ -48,11 +48,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Credits.unity
     guid: 7516d3ec6c4f7a44e945d4c7d08cc7e5
   - enabled: 1
-    path: Assets/Scenes/RoboSelect.unity
-    guid: 200dab85bed8cd644850ca0d48407ca8
-  - enabled: 1
     path: Assets/Scenes/Gallery2.unity
     guid: 90a2bb73a710ad94ca8a8c9b7b91f85e
+  - enabled: 1
+    path: Assets/Scenes/DateSelection.unity
+    guid: c850ee8c3b14cc8459e7e186857cf567
+  - enabled: 1
+    path: Assets/Scenes/RoboSelect 1.unity
+    guid: 98de7d4f48be0714cbbcc000bafa5438
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000,
       guid: 38022e419cf24e949ad742fd66639946, type: 2}
