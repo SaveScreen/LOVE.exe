@@ -13,12 +13,14 @@ public class CircleScript : MonoBehaviour
     private float c;
     private GameObject minigamemaster;
     private RhythmMinigameScript rms;
-    public bool clicked;
     public AudioClip snare;
     public InputActionAsset inputs;
     private InputAction click;
+    private InputAction pos;
     private Camera maincamera;
     public bool gameover;
+    private bool clicked;
+    private Vector2 mousepos;
     
 
     // Start is called before the first frame update
@@ -32,6 +34,8 @@ public class CircleScript : MonoBehaviour
         c = 1;
         gameover = false;
         click = inputs.FindAction("Player/MouseButton");
+        pos = inputs.FindAction("Player/MousePosition");
+
     }
     
     void OnEnable() {
@@ -44,7 +48,10 @@ public class CircleScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        clicked = click.WasPressedThisFrame();
+        mousepos = pos.ReadValue<Vector2>();
+        clicked = click.WasPerformedThisFrame();
+        Debug.Log(mousepos);
+        Debug.Log(clicked);
 
         if (!gameover) {
             if (c > 0f) {
@@ -60,8 +67,14 @@ public class CircleScript : MonoBehaviour
             }
 
             if (clicked) {
-                var rayHit = Physics2D.GetRayIntersection(maincamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
+                var rayHit = Physics2D.GetRayIntersection(maincamera.ScreenPointToRay(mousepos));
+                var mouserayHit = Physics2D.GetRayIntersection(maincamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
                 if (!rayHit.collider) return;
+                if (!mouserayHit.collider) return;
+                if (rayHit.collider.gameObject == gameObject) {
+                    AddScore();
+                    Destroy(gameObject);
+                }
                 if (rayHit.collider.gameObject == gameObject) {
                     AddScore();
                     Destroy(gameObject);

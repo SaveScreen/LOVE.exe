@@ -58,8 +58,6 @@ MonoBehaviour:
   hlWhoistalking: 000001000100
   date2pregamelines:
   - '- Jimothy shall we embark on another adventure into the Wild Wild Countryside?'
-  - "*chuckles* \u201CWhy partner I think we should, in fact, they got a mighty fun
-    saloon cabinet in the back that can invigorate those Cowboy feelings!\u201D"
   - "\u201CI like your spunk pal. Ever since I was a wee boy, I\u2019ve dreamed of
     riding horses, drinkin\u2019 moonshine, and swinging my lasso to gather the cattle.\""
   - "\"My old man told me there\u2019s no such thing as a horse and told me to grow
@@ -67,7 +65,7 @@ MonoBehaviour:
     \u201D"
   - "\u201COh shoot. That there arcade cabinet looks mighty familiar from my childhood,
     mind if we go check it out?\""
-  date2preWhoistalking: 0100000000
+  date2preWhoistalking: 01000000
   date2postgamelines:
   - '- I am happy you seem to be opening up to me more Jimothy! Your situation with
     your Father seems to have led you to mistrust others and stay in your own world.

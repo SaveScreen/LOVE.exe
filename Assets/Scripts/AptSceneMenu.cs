@@ -56,6 +56,7 @@ public class AptSceneMenu : MonoBehaviour
     }
 
     public void GoToMenu() {
+        /*
         bool playerSelected = playerdata.GetPlayerSelected();
         // If player is selected already, go straight to the next date.
         if (playerSelected) {
@@ -67,6 +68,9 @@ public class AptSceneMenu : MonoBehaviour
             //SceneManager.LoadScene("MenuScreen");
             FadeToLevel(2);
         }
+        */
+        playerdata.ResetPlayedGame();
+        FadeToLevel(2);
         
     }
 
