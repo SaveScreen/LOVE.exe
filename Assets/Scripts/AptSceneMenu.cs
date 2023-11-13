@@ -27,6 +27,7 @@ public class AptSceneMenu : MonoBehaviour
 
     // make sure fade is turned on
     public GameObject FadeOBJ;
+    public GameObject tutTXT;
 
     void Start()
     {
@@ -47,6 +48,17 @@ public class AptSceneMenu : MonoBehaviour
         GameObject tempObj = RoboWearingAPT[outfitSelect];
         tempObj.SetActive(true);
         FadeOBJ.SetActive(true);
+
+        if(PlayerData.firstLoad == true)
+        {
+            tutTXT.SetActive(true);
+            MONEYScript.money = 500;
+        }
+        else if (PlayerData.firstLoad == false)
+        {
+            tutTXT.SetActive(false);
+        }
+
     }
     void Update() {
         if (Input.GetKeyDown(KeyCode.P)) {
@@ -78,7 +90,10 @@ public class AptSceneMenu : MonoBehaviour
     public void GoToStore()
     {
         FadeToLevel(6);
-       // SceneManager.LoadScene("StoreScene");
+        // SceneManager.LoadScene("StoreScene");
+        PlayerData.firstLoad = false;
+
+
     }
     public void GoToCloset()
     {

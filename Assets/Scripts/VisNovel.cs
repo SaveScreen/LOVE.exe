@@ -218,4 +218,8 @@ public class VisNovel : MonoBehaviour
             Application.Quit();
         }
     }
+    public void QuitGame()
+    {
+        SceneManager.LoadScene("AptScene");
+    }
 }

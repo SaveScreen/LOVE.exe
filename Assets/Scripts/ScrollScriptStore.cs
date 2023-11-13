@@ -37,6 +37,8 @@ public class ScrollScriptStore : MonoBehaviour
 
     public TMP_Text moneyText;
 
+    public ParticleSystem BuyParticle;
+
 
     private void Start()
     {
@@ -83,6 +85,7 @@ public class ScrollScriptStore : MonoBehaviour
         tempMon = moneyData.GetGAINZ();
         if (canAfford(tempMon))
         {
+            BuyParticle.Play();
             if (!playerdata.getOutfitUnlocked(currentItem))
             {
                 switch (currentItem)

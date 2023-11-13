@@ -293,7 +293,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 540, y: 2023}
+  m_AnchoredPosition: {x: 540, y: 1895}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &29262279
@@ -2310,7 +2310,7 @@ RectTransform:
   m_GameObject: {fileID: 734579180}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.834284, y: 4.172053, z: 5.297846}
+  m_LocalScale: {x: 4.4924517, y: 3.877047, z: 4.923235}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1064711773}
@@ -2318,7 +2318,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 539.99994, y: 322}
+  m_AnchoredPosition: {x: 539.99994, y: 367}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &734579182
@@ -3889,7 +3889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e6efeabe25a24d4c9d1d4969459adee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  choosebotmenu: {fileID: 35596225}
+  choosebotmenu: {fileID: 1064711772}
   choosenamemenu: {fileID: 487974623}
   confirmscreen: {fileID: 2067080204}
   botoption: 0
