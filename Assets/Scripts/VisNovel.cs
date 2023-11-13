@@ -37,9 +37,6 @@ public class VisNovel : MonoBehaviour
     public int dateref;
     public int datemoodref;
     public float playerRating;
-
-    private System.Random rand = new System.Random();
-    private int randomNum;
     private bool playedGame;
 
     void Start()

@@ -176,6 +176,7 @@ public class PlayerData : MonoBehaviour
     public void SetPlayerChibiOutfit(int sel)
     {
         playerChibiOutfit = sel;
+        playeroutfit = sel;
 
         Debug.Log("Outfit Selected: " + sel);
     }
@@ -197,12 +198,13 @@ public class PlayerData : MonoBehaviour
     {
         switch(dateNum)
         {
+            //1 is cowboy, 2 is fancy, 3 is goth
             case 1: //Cowboy
                 if (firstLoad)
                 {
                     if (playeroutfit == 1)
                         playerRating += 1f;
-                    else if (playeroutfit == 2)
+                    else if (playeroutfit == 3)
                         playerRating += 0.5f;
                     else
                         playerRating += 0;
@@ -215,9 +217,9 @@ public class PlayerData : MonoBehaviour
             case 2: //Goth
                 if (firstLoad)
                 {
-                    if (playeroutfit == 2)
+                    if (playeroutfit == 3)
                         playerRating += 1f;
-                    else if (playeroutfit == 3)
+                    else if (playeroutfit == 2)
                         playerRating += 0.5f;
                     else
                         playerRating += 0;
@@ -230,7 +232,7 @@ public class PlayerData : MonoBehaviour
             case 3: //Fancy
                 if (firstLoad)
                 {
-                    if (playeroutfit == 3)
+                    if (playeroutfit == 2)
                         playerRating += 1f;
                     else if (playeroutfit == 1)
                         playerRating += 0.5f;

@@ -52,7 +52,7 @@ public class AptSceneMenu : MonoBehaviour
         if(PlayerData.firstLoad == true)
         {
             tutTXT.SetActive(true);
-            MONEYScript.money = 500;
+            moneyData.SetMoney(500);
         }
         else if (PlayerData.firstLoad == false)
         {
@@ -68,19 +68,6 @@ public class AptSceneMenu : MonoBehaviour
     }
 
     public void GoToMenu() {
-        /*
-        bool playerSelected = playerdata.GetPlayerSelected();
-        // If player is selected already, go straight to the next date.
-        if (playerSelected) {
-           playerdata.ResetPlayedGame();
-          // SceneManager.LoadScene("VisualNovel");
-            FadeToLevel(3);
-        }
-        else {
-            //SceneManager.LoadScene("MenuScreen");
-            FadeToLevel(2);
-        }
-        */
         playerdata.ResetPlayedGame();
         FadeToLevel(2);
         
