@@ -257,12 +257,12 @@ public class VisNovelDialogueController : MonoBehaviour
                                 //Goth
                                 case 2:
                                     currentlines = goth.date2postgamelines;
-                                    whoistalking = cowboy.date2postWhoistalking;
+                                    whoistalking = goth.date2postWhoistalking;
                                 break;
                                 //Fancy
                                 case 3:
                                     currentlines = fancy.date2postgamelines;
-                                    whoistalking = cowboy.date2postWhoistalking;
+                                    whoistalking = fancy.date2postWhoistalking;
                                 break;
                             }
                         }
