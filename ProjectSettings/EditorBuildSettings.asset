@@ -50,6 +50,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RoboSelect.unity
     guid: 200dab85bed8cd644850ca0d48407ca8
+  - enabled: 1
+    path: Assets/Scenes/Gallery2.unity
+    guid: 90a2bb73a710ad94ca8a8c9b7b91f85e
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000,
       guid: 38022e419cf24e949ad742fd66639946, type: 2}
