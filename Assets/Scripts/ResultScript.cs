@@ -11,6 +11,7 @@ public class ResultScript : MonoBehaviour
 {
     public TMP_Text SuccessType;
     public TMP_Text FinalScore;
+    public TMP_Text FinalMoney;
 
     public GameObject Date1;
     public GameObject Date2;
@@ -48,6 +49,7 @@ public class ResultScript : MonoBehaviour
     public void DisplayResult()
     {
         FinalScore.SetText("Score: " + playerdata.GetPlayerRating().ToString());
+        FinalMoney.SetText("Pay: " + moneyData.GetGAINZ().ToString());
 
         switch (playerdata.GetPlayerDate())
         {
