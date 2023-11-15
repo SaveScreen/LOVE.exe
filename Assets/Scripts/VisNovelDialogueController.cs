@@ -12,9 +12,7 @@ public class VisNovelDialogueController : MonoBehaviour
     public TextMeshProUGUI pinktextbox;
     public TextMeshProUGUI yellowtextbox; 
     public TextMeshProUGUI jptextbox;
-    public CharacterData cowboy;
-    public CharacterData goth;
-    public CharacterData fancy;
+    public CharacterData[] characters;
     private string[] currentlines;
     private bool[] whoistalking;
     public bool isEnglish;
@@ -33,6 +31,7 @@ public class VisNovelDialogueController : MonoBehaviour
     private int gamecount;
     private bool wonlastgame;
     private bool playedGame;
+    private int date;
 
     // Start is called before the first frame update
     void Start()
@@ -54,8 +53,7 @@ public class VisNovelDialogueController : MonoBehaviour
         gamecount = playerdata.GetGameCount();
         wonlastgame = playerdata.GetWin();
         playedGame = playerdata.GetPlayedGame();
-        //currentlines = cowboyangrylines;
-        
+        date = playerdata.GetPlayerDate() - 1;
     }
 
     void OnEnable() {
@@ -80,8 +78,8 @@ public class VisNovelDialogueController : MonoBehaviour
                             switch (visNovelScript.datemoodref) {
                                 case 1:
                                     if (isEnglish) {
-                                        currentlines = cowboy.angrylines;
-                                        whoistalking = cowboy.alWhoistalking;
+                                        currentlines = characters[date].angrylines;
+                                        whoistalking = characters[date].alWhoistalking;
                                     }
                                     else {
                                         //currentlines = jpcowboyangrylines;
@@ -90,8 +88,8 @@ public class VisNovelDialogueController : MonoBehaviour
                                 break;
                                 case 2:
                                     if (isEnglish) {
-                                        currentlines = cowboy.neutrallines;
-                                        whoistalking = cowboy.nlWhoistalking;
+                                        currentlines = characters[date].neutrallines;
+                                        whoistalking = characters[date].nlWhoistalking;
                                     }
                                     else {
                                         //currentlines = jpcowboyneutrallines;
@@ -101,8 +99,8 @@ public class VisNovelDialogueController : MonoBehaviour
 
                                 case 3:
                                     if (isEnglish) {
-                                        currentlines = cowboy.happylines;
-                                        whoistalking = cowboy.hlWhoistalking;
+                                        currentlines = characters[date].happylines;
+                                        whoistalking = characters[date].hlWhoistalking;
                                     }
                                     else {
                                         //currentlines = jpcowboyhappylines;
@@ -116,8 +114,8 @@ public class VisNovelDialogueController : MonoBehaviour
                             switch (visNovelScript.datemoodref) {
                                 case 1:
                                     if (isEnglish) {
-                                        currentlines = goth.angrylines;
-                                        whoistalking = goth.alWhoistalking;
+                                        currentlines = characters[date].angrylines;
+                                        whoistalking = characters[date].alWhoistalking;
                                     }
                                     else {
                                         //currentlines = jpgothangrylines;
@@ -126,8 +124,8 @@ public class VisNovelDialogueController : MonoBehaviour
                                 break;
                                 case 2:
                                     if (isEnglish) {
-                                        currentlines = goth.neutrallines;
-                                        whoistalking = goth.nlWhoistalking;
+                                        currentlines = characters[date].neutrallines;
+                                        whoistalking = characters[date].nlWhoistalking;
                                     }
                                     else {
                                         //currentlines = jpgothneutrallines;
@@ -137,8 +135,8 @@ public class VisNovelDialogueController : MonoBehaviour
 
                                 case 3:
                                     if (isEnglish) {
-                                        currentlines = goth.happylines;
-                                        whoistalking = goth.hlWhoistalking;
+                                        currentlines = characters[date].happylines;
+                                        whoistalking = characters[date].hlWhoistalking;
                                     }
                                     else {
                                         //currentlines = jpgothhappylines;
@@ -152,8 +150,8 @@ public class VisNovelDialogueController : MonoBehaviour
                             switch (visNovelScript.datemoodref) {
                                 case 1:
                                     if (isEnglish) {
-                                        currentlines = fancy.angrylines;
-                                        whoistalking = fancy.alWhoistalking;
+                                        currentlines = characters[date].angrylines;
+                                        whoistalking = characters[date].alWhoistalking;
                                     }
                                     else {
                                         //currentlines = jpfancyangrylines;
@@ -162,8 +160,8 @@ public class VisNovelDialogueController : MonoBehaviour
                                 break;
                                 case 2:
                                     if (isEnglish) {
-                                        currentlines = fancy.neutrallines;
-                                        whoistalking = fancy.nlWhoistalking;
+                                        currentlines = characters[date].neutrallines;
+                                        whoistalking = characters[date].nlWhoistalking;
                                     }
                                     else {
                                         //currentlines = jpfancyneutrallines;
@@ -173,8 +171,8 @@ public class VisNovelDialogueController : MonoBehaviour
 
                                 case 3:
                                     if (isEnglish) {
-                                        currentlines = fancy.happylines;
-                                        whoistalking = fancy.hlWhoistalking;
+                                        currentlines = characters[date].happylines;
+                                        whoistalking = characters[date].hlWhoistalking;
                                     }
                                     else {
                                         //currentlines = jpfancyhappylines;
@@ -192,34 +190,34 @@ public class VisNovelDialogueController : MonoBehaviour
                                 //Cowboy
                                 case 1:
                                     if (wonlastgame) {
-                                        currentlines = cowboy.wongamelines;
-                                        whoistalking = cowboy.wongameWhoistalking;
+                                        currentlines = characters[date].wongamelines;
+                                        whoistalking = characters[date].wongameWhoistalking;
                                     }
                                     else {
-                                        currentlines = cowboy.lostgamelines;
-                                        whoistalking = cowboy.lostgameWhoistalking;                                   
+                                        currentlines = characters[date].lostgamelines;
+                                        whoistalking = characters[date].lostgameWhoistalking;                                   
                                     }
                                 break;
                                 //Goth
                                 case 2:
                                     if (wonlastgame) {
-                                        currentlines = goth.wongamelines;
-                                        whoistalking = goth.wongameWhoistalking;
+                                        currentlines = characters[date].wongamelines;
+                                        whoistalking = characters[date].wongameWhoistalking;
                                     }
                                     else {
-                                        currentlines = goth.lostgamelines;
-                                        whoistalking = cowboy.lostgameWhoistalking;
+                                        currentlines = characters[date].lostgamelines;
+                                        whoistalking = characters[date].lostgameWhoistalking;
                                     }
                                 break;
                                 //Fancy
                                 case 3:
                                     if (wonlastgame) {
-                                        currentlines = fancy.wongamelines;
-                                        whoistalking = fancy.wongameWhoistalking;
+                                        currentlines = characters[date].wongamelines;
+                                        whoistalking = characters[date].wongameWhoistalking;
                                     }
                                     else {
-                                        currentlines = fancy.lostgamelines;
-                                        whoistalking = cowboy.lostgameWhoistalking;
+                                        currentlines = characters[date].lostgamelines;
+                                        whoistalking = characters[date].lostgameWhoistalking;
                                     }
                                 break;
                             }
@@ -229,18 +227,18 @@ public class VisNovelDialogueController : MonoBehaviour
                             switch (visNovelScript.dateref) {
                                 //Cowboy
                                 case 1:
-                                    currentlines = cowboy.date2pregamelines;
-                                    whoistalking = cowboy.date2preWhoistalking;
+                                    currentlines = characters[date].date2pregamelines;
+                                    whoistalking = characters[date].date2preWhoistalking;
                                 break;
                                 //Goth
                                 case 2:
-                                    currentlines = goth.date2pregamelines;
-                                    whoistalking = goth.date2preWhoistalking;
+                                    currentlines = characters[date].date2pregamelines;
+                                    whoistalking = characters[date].date2preWhoistalking;
                                 break;
                                 //Fancy
                                 case 3:
-                                    currentlines = fancy.date2pregamelines;
-                                    whoistalking = fancy.date2preWhoistalking;
+                                    currentlines = characters[date].date2pregamelines;
+                                    whoistalking = characters[date].date2preWhoistalking;
                                 break;
                             }
                         }
@@ -251,18 +249,18 @@ public class VisNovelDialogueController : MonoBehaviour
                             switch (visNovelScript.dateref) {
                                 //Cowboy
                                 case 1:
-                                    currentlines = cowboy.date2postgamelines;
-                                    whoistalking = cowboy.date2postWhoistalking;
+                                    currentlines = characters[date].date2postgamelines;
+                                    whoistalking = characters[date].date2postWhoistalking;
                                 break;
                                 //Goth
                                 case 2:
-                                    currentlines = goth.date2postgamelines;
-                                    whoistalking = goth.date2postWhoistalking;
+                                    currentlines = characters[date].date2postgamelines;
+                                    whoistalking = characters[date].date2postWhoistalking;
                                 break;
                                 //Fancy
                                 case 3:
-                                    currentlines = fancy.date2postgamelines;
-                                    whoistalking = fancy.date2postWhoistalking;
+                                    currentlines = characters[date].date2postgamelines;
+                                    whoistalking = characters[date].date2postWhoistalking;
                                 break;
                             }
                         }
@@ -271,19 +269,19 @@ public class VisNovelDialogueController : MonoBehaviour
                             switch (visNovelScript.dateref) {
                                 //Cowboy
                                 case 1:
-                                    currentlines = cowboy.date3pregamelines;
-                                    whoistalking = cowboy.date3preWhoistalking;
+                                    currentlines = characters[date].date3pregamelines;
+                                    whoistalking = characters[date].date3preWhoistalking;
 
                                 break;
                                 //Goth
                                 case 2:
-                                    currentlines = goth.date3pregamelines;
-                                    whoistalking = goth.date3preWhoistalking;
+                                    currentlines = characters[date].date3pregamelines;
+                                    whoistalking = characters[date].date3preWhoistalking;
                                 break;
                                 //Fancy
                                 case 3:
-                                    currentlines = fancy.date3pregamelines;
-                                    whoistalking = fancy.date3preWhoistalking;
+                                    currentlines = characters[date].date3pregamelines;
+                                    whoistalking = characters[date].date3preWhoistalking;
                                 break;
                             }
                         }
@@ -294,18 +292,18 @@ public class VisNovelDialogueController : MonoBehaviour
                             switch (visNovelScript.dateref) {
                                 //Cowboy
                                 case 1:
-                                    currentlines = cowboy.date3postgamelines;
-                                    whoistalking = cowboy.date3postWhoistalking;
+                                    currentlines = characters[date].date3postgamelines;
+                                    whoistalking = characters[date].date3postWhoistalking;
                                 break;
                                 //Goth
                                 case 2:
-                                    currentlines = goth.date3postgamelines;
-                                    whoistalking = goth.date3postWhoistalking;
+                                    currentlines = characters[date].date3postgamelines;
+                                    whoistalking = characters[date].date3postWhoistalking;
                                 break;
                                 //Fancy
                                 case 3:
-                                    currentlines = fancy.date3postgamelines;
-                                    whoistalking = fancy.date3postWhoistalking;
+                                    currentlines = characters[date].date3postgamelines;
+                                    whoistalking = characters[date].date3postWhoistalking;
                                 break;
                             }
                         }
