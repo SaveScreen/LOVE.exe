@@ -38,19 +38,24 @@ public class ResultScript : MonoBehaviour
     public GameObject moneyContainer;
     public MONEYScript moneyData;
 
+    public GameObject RankC;
+    public GameObject RankB;
+    public GameObject RankA;
+    public GameObject RankS;
+
     // Start is called before the first frame update
     void Start()
     {
         moneyData = moneyContainer.GetComponent<MONEYScript>();
         DisplayResult();
-
+        //RankC.SetActive(false); RankB.SetActive(false); RankA.SetActive(false); RankS.SetActive(false);
     }
 
     public void DisplayResult()
     {
         FinalScore.SetText("Score: " + playerdata.GetPlayerRating().ToString());
-        FinalMoney.SetText("Pay: " + moneyData.GetGAINZ().ToString());
-
+        
+        
         switch (playerdata.GetPlayerDate())
         {
             case 1:
@@ -59,15 +64,19 @@ public class ResultScript : MonoBehaviour
                 {
                     case 0:
                         Date1C.SetActive(true);
+                        RankC.SetActive(true);
                         break;
                     case 1:
                         Date1B.SetActive(true);
+                        RankB.SetActive(true);
                         break; 
                     case 2:
                         Date1A.SetActive(true);
+                        RankA.SetActive(true);
                         break; 
                     case 3:
                         Date1S.SetActive(true);
+                        RankS.SetActive(true);
                         break;
                 }
 
@@ -79,15 +88,19 @@ public class ResultScript : MonoBehaviour
                 {
                     case 0:
                         Date2C.SetActive(true);
+                        RankC.SetActive(true);
                         break;
                     case 1:
                         Date2B.SetActive(true);
+                        RankB.SetActive(true);
                         break;
                     case 2:
                         Date2A.SetActive(true);
+                        RankA.SetActive(true);
                         break;
                     case 3:
                         Date2S.SetActive(true);
+                        RankS.SetActive(true);
                         break;
                 }
                 break;
@@ -98,21 +111,25 @@ public class ResultScript : MonoBehaviour
                 {
                     case 0:
                         Date3C.SetActive(true);
+                        RankC.SetActive(true);
                         break;
                     case 1:
                         Date3B.SetActive(true);
+                        RankB.SetActive(true);
                         break;
                     case 2:
                         Date3A.SetActive(true);
+                        RankA.SetActive(true);
                         break;
                     case 3:
                         Date3S.SetActive(true);
+                        RankS.SetActive(true);
                         break;
                 }
                 break;
 
         }
-
+        FinalMoney.SetText("Pay: " + moneyData.GetGAINZ().ToString());
     }
 
     public int PlayerRank()
