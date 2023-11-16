@@ -34,4 +34,8 @@ public class CharacterData : ScriptableObject
 
     //IF BOOL IS TRUE, THE PLAYER BOT IS TALKING
 
+    public int[] minigameOrder;
+    
+    //SET 3 INTS, 0 MEANS NOT BEEN SET YET, 1: FOOTBALL MINIGAME, 2: ZOMBIE MINIGAME, 3: RHYTHM MINIGAME
+
 }

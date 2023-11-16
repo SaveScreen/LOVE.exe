@@ -184,17 +184,15 @@ public class VisNovel : MonoBehaviour
                     if (playerdata.GetGameCount() < 3)
                     {
                         Debug.Log("Goingtonext");
-                        switch (playerdata.GetGameCount())
+                        switch (vndc.characters[vndc.date].minigameOrder[playerdata.GetGameCount()])
                         {
-                            case 0:
-                            SceneManager.LoadScene("FootballMinigame");
-                            
-                            break;
                             case 1:
-                            SceneManager.LoadScene("SnakeMinigame");
-                                    
+                            SceneManager.LoadScene("FootballMinigame");
                             break;
                             case 2:
+                            SceneManager.LoadScene("SnakeMinigame");  
+                            break;
+                            case 3:
                             SceneManager.LoadScene("RhythmMinigame");
                             break;
                         }

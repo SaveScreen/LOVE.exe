@@ -87,3 +87,4 @@ MonoBehaviour:
   lostgamelines:
   - "\u201CWhy did I ever trust in a stupid robot? This blows\u201D"
   lostgameWhoistalking: 00
+  minigameOrder: 010000000200000003000000

@@ -31,7 +31,7 @@ public class VisNovelDialogueController : MonoBehaviour
     private int gamecount;
     private bool wonlastgame;
     private bool playedGame;
-    private int date;
+    [HideInInspector] public int date;
 
     // Start is called before the first frame update
     void Start()
