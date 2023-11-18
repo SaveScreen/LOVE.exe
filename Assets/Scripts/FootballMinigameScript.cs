@@ -1,11 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class FootballMinigameScript : MonoBehaviour
@@ -103,20 +100,25 @@ public class FootballMinigameScript : MonoBehaviour
             
             if (!enableaccuracy)
             {
-                switch (gamesPlayed)
-                {
-                    case 0:
-                        powermeterspeed = 4;
-                    break;
-                    case 1:
-                        powermeterspeed = 8;
-                    break;
-                    case 2:
-                        powermeterspeed = 10;
-                    break;
-                }
-                powermeter.SetActive(true);
-                if (isgoingup)
+                PowerMeter();
+            }
+            //When the accuracy meter starts
+            else
+            {
+                AccuracyMeter();
+            }
+
+        }
+        //When the kick starts
+        else if (gamestarted && kickingtime) {
+            KickBall();
+        }
+        
+    }
+
+    void PowerMeter() {
+        powermeter.SetActive(true);
+        if (isgoingup)
                 {
                     if (powertriangle.transform.localPosition.y < trianglemaxposition && !clicked)
                     {
@@ -128,13 +130,13 @@ public class FootballMinigameScript : MonoBehaviour
                         
                         if (clicked) {
                             power = powertriangle.transform.localPosition.y;
-                            Debug.Log("Power is" + power);
+                            //Debug.Log("Power is" + power);
                             enableaccuracy = true;
                             isgoingup = true;
                         }
                     }
                 }
-                else
+        else
                 {
                     if (powertriangle.transform.localPosition.y > triangleminposition && !clicked)
                     {
@@ -144,21 +146,17 @@ public class FootballMinigameScript : MonoBehaviour
                     {
                         if (clicked) {
                             power = powertriangle.transform.localPosition.y;
-                            Debug.Log("Power is " + power);
-                        } else {
-                            power = powertriangle.transform.localPosition.y;
-                            Debug.Log("Power is " + power);
+                            enableaccuracy = true;
+                            //Debug.Log("Power is " + power);
                         }
                         isgoingup = true;
-                        enableaccuracy = true;
+                        
                     }
-                }
+                }                
+    }
 
-            }
-            //When the accuracy meter starts
-            else
-            {
-                powermeter.SetActive(false);
+    void AccuracyMeter() {
+        powermeter.SetActive(false);
                 accuracymeter.SetActive(true);
                 if (isgoingup)
                 {
@@ -187,26 +185,14 @@ public class FootballMinigameScript : MonoBehaviour
                     {
                         if (clicked) {
                             accuracy = accuracymeter.transform.position.x;
-                            Debug.Log("Accuracy is " + accuracy);
-                        } else {
-                            accuracy = accuracymeter.transform.position.x;
+                            kickingtime = true;
                             Debug.Log("Accuracy is " + accuracy);
                         }
                         isgoingup = true;
-                        kickingtime = true;
+                        //kickingtime = true;
                     }
                 }
-
-            }
-
-        }
-        //When the kick starts
-        else if (gamestarted && kickingtime) {
-            KickBall();
-        }
-        
     }
-
     void KickBall() {
         
         if (donekicking == false) {
@@ -214,21 +200,21 @@ public class FootballMinigameScript : MonoBehaviour
             
             if (power > -0.5f) {
                 //Kick is high and center
-                if (accuracy > -1.4f && accuracy < 1.4f) {
+                if (accuracy >= -0.75f && accuracy <= 0.75f) {
                     if (ballScript.animating == false) {
                         ballScript.BallAnimation(1);
                         StartCoroutine(AnimDelay());
                     }
                 }
                 //Kick is left
-                else if (accuracy < -1.4f) {
+                else if (accuracy < -0.75f) {
                     if (ballScript.animating == false) {
                         ballScript.BallAnimation(3);
                         StartCoroutine(AnimDelay());
                     }
                 }
                 //Kick is right
-                else if (accuracy > 1.4f) {
+                else if (accuracy > 0.75f) {
                     if (ballScript.animating == false) {
                         ballScript.BallAnimation(4);
                         StartCoroutine(AnimDelay());
@@ -252,31 +238,23 @@ public class FootballMinigameScript : MonoBehaviour
                     if (power > -0.5f)
                     {
                         //Kick is high and center
-                        if (accuracy > -1.4f && accuracy < 1.4f)
+                        if (accuracy >= -0.75f && accuracy <= 0.75f)
                         {
                             //THE KICK IS GOOD!
                             countdowntimer.enabled = true;
                             countdowntimer.text = "Kick is good :)";
                             didWin = true;
                         }
-                        //Kick is left
-                        else if (accuracy < -1.4f)
+                        //Kick is wide left and right
+                        else if (accuracy < -0.75f || accuracy > 0.75f)
                         {
                             //THE KICK IS WIDE LEFT!
                             countdowntimer.enabled = true;
                             countdowntimer.text = "Kick is no good :(";
                             didWin = false;
                         }
-                        //Kick is right
-                        else if (accuracy > 1.4f)
-                        {
-                            //THE KICK IS WIDE RIGHT!
-                            countdowntimer.enabled = true;
-                            countdowntimer.text = "Kick is no good :(";
-                            didWin = false;
-                        }
+                        
                     }
-
                     //Kick is too low
                     else
                     {
@@ -286,83 +264,6 @@ public class FootballMinigameScript : MonoBehaviour
                         didWin = false;
                     }
                 break;
-
-                case 1:
-                    if (power > -0.2f)
-                    {
-                        //Kick is high and center
-                        if (accuracy > -1f && accuracy < 1f)
-                        {
-                            //THE KICK IS GOOD!
-                            countdowntimer.enabled = true;
-                            countdowntimer.text = "Kick is good :)";
-                            didWin = true;
-                        }
-                        //Kick is left
-                        else if (accuracy < -1f)
-                        {
-                            //THE KICK IS WIDE LEFT!
-                            countdowntimer.enabled = true;
-                            countdowntimer.text = "Kick is no good :(";
-                            didWin = false;
-                        }
-                        //Kick is right
-                        else if (accuracy > 1f)
-                        {
-                            //THE KICK IS WIDE RIGHT!
-                            countdowntimer.enabled = true;
-                            countdowntimer.text = "Kick is no good :(";
-                            didWin = false;
-                        }
-                    }
-
-                    //Kick is too low
-                    else
-                    {
-                        //THE KICK IS NO GOOD!
-                        countdowntimer.enabled = true;
-                        countdowntimer.text = "Kick is no good :(";
-                        didWin = false;
-                    }
-                break;
-                case 3:
-                    if (power > 0.5f)
-                    {
-                        //Kick is high and center
-                        if (accuracy > -0.5f && accuracy < 0.5f)
-                        {
-                            //THE KICK IS GOOD!
-                            countdowntimer.enabled = true;
-                            countdowntimer.text = "Kick is good :)";
-                            didWin = true;
-                        }
-                        //Kick is left
-                        else if (accuracy < -0.5f)
-                        {
-                            //THE KICK IS WIDE LEFT!
-                            countdowntimer.enabled = true;
-                            countdowntimer.text = "Kick is no good :(";
-                            didWin = false;
-                        }
-                        //Kick is right
-                        else if (accuracy > 0.5f)
-                        {
-                            //THE KICK IS WIDE RIGHT!
-                            countdowntimer.enabled = true;
-                            countdowntimer.text = "Kick is no good :(";
-                            didWin = false;
-                        }
-                    }
-
-                    //Kick is too low
-                    else
-                    {
-                        //THE KICK IS NO GOOD!
-                        countdowntimer.enabled = true;
-                        countdowntimer.text = "Kick is no good :(";
-                        didWin = false;
-                    }
-                    break;
             }
             
             restartbutton.SetActive(true);
@@ -401,25 +302,6 @@ public class FootballMinigameScript : MonoBehaviour
         }
 
         SceneManager.LoadScene("VisualNovel");
-        /*
-        gamestarted = false;
-        countdowntimer.text = timerinseconds.ToString();
-        timerinseconds = 3;
-        powermeter.SetActive(false);
-        accuracymeter.SetActive(false);
-        restartbutton.SetActive(false);
-        continuebutton.SetActive(false);
-        isgoingup = true;
-        enableaccuracy = false;
-        kickingtime = false;
-        donekicking = false;
-        power = 0;
-        accuracy = 0;
-        timer = 3;
-        
-        powertriangle.transform.localPosition = new Vector2(powertriangle.transform.localPosition.x,triangleminposition);
-        accuracymeter.transform.position = new Vector2(accuracyminposition, accuracymeter.transform.position.y);
-        */
     }
 
     IEnumerator TimerText() {
