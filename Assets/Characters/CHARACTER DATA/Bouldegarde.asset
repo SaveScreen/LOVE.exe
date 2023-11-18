@@ -12,21 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f9fbb3627edbde4b97be632b8ce0af8, type: 3}
   m_Name: Bouldegarde
   m_EditorClassIdentifier: 
-  angrylines: []
-  alWhoistalking: 
-  neutrallines: []
-  nlWhoistalking: 
-  happylines: []
-  hlWhoistalking: 
-  date2pregamelines: []
-  date2preWhoistalking: 
-  date2postgamelines: []
-  date2postWhoistalking: 
-  date3pregamelines: []
-  date3preWhoistalking: 
-  date3postgamelines: []
-  date3postWhoistalking: 
-  wongamelines: []
-  wongameWhoistalking: 
-  lostgamelines: []
-  lostgameWhoistalking: 
+  angrylines:
+  - angry1
+  alWhoistalking: 00
+  neutrallines:
+  - neutral1
+  nlWhoistalking: 00
+  happylines:
+  - happy1
+  hlWhoistalking: 00
+  date2pregamelines:
+  - pregame1
+  date2preWhoistalking: 00
+  date2postgamelines:
+  - postgame1
+  date2postWhoistalking: 00
+  date3pregamelines:
+  - pregame2
+  date3preWhoistalking: 00
+  date3postgamelines:
+  - postgame2
+  date3postWhoistalking: 00
+  wongamelines:
+  - wongame1
+  wongameWhoistalking: 00
+  lostgamelines:
+  - lostgame1
+  lostgameWhoistalking: 00
+  minigameOrder: 010000000200000003000000

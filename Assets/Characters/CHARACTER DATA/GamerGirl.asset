@@ -12,21 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f9fbb3627edbde4b97be632b8ce0af8, type: 3}
   m_Name: GamerGirl
   m_EditorClassIdentifier: 
-  angrylines: []
-  alWhoistalking: 
-  neutrallines: []
-  nlWhoistalking: 
-  happylines: []
-  hlWhoistalking: 
-  date2pregamelines: []
-  date2preWhoistalking: 
-  date2postgamelines: []
-  date2postWhoistalking: 
-  date3pregamelines: []
-  date3preWhoistalking: 
-  date3postgamelines: []
-  date3postWhoistalking: 
-  wongamelines: []
-  wongameWhoistalking: 
-  lostgamelines: []
-  lostgameWhoistalking: 
+  angrylines:
+  - AngryLine1
+  alWhoistalking: 00
+  neutrallines:
+  - NeutralLine1
+  nlWhoistalking: 00
+  happylines:
+  - HappyLine1
+  hlWhoistalking: 00
+  date2pregamelines:
+  - PregameLine1
+  date2preWhoistalking: 00
+  date2postgamelines:
+  - PostGameLine1
+  date2postWhoistalking: 00
+  date3pregamelines:
+  - PregameLine2
+  date3preWhoistalking: 00
+  date3postgamelines:
+  - PostGameLine2
+  date3postWhoistalking: 00
+  wongamelines:
+  - WonGameLine
+  wongameWhoistalking: 00
+  lostgamelines:
+  - LostGameLine
+  lostgameWhoistalking: 00
+  minigameOrder: 030000000200000001000000

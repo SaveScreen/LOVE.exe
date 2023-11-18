@@ -44,7 +44,25 @@ public class DateSelectionScript : MonoBehaviour
             break;
             case 3:
                 datechoicetext.text = "Fancy";
-            break;
+                break;
+            case 4:
+                datechoicetext.text = "Gamer";
+                break;
+            case 5:
+                datechoicetext.text = "Knight";
+                break;
+            case 6:
+                datechoicetext.text = "Twink??";
+                break;
+            case 7:
+                datechoicetext.text = "Pyramid Sceme??";
+                break;
+            case 8:
+                datechoicetext.text = "Wrestler";
+                break;
+            case 9:
+                datechoicetext.text = "ShopKeeper";
+                break;
         }
     }
 

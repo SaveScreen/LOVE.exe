@@ -13,6 +13,12 @@ public class VisNovel : MonoBehaviour
     public GameObject Date1Choice;
     public GameObject Date2Choice;
     public GameObject Date3Choice;
+    public GameObject Date4Choice;
+    public GameObject Date5Choice;
+    public GameObject Date6Choice;
+    public GameObject Date7Choice;
+    public GameObject Date8Choice;
+    public GameObject Date9Choice;
 
     public GameObject playerdatacontainer;
     public PlayerData playerdata;
@@ -28,6 +34,30 @@ public class VisNovel : MonoBehaviour
     public GameObject Angry3;
     public GameObject Neutral3;
     public GameObject Happy3;
+    [Header("Gamer Girl")]
+    public GameObject Angry4;
+    public GameObject Neutral4;
+    public GameObject Happy4;
+    [Header("Bouldergarde")]
+    public GameObject Angry5;
+    public GameObject Neutral5;
+    public GameObject Happy5;
+    [Header("Twink")]
+    public GameObject Angry6;
+    public GameObject Neutral6;
+    public GameObject Happy6;
+    [Header("Scammer")]
+    public GameObject Angry7;
+    public GameObject Neutral7;
+    public GameObject Happy7;
+    [Header("Wrestler")]
+    public GameObject Angry8;
+    public GameObject Neutral8;
+    public GameObject Happy8;
+    [Header("Shopkeeper")]
+    public GameObject Angry9;
+    public GameObject Neutral9;
+    public GameObject Happy9;
 
     public InputActionAsset inputs;
     private InputAction click;
@@ -91,6 +121,25 @@ public class VisNovel : MonoBehaviour
             case 3:
                 Date3(dateState);
                 break;
+            case 4:
+                Date4(dateState);
+                break;
+            case 5:
+                Date5(dateState);
+                break;
+            case 6:
+                Date6(dateState);
+                break;
+            case 7:
+                Date7(dateState);
+                break;
+            case 8:
+                Date8(dateState);
+                break;
+            case 9:
+                Date9(dateState);
+                break;
+
             default:
                 break;
 
@@ -167,8 +216,140 @@ public class VisNovel : MonoBehaviour
         Debug.Log(datemoodref);
     }
 
+    public void Date4(int state)
+    {
+        Date4Choice.SetActive(true);
+        dateref = 4;
+        switch (state)
+        {
+            case 1:
+                Angry4.SetActive(true);
+                datemoodref = 1;
+                break;
+            case 2:
+                Neutral4.SetActive(true);
+                datemoodref = 2;
+                break;
+            case 3:
+                Happy4.SetActive(true);
+                datemoodref = 3;
+                break;
+        }
+        Debug.Log(dateref);
+        Debug.Log(datemoodref);
+    }
 
+    public void Date5(int state)
+    {
+        Date5Choice.SetActive(true);
+        dateref = 4;
+        switch (state)
+        {
+            case 1:
+                Angry5.SetActive(true);
+                datemoodref = 1;
+                break;
+            case 2:
+                Neutral5.SetActive(true);
+                datemoodref = 2;
+                break;
+            case 3:
+                Happy5.SetActive(true);
+                datemoodref = 3;
+                break;
+        }
+        Debug.Log(dateref);
+        Debug.Log(datemoodref);
+    }
 
+    public void Date6(int state)
+    {
+        Date6Choice.SetActive(true);
+        dateref = 4;
+        switch (state)
+        {
+            case 1:
+                Angry6.SetActive(true);
+                datemoodref = 1;
+                break;
+            case 2:
+                Neutral6.SetActive(true);
+                datemoodref = 2;
+                break;
+            case 3:
+                Happy6.SetActive(true);
+                datemoodref = 3;
+                break;
+        }
+        Debug.Log(dateref);
+        Debug.Log(datemoodref);
+    }
+    public void Date7(int state)
+    {
+        Date7Choice.SetActive(true);
+        dateref = 4;
+        switch (state)
+        {
+            case 1:
+                Angry7.SetActive(true);
+                datemoodref = 1;
+                break;
+            case 2:
+                Neutral7.SetActive(true);
+                datemoodref = 2;
+                break;
+            case 3:
+                Happy7.SetActive(true);
+                datemoodref = 3;
+                break;
+        }
+        Debug.Log(dateref);
+        Debug.Log(datemoodref);
+    }
+    public void Date8(int state)
+    {
+        Date8Choice.SetActive(true);
+        dateref = 4;
+        switch (state)
+        {
+            case 1:
+                Angry8.SetActive(true);
+                datemoodref = 1;
+                break;
+            case 2:
+                Neutral8.SetActive(true);
+                datemoodref = 2;
+                break;
+            case 3:
+                Happy8.SetActive(true);
+                datemoodref = 3;
+                break;
+        }
+        Debug.Log(dateref);
+        Debug.Log(datemoodref);
+    }
+    public void Date9(int state)
+    {
+        Date9Choice.SetActive(true);
+        dateref = 4;
+        switch (state)
+        {
+            case 1:
+                Angry9.SetActive(true);
+                datemoodref = 1;
+                break;
+            case 2:
+                Neutral9.SetActive(true);
+                datemoodref = 2;
+                break;
+            case 3:
+                Happy9.SetActive(true);
+                datemoodref = 3;
+                break;
+        }
+        Debug.Log(dateref);
+        Debug.Log(datemoodref);
+    }
     // Update is called once per frame
     void Update()
     {

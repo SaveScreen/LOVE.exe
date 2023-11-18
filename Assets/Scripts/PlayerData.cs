@@ -250,6 +250,108 @@ public class PlayerData : MonoBehaviour
                 Debug.Log("Player Rating: " + playerRating);
                 return playerRating;
 
+            case 4: //Gamer
+                if (firstLoad)
+                {
+                    if (playeroutfit == 2)
+                        playerRating += 1f;
+                    else if (playeroutfit == 3)
+                        playerRating += 0.5f;
+                    else if (playeroutfit > 3)
+                        playerRating += Random.Range(0, 1f);
+                    else
+                        playerRating += 0;
+                    Debug.Log("Firstloaded");
+                }
+                firstLoad = false;
+                Debug.Log("Player Rating: " + playerRating);
+                return playerRating;
+
+            case 5: //Gamer
+                if (firstLoad)
+                {
+                    if (playeroutfit == 2)
+                        playerRating += 1f;
+                    else if (playeroutfit == 3)
+                        playerRating += 0.5f;
+                    else if (playeroutfit > 3)
+                        playerRating += Random.Range(0, 1f);
+                    else
+                        playerRating += 0;
+                    Debug.Log("Firstloaded");
+                }
+                firstLoad = false;
+                Debug.Log("Player Rating: " + playerRating);
+                return playerRating;
+
+            case 6: //Gamer
+                if (firstLoad)
+                {
+                    if (playeroutfit == 2)
+                        playerRating += 1f;
+                    else if (playeroutfit == 3)
+                        playerRating += 0.5f;
+                    else if (playeroutfit > 3)
+                        playerRating += Random.Range(0, 1f);
+                    else
+                        playerRating += 0;
+                    Debug.Log("Firstloaded");
+                }
+                firstLoad = false;
+                Debug.Log("Player Rating: " + playerRating);
+                return playerRating;
+
+            case 7: //Gamer
+                if (firstLoad)
+                {
+                    if (playeroutfit == 2)
+                        playerRating += 1f;
+                    else if (playeroutfit == 3)
+                        playerRating += 0.5f;
+                    else if (playeroutfit > 3)
+                        playerRating += Random.Range(0, 1f);
+                    else
+                        playerRating += 0;
+                    Debug.Log("Firstloaded");
+                }
+                firstLoad = false;
+                Debug.Log("Player Rating: " + playerRating);
+                return playerRating;
+
+            case 8: //Gamer
+                if (firstLoad)
+                {
+                    if (playeroutfit == 2)
+                        playerRating += 1f;
+                    else if (playeroutfit == 3)
+                        playerRating += 0.5f;
+                    else if (playeroutfit > 3)
+                        playerRating += Random.Range(0, 1f);
+                    else
+                        playerRating += 0;
+                    Debug.Log("Firstloaded");
+                }
+                firstLoad = false;
+                Debug.Log("Player Rating: " + playerRating);
+                return playerRating;
+
+            case 9: //Gamer
+                if (firstLoad)
+                {
+                    if (playeroutfit == 2)
+                        playerRating += 1f;
+                    else if (playeroutfit == 3)
+                        playerRating += 0.5f;
+                    else if (playeroutfit > 3)
+                        playerRating += Random.Range(0, 1f);
+                    else
+                        playerRating += 0;
+                    Debug.Log("Firstloaded");
+                }
+                firstLoad = false;
+                Debug.Log("Player Rating: " + playerRating);
+                return playerRating;
+
             default:
                 return 0;
         }
