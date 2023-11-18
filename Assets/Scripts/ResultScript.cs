@@ -16,21 +16,58 @@ public class ResultScript : MonoBehaviour
     public GameObject Date1;
     public GameObject Date2;
     public GameObject Date3;
+    public GameObject Date4;
+    public GameObject Date5;
+    public GameObject Date6;
+    public GameObject Date7;
+    public GameObject Date8;
+    public GameObject Date9;
 
+    [Header("Cowboy")]
     public GameObject Date1C;
     public GameObject Date1B;
     public GameObject Date1A;
     public GameObject Date1S;
-
+    [Header("Goth")]
     public GameObject Date2C;
     public GameObject Date2B;
     public GameObject Date2A;
     public GameObject Date2S;
-
+    [Header("Fancy")]
     public GameObject Date3C;
     public GameObject Date3B;
     public GameObject Date3A;
     public GameObject Date3S;
+    [Header("GamerGirl")]
+    public GameObject Date4C;
+    public GameObject Date4B;
+    public GameObject Date4A;
+    public GameObject Date4S;
+    [Header("Bouldergarde")]
+    public GameObject Date5C;
+    public GameObject Date5B;
+    public GameObject Date5A;
+    public GameObject Date5S;
+    [Header("Twink")]
+    public GameObject Date6C;
+    public GameObject Date6B;
+    public GameObject Date6A;
+    public GameObject Date6S;
+    [Header("PyramidScheme")]
+    public GameObject Date7C;
+    public GameObject Date7B;
+    public GameObject Date7A;
+    public GameObject Date7S;
+    [Header("Wrestler")]
+    public GameObject Date8C;
+    public GameObject Date8B;
+    public GameObject Date8A;
+    public GameObject Date8S;
+    [Header("Shopkeeper")]
+    public GameObject Date9C;
+    public GameObject Date9B;
+    public GameObject Date9A;
+    public GameObject Date9S;
 
     public GameObject playerdatacontainer;
     public PlayerData playerdata;
