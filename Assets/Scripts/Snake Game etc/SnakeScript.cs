@@ -139,9 +139,11 @@ public class SnakeScript : MonoBehaviour
         else {
             endlesscomplete = false;
             snakegamesplayed = playerdata.GetSnakeGamesPlayed();
+            Debug.Log("Snake games played" + snakegamesplayed);
             hiscoretext.text = "";
             potentialscore = 10;
 
+            //Difficulty scaling
             if (snakegamesplayed > 0) {
                 potentialscore += 5 * snakegamesplayed;
             }
@@ -267,11 +269,8 @@ public class SnakeScript : MonoBehaviour
                     didWin = false;
                 }
                 else {
-                    endlessgamewon.SetActive(true);
-                    scoretext.text = "Score: " + score;
-
-                    didWin = false;
-                } 
+                    Debug.Log("You already won!");
+                }
             }
             
         }
@@ -291,6 +290,7 @@ public class SnakeScript : MonoBehaviour
             if (score >= potentialscore) {
                 endlesscomplete = true;
                 endlessgamewon.SetActive(true);
+                didWin = true;
             }
         }
         

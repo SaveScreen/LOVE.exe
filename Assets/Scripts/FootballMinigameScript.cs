@@ -43,6 +43,7 @@ public class FootballMinigameScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(Time.timeScale);
         playerdata = playerdatacontainer.GetComponent<PlayerData>();
         ballScript = ball.GetComponent<BallScript>();
 
@@ -65,19 +66,16 @@ public class FootballMinigameScript : MonoBehaviour
         donekicking = false;
         gamesPlayed = playerdata.GetGameCount();
         isEndlessMode = playerdata.IsEndlessMode();
-        footballGamesPlayed = playerdata.GetFootballGamesPlayed();
+        
 
         if (isEndlessMode) {
-            switch (footballGamesPlayed) {
-                case 0:
-                    powermeterspeed = 2;
-                break;
-                case 1:
-                    powermeterspeed = 3;
-                break;
-                case 2:
-                    powermeterspeed = 4;
-                break;
+            footballGamesPlayed = playerdata.GetFootballGamesPlayed();
+            Debug.Log(footballGamesPlayed);
+            powermeterspeed = 2;
+
+            //Difficulty scaling
+            if (footballGamesPlayed > 0) {
+                powermeterspeed += 0.5f * footballGamesPlayed;
             }
         }
 

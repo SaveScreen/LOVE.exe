@@ -41,6 +41,7 @@ public class RhythmMinigameScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         playerdata = playerdatacontainer.GetComponent<PlayerData>();
         audioSource = GetComponent<AudioSource>();
         respawntime = timer;
@@ -75,10 +76,13 @@ public class RhythmMinigameScript : MonoBehaviour
         }
         else {
             rhythmGamesPlayed = playerdata.GetRhythmGamesPlayed();
+            Debug.Log(rhythmGamesPlayed);
             potentialscore = 10;
             gamestarted = false;
+            gameover = false;
             firstspawn = false;
-
+            
+            //Difficulty scaling
             if (rhythmGamesPlayed > 0) {
                 potentialscore += 5 * rhythmGamesPlayed;
             }
@@ -149,7 +153,9 @@ public class RhythmMinigameScript : MonoBehaviour
                     scoretext.text = "Score: " + score;
 
                     if (score >= potentialscore) {
-                        MinigameComplete();
+                        if (!gameover) {
+                            MinigameComplete();
+                        }
                     }
                 }
                 
@@ -223,6 +229,7 @@ public class RhythmMinigameScript : MonoBehaviour
             Time.timeScale = 0;
             gameover = true;
             didWin = false;
+            Debug.Log(didWin);
             endlessgameoverscreen.SetActive(true);
         }
         
@@ -264,14 +271,16 @@ public class RhythmMinigameScript : MonoBehaviour
             if (didWin) {
                 playerdata.IncreaseEndlessGamesPlayed();
                 playerdata.IncreaseRhythmGamesPlayed();
-
                 SceneManager.LoadScene("EndlessMode");
                 Time.timeScale = 1;
+                
             }
             else {
                 playerdata.DecreaseEndlessLives();
+
                 SceneManager.LoadScene("EndlessMode");
                 Time.timeScale = 1;
+                
             }
             
         }

@@ -117,15 +117,15 @@ public class EndlessModeController : MonoBehaviour
         int rand = Random.Range(0,3);
         switch (rand) {
             case 0:
-                playerData.StartEndlessMode();
+                
                 SceneManager.LoadScene("FootballMinigame");
             break;
             case 1:
-                playerData.StartEndlessMode();
+                
                 SceneManager.LoadScene("SnakeMinigame");
             break;
             case 2:
-                playerData.StartEndlessMode();
+                
                 SceneManager.LoadScene("RhythmMinigame");
             break;
         }
