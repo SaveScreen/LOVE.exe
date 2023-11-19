@@ -13,30 +13,136 @@ MonoBehaviour:
   m_Name: PyramidSchemer
   m_EditorClassIdentifier: 
   angrylines:
-  - angry1
-  alWhoistalking: 00
+  - ...
+  - Excuse me, sir? Barry D. Money?
+  - Oh, wonderful! We can begin our meeting.
+  - " I apologize, but I wasn\u2019t expecting a \u201Cmeeting\u201D today.  My manufacturer
+    programmed me as an interface designed only for dating and companionship."
+  - Oh but- Hold on a minute Bot! I actually very much need you for something!
+  - "I want you to try a new product that\u2019s been flying off shelves lately and
+    conduct a series of tests!"
+  - "It's called a \u2018Happy Mask\u2019, and it's said that those who wear their
+    Happy Mask all day have shown signs of being much happier than those who don\u2019t."
+  - This is very intriguing! I would love to try it out.
+  - "That\u2019s good to hear! In fact, I have one on me for you to try."
+  - '*Barry handed you the Happy Mask and you put it on your face* '
+  - So, how does it feel?
+  - ' It is a bit tight. I am not sure if it is suited for me.'
+  - "That\u2019s totally normal. You\u2019ll get used to it! Now I would like to
+    take you to a park to run my first test. Shall we go?"
+  alWhoistalking: 00010001000000010001000100
   neutrallines:
-  - neutral1
-  nlWhoistalking: 00
+  - ...
+  - Excuse me, sir? Barry D. Money?
+  - Oh, wonderful! We can begin our meeting.
+  - " I apologize, but I wasn\u2019t expecting a \u201Cmeeting\u201D today.  My manufacturer
+    programmed me as an interface designed only for dating and companionship."
+  - Oh but- Hold on a minute Bot! I actually very much need you for something!
+  - "I want you to try a new product that\u2019s been flying off shelves lately and
+    conduct a series of tests!"
+  - "It's called a \u2018Happy Mask\u2019, and it's said that those who wear their
+    Happy Mask all day have shown signs of being much happier than those who don\u2019t."
+  - This is very intriguing! I would love to try it out.
+  - "That\u2019s good to hear! In fact, I have one on me for you to try."
+  - '*Barry handed you the Happy Mask and you put it on your face* '
+  - So, how does it feel?
+  - ' It is a bit tight. I am not sure if it is suited for me.'
+  - "That\u2019s totally normal. You\u2019ll get used to it! Now I would like to
+    take you to a park to run my first test. Shall we go?"
+  nlWhoistalking: 00010001000000010001000100
   happylines:
-  - happy1
-  hlWhoistalking: 00
+  - ...
+  - Excuse me, sir? Barry D. Money?
+  - Oh, wonderful! We can begin our meeting.
+  - " I apologize, but I wasn\u2019t expecting a \u201Cmeeting\u201D today.  My manufacturer
+    programmed me as an interface designed only for dating and companionship."
+  - Oh but- Hold on a minute Bot! I actually very much need you for something!
+  - "I want you to try a new product that\u2019s been flying off shelves lately and
+    conduct a series of tests!"
+  - "It's called a \u2018Happy Mask\u2019, and it's said that those who wear their
+    Happy Mask all day have shown signs of being much happier than those who don\u2019t."
+  - This is very intriguing! I would love to try it out.
+  - "That\u2019s good to hear! In fact, I have one on me for you to try."
+  - '*Barry handed you the Happy Mask and you put it on your face* '
+  - So, how does it feel?
+  - ' It is a bit tight. I am not sure if it is suited for me.'
+  - "That\u2019s totally normal. You\u2019ll get used to it! Now I would like to
+    take you to a park to run my first test. Shall we go?"
+  hlWhoistalking: 00010001000000010001000100
   date2pregamelines:
-  - pregame1
-  date2preWhoistalking: 00
+  - So how do you feel after that first activity?
+  - I do not feel much difference in my system.
+  - "O-oh! Interesting. In fact, you\u2019re the first person who has ever said that
+    to me about the Happy Mask."
+  - ' Really? I apologize, but it may just be because my program is not good at detecting
+    changes in signals provided by the Happy Mask.'
+  - No, no it's fine, really! Sometimes it takes a little while for the Happy Mask
+    to fully go into effect.
+  - But no worry! I see we have another thing we could try right at that arcade cabinet
+    over there!
+  date2preWhoistalking: 000100010000
   date2postgamelines:
-  - postgame1
-  date2postWhoistalking: 00
+  - "Wasn\u2019t that fun? I could just tell you had a great time!"
+  - I must say I thoroughly enjoyed that experience.
+  date2postWhoistalking: 0001
   date3pregamelines:
-  - pregame2
-  date3preWhoistalking: 00
+  - Seems like the Happy Mask is starting to work now, huh?
+  - "Yes\u2026 Though I must ask, what is it that\u2019s used in this mask to cause
+    someone\u2019s sudden change in happiness?"
+  - "The secret is the mask\u2019s state-of-the-art technology that tracks your mood
+    and adjusts various aspects of the mask to increase the user\u2019s overall happiness."
+  - Really? So how does it do that?
+  - "The science behind it is really quite complex. I wouldn\u2019t want to waste
+    your time boring you with all the details."
+  - I cannot be bored. I am a robot, but I understand. What is the starting price
+    for these masks?
+  - The AMAZING starting price is only 5 payments of $99.99!
+  - Intriguing! That is quite expensive compared to most face masks. Are you not
+    worried about selling any masks at that steep price?
+  - For a good reason! The technology that is inside this mask is part of the reason
+    it has such a price!
+  - We have actual award-winning doctors and psychiatrists including HUNDREDS of
+    peer-reviewed articles! Not to mention the thousands of FIVE STAR reviews!
+  - I apologize! My systems cannot find a single article, testimonial, or doctor's
+    referral regarding the success of your Happy Mask.
+  - "R-really? Well, that\u2019s just because we don\u2019t have enough investors
+    yet to spread the word."
+  - With your help, we could get even more people on board! Let's head to the dance
+    floor to scope out our audience!
+  date3preWhoistalking: 00010001000100010000010000
   date3postgamelines:
-  - postgame2
-  date3postWhoistalking: 00
+  - "Man, that dance floor was just too busy and crowded. I couldn\u2019t get anyone\u2019s
+    attention over the loud music and the sounds of people partying."
+  - "It\u2019s a shame these people don\u2019t realize they would be having an even
+    better time if they had something to enhance their experience such as this Happy
+    Mask!"
+  - "I apologize, Barry, but my calculations believe your product isn\u2019t going
+    to sell well. It might just be too expensive for the average consumer."
+  - "I understand, but I have to sell a certain number of units or else my boss won\u2019t
+    be too happy\u2026 "
+  - Oops! HAHAHA! Forget I said that, please.
+  - Your statement has been removed from my memory.
+  - "Fortunately, with you, I think we might be able to sell more masks at a faster
+    rate. We\u2019ll have twice the manpower. I could even give you a cut of the
+    earnings from it."
+  - 'Barry, My primary services are to those who want companionship. You must hire
+    someone else to help sell your product. '
+  - Although I recommend not proceeding with this. My systems are detecting a PYRAMID
+    SCHEME SCAM.
+  - '*Barry takes off his Happy Mask* '
+  - "Man, you\u2019re right\u2026 I guess it only comes out of my pocket if I\u2019m
+    hiring you."
+  - "Your services aren\u2019t cheap, but thanks for at least helping me out by testing
+    my product\u2026. "
+  - 'Please come get my services again if you would like to work through your FEAR
+    OF REJECTION, Barry! '
+  date3postWhoistalking: 00000100000100010000000001
   wongamelines:
-  - wongame1
+  - Wow, it looks like the mask is working great already!
   wongameWhoistalking: 00
   lostgamelines:
-  - lostgame1
+  - "Haha. This doesn't prove anything\u2026."
+  - Are you with the corpos??
+  - I'm... getting a business call!
   lostgameWhoistalking: 00
   minigameOrder: 010000000200000003000000
