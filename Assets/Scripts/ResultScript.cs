@@ -90,7 +90,8 @@ public class ResultScript : MonoBehaviour
 
     public void DisplayResult()
     {
-        FinalScore.SetText("Score: " + playerdata.GetPlayerRating().ToString());
+        //float scoreTemp = playerdata.GetPlayerRating() * 100;
+        //FinalScore.SetText("Score: " + scoreTemp.ToString() + "%");
         
         
         switch (playerdata.GetPlayerDate())
@@ -164,9 +165,140 @@ public class ResultScript : MonoBehaviour
                         break;
                 }
                 break;
+            case 4:
+                Date2.SetActive(true);
+                switch (PlayerRank())
+                {
+                    case 0:
+                        Date4C.SetActive(true);
+                        RankC.SetActive(true);
+                        break;
+                    case 1:
+                        Date4B.SetActive(true);
+                        RankB.SetActive(true);
+                        break;
+                    case 2:
+                        Date4A.SetActive(true);
+                        RankA.SetActive(true);
+                        break;
+                    case 3:
+                        Date4S.SetActive(true);
+                        RankS.SetActive(true);
+                        break;
+                }
+                break;
+            case 5:
+                Date2.SetActive(true);
+                switch (PlayerRank())
+                {
+                    case 0:
+                        Date5C.SetActive(true);
+                        RankC.SetActive(true);
+                        break;
+                    case 1:
+                        Date5B.SetActive(true);
+                        RankB.SetActive(true);
+                        break;
+                    case 2:
+                        Date5A.SetActive(true);
+                        RankA.SetActive(true);
+                        break;
+                    case 3:
+                        Date5S.SetActive(true);
+                        RankS.SetActive(true);
+                        break;
+                }
+                break;
+            case 6:
+                Date2.SetActive(true);
+                switch (PlayerRank())
+                {
+                    case 0:
+                        Date6C.SetActive(true);
+                        RankC.SetActive(true);
+                        break;
+                    case 1:
+                        Date6B.SetActive(true);
+                        RankB.SetActive(true);
+                        break;
+                    case 2:
+                        Date6A.SetActive(true);
+                        RankA.SetActive(true);
+                        break;
+                    case 3:
+                        Date6S.SetActive(true);
+                        RankS.SetActive(true);
+                        break;
+                }
+                break;
+            case 7:
+                Date2.SetActive(true);
+                switch (PlayerRank())
+                {
+                    case 0:
+                        Date7C.SetActive(true);
+                        RankC.SetActive(true);
+                        break;
+                    case 1:
+                        Date7B.SetActive(true);
+                        RankB.SetActive(true);
+                        break;
+                    case 2:
+                        Date7A.SetActive(true);
+                        RankA.SetActive(true);
+                        break;
+                    case 3:
+                        Date7S.SetActive(true);
+                        RankS.SetActive(true);
+                        break;
+                }
+                break;
+            case 8:
+                Date2.SetActive(true);
+                switch (PlayerRank())
+                {
+                    case 0:
+                        Date8C.SetActive(true);
+                        RankC.SetActive(true);
+                        break;
+                    case 1:
+                        Date8B.SetActive(true);
+                        RankB.SetActive(true);
+                        break;
+                    case 2:
+                        Date8A.SetActive(true);
+                        RankA.SetActive(true);
+                        break;
+                    case 3:
+                        Date8S.SetActive(true);
+                        RankS.SetActive(true);
+                        break;
+                }
+                break;
+            case 9:
+                Date2.SetActive(true);
+                switch (PlayerRank())
+                {
+                    case 0:
+                        Date9C.SetActive(true);
+                        RankC.SetActive(true);
+                        break;
+                    case 1:
+                        Date9B.SetActive(true);
+                        RankB.SetActive(true);
+                        break;
+                    case 2:
+                        Date9A.SetActive(true);
+                        RankA.SetActive(true);
+                        break;
+                    case 3:
+                        Date9S.SetActive(true);
+                        RankS.SetActive(true);
+                        break;
+                }
+                break;
 
         }
-        FinalMoney.SetText("Pay: " + moneyData.GetGAINZ().ToString());
     }
 
     public int PlayerRank()
@@ -177,24 +309,36 @@ public class ResultScript : MonoBehaviour
         {
             SuccessType.SetText("FAIL");
             moneyData.AddMoney(100);
+            FinalMoney.SetText("Pay: 100");
+            FinalScore.SetText("Score: 70%");
+            RankC.SetActive(true);
             return 0;
         }
         else if (rate >= 1 && rate < 2)
         {
             SuccessType.SetText("PASS");
             moneyData.AddMoney(300);
+            FinalMoney.SetText("Pay: 300");
+            FinalScore.SetText("Score: 80%");
+            RankB.SetActive(true);
             return 1;
         }
         else if (rate >= 2 && rate < 2.5f)
         {
             SuccessType.SetText("GREAT");
             moneyData.AddMoney(500);
+            FinalMoney.SetText("Pay: 500");
+            FinalScore.SetText("Score: 90%");
+            RankA.SetActive(true);
             return 2;
         }
         else
         {
             SuccessType.SetText("PERFECT");
             moneyData.AddMoney(1000);
+            FinalMoney.SetText("Pay: 1000");
+            FinalScore.SetText("Score: 100%");
+            RankS.SetActive(true);
             return 3;
         }
     }
