@@ -38,6 +38,7 @@ public class FootballMinigameScript : MonoBehaviour
     private BallScript ballScript;
     private bool isEndlessMode;
     private int footballGamesPlayed;
+    public GameObject endlessgameoverscreen;
 
     // Start is called before the first frame update
     void Start()
@@ -51,6 +52,7 @@ public class FootballMinigameScript : MonoBehaviour
         accuracymeter.SetActive(false);
         restartbutton.SetActive(false);
         continuebutton.SetActive(false);
+        endlessgameoverscreen.SetActive(false);
         timerinseconds = 3;
 
         trianglemaxposition = 1.4f;
@@ -64,6 +66,20 @@ public class FootballMinigameScript : MonoBehaviour
         gamesPlayed = playerdata.GetGameCount();
         isEndlessMode = playerdata.IsEndlessMode();
         footballGamesPlayed = playerdata.GetFootballGamesPlayed();
+
+        if (isEndlessMode) {
+            switch (footballGamesPlayed) {
+                case 0:
+                    powermeterspeed = 2;
+                break;
+                case 1:
+                    powermeterspeed = 3;
+                break;
+                case 2:
+                    powermeterspeed = 4;
+                break;
+            }
+        }
 
         click = inputs.FindAction("Player/MouseButton");
     }
@@ -236,10 +252,45 @@ public class FootballMinigameScript : MonoBehaviour
             }
         }
         else {
-            switch (gamesPlayed)
-            {
-                case 0:
-                    if (power > -0.5f)
+            if (!isEndlessMode) {
+                switch (gamesPlayed)
+                {
+                    case 0:
+                        if (power > -0.5f)
+                        {
+                            //Kick is high and center
+                            if (accuracy >= -0.75f && accuracy <= 0.75f)
+                            {
+                                //THE KICK IS GOOD!
+                                countdowntimer.enabled = true;
+                                countdowntimer.text = "Kick is good :)";
+                                didWin = true;
+                            }
+                            //Kick is wide left and right
+                            else if (accuracy < -0.75f || accuracy > 0.75f)
+                            {
+                                //THE KICK IS WIDE LEFT!
+                                countdowntimer.enabled = true;
+                                countdowntimer.text = "Kick is no good :(";
+                                didWin = false;
+                            }
+                            
+                        }
+                        //Kick is too low
+                        else
+                        {
+                            //THE KICK IS NO GOOD!
+                            countdowntimer.enabled = true;
+                            countdowntimer.text = "Kick is no good :(";
+                            didWin = false;
+                        }
+                    break;
+                }
+                restartbutton.SetActive(true);
+                continuebutton.SetActive(true);
+            }
+            else {
+                if (power > -0.5f)
                     {
                         //Kick is high and center
                         if (accuracy >= -0.75f && accuracy <= 0.75f)
@@ -259,19 +310,17 @@ public class FootballMinigameScript : MonoBehaviour
                         }
                         
                     }
-                    //Kick is too low
-                    else
-                    {
-                        //THE KICK IS NO GOOD!
-                        countdowntimer.enabled = true;
-                        countdowntimer.text = "Kick is no good :(";
-                        didWin = false;
-                    }
-                break;
+                //Kick is too low
+                else
+                {
+                    //THE KICK IS NO GOOD!
+                    countdowntimer.enabled = true;
+                    countdowntimer.text = "Kick is no good :(";
+                    didWin = false;
+                }
+                endlessgameoverscreen.SetActive(true);
             }
             
-            restartbutton.SetActive(true);
-            continuebutton.SetActive(true);
         }
        
     }
@@ -296,16 +345,32 @@ public class FootballMinigameScript : MonoBehaviour
         accuracymeter.transform.position = new Vector2(accuracyminposition, accuracymeter.transform.position.y);
     }
     public void Continue() {
-        playerdata.UpdatePlayerDateScore(didWin);
-        playerdata.IncreaseGameCount();
-        if (didWin) {
-            playerdata.WonGame();
+        if (!isEndlessMode) {
+            playerdata.UpdatePlayerDateScore(didWin);
+            playerdata.IncreaseGameCount();
+            if (didWin) {
+                playerdata.WonGame();
+            }
+            else {
+                playerdata.LostGame();
+            }
+
+            SceneManager.LoadScene("VisualNovel");
         }
         else {
-            playerdata.LostGame();
-        }
+            if (didWin) {
+                playerdata.IncreaseFootballGamesPlayed();
+                playerdata.IncreaseEndlessGamesPlayed();
 
-        SceneManager.LoadScene("VisualNovel");
+                SceneManager.LoadScene("EndlessMode");
+            }
+            else {
+                playerdata.DecreaseEndlessLives();
+                
+                SceneManager.LoadScene("EndlessMode");
+            }
+        }
+        
     }
 
     IEnumerator TimerText() {

@@ -1631,7 +1631,7 @@ MonoBehaviour:
   wintext: {fileID: 1333098024}
   hiscoretext: {fileID: 17047227}
   endlesscountdown: {fileID: 0}
-  countdowntimer: 0
+  countdowntimer: 3
   playerdatacontainer: {fileID: 826056029}
   spawnradius: 2.5
   timer: 2
