@@ -20,6 +20,8 @@ public class EndlessModeController : MonoBehaviour
     private int lives;
     private int currentScore;
     private int hiscore;
+    private bool gameover;
+    private bool newhiscore;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +32,8 @@ public class EndlessModeController : MonoBehaviour
         lives = playerData.GetEndlessLives();
         hiscore = playerData.GetEndlessHiScore();
         isEndlessMode = playerData.IsEndlessMode();
+        gameover = false;
+        newhiscore = false;
 
         currentScore = gamesPlayed;
 
@@ -45,6 +49,7 @@ public class EndlessModeController : MonoBehaviour
             if (currentScore > hiscore) {
                 playerData.NewEndlessHiScore(currentScore);
                 hiscoretext.text = "Hiscore: " + currentScore;
+                newhiscore = true;
             }
 
             if (lives == 3) {
@@ -74,6 +79,7 @@ public class EndlessModeController : MonoBehaviour
                 livesobjects[2].SetActive(false);
                 inEndlessMode.SetActive(false);
                 gameOverEndlessMode.SetActive(true);
+                gameover = true;
             }
         }
         else {
@@ -91,6 +97,13 @@ public class EndlessModeController : MonoBehaviour
         playerData.ResetFootballGamesPlayed();
         playerData.ResetEndlessGamesPlayed();
         playerData.EndEndlessMode();
+
+        if (gameover) {
+            if (newhiscore) {
+                playerData.SaveGame();
+                Debug.Log("New hi score");
+            }
+        }
 
         SceneManager.LoadScene("AptScene");
     }
@@ -126,6 +139,51 @@ public class EndlessModeController : MonoBehaviour
             break;
             case 2:
                 
+                SceneManager.LoadScene("RhythmMinigame");
+            break;
+        }
+    }
+
+    public void RestartEndless() {
+        int rand = Random.Range(0,3);
+        switch (rand) {
+            case 0:
+                gameover = false;
+                if (newhiscore) {
+                    playerData.SaveGame();
+                    newhiscore = false;
+                }
+                playerData.ResetEndlessGamesPlayed();
+                playerData.ResetSnakeGamesPlayed();
+                playerData.ResetFootballGamesPlayed();
+                playerData.ResetEndlessGamesPlayed();
+                playerData.StartEndlessMode();
+                SceneManager.LoadScene("FootballMinigame");
+            break;
+            case 1:
+                gameover = false;
+                if (newhiscore) {
+                    playerData.SaveGame();
+                    newhiscore = false;
+                }
+                playerData.ResetEndlessGamesPlayed();
+                playerData.ResetSnakeGamesPlayed();
+                playerData.ResetFootballGamesPlayed();
+                playerData.ResetEndlessGamesPlayed();
+                playerData.StartEndlessMode();
+                SceneManager.LoadScene("SnakeMinigame");
+            break;
+            case 2:
+                gameover = false;
+                if (newhiscore) {
+                    playerData.SaveGame();
+                    newhiscore = false;
+                }
+                playerData.ResetEndlessGamesPlayed();
+                playerData.ResetSnakeGamesPlayed();
+                playerData.ResetFootballGamesPlayed();
+                playerData.ResetEndlessGamesPlayed();
+                playerData.StartEndlessMode();
                 SceneManager.LoadScene("RhythmMinigame");
             break;
         }
