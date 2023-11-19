@@ -18,11 +18,13 @@ public class PlayerData : MonoBehaviour
     public static bool playedGame = false;
     public static bool playerSelected = false;
     public static int playerChibiOutfit;
+    public static bool isendlessmode = false;
     public static int endlessgamesplayed = 0;
     //For endless mode, tracks the amount of each game played
     public static int footballgamesplayed = 0;
     public static int snakegamesplayed = 0;
     public static int rhythmgamesplayed = 0;
+    public static int endlesslivesleft = 0;
     
     public bool loadingdata = false;
     public bool restarting = false;
@@ -121,6 +123,19 @@ public class PlayerData : MonoBehaviour
     {
         gameCount = 0;
     }
+    public void StartEndlessMode() 
+    {
+        isendlessmode = true;
+        endlesslivesleft = 3;
+    }
+    public void EndEndlessMode() 
+    {
+        isendlessmode = false;
+        endlesslivesleft = 0;
+    }
+    public void DecreaseEndlessLives() {
+        endlesslivesleft--;
+    }
     public void IncreaseEndlessGamesPlayed() 
     {
         endlessgamesplayed++;
@@ -153,7 +168,8 @@ public class PlayerData : MonoBehaviour
     {
         rhythmgamesplayed = 0;
     }
-    public void ResetPlayedGame() {
+    public void ResetPlayedGame() 
+    {
         playedGame = false;
     }
     public void UnlockOutfit(int outfitNum)
@@ -170,12 +186,18 @@ public class PlayerData : MonoBehaviour
     {
         snakegamehiscore = score;
     }
+    public void NewEndlessHiScore(int score)
+    {
+        endlessgameshiscore = score;
+    }
 
-    public void WonGame() {
+    public void WonGame() 
+    {
         wonGame = true;
         playedGame = true;
     }
-    public void LostGame() {
+    public void LostGame() 
+    {
         wonGame = false;
         playedGame = true;
     }
@@ -202,6 +224,10 @@ public class PlayerData : MonoBehaviour
     public int GetEndlessGamesPlayed() 
     {
         return endlessgamesplayed;
+    }
+    public int GetEndlessLives() 
+    {
+        return endlesslivesleft;
     }
     public int GetFootballGamesPlayed() 
     {
@@ -259,6 +285,14 @@ public class PlayerData : MonoBehaviour
     public int GetSnakeGameHiScore() 
     {
         return snakegamehiscore;
+    }
+    public int GetEndlessHiScore()
+    {
+        return endlessgameshiscore;
+    }
+    public bool IsEndlessMode() 
+    {
+        return isendlessmode;
     }
 
     public float PlayerLikeRating(int dateNum)
@@ -447,6 +481,7 @@ public class PlayerData : MonoBehaviour
         playerSelected = false;
         rhythmgamehiscore = 0;
         snakegamehiscore = 0;
+        endlessgameshiscore = 0;
         moneyScript.SetMoney(0);
     }
 

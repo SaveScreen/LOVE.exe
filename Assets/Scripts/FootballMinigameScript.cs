@@ -36,6 +36,8 @@ public class FootballMinigameScript : MonoBehaviour
     public GameObject playerdatacontainer;
     public GameObject ball;
     private BallScript ballScript;
+    private bool isEndlessMode;
+    private int footballGamesPlayed;
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +62,8 @@ public class FootballMinigameScript : MonoBehaviour
         kickingtime = false;
         donekicking = false;
         gamesPlayed = playerdata.GetGameCount();
+        isEndlessMode = playerdata.IsEndlessMode();
+        footballGamesPlayed = playerdata.GetFootballGamesPlayed();
 
         click = inputs.FindAction("Player/MouseButton");
     }

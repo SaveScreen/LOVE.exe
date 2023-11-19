@@ -48,6 +48,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Credits.unity
     guid: 7516d3ec6c4f7a44e945d4c7d08cc7e5
   - enabled: 1
+    path: Assets/Scenes/EndlessMode/EndlessMode.unity
+    guid: 7c547c49ff2034c42b68d6c95cc2b26e
+  - enabled: 1
     path: Assets/Scenes/Gallery2.unity
     guid: 90a2bb73a710ad94ca8a8c9b7b91f85e
   - enabled: 1

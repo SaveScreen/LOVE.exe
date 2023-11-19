@@ -73,6 +73,9 @@ public class AptSceneMenu : MonoBehaviour
         
     }
 
+    public void GoToEndless() {
+        FadeToLevel(14);
+    }
 
     public void GoToStore()
     {
