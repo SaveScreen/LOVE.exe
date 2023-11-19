@@ -35,6 +35,8 @@ public class RhythmMinigameScript : MonoBehaviour
     private int gamecount;
     private bool isEndlessMode;
     private int rhythmGamesPlayed;
+    private int potentialscore;
+    private bool firstspawn;
 
     // Start is called before the first frame update
     void Start()
@@ -48,12 +50,12 @@ public class RhythmMinigameScript : MonoBehaviour
         speedtext.text = "Circle/s: " + respawntime;
         timerinseconds = 3;
 
-        gamecount = playerdata.GetGameCount();
         isEndlessMode = playerdata.IsEndlessMode();
-        rhythmGamesPlayed = playerdata.GetRhythmGamesPlayed();
 
 
         if (!isEndlessMode) {
+            gamecount = playerdata.GetGameCount();
+
             switch (gamecount)
             {
                 case 0:
@@ -68,21 +70,20 @@ public class RhythmMinigameScript : MonoBehaviour
             }
 
             Generate();
+            endlesscountdown.text = "";
             hiscoretext.text = "Hiscore: " + hiscore;
         }
         else {
-            switch (rhythmGamesPlayed) 
-            {
-                case 0:
-                    wintext.text = "Score at least 10 to pass!";
-                break;
-                case 1:
-                    wintext.text = "Score at least 20 to pass!";
-                break;
-                case 2:
-                    wintext.text = "Score at least 30 to pass!";
-                break;
+            rhythmGamesPlayed = playerdata.GetRhythmGamesPlayed();
+            potentialscore = 10;
+            gamestarted = false;
+            firstspawn = false;
+
+            if (rhythmGamesPlayed > 0) {
+                potentialscore += 5 * rhythmGamesPlayed;
             }
+            
+            wintext.text = "Score at least " + potentialscore + " to pass!";
             hiscoretext.text = "";
         }
 
@@ -132,27 +133,28 @@ public class RhythmMinigameScript : MonoBehaviour
                 }
             }
             else {
-                if (timer > 0) {
-                    timer -= Time.deltaTime;
+                if (!firstspawn) {
+                    Generate();
+                    firstspawn = true;
                 }
                 else {
-                    Generate();
-                    timer = respawntime;
-                    ShrinkRespawnTime();
-                }
-                scoretext.text = "Score: " + score;
+                    if (timer > 0) {
+                    timer -= Time.deltaTime;
+                    }
+                    else {
+                        Generate();
+                        timer = respawntime;
+                        ShrinkRespawnTime();
+                    }
+                    scoretext.text = "Score: " + score;
 
-                switch (rhythmGamesPlayed) {
-                    case 0:
-                        if (score >= 10) {
-                            MinigameComplete();
-                        }
-                    break;
+                    if (score >= potentialscore) {
+                        MinigameComplete();
+                    }
                 }
+                
             }
-        }
-        
-        
+        } 
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -261,7 +263,7 @@ public class RhythmMinigameScript : MonoBehaviour
         else {
             if (didWin) {
                 playerdata.IncreaseEndlessGamesPlayed();
-                playerdata.IncreaseFootballGamesPlayed();
+                playerdata.IncreaseRhythmGamesPlayed();
 
                 SceneManager.LoadScene("EndlessMode");
                 Time.timeScale = 1;

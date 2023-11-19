@@ -36,6 +36,8 @@ public class EndlessModeController : MonoBehaviour
         scoretext.text = "Score: " + currentScore;
         hiscoretext.text = "Hiscore: " + hiscore;
 
+        Debug.Log("Endless Lives " + lives);
+
         if (isEndlessMode) {
             startEndlessMode.SetActive(false);
             //quitEndlessMode.SetActive(false);

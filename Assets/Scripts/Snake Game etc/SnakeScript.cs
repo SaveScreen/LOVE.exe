@@ -146,7 +146,7 @@ public class SnakeScript : MonoBehaviour
                 potentialscore += 5 * snakegamesplayed;
             }
             
-            wintext.text = "Score at least " + potentialscore + "to pass!";
+            wintext.text = "Score at least " + potentialscore + " to pass!";
 
         }
         
