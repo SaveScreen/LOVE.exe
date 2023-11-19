@@ -39,6 +39,12 @@ public class EndlessModeController : MonoBehaviour
         if (isEndlessMode) {
             startEndlessMode.SetActive(false);
             //quitEndlessMode.SetActive(false);
+
+            if (currentScore > hiscore) {
+                playerData.NewEndlessHiScore(currentScore);
+                hiscoretext.text = "Hiscore: " + currentScore;
+            }
+
             if (lives == 3) {
                 livesobjects[0].SetActive(true);
                 livesobjects[1].SetActive(true);
@@ -106,6 +112,20 @@ public class EndlessModeController : MonoBehaviour
     }
 
     public void ContinueEndlessMode() {
-
+        int rand = Random.Range(0,3);
+        switch (rand) {
+            case 0:
+                playerData.StartEndlessMode();
+                SceneManager.LoadScene("FootballMinigame");
+            break;
+            case 1:
+                playerData.StartEndlessMode();
+                SceneManager.LoadScene("SnakeMinigame");
+            break;
+            case 2:
+                playerData.StartEndlessMode();
+                SceneManager.LoadScene("RhythmMinigame");
+            break;
+        }
     }
 }
