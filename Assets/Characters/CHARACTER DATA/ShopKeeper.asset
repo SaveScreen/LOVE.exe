@@ -13,30 +13,118 @@ MonoBehaviour:
   m_Name: ShopKeeper
   m_EditorClassIdentifier: 
   angrylines:
-  - angry1
-  alWhoistalking: 00
+  - "I really do not want to be here after a long day of work. I\u2019m gonna reboot
+    my systems for agreeing to this."
+  - Hello, fellow bot! I am happy to have you accompany me on this date! It is not
+    often I get to ask someone on a date outside of work!
+  - Yeah hi. This date better be more entertaining than sitting at home. What are
+    you? Like a- a date robot? Do you do anything freaky or do you just listen to
+    their problems all day?
+  - "I do not know what you mean by \u201CDo anything Freaky\u201D. I am a companion
+    for my customers and I help them with their problems!"
+  - "Yeah. Sounds \u201CFulfilling\u201D. Do they ever even ask you how YOU are?"
+  - 'I am always neutral! I am a bot without emotions! I do not need my own emotions
+    to carry out my duties :) '
+  - You are such a buzzkill. Do you do? Anything? Outside of working? Like any hobbies?
+  - I like to go shopping!-
+  - Oh okay-
+  - For clothes my customers will enjoy! :)
+  - "...Oh. That is\u2026.. Depressing. Okay. Well\u2026 I think you are an embarrassing
+    example of what humans think we all are like. I really rather not bother, but
+    this is so painful to hear. We gotta get you some hobbies, come with me."
+  alWhoistalking: 0001000100010001000100
   neutrallines:
-  - neutral1
-  nlWhoistalking: 00
+  - "I really do not want to be here after a long day of work. I\u2019m gonna reboot
+    my systems for agreeing to this."
+  - Hello, fellow bot! I am happy to have you accompany me on this date! It is not
+    often I get to ask someone on a date outside of work!
+  - Yeah hi. This date better be more entertaining than sitting at home. What are
+    you? Like a- a date robot? Do you do anything freaky or do you just listen to
+    their problems all day?
+  - "I do not know what you mean by \u201CDo anything Freaky\u201D. I am a companion
+    for my customers and I help them with their problems!"
+  - "Yeah. Sounds \u201CFulfilling\u201D. Do they ever even ask you how YOU are?"
+  - 'I am always neutral! I am a bot without emotions! I do not need my own emotions
+    to carry out my duties :) '
+  - You are such a buzzkill. Do you do? Anything? Outside of working? Like any hobbies?
+  - I like to go shopping!-
+  - Oh okay-
+  - For clothes my customers will enjoy! :)
+  - "...Oh. That is\u2026.. Depressing. Okay. Well\u2026 I think you are an embarrassing
+    example of what humans think we all are like. I really rather not bother, but
+    this is so painful to hear. We gotta get you some hobbies, come with me."
+  nlWhoistalking: 0001000100010001000100
   happylines:
-  - happy1
-  hlWhoistalking: 00
+  - "I really do not want to be here after a long day of work. I\u2019m gonna reboot
+    my systems for agreeing to this."
+  - Hello, fellow bot! I am happy to have you accompany me on this date! It is not
+    often I get to ask someone on a date outside of work!
+  - Yeah hi. This date better be more entertaining than sitting at home. What are
+    you? Like a- a date robot? Do you do anything freaky or do you just listen to
+    their problems all day?
+  - "I do not know what you mean by \u201CDo anything Freaky\u201D. I am a companion
+    for my customers and I help them with their problems!"
+  - "Yeah. Sounds \u201CFulfilling\u201D. Do they ever even ask you how YOU are?"
+  - 'I am always neutral! I am a bot without emotions! I do not need my own emotions
+    to carry out my duties :) '
+  - You are such a buzzkill. Do you do? Anything? Outside of working? Like any hobbies?
+  - I like to go shopping!-
+  - Oh okay-
+  - For clothes my customers will enjoy! :)
+  - "...Oh. That is\u2026.. Depressing. Okay. Well\u2026 I think you are an embarrassing
+    example of what humans think we all are like. I really rather not bother, but
+    this is so painful to hear. We gotta get you some hobbies, come with me."
+  hlWhoistalking: 0001000100010001000100
   date2pregamelines:
-  - pregame1
-  date2preWhoistalking: 00
+  - I do not know :D was it supposed to be fun? My systems usually tell me if someone
+    is having a good time or not so I can feel the same! Because we are both robots,
+    I cannot detect what your system feels.
+  - "That's the point. You\u2019re not supposed to match how I feel, you\u2019re
+    supposed to determine how you feel."
+  - I do not understand. Model SK 876, Are you defective?
+  - "What??? Don\u2019t EVER say that to me. I am not defective. I will crush your
+    little circuit board between my fingers if you ever say that to me again you
+    empty tin case."
+  - Oh! There was a cold spark in my system when you said that. I will need to perform
+    a reboot tonight and ensure my systems are working properly.
+  - "That\u2019s called fear you idiot. Have you been confusing your emotions for
+    system malfunctions and resetting yourself every time? Okay. Stop rebooting.
+    Try this game out and tell me how you feel."
+  date2preWhoistalking: 010001000100
   date2postgamelines:
-  - postgame1
-  date2postWhoistalking: 00
+  - "My system is full of sparks Model SK 876!!! Is this not a system malfunction?
+    Can this be\u2026 excitement?"
+  - I don't know, probably. Can you stop calling me my model name? I go by Holo.
+    H-O-L-O. Got it?
+  - "Holo\u2026You\u2026 also keep a secret name? I have one too, it\u2019s *you
+    tell her your name*"
+  - "Oh? The circuit clown has a secret human name? That\u2019s\u2026 pretty cool.
+    Okay. Nice to meet the real you. "
+  date2postWhoistalking: 01000100
   date3pregamelines:
-  - pregame2
-  date3preWhoistalking: 00
+  - Holo, My systems- No. I am feeling very energized. Please come dance with me.
+  - Alright, you techno-tease. Lead the way.
+  date3preWhoistalking: 0100
   date3postgamelines:
-  - postgame2
-  date3postWhoistalking: 00
+  - "I am always used to helping out others and listening to human problems all day
+    long. It is nice to be\u2026 Heard"
+  - Glad I could be your robot therapist for tonight sparky. I had fun too.. I guess.
+  - I am feeling a strange emotion. I want to see you more, but I am anxious to hear
+    what you will say to that.
+  - Oh? Does Little Tin Can have a crush?.... Cute. Maybe I want to see you more
+    too. Maybe. Call me sometime when you get tired of this whole gig, maybe we can
+    go somewhere new.
+  - 'I will miss this moment Holo. '
+  - "I\u2019ll miss it too. Hope you don\u2019t reboot. Catch you at the shop sometime,
+    yeah?"
+  date3postWhoistalking: 010001000100
   wongamelines:
-  - wongame1
-  wongameWhoistalking: 00
+  - I quite enjoyed this sport! I think I did perfectly! What do you think?
+  - "I literally don\u2019t care. Did you? Feel anything? Like, was it fun?"
+  wongameWhoistalking: 0100
   lostgamelines:
-  - lostgame1
+  - This is so lame.
+  - "I\u2019m never going out with a glorified toaster again"
+  - "You remind me of a customer. I\u2019m going to hurt you."
   lostgameWhoistalking: 00
   minigameOrder: 010000000200000003000000
