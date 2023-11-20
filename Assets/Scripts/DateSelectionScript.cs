@@ -37,31 +37,31 @@ public class DateSelectionScript : MonoBehaviour
         confirmscreen.SetActive(true);
         switch (dateoption) {
             case 1:
-                datechoicetext.text = "Cowboy";
+                datechoicetext.text = "Jimothy Jones";
             break;
             case 2:
-                datechoicetext.text = "Goth";
+                datechoicetext.text = "Jett Black";
             break;
             case 3:
-                datechoicetext.text = "Fancy";
+                datechoicetext.text = "Frills Gaudy";
                 break;
             case 4:
-                datechoicetext.text = "Gamer";
+                datechoicetext.text = "Rosaline Starr";
                 break;
             case 5:
-                datechoicetext.text = "Knight";
+                datechoicetext.text = "Sir Michaelangelo Bouldegarde";
                 break;
             case 6:
-                datechoicetext.text = "Twink??";
+                datechoicetext.text = "Pierre Le’Sarcelle";
                 break;
             case 7:
-                datechoicetext.text = "Pyramid Sceme??";
+                datechoicetext.text = "Barry D. Money";
                 break;
             case 8:
-                datechoicetext.text = "Wrestler";
+                datechoicetext.text = "Hitomi Nakamura";
                 break;
             case 9:
-                datechoicetext.text = "ShopKeeper";
+                datechoicetext.text = "Model SK 876";
                 break;
         }
     }

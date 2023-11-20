@@ -162,12 +162,12 @@ public class VisNovelDialogueController : MonoBehaviour
                         else {
                             switch (playerdata.GetPlayerBot()) {
                                 case 3:
-                                    if (yellowtextbox.text == currentlines[index]) {
+                                    if (pinktextbox.text == currentlines[index]) {
                                         NextPage();
                                     }
                                     else {
                                         StopAllCoroutines();
-                                        yellowtextbox.text = currentlines[index];
+                                        pinktextbox.text = currentlines[index];
                                     } 
                                 break;
                                 case 1:
@@ -180,12 +180,12 @@ public class VisNovelDialogueController : MonoBehaviour
                                     }
                                 break;
                                 case 2:
-                                    if (pinktextbox.text == currentlines[index]) {
+                                    if (yellowtextbox.text == currentlines[index]) {
                                         NextPage();
                                     }
                                     else {
                                         StopAllCoroutines();
-                                        pinktextbox.text = currentlines[index];
+                                        yellowtextbox.text = currentlines[index];
                                     }
                                 break;
                             }
