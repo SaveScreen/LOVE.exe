@@ -27,6 +27,7 @@ public class RhythmMinigameScript : MonoBehaviour
     private int hiscore;
     public AudioClip winAudio;
     public AudioClip loseAudio;
+    public GameObject MusicPlayer;
     private AudioSource audioSource;
     public GameObject gameoverscreen;
     public GameObject endlessgameoverscreen;
@@ -98,6 +99,7 @@ public class RhythmMinigameScript : MonoBehaviour
         endlessgamewinscreen.SetActive(false);
         restart = false;
         starttimer = timer;
+        MusicPlayer.SetActive(true);
     }
 
     // Update is called once per frame
@@ -156,6 +158,7 @@ public class RhythmMinigameScript : MonoBehaviour
 
                     if (score >= potentialscore) {
                         if (!gameover) {
+                            MusicPlayer.SetActive(false);
                             PlaySound(winAudio);
                             MinigameComplete();
                         }
@@ -205,36 +208,43 @@ public class RhythmMinigameScript : MonoBehaviour
                 case 0:
                     if (score >= 10) {
                         didWin = true;
+                        MusicPlayer.SetActive(false);
                         PlaySound(winAudio);
                     }
                     else {
                         didWin = false;
+                        MusicPlayer.SetActive(false);
                         PlaySound(loseAudio);
                     }
                 break;
                 case 1:
                     if (score >= 20) {
                         didWin = true;
+                        MusicPlayer.SetActive(false);
                         PlaySound(winAudio);
                     }
                     else {
                         didWin = false;
+                        MusicPlayer.SetActive(false);
                         PlaySound(loseAudio);
                     }
                 break;
                 case 2:
                     if (score >= 30) {
                         didWin = true;
+                        MusicPlayer.SetActive(false);
                         PlaySound(winAudio);
                     }
                     else {
                         didWin = false;
+                        MusicPlayer.SetActive(false);
                         PlaySound(loseAudio);
                     }
                 break;
             }
         }
         else {
+            MusicPlayer.SetActive(false);
             PlaySound(loseAudio);
             Time.timeScale = 0;
             gameover = true;
@@ -255,6 +265,7 @@ public class RhythmMinigameScript : MonoBehaviour
         scoretext.text = "Score: " + score;
         speedtext.text = "Circle/s: " + respawntime;
         gameoverscreen.SetActive(false);
+        MusicPlayer.SetActive(true);
         Generate();
     }
 

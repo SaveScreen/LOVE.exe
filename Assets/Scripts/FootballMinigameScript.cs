@@ -39,10 +39,11 @@ public class FootballMinigameScript : MonoBehaviour
     private bool isEndlessMode;
     private int footballGamesPlayed;
     public GameObject endlessgameoverscreen;
-    public AudioSource accurateSound;
-    public AudioSource powerSound;
-    public AudioSource fbWin;
-    public AudioSource fbLose;
+    public AudioSource audioSource;
+    public AudioClip accurateSound;
+    public AudioClip powerSound;
+    public AudioClip fbWin;
+    public AudioClip fbLose;
 
     // Start is called before the first frame update
     void Start()
@@ -94,6 +95,11 @@ public class FootballMinigameScript : MonoBehaviour
         inputs.Disable();
     }
 
+    public void PlaySound(AudioClip audio)
+    {
+        audioSource.PlayOneShot(audio);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -135,7 +141,6 @@ public class FootballMinigameScript : MonoBehaviour
         else if (gamestarted && kickingtime) {
             KickBall();
         }
-        
     }
 
     void PowerMeter() {
@@ -151,6 +156,7 @@ public class FootballMinigameScript : MonoBehaviour
                         isgoingup = false;
                         
                         if (clicked) {
+                            PlaySound(accurateSound);
                             power = powertriangle.transform.localPosition.y;
                             //Debug.Log("Power is" + power);
                             enableaccuracy = true;
@@ -167,6 +173,7 @@ public class FootballMinigameScript : MonoBehaviour
                     else
                     {
                         if (clicked) {
+                            PlaySound(accurateSound);
                             power = powertriangle.transform.localPosition.y;
                             enableaccuracy = true;
                             //Debug.Log("Power is " + power);
@@ -190,6 +197,7 @@ public class FootballMinigameScript : MonoBehaviour
                     {
                         isgoingup = false;
                         if (clicked) {
+                            PlaySound(accurateSound);
                             accuracy = accuracymeter.transform.position.x;
                             Debug.Log("Accuracy is " + accuracy);
                             isgoingup = true;
@@ -206,7 +214,8 @@ public class FootballMinigameScript : MonoBehaviour
                     else
                     {
                         if (clicked) {
-                            accuracy = accuracymeter.transform.position.x;
+                    PlaySound(accurateSound);
+                    accuracy = accuracymeter.transform.position.x;
                             kickingtime = true;
                             Debug.Log("Accuracy is " + accuracy);
                         }

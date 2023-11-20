@@ -55,6 +55,18 @@ public class SnakeScript : MonoBehaviour
     private int potentialscore;
     private bool endlesscomplete;
 
+    //audio Stuff
+    public AudioSource audioSource;
+    public AudioSource musicPlayer;
+    public AudioClip pickup;
+    public AudioClip died;
+    public AudioClip win;
+
+    public void PlaySound(AudioClip audio)
+    {
+        audioSource.PlayOneShot(audio);
+    }
+
     //call in update
     private void SetOldPosition()
     {
@@ -151,7 +163,6 @@ public class SnakeScript : MonoBehaviour
             wintext.text = "Score at least " + potentialscore + " to pass!";
 
         }
-        
 
 
     }
@@ -221,6 +232,8 @@ public class SnakeScript : MonoBehaviour
         //GAME OVER
         if (other.gameObject.CompareTag("killbox"))
         {
+            PlaySound(died);
+            musicPlayer.Stop();
             Debug.Log("Hit Player");
             gameObject.SetActive(false);
             if (!isendlessmode) {
@@ -279,6 +292,7 @@ public class SnakeScript : MonoBehaviour
         if (other.tag == "SnakeFood")
         {
             Invoke("Grow", .4f);
+            PlaySound(pickup);
             AddScore();
         }
 
