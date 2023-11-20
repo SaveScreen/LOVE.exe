@@ -39,6 +39,10 @@ public class ScrollScriptStore : MonoBehaviour
 
     public ParticleSystem BuyParticle;
 
+    //SFX
+
+    public AudioSource StoreClothes;
+
 
     private void Start()
     {
@@ -103,11 +107,11 @@ public class ScrollScriptStore : MonoBehaviour
                         playerdata.UnlockOutfit(2);
                         break;
                     case 3:
-                        moneyData.LoseMoney(1500);
+                        moneyData.LoseMoney(1000);
                         playerdata.UnlockOutfit(3);
                         break;
                     case 4:
-                        moneyData.LoseMoney(1500);
+                        moneyData.LoseMoney(1000);
                         playerdata.UnlockOutfit(4);
                         break;
                     case 5:
@@ -118,9 +122,22 @@ public class ScrollScriptStore : MonoBehaviour
                         moneyData.LoseMoney(1500);
                         playerdata.UnlockOutfit(6);
                         break;
+                    case 7:
+                        moneyData.LoseMoney(1500);
+                        playerdata.UnlockOutfit(7);
+                        break;
+                    case 8:
+                        moneyData.LoseMoney(1500);
+                        playerdata.UnlockOutfit(8);
+                        break;
+                    case 9:
+                        moneyData.LoseMoney(500);
+                        playerdata.UnlockOutfit(9);
+                        break;
                 }
 
                 storeController.GetMoney();
+                StoreClothes.Play();
             }
         }
         else if (!playerdata.getOutfitUnlocked(currentItem))

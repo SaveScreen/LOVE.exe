@@ -9,6 +9,7 @@ public class StartMenuController : MonoBehaviour
     public Animator LevelChangerComponent;
     private int levelToLoad;
     public GameObject player;
+    public AudioSource StartScreenSound;
 
     //Scrolling BG
     [SerializeField] private RawImage _img;
@@ -18,7 +19,9 @@ public class StartMenuController : MonoBehaviour
     {
      if (Input.GetMouseButtonDown(0))
         {
+            StartScreenSound.Play();
             FadeToLevel(1);
+            
             PlayerData playerdata = player.GetComponent<PlayerData>();
             playerdata.InitialFileCheck();
         }
@@ -48,7 +51,7 @@ public class StartMenuController : MonoBehaviour
         }
         else {
             playerdata.NewGame();
-            SceneManager.LoadScene("RoboSelect");
+            SceneManager.LoadScene("RoboSelect 1");
         }
         
     }

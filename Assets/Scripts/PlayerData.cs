@@ -17,14 +17,22 @@ public class PlayerData : MonoBehaviour
     public static bool playedGame = false;
     public static bool playerSelected = false;
     public static int playerChibiOutfit;
+    public static bool isendlessmode = false;
+    public static int endlessgamesplayed = 0;
+    //For endless mode, tracks the amount of each game played
+    public static int footballgamesplayed = 0;
+    public static int snakegamesplayed = 0;
+    public static int rhythmgamesplayed = 0;
+    public static int endlesslivesleft = 0;
     
     public bool loadingdata = false;
     public bool restarting = false;
 
     public static int rhythmgamehiscore = 0;
     public static int snakegamehiscore = 0;
+    public static int endlessgameshiscore = 0;
 
-    public static bool[] isOutfitUnlocked = new bool[7];
+    public static bool[] isOutfitUnlocked = new bool[10];
 
     public MONEYScript moneyScript;
 
@@ -47,6 +55,7 @@ public class PlayerData : MonoBehaviour
         gameData.money = money;
         gameData.snakegamehiscore = snakegamehiscore;
         gameData.rhythmgamehiscore = rhythmgamehiscore;
+        gameData.endlessgameshiscore = endlessgameshiscore;
 
         string json = JsonUtility.ToJson(gameData,false);
         File.WriteAllText(Application.dataPath + "/PlayerDataFile.json",json);
@@ -75,22 +84,27 @@ public class PlayerData : MonoBehaviour
         snakegamehiscore = gameData.snakegamehiscore;
         rhythmgamehiscore = gameData.rhythmgamehiscore;
         isOutfitUnlocked = gameData.isOutfitUnlocked;
+        endlessgameshiscore = gameData.endlessgameshiscore;
         int money = gameData.money;
         moneyScript.SetMoney(money);
 
         loadingdata = true;
     }
 
-    public void PlayerBotSelection(int selection) {
+    public void PlayerBotSelection(int selection) 
+    {
         playerbot = selection;
     }
-    public void PlayerOutfitSelection(int selection) {
+    public void PlayerOutfitSelection(int selection) 
+    {
         playeroutfit = selection;
     }
-    public void PlayerDateSelection(int selection) {
+    public void PlayerDateSelection(int selection) 
+    {
         playerdate = selection;
     }
-    public void PlayerNameSelection(string selection) {
+    public void PlayerNameSelection(string selection) 
+    {
         playername = selection;
     }
     public void PlayerFirstLoad()
@@ -108,7 +122,53 @@ public class PlayerData : MonoBehaviour
     {
         gameCount = 0;
     }
-    public void ResetPlayedGame() {
+    public void StartEndlessMode() 
+    {
+        isendlessmode = true;
+        endlesslivesleft = 3;
+    }
+    public void EndEndlessMode() 
+    {
+        isendlessmode = false;
+        endlesslivesleft = 0;
+    }
+    public void DecreaseEndlessLives() {
+        endlesslivesleft--;
+    }
+    public void IncreaseEndlessGamesPlayed() 
+    {
+        endlessgamesplayed++;
+    }
+    public void ResetEndlessGamesPlayed() 
+    {
+        endlessgamesplayed = 0;
+    }
+    public void IncreaseFootballGamesPlayed() 
+    {
+        footballgamesplayed++;
+    }
+    public void IncreaseSnakeGamesPlayed()
+    {
+        snakegamesplayed++;
+    }
+    public void IncreaseRhythmGamesPlayed()
+    {
+        rhythmgamesplayed++;
+    }
+    public void ResetFootballGamesPlayed() 
+    {
+        footballgamesplayed = 0;
+    }
+    public void ResetSnakeGamesPlayed()
+    {
+        snakegamesplayed = 0;
+    }
+    public void ResetRhythmGamesPlayed()
+    {
+        rhythmgamesplayed = 0;
+    }
+    public void ResetPlayedGame() 
+    {
         playedGame = false;
     }
     public void UnlockOutfit(int outfitNum)
@@ -116,19 +176,27 @@ public class PlayerData : MonoBehaviour
         isOutfitUnlocked[outfitNum] = true;
     }
 
-    public void NewRhythmGameHiScore(int score) {
+    public void NewRhythmGameHiScore(int score) 
+    {
         rhythmgamehiscore = score;
     }
 
-    public void NewSnakeGameHiScore(int score) {
+    public void NewSnakeGameHiScore(int score) 
+    {
         snakegamehiscore = score;
     }
+    public void NewEndlessHiScore(int score)
+    {
+        endlessgameshiscore = score;
+    }
 
-    public void WonGame() {
+    public void WonGame() 
+    {
         wonGame = true;
         playedGame = true;
     }
-    public void LostGame() {
+    public void LostGame() 
+    {
         wonGame = false;
         playedGame = true;
     }
@@ -152,6 +220,26 @@ public class PlayerData : MonoBehaviour
     {
         return gameCount;
     }
+    public int GetEndlessGamesPlayed() 
+    {
+        return endlessgamesplayed;
+    }
+    public int GetEndlessLives() 
+    {
+        return endlesslivesleft;
+    }
+    public int GetFootballGamesPlayed() 
+    {
+        return footballgamesplayed;
+    }
+    public int GetSnakeGamesPlayed() 
+    {
+        return snakegamesplayed;
+    }
+    public int GetRhythmGamesPlayed() 
+    {
+        return rhythmgamesplayed;
+    }
     public bool GetWin() {
         return wonGame;
     }
@@ -162,10 +250,12 @@ public class PlayerData : MonoBehaviour
     {
         return playerRating;
     }
-    public void ResetPlayerRating() {
+    public void ResetPlayerRating() 
+    {
         playerRating = 0;
     }
-    public bool GetPlayerSelected() {
+    public bool GetPlayerSelected() 
+    {
         return playerSelected;
     }
     public bool getOutfitUnlocked(int fitSlot)
@@ -186,12 +276,22 @@ public class PlayerData : MonoBehaviour
         return playerChibiOutfit;
     }
 
-    public int GetRhythmGameHiScore() {
+    public int GetRhythmGameHiScore() 
+    {
         return rhythmgamehiscore;
     }
 
-    public int GetSnakeGameHiScore() {
+    public int GetSnakeGameHiScore() 
+    {
         return snakegamehiscore;
+    }
+    public int GetEndlessHiScore()
+    {
+        return endlessgameshiscore;
+    }
+    public bool IsEndlessMode() 
+    {
+        return isendlessmode;
     }
 
     public float PlayerLikeRating(int dateNum)
@@ -250,6 +350,108 @@ public class PlayerData : MonoBehaviour
                 Debug.Log("Player Rating: " + playerRating);
                 return playerRating;
 
+            case 4: //Gamer
+                if (firstLoad)
+                {
+                    if (playeroutfit == 2)
+                        playerRating += 1f;
+                    else if (playeroutfit == 3)
+                        playerRating += 0.5f;
+                    else if (playeroutfit > 3)
+                        playerRating += Random.Range(0, 1f);
+                    else
+                        playerRating += 0;
+                    Debug.Log("Firstloaded");
+                }
+                firstLoad = false;
+                Debug.Log("Player Rating: " + playerRating);
+                return playerRating;
+
+            case 5: //Gamer
+                if (firstLoad)
+                {
+                    if (playeroutfit == 2)
+                        playerRating += 1f;
+                    else if (playeroutfit == 3)
+                        playerRating += 0.5f;
+                    else if (playeroutfit > 3)
+                        playerRating += Random.Range(0, 1f);
+                    else
+                        playerRating += 0;
+                    Debug.Log("Firstloaded");
+                }
+                firstLoad = false;
+                Debug.Log("Player Rating: " + playerRating);
+                return playerRating;
+
+            case 6: //Gamer
+                if (firstLoad)
+                {
+                    if (playeroutfit == 2)
+                        playerRating += 1f;
+                    else if (playeroutfit == 3)
+                        playerRating += 0.5f;
+                    else if (playeroutfit > 3)
+                        playerRating += Random.Range(0, 1f);
+                    else
+                        playerRating += 0;
+                    Debug.Log("Firstloaded");
+                }
+                firstLoad = false;
+                Debug.Log("Player Rating: " + playerRating);
+                return playerRating;
+
+            case 7: //Gamer
+                if (firstLoad)
+                {
+                    if (playeroutfit == 2)
+                        playerRating += 1f;
+                    else if (playeroutfit == 3)
+                        playerRating += 0.5f;
+                    else if (playeroutfit > 3)
+                        playerRating += Random.Range(0, 1f);
+                    else
+                        playerRating += 0;
+                    Debug.Log("Firstloaded");
+                }
+                firstLoad = false;
+                Debug.Log("Player Rating: " + playerRating);
+                return playerRating;
+
+            case 8: //Gamer
+                if (firstLoad)
+                {
+                    if (playeroutfit == 2)
+                        playerRating += 1f;
+                    else if (playeroutfit == 3)
+                        playerRating += 0.5f;
+                    else if (playeroutfit > 3)
+                        playerRating += Random.Range(0, 1f);
+                    else
+                        playerRating += 0;
+                    Debug.Log("Firstloaded");
+                }
+                firstLoad = false;
+                Debug.Log("Player Rating: " + playerRating);
+                return playerRating;
+
+            case 9: //Gamer
+                if (firstLoad)
+                {
+                    if (playeroutfit == 2)
+                        playerRating += 1f;
+                    else if (playeroutfit == 3)
+                        playerRating += 0.5f;
+                    else if (playeroutfit > 3)
+                        playerRating += Random.Range(0, 1f);
+                    else
+                        playerRating += 0;
+                    Debug.Log("Firstloaded");
+                }
+                firstLoad = false;
+                Debug.Log("Player Rating: " + playerRating);
+                return playerRating;
+
             default:
                 return 0;
         }
@@ -278,6 +480,7 @@ public class PlayerData : MonoBehaviour
         playerSelected = false;
         rhythmgamehiscore = 0;
         snakegamehiscore = 0;
+        endlessgameshiscore = 0;
         moneyScript.SetMoney(0);
     }
 

@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ScrollScript : MonoBehaviour
 {
@@ -55,5 +56,11 @@ public class ScrollScript : MonoBehaviour
             isSnapped = false;
             snapSpeed = 0;
         }
+    }
+
+
+    public void GoBack()
+    {
+        SceneManager.LoadScene("AptScene");
     }
 }
