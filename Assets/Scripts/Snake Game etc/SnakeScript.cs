@@ -61,6 +61,10 @@ public class SnakeScript : MonoBehaviour
     public AudioClip pickup;
     public AudioClip died;
     public AudioClip win;
+    private bool gamestarted;
+    [SerializeField] private float timer;
+    public TextMeshProUGUI countdowntimer;
+    private int timerinseconds;
 
     public void PlaySound(AudioClip audio)
     {
@@ -90,8 +94,29 @@ public class SnakeScript : MonoBehaviour
 
     private void Update()
     {
-        tmpPosition = gameObject.transform.position;
-        SetOldPosition();
+        if (!gamestarted) {
+            timer -= Time.deltaTime;
+            countdowntimer.text = timerinseconds.ToString();
+            if (timer < 3 && timerinseconds == 0) {
+                timerinseconds = 3;
+            }
+            else if (timer < 2 && timerinseconds == 3) {
+                timerinseconds = 2;
+            }
+            else if (timer < 1 && timerinseconds == 2) {
+                timerinseconds = 1;
+            }
+            else if (timer < 0 && timerinseconds == 1) {
+                timer = 0;
+                countdowntimer.text = "GO!";
+                StartCoroutine(TimerText());
+            }
+        }
+        else {
+            tmpPosition = gameObject.transform.position;
+            SetOldPosition();
+        }
+        
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -121,6 +146,9 @@ public class SnakeScript : MonoBehaviour
         gameovercanvas.SetActive(false);
         endlessgameover.SetActive(false);
         endlessgamewon.SetActive(false);
+        gamestarted = false;
+        timerinseconds = 3;
+        countdowntimer.text = timerinseconds.ToString();
 
         _segments = new List<Transform>();
         _segments.Add(this.transform);
@@ -171,6 +199,29 @@ public class SnakeScript : MonoBehaviour
     {
         if (isendlessmode) {
             if (!endlesscomplete) {
+                if (gamestarted) {
+                    if (Input.GetMouseButton(0))
+                    {
+                        Vector3 pos = Input.mousePosition;
+                        pos.z = distanceFromCamera;
+                        pos = cam.ScreenToWorldPoint(pos);
+                        r.velocity = (pos - DragObj.position) * 10;
+                        // lastPos = pos;
+                        // DragObj.position = pos;
+                    }
+                    if (Input.GetMouseButtonUp(0))
+                    {
+                        r.velocity = Vector3.zero;
+                    }
+                    //Looks in direction u r moving
+                    Quaternion rotation = Quaternion.LookRotation(r.velocity, Vector3.up);
+                    transform.rotation = rotation;
+                }
+                
+            }
+        }
+        else {
+            if (gamestarted) {
                 if (Input.GetMouseButton(0))
                 {
                     Vector3 pos = Input.mousePosition;
@@ -188,24 +239,6 @@ public class SnakeScript : MonoBehaviour
                 Quaternion rotation = Quaternion.LookRotation(r.velocity, Vector3.up);
                 transform.rotation = rotation;
             }
-        }
-        else {
-            if (Input.GetMouseButton(0))
-            {
-                Vector3 pos = Input.mousePosition;
-                pos.z = distanceFromCamera;
-                pos = cam.ScreenToWorldPoint(pos);
-                r.velocity = (pos - DragObj.position) * 10;
-                // lastPos = pos;
-                // DragObj.position = pos;
-            }
-            if (Input.GetMouseButtonUp(0))
-            {
-                r.velocity = Vector3.zero;
-            }
-            //Looks in direction u r moving
-            Quaternion rotation = Quaternion.LookRotation(r.velocity, Vector3.up);
-            transform.rotation = rotation;
         }
         
     }
@@ -299,9 +332,11 @@ public class SnakeScript : MonoBehaviour
         //snakefood == green box
         if (other.tag == "SnakeFood")
         {
-            Invoke("Grow", .4f);
-            PlaySound(pickup);
-            AddScore();
+            if (gamestarted) {
+                Invoke("Grow", .4f);
+                PlaySound(pickup);
+                AddScore();
+            } 
         }
 
     }
@@ -358,5 +393,12 @@ public class SnakeScript : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene("SnakeMinigame");
+    }
+
+    IEnumerator TimerText() {
+        yield return new WaitForSeconds(0.75f);
+        countdowntimer.enabled = false;
+        gamestarted = true;
+        StopCoroutine(TimerText());
     }
 }

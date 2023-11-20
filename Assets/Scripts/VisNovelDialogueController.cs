@@ -247,13 +247,13 @@ public class VisNovelDialogueController : MonoBehaviour
                 } else {
                     switch (playerdata.GetPlayerBot()) {
                         case 3:
-                            yellowtextbox.text += c;
+                            pinktextbox.text += c;
                         break;
                         case 1:
                             bluetextbox.text += c;
                         break;
                         case 2:
-                            pinktextbox.text += c;
+                            yellowtextbox.text += c;
                         break;
                     }
                 }
