@@ -39,6 +39,9 @@ public class ScrollScript1 : MonoBehaviour
     //Fun Effect
     public ParticleSystem OutfitClickedParticle;
 
+    //SFX
+    public AudioSource ClothesAccept;
+
     //Link to APT scene thru playerdata
     public GameObject playerDataContainer;
     public PlayerData playerdata;
@@ -90,6 +93,7 @@ public class ScrollScript1 : MonoBehaviour
         {
             OutfitClickedParticle.Play();
             playerdata.SetPlayerChibiOutfit(currentItem);
+            ClothesAccept.Play();
         }
         else if(currentItem != 0)
         {
@@ -99,6 +103,7 @@ public class ScrollScript1 : MonoBehaviour
         {
             OutfitClickedParticle.Play();
             playerdata.SetPlayerChibiOutfit(currentItem);
+            ClothesAccept.Play();
         }
     }
 

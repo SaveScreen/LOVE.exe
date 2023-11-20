@@ -25,6 +25,8 @@ public class RhythmMinigameScript : MonoBehaviour
     private float respawntime;
     public int score;
     private int hiscore;
+    public AudioClip winAudio;
+    public AudioClip loseAudio;
     private AudioSource audioSource;
     public GameObject gameoverscreen;
     public GameObject endlessgameoverscreen;
@@ -154,6 +156,7 @@ public class RhythmMinigameScript : MonoBehaviour
 
                     if (score >= potentialscore) {
                         if (!gameover) {
+                            PlaySound(winAudio);
                             MinigameComplete();
                         }
                     }
@@ -202,30 +205,37 @@ public class RhythmMinigameScript : MonoBehaviour
                 case 0:
                     if (score >= 10) {
                         didWin = true;
+                        PlaySound(winAudio);
                     }
                     else {
                         didWin = false;
+                        PlaySound(loseAudio);
                     }
                 break;
                 case 1:
                     if (score >= 20) {
                         didWin = true;
+                        PlaySound(winAudio);
                     }
                     else {
                         didWin = false;
+                        PlaySound(loseAudio);
                     }
                 break;
                 case 2:
                     if (score >= 30) {
                         didWin = true;
+                        PlaySound(winAudio);
                     }
                     else {
                         didWin = false;
+                        PlaySound(loseAudio);
                     }
                 break;
             }
         }
         else {
+            PlaySound(loseAudio);
             Time.timeScale = 0;
             gameover = true;
             didWin = false;
