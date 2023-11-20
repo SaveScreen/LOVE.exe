@@ -9,6 +9,8 @@ public class GalleryScript : MonoBehaviour
     public GameObject JettPics;
     public GameObject MiscPics;
 
+    public AudioSource buttonClick;
+
     public void Return()
     {
         SceneManager.LoadScene("SettingsScreen");
@@ -16,12 +18,14 @@ public class GalleryScript : MonoBehaviour
 
     public void Credits()
     {
+        buttonClick.Play();
         SceneManager.LoadScene("Credits");
     }
 
     public void Gallery()
     {
         SceneManager.LoadScene("Gallery2");
+        buttonClick.Play();
     }
 
     public void JimClick()
@@ -29,12 +33,14 @@ public class GalleryScript : MonoBehaviour
         JimPics.SetActive(true);
         JettPics.SetActive(false);
         MiscPics.SetActive(false);
+        buttonClick.Play();
     }
     public void JettClick()
     {
         JimPics.SetActive(false);
         JettPics.SetActive(true);
         MiscPics.SetActive(false);
+        buttonClick.Play();
     }
 
     public void MiscClick()
@@ -42,6 +48,7 @@ public class GalleryScript : MonoBehaviour
         JimPics.SetActive(false);
         JettPics.SetActive(false);
         MiscPics.SetActive(true);
+        buttonClick.Play();
     }
 
 }

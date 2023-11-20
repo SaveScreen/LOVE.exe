@@ -14,6 +14,8 @@ public class SettingsScript : MonoBehaviour
 
     public Slider mastSlider, musicSlider, sfxSlider;
 
+    public AudioSource buttonClick;
+
     void Start()
     {
         float volume = 0f;
@@ -67,6 +69,7 @@ public class SettingsScript : MonoBehaviour
 
     public void GotoGallery()
     {
+        buttonClick.Play();
         SceneManager.LoadScene("Gallery2");
     }
 }

@@ -39,6 +39,10 @@ public class ScrollScriptStore : MonoBehaviour
 
     public ParticleSystem BuyParticle;
 
+    //SFX
+
+    public AudioSource StoreClothes;
+
 
     private void Start()
     {
@@ -121,6 +125,7 @@ public class ScrollScriptStore : MonoBehaviour
                 }
 
                 storeController.GetMoney();
+                StoreClothes.Play();
             }
         }
         else if (!playerdata.getOutfitUnlocked(currentItem))

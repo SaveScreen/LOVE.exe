@@ -9,6 +9,7 @@ public class StartMenuController : MonoBehaviour
     public Animator LevelChangerComponent;
     private int levelToLoad;
     public GameObject player;
+    public AudioSource StartScreenSound;
 
     //Scrolling BG
     [SerializeField] private RawImage _img;
@@ -21,6 +22,7 @@ public class StartMenuController : MonoBehaviour
             FadeToLevel(1);
             PlayerData playerdata = player.GetComponent<PlayerData>();
             playerdata.InitialFileCheck();
+            StartScreenSound.Play();
         }
 
         _img.uvRect = new Rect(_img.uvRect.position + new Vector2(_x, _y) * Time.deltaTime, _img.uvRect.size);

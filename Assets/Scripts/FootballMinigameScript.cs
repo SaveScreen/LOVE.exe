@@ -39,6 +39,10 @@ public class FootballMinigameScript : MonoBehaviour
     private bool isEndlessMode;
     private int footballGamesPlayed;
     public GameObject endlessgameoverscreen;
+    public AudioSource accurateSound;
+    public AudioSource powerSound;
+    public AudioSource fbWin;
+    public AudioSource fbLose;
 
     // Start is called before the first frame update
     void Start()
