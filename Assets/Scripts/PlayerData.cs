@@ -32,7 +32,7 @@ public class PlayerData : MonoBehaviour
     public static int snakegamehiscore = 0;
     public static int endlessgameshiscore = 0;
 
-    public static bool[] isOutfitUnlocked = new bool[7];
+    public static bool[] isOutfitUnlocked = new bool[10];
 
     public MONEYScript moneyScript;
 

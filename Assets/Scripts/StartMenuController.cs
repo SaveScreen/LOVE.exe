@@ -19,10 +19,11 @@ public class StartMenuController : MonoBehaviour
     {
      if (Input.GetMouseButtonDown(0))
         {
+            StartScreenSound.Play();
             FadeToLevel(1);
+            
             PlayerData playerdata = player.GetComponent<PlayerData>();
             playerdata.InitialFileCheck();
-            StartScreenSound.Play();
         }
 
         _img.uvRect = new Rect(_img.uvRect.position + new Vector2(_x, _y) * Time.deltaTime, _img.uvRect.size);

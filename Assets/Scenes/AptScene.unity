@@ -1391,13 +1391,13 @@ RectTransform:
   - {fileID: 889167264}
   - {fileID: 1990243477}
   - {fileID: 412010346}
+  - {fileID: 2084720733}
+  - {fileID: 1194796931}
   - {fileID: 244037341}
   - {fileID: 369787638}
-  - {fileID: 2084720733}
   - {fileID: 1825524632}
   - {fileID: 734507387}
   - {fileID: 100386786}
-  - {fileID: 1194796931}
   m_Father: {fileID: 622430854}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1609,13 +1609,13 @@ MonoBehaviour:
   - {fileID: 889167263}
   - {fileID: 1990243476}
   - {fileID: 412010345}
+  - {fileID: 2084720732}
+  - {fileID: 1194796928}
   - {fileID: 244037340}
   - {fileID: 369787637}
-  - {fileID: 2084720732}
   - {fileID: 1825524631}
   - {fileID: 734507384}
   - {fileID: 100386783}
-  - {fileID: 1194796928}
   LevelChangerComponent: {fileID: 593349483}
   _img: {fileID: 1532942309}
   _x: 0.01
