@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f9fbb3627edbde4b97be632b8ce0af8, type: 3}
+  m_Name: Hitomi
+  m_EditorClassIdentifier: 
+  angrylines:
+  - I knew you were a Hitomi-maniac in your heart!
+  - H I T O M I! YEAH!
+  - "Hello Hitomi Nakamura, It is a pleasure to meet you in person seeing as your
+    profile has you as a Technopolis Championship Wrestling\u2019s rookie of the
+    previous year!"
+  - Oh my! It seems we have a real super fan here! It is a pleasure to have your
+    services, I need your help with a very big issue currently plaguing the TCW.
+  - My systems tell me that your current run has been plagued by a losing streak
+    due to the tag team known as Gloom & Doom. They made you lose your championship
+    last Christmas after Fabulous Phlair distracted you in your match with Judgement
+    Ripley.
+  - "\u2026Correct, see I am not one for cheating but having a partner by my side
+    so I can take down those dastardly villains will help me regain my confidence
+    and glory. But first I need to test your strength, endurance, and speed"
+  alWhoistalking: 000001000100
+  neutrallines:
+  - I knew you were a Hitomi-maniac in your heart!
+  - H I T O M I! YEAH!
+  - "Hello Hitomi Nakamura, It is a pleasure to meet you in person seeing as your
+    profile has you as a Technopolis Championship Wrestling\u2019s rookie of the
+    previous year!"
+  - Oh my! It seems we have a real super fan here! It is a pleasure to have your
+    services, I need your help with a very big issue currently plaguing the TCW.
+  - My systems tell me that your current run has been plagued by a losing streak
+    due to the tag team known as Gloom & Doom. They made you lose your championship
+    last Christmas after Fabulous Phlair distracted you in your match with Judgement
+    Ripley.
+  - "\u2026Correct, see I am not one for cheating but having a partner by my side
+    so I can take down those dastardly villains will help me regain my confidence
+    and glory. But first I need to test your strength, endurance, and speed"
+  nlWhoistalking: 000001000100
+  happylines:
+  - I knew you were a Hitomi-maniac in your heart!
+  - H I T O M I! YEAH!
+  - "Hello Hitomi Nakamura, It is a pleasure to meet you in person seeing as your
+    profile has you as a Technopolis Championship Wrestling\u2019s rookie of the
+    previous year!"
+  - Oh my! It seems we have a real super fan here! It is a pleasure to have your
+    services, I need your help with a very big issue currently plaguing the TCW.
+  - My systems tell me that your current run has been plagued by a losing streak
+    due to the tag team known as Gloom & Doom. They made you lose your championship
+    last Christmas after Fabulous Phlair distracted you in your match with Judgement
+    Ripley.
+  - "\u2026Correct, see I am not one for cheating but having a partner by my side
+    so I can take down those dastardly villains will help me regain my confidence
+    and glory. But first I need to test your strength, endurance, and speed"
+  hlWhoistalking: 000001000100
+  date2pregamelines:
+  - "That\u2019s the spirit get into it! We have to come up with a name for you,
+    one to match yours truly of course. Something to strike fear into the hearts
+    of our enemies! But also make the audience fall madly in love with you.  "
+  - '*scanning for appropriate ring names* How about the Bruiser Bot? Or the Agile
+    Android? '
+  - "Love the creativity, but I was thinking of something with a bit more punch to
+    it, something to get the crowd pumped up! Let me test your endurance and maybe
+    something will come to my mind\u2026"
+  - "Testing endurance on a videogame machine is quite\u2026odd."
+  date2preWhoistalking: 00010001
+  date2postgamelines:
+  - 'WOOO! I got it, I know what we should call you! Stick with me here Punchimi
+    The Bruiser Bot! Combines your idea and kinda intertwines with my gimmick! '
+  - "That sounds\u2026WONDERFUL! Together Hitomi and Punchimi will take over the
+    TCW and show the city what true heroes look like!"
+  - "That\u2019s the spirit I\u2019ve been talking about! Listen to yourself, you
+    sound like a bonafide professional wrestler! I think you are almost ready to
+    hit the ropes with me and take down Doom & Gloom. But first I need to test your
+    agility!"
+  date2postWhoistalking: 000100
+  date3pregamelines:
+  - How do you propose we do that Hitomi, we are in the middle of a bar.
+  - The dance floor silly, come let me guide you, and then you got to show me your
+    moves Punchimi. *winks cheekily at you*
+  date3preWhoistalking: 0100
+  date3postgamelines:
+  - "You can\u2019t stop us! You are perfect, I believe I have found the perfect
+    tag team partner to help me gain my glory back!"
+  - 'Of course Hitomi, you are a star, even if my services were not here you would
+    not need my assistance to succeed. '
+  - "My, oh my, you really are quite the charmer. Let\u2019s focus on the battle
+    ahead partner and maybe we can go out again for a nice drink once I am champion
+    again."
+  - 'I would enjoy that alot, partner! '
+  date3postWhoistalking: 00010001
+  wongamelines:
+  - 'YEAH! You are a superstar, definitely see that grit inside you that makes someone
+    a perfect wrestler. '
+  - '*changing dialogue parameters* Well sister, I can see us being a two-person
+    power team in the TCW making sure you get your championship back from those conniving
+    cheaters known as Gloom & Doom.'
+  wongameWhoistalking: 0001
+  lostgamelines:
+  - Another loss to my perfect record, suffering succotash.
+  - "I\u2019m hurt, I'm tired, I\u2019m heartbroken, and I work with idiots like
+    you"
+  - "If you can\u2019t be my partner, give me a HECK YEAH!"
+  - "Let me go grab the explosive bat real quick\u2026"
+  lostgameWhoistalking: 00
+  minigameOrder: 010000000200000003000000

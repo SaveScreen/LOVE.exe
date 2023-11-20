@@ -12,9 +12,7 @@ public class VisNovelDialogueController : MonoBehaviour
     public TextMeshProUGUI pinktextbox;
     public TextMeshProUGUI yellowtextbox; 
     public TextMeshProUGUI jptextbox;
-    public CharacterData cowboy;
-    public CharacterData goth;
-    public CharacterData fancy;
+    public CharacterData[] characters;
     private string[] currentlines;
     private bool[] whoistalking;
     public bool isEnglish;
@@ -33,6 +31,7 @@ public class VisNovelDialogueController : MonoBehaviour
     private int gamecount;
     private bool wonlastgame;
     private bool playedGame;
+    [HideInInspector] public int date;
 
     // Start is called before the first frame update
     void Start()
@@ -54,8 +53,7 @@ public class VisNovelDialogueController : MonoBehaviour
         gamecount = playerdata.GetGameCount();
         wonlastgame = playerdata.GetWin();
         playedGame = playerdata.GetPlayedGame();
-        //currentlines = cowboyangrylines;
-        
+        date = playerdata.GetPlayerDate() - 1;
     }
 
     void OnEnable() {
@@ -74,241 +72,72 @@ public class VisNovelDialogueController : MonoBehaviour
             Debug.Log("Game is " + gamecount);
             switch (gamecount) {
                 case 0:
-                    switch (visNovelScript.dateref) {
-                        //Cowboy
+                    switch (visNovelScript.datemoodref) {
                         case 1:
-                            switch (visNovelScript.datemoodref) {
-                                case 1:
-                                    if (isEnglish) {
-                                        currentlines = cowboy.angrylines;
-                                        whoistalking = cowboy.alWhoistalking;
-                                    }
-                                    else {
-                                        //currentlines = jpcowboyangrylines;
-                                    }
-                                    
-                                break;
-                                case 2:
-                                    if (isEnglish) {
-                                        currentlines = cowboy.neutrallines;
-                                        whoistalking = cowboy.nlWhoistalking;
-                                    }
-                                    else {
-                                        //currentlines = jpcowboyneutrallines;
-                                    }
-                                    
-                                break;
-
-                                case 3:
-                                    if (isEnglish) {
-                                        currentlines = cowboy.happylines;
-                                        whoistalking = cowboy.hlWhoistalking;
-                                    }
-                                    else {
-                                        //currentlines = jpcowboyhappylines;
-                                    }
-                                    
-                                break;
+                            if (isEnglish) {
+                                currentlines = characters[date].angrylines;
+                                whoistalking = characters[date].alWhoistalking;
                             }
+                            else {
+                                //currentlines = jpcowboyangrylines;
+                            }                        
                         break;
-                        //Goth
                         case 2:
-                            switch (visNovelScript.datemoodref) {
-                                case 1:
-                                    if (isEnglish) {
-                                        currentlines = goth.angrylines;
-                                        whoistalking = goth.alWhoistalking;
-                                    }
-                                    else {
-                                        //currentlines = jpgothangrylines;
-                                    }
-                                    
-                                break;
-                                case 2:
-                                    if (isEnglish) {
-                                        currentlines = goth.neutrallines;
-                                        whoistalking = goth.nlWhoistalking;
-                                    }
-                                    else {
-                                        //currentlines = jpgothneutrallines;
-                                    }
-                                    
-                                break;
-
-                                case 3:
-                                    if (isEnglish) {
-                                        currentlines = goth.happylines;
-                                        whoistalking = goth.hlWhoistalking;
-                                    }
-                                    else {
-                                        //currentlines = jpgothhappylines;
-                                    }
-                                    
-                                break;
+                            if (isEnglish) {
+                                currentlines = characters[date].neutrallines;
+                                whoistalking = characters[date].nlWhoistalking;
                             }
+                            else {
+                                //currentlines = jpcowboyneutrallines;
+                            }                            
                         break;
-                        //Fancy
                         case 3:
-                            switch (visNovelScript.datemoodref) {
-                                case 1:
-                                    if (isEnglish) {
-                                        currentlines = fancy.angrylines;
-                                        whoistalking = fancy.alWhoistalking;
-                                    }
-                                    else {
-                                        //currentlines = jpfancyangrylines;
-                                    }
-                                    
-                                break;
-                                case 2:
-                                    if (isEnglish) {
-                                        currentlines = fancy.neutrallines;
-                                        whoistalking = fancy.nlWhoistalking;
-                                    }
-                                    else {
-                                        //currentlines = jpfancyneutrallines;
-                                    }
-                                    
-                                break;
-
-                                case 3:
-                                    if (isEnglish) {
-                                        currentlines = fancy.happylines;
-                                        whoistalking = fancy.hlWhoistalking;
-                                    }
-                                    else {
-                                        //currentlines = jpfancyhappylines;
-                                    }
-                                    
-                                break;
+                            if (isEnglish) {
+                                currentlines = characters[date].happylines;
+                                whoistalking = characters[date].hlWhoistalking;
                             }
+                            else {
+                                //currentlines = jpcowboyhappylines;
+                            }      
                         break;
-                    }
+                    }                    
                 break;
                 //After playing 1 game
                 case 1:
-                        if (playedGame) {
-                            switch (visNovelScript.dateref) {
-                                //Cowboy
-                                case 1:
-                                    if (wonlastgame) {
-                                        currentlines = cowboy.wongamelines;
-                                        whoistalking = cowboy.wongameWhoistalking;
-                                    }
-                                    else {
-                                        currentlines = cowboy.lostgamelines;
-                                        whoistalking = cowboy.lostgameWhoistalking;                                   
-                                    }
-                                break;
-                                //Goth
-                                case 2:
-                                    if (wonlastgame) {
-                                        currentlines = goth.wongamelines;
-                                        whoistalking = goth.wongameWhoistalking;
-                                    }
-                                    else {
-                                        currentlines = goth.lostgamelines;
-                                        whoistalking = cowboy.lostgameWhoistalking;
-                                    }
-                                break;
-                                //Fancy
-                                case 3:
-                                    if (wonlastgame) {
-                                        currentlines = fancy.wongamelines;
-                                        whoistalking = fancy.wongameWhoistalking;
-                                    }
-                                    else {
-                                        currentlines = fancy.lostgamelines;
-                                        whoistalking = cowboy.lostgameWhoistalking;
-                                    }
-                                break;
-                            }
+                    if (playedGame) {    
+                        if (wonlastgame) {
+                            currentlines = characters[date].wongamelines;
+                            whoistalking = characters[date].wongameWhoistalking;
                         }
-                        //Next Date
                         else {
-                            switch (visNovelScript.dateref) {
-                                //Cowboy
-                                case 1:
-                                    currentlines = cowboy.date2pregamelines;
-                                    whoistalking = cowboy.date2preWhoistalking;
-                                break;
-                                //Goth
-                                case 2:
-                                    currentlines = goth.date2pregamelines;
-                                    whoistalking = goth.date2preWhoistalking;
-                                break;
-                                //Fancy
-                                case 3:
-                                    currentlines = fancy.date2pregamelines;
-                                    whoistalking = fancy.date2preWhoistalking;
-                                break;
-                            }
-                        }
+                            currentlines = characters[date].lostgamelines;
+                            whoistalking = characters[date].lostgameWhoistalking;                                   
+                        }    
+                    }
+                    //Next Date
+                    else {
+                        currentlines = characters[date].date2pregamelines;
+                        whoistalking = characters[date].date2preWhoistalking;    
+                    }
                 break;
                 //After playing 2 games
                 case 2:
                     if (playedGame) {
-                            switch (visNovelScript.dateref) {
-                                //Cowboy
-                                case 1:
-                                    currentlines = cowboy.date2postgamelines;
-                                    whoistalking = cowboy.date2postWhoistalking;
-                                break;
-                                //Goth
-                                case 2:
-                                    currentlines = goth.date2postgamelines;
-                                    whoistalking = goth.date2postWhoistalking;
-                                break;
-                                //Fancy
-                                case 3:
-                                    currentlines = fancy.date2postgamelines;
-                                    whoistalking = fancy.date2postWhoistalking;
-                                break;
-                            }
-                        }
-                        //Next Date
-                        else {
-                            switch (visNovelScript.dateref) {
-                                //Cowboy
-                                case 1:
-                                    currentlines = cowboy.date3pregamelines;
-                                    whoistalking = cowboy.date3preWhoistalking;
-
-                                break;
-                                //Goth
-                                case 2:
-                                    currentlines = goth.date3pregamelines;
-                                    whoistalking = goth.date3preWhoistalking;
-                                break;
-                                //Fancy
-                                case 3:
-                                    currentlines = fancy.date3pregamelines;
-                                    whoistalking = fancy.date3preWhoistalking;
-                                break;
-                            }
-                        }
+                        currentlines = characters[date].date2postgamelines;
+                        whoistalking = characters[date].date2postWhoistalking;     
+                    }
+                    //Next Date
+                    else {
+                        currentlines = characters[date].date3pregamelines;
+                        whoistalking = characters[date].date3preWhoistalking;                            
+                    }
                 break;
                 //After playing 3 games
                 case 3:
                     if (playedGame) {
-                            switch (visNovelScript.dateref) {
-                                //Cowboy
-                                case 1:
-                                    currentlines = cowboy.date3postgamelines;
-                                    whoistalking = cowboy.date3postWhoistalking;
-                                break;
-                                //Goth
-                                case 2:
-                                    currentlines = goth.date3postgamelines;
-                                    whoistalking = goth.date3postWhoistalking;
-                                break;
-                                //Fancy
-                                case 3:
-                                    currentlines = fancy.date3postgamelines;
-                                    whoistalking = fancy.date3postWhoistalking;
-                                break;
-                            }
-                        }
+                        currentlines = characters[date].date3postgamelines;
+                        whoistalking = characters[date].date3postWhoistalking;    
+                    }
                 break;
                 
             }
@@ -333,12 +162,12 @@ public class VisNovelDialogueController : MonoBehaviour
                         else {
                             switch (playerdata.GetPlayerBot()) {
                                 case 3:
-                                    if (yellowtextbox.text == currentlines[index]) {
+                                    if (pinktextbox.text == currentlines[index]) {
                                         NextPage();
                                     }
                                     else {
                                         StopAllCoroutines();
-                                        yellowtextbox.text = currentlines[index];
+                                        pinktextbox.text = currentlines[index];
                                     } 
                                 break;
                                 case 1:
@@ -351,12 +180,12 @@ public class VisNovelDialogueController : MonoBehaviour
                                     }
                                 break;
                                 case 2:
-                                    if (pinktextbox.text == currentlines[index]) {
+                                    if (yellowtextbox.text == currentlines[index]) {
                                         NextPage();
                                     }
                                     else {
                                         StopAllCoroutines();
-                                        pinktextbox.text = currentlines[index];
+                                        yellowtextbox.text = currentlines[index];
                                     }
                                 break;
                             }
@@ -418,13 +247,13 @@ public class VisNovelDialogueController : MonoBehaviour
                 } else {
                     switch (playerdata.GetPlayerBot()) {
                         case 3:
-                            yellowtextbox.text += c;
+                            pinktextbox.text += c;
                         break;
                         case 1:
                             bluetextbox.text += c;
                         break;
                         case 2:
-                            pinktextbox.text += c;
+                            yellowtextbox.text += c;
                         break;
                     }
                 }

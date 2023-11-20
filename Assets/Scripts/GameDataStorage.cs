@@ -12,5 +12,6 @@ public class GameDataStorage
 
     public int rhythmgamehiscore;
     public int snakegamehiscore;
+    public int endlessgameshiscore;
 
 }

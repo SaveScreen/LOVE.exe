@@ -37,17 +37,6 @@ public class CircleScript : MonoBehaviour
         click = inputs.FindAction("Player/MouseButton");
         pos = inputs.FindAction("Player/MousePosition");
 
-        /*
-        if (SystemInfo.deviceType == DeviceType.Handheld) {
-            isOnMobile = true;
-        }
-        else {
-            isOnMobile = false;
-        }
-        */
-        
-        //Debug.Log(SystemInfo.deviceType);
-
     }
     
     void OnEnable() {
@@ -82,27 +71,6 @@ public class CircleScript : MonoBehaviour
                     AddScore();
                     Destroy(gameObject);
                 }
-
-                /*
-                if (!isOnMobile) {
-                    var rayHit = Physics2D.GetRayIntersection(maincamera.ScreenPointToRay(mousepos));
-
-                    if (!rayHit.collider) return;
-                    if (rayHit.collider.gameObject == gameObject) {
-                        AddScore();
-                        Destroy(gameObject);
-                    }
-                }
-                else {
-                    var rayHit = Physics2D.GetRayIntersection(maincamera.ScreenPointToRay(mousepos));
-
-                    if (!rayHit.collider) return;
-                    if (rayHit.collider.gameObject == gameObject) {
-                        AddScore();
-                        Destroy(gameObject);
-                    }
-                }
-                */
             }
         } 
         else {

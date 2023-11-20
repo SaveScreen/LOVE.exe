@@ -29,6 +29,9 @@ public class AptSceneMenu : MonoBehaviour
     public GameObject FadeOBJ;
     public GameObject tutTXT;
 
+    //SFX
+    public AudioSource buttonClick;
+
     void Start()
     {
         playerdata = player.GetComponent<PlayerData>();
@@ -73,6 +76,9 @@ public class AptSceneMenu : MonoBehaviour
         
     }
 
+    public void GoToEndless() {
+        FadeToLevel(14);
+    }
 
     public void GoToStore()
     {
@@ -102,6 +108,7 @@ public class AptSceneMenu : MonoBehaviour
     {
         levelToLoad = levelIndex;
         LevelChangerComponent.SetTrigger("FadeOut");
+        buttonClick.Play();
     }
 
     public void OnFadeComplete()
