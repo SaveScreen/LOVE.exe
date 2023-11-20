@@ -232,10 +232,9 @@ public class SnakeScript : MonoBehaviour
         //GAME OVER
         if (other.gameObject.CompareTag("killbox"))
         {
-            PlaySound(died);
             musicPlayer.Stop();
             Debug.Log("Hit Player");
-            gameObject.SetActive(false);
+            
             if (!isendlessmode) {
                 gameovercanvas.SetActive(true);
                 scoretext.text = "Score: " + score;
@@ -285,7 +284,16 @@ public class SnakeScript : MonoBehaviour
                     Debug.Log("You already won!");
                 }
             }
-            
+
+            if (didWin)
+            {
+                PlaySound(win);
+            }
+            if(!didWin)
+            {
+                PlaySound(died);
+            }
+            gameObject.SetActive(false);
         }
         
         //snakefood == green box

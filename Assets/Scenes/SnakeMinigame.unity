@@ -2748,7 +2748,7 @@ MonoBehaviour:
   cloneObj: {fileID: 3213517991056240131, guid: a44772bceae41e54b96cce68e9e5e471,
     type: 3}
   littleGuys: []
-  audioSource: {fileID: 1181902091}
+  audioSource: {fileID: 146183846}
   musicPlayer: {fileID: 121061680}
   pickup: {fileID: 8300000, guid: 2b5a2cf126ab4254f998531b905a0675, type: 3}
   died: {fileID: 8300000, guid: ec1702d4ebb6d1d4c9146d71960fbdaf, type: 3}
