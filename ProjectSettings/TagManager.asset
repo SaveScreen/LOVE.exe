@@ -9,6 +9,7 @@ TagManager:
   - killbox
   - wall
   - SnakeFood
+  - ShootTarget
   layers:
   - Default
   - TransparentFX
