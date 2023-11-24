@@ -5,6 +5,8 @@ using UnityEngine;
 public class ShootingMinigameControler : MonoBehaviour
 {
     Camera cam;
+    public GameObject target;
+    public TargetScript Script;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,8 @@ public class ShootingMinigameControler : MonoBehaviour
                 if (Hit.collider.CompareTag("ShootTarget"))
                 {
                     Debug.Log("hit target");
+                    Hit.collider.gameObject.GetComponent<TargetScript>().AddScore();
+                    //target.GetComponent<TargetScript>().AddScore();
                 }
                 else
                 {
@@ -33,4 +37,5 @@ public class ShootingMinigameControler : MonoBehaviour
             }
         }
     }
+
 }

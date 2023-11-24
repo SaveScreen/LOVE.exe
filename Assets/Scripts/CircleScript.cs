@@ -86,5 +86,5 @@ public class CircleScript : MonoBehaviour
         rms.PlaySound(snare);
         rms.score += 1;
     }
-
+    
 }
