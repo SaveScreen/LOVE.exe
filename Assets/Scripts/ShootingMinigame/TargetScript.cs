@@ -15,6 +15,7 @@ public class TargetScript : MonoBehaviour
     public float speed;
     private bool movingLeft;
     public bool Iwashit;
+
     // Start is called before the first frame update
     void Start()
     {

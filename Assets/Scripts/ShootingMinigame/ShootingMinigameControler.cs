@@ -11,12 +11,18 @@ public class ShootingMinigameControler : MonoBehaviour
     public TargetScript[] targets;
     public List<TargetScript> myTargets = new();
 
+    public bool waitover;
+
     public void ResetTargets()
     {
-        foreach(TargetScript target in myTargets)
+        if(waitover)
         {
-            target.Reactivate();
-            Debug.Log("all reactivated");
+            foreach(TargetScript target in myTargets)
+            {
+                target.Reactivate();
+                Debug.Log("all reactivated");
+                waitover = false;
+            }
         }
     }
     // Start is called before the first frame update
@@ -25,6 +31,7 @@ public class ShootingMinigameControler : MonoBehaviour
         cam = Camera.main;
         print(cam.name);
         TargetScript target = gameObject.GetComponent<TargetScript>();
+        waitover = false;
     }
 
     // Update is called once per frame
@@ -55,10 +62,23 @@ public class ShootingMinigameControler : MonoBehaviour
         if (targets.All(obj => obj.Iwashit)) // or .Any to test for ... "any"
         {
             //timer.StopTimer();
-            Debug.Log("all targets reset");
-            ResetTargets();
+               StartCoroutine(ResetAllCoroutine());
+                ResetTargets();
         }
         }
         
+    }
+
+    public IEnumerator ResetAllCoroutine()
+    {
+        while(!waitover)
+        {
+         Debug.Log("Started Coroutine at timestamp : " + Time.time);
+         yield return new WaitForSeconds(1);
+         Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+                 waitover = true;
+                  yield return null;
+
+        }
     }
 }
