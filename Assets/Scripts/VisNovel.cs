@@ -19,6 +19,7 @@ public class VisNovel : MonoBehaviour
     public GameObject Date7Choice;
     public GameObject Date8Choice;
     public GameObject Date9Choice;
+    public GameObject Date10Choice;
 
     public GameObject playerdatacontainer;
     public PlayerData playerdata;
@@ -58,6 +59,10 @@ public class VisNovel : MonoBehaviour
     public GameObject Angry9;
     public GameObject Neutral9;
     public GameObject Happy9;
+    [Header("Shopkeeper")]
+    public GameObject Angry10;
+    public GameObject Neutral10;
+    public GameObject Happy10;
 
     public InputActionAsset inputs;
     private InputAction click;
@@ -138,6 +143,9 @@ public class VisNovel : MonoBehaviour
                 break;
             case 9:
                 Date9(dateState);
+                break;
+            case 10:
+                Date10(dateState);
                 break;
 
             default:
@@ -287,7 +295,7 @@ public class VisNovel : MonoBehaviour
     public void Date7(int state)
     {
         Date7Choice.SetActive(true);
-        dateref = 4;
+        dateref = 7;
         switch (state)
         {
             case 1:
@@ -309,7 +317,7 @@ public class VisNovel : MonoBehaviour
     public void Date8(int state)
     {
         Date8Choice.SetActive(true);
-        dateref = 4;
+        dateref = 8;
         switch (state)
         {
             case 1:
@@ -331,7 +339,7 @@ public class VisNovel : MonoBehaviour
     public void Date9(int state)
     {
         Date9Choice.SetActive(true);
-        dateref = 4;
+        dateref = 9;
         switch (state)
         {
             case 1:
@@ -350,8 +358,30 @@ public class VisNovel : MonoBehaviour
         Debug.Log(dateref);
         Debug.Log(datemoodref);
     }
-    // Update is called once per frame
-    void Update()
+    public void Date10(int state)
+    {
+        Date10Choice.SetActive(true);
+        dateref = 10;
+        switch (state)
+        {
+            case 1:
+                Angry10.SetActive(true);
+                datemoodref = 1;
+                break;
+            case 2:
+                Neutral10.SetActive(true);
+                datemoodref = 2;
+                break;
+            case 3:
+                Happy10.SetActive(true);
+                datemoodref = 3;
+                break;
+        }
+        Debug.Log(dateref);
+        Debug.Log(datemoodref);
+    }
+        // Update is called once per frame
+        void Update()
     {
         clicked = click.WasPressedThisFrame();
         if (clicked)

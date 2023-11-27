@@ -63,6 +63,9 @@ public class DateSelectionScript : MonoBehaviour
             case 9:
                 datechoicetext.text = "Model SK 876";
                 break;
+            case 10:
+                datechoicetext.text = "Holo-tsune";
+                break;
         }
     }
 

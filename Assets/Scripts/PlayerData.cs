@@ -451,7 +451,22 @@ public class PlayerData : MonoBehaviour
                 firstLoad = false;
                 Debug.Log("Player Rating: " + playerRating);
                 return playerRating;
-
+            case 10: //HOLODAY
+                if (firstLoad)
+                {
+                    if (playeroutfit == 2)
+                        playerRating += 1f;
+                    else if (playeroutfit == 3)
+                        playerRating += 1f;
+                    else if (playeroutfit > 3)
+                        playerRating += Random.Range(0, 1f);
+                    else
+                        playerRating += 0;
+                    Debug.Log("Firstloaded");
+                }
+                firstLoad = false;
+                Debug.Log("Player Rating: " + playerRating);
+                return playerRating;
             default:
                 return 0;
         }
