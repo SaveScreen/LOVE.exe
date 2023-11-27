@@ -22,7 +22,7 @@ public class ScrollScriptStore : MonoBehaviour
     public TMP_Text ItemName;
     public string[] ItemNames;
     public TMP_Text ItemCost;
-    public string[] ItemCosts;
+    public int[] ItemCosts;
 
     bool isSnapped;
     float snapSpeed;
@@ -87,68 +87,22 @@ public class ScrollScriptStore : MonoBehaviour
     {
         int tempMon = 0;
         tempMon = moneyData.GetGAINZ();
-        if (canAfford(tempMon))
+        if (!playerdata.getOutfitUnlocked(currentItem))
         {
-            BuyParticle.Play();
-            if (!playerdata.getOutfitUnlocked(currentItem))
+            if (canAfford(tempMon))
             {
-                switch (currentItem)
-                {
-                    case 0:
-                        moneyData.LoseMoney(500);
-                        playerdata.UnlockOutfit(0);
-                        break;
-                    case 1:
-                        moneyData.LoseMoney(500);
-                        playerdata.UnlockOutfit(1);
-                        break;
-                    case 2:
-                        moneyData.LoseMoney(500);
-                        playerdata.UnlockOutfit(2);
-                        break;
-                    case 3:
-                        moneyData.LoseMoney(1000);
-                        playerdata.UnlockOutfit(3);
-                        break;
-                    case 4:
-                        moneyData.LoseMoney(1000);
-                        playerdata.UnlockOutfit(4);
-                        break;
-                    case 5:
-                        moneyData.LoseMoney(1500);
-                        playerdata.UnlockOutfit(5);
-                        break;
-                    case 6:
-                        moneyData.LoseMoney(1500);
-                        playerdata.UnlockOutfit(6);
-                        break;
-                    case 7:
-                        moneyData.LoseMoney(1500);
-                        playerdata.UnlockOutfit(7);
-                        break;
-                    case 8:
-                        moneyData.LoseMoney(1500);
-                        playerdata.UnlockOutfit(8);
-                        break;
-                    case 9:
-                        moneyData.LoseMoney(500);
-                        playerdata.UnlockOutfit(9);
-                        break;
-                    case 10:
-                        moneyData.LoseMoney(0);
-                        playerdata.UnlockOutfit(10);
-                        break;
-                }
+                moneyData.LoseMoney(ItemCosts[currentItem]);
+                playerdata.UnlockOutfit(currentItem);
+                BuyParticle.Play();
 
                 storeController.GetMoney();
                 StoreClothes.Play();
             }
-        }
-        else if (!playerdata.getOutfitUnlocked(currentItem))
-        {
-            ItemName.text = "CANNOT AFFORD";
-        }
-        else
+            else
+            {
+                ItemName.text = "CANNOT AFFORD";
+            }
+        } else
         {
             ItemName.text = "ALREADY UNLOCKED";
         }
@@ -164,12 +118,7 @@ public class ScrollScriptStore : MonoBehaviour
 
     public bool canAfford(int money)
     {
-        if (currentItem <= 2 && money >= 500)
-        {
-            return true;
-        }
-
-        if (currentItem > 2 && money >= 1500)
+        if (money >= ItemCosts[currentItem])
         {
             return true;
         }

@@ -1151,7 +1151,7 @@ GameObject:
   - component: {fileID: 408944630}
   - component: {fileID: 408944629}
   m_Layer: 5
-  m_Name: overlay (1)
+  m_Name: Christmas Overlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1166,7 +1166,7 @@ RectTransform:
   m_GameObject: {fileID: 408944627}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 23.592293, y: 20.63131, z: 17.465662}
+  m_LocalScale: {x: 19.838995, y: 20.086977, z: 14.68705}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1914393928}
@@ -1174,7 +1174,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -18}
+  m_AnchoredPosition: {x: -5, y: -18}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &408944629
@@ -2832,6 +2832,8 @@ MonoBehaviour:
   win: {fileID: 8300000, guid: 1d72bb4778a6d124aa8534c6a9c81e55, type: 3}
   timer: 3
   countdowntimer: {fileID: 1980623305}
+  regularbg: {fileID: 1468459778}
+  christmasbg: {fileID: 408944627}
 --- !u!82 &1181902091
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3114,7 +3116,7 @@ GameObject:
   - component: {fileID: 1468459781}
   - component: {fileID: 1468459780}
   m_Layer: 5
-  m_Name: overlay
+  m_Name: Regular Overlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

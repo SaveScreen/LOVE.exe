@@ -9,6 +9,8 @@ public class FootballMinigameScript : MonoBehaviour
 {
     public GameObject powermeter;
     public GameObject powertriangle;
+    public GameObject regularbg;
+    public GameObject christmasbg;
     private float trianglemaxposition;
     private float triangleminposition;
     private float accuracymaxposition;
@@ -37,6 +39,7 @@ public class FootballMinigameScript : MonoBehaviour
     public GameObject ball;
     private BallScript ballScript;
     private bool isEndlessMode;
+    private bool isChristmas;
     private int footballGamesPlayed;
     public GameObject endlessgameoverscreen;
     public AudioSource audioSource;
@@ -71,6 +74,18 @@ public class FootballMinigameScript : MonoBehaviour
         donekicking = false;
         gamesPlayed = playerdata.GetGameCount();
         isEndlessMode = playerdata.IsEndlessMode();
+        isChristmas = playerdata.GetChristmasTime();
+
+        if (isChristmas)
+        {
+            regularbg.SetActive(false);
+            christmasbg.SetActive(true);
+        }
+        else if (!isChristmas)
+        {
+            regularbg.SetActive(true);
+            christmasbg.SetActive(false);
+        }
         
 
         if (isEndlessMode) {

@@ -66,6 +66,10 @@ public class SnakeScript : MonoBehaviour
     public TextMeshProUGUI countdowntimer;
     private int timerinseconds;
 
+    public GameObject regularbg;
+    public GameObject christmasbg;
+    private bool isChristmas;
+
     public void PlaySound(AudioClip audio)
     {
         audioSource.PlayOneShot(audio);
@@ -159,6 +163,18 @@ public class SnakeScript : MonoBehaviour
         hiscoretext.text = "Hiscore: " + hiscore;
 
         isendlessmode = playerdata.IsEndlessMode();
+        isChristmas = playerdata.GetChristmasTime();
+
+        if (isChristmas)
+        {
+            regularbg.SetActive(false);
+            christmasbg.SetActive(true);
+        }
+        else
+        {
+            regularbg.SetActive(true);
+            christmasbg.SetActive(false);
+        }
 
         if (!isendlessmode) {
             gamecount = playerdata.GetGameCount();

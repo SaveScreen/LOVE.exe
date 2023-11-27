@@ -5228,7 +5228,6 @@ MonoBehaviour:
   HLG: {fileID: 574482607}
   ItemName: {fileID: 734579182}
   ItemNames:
-  - HOLO-DAY
   - Cowboy
   - Fancy
   - Goth
@@ -5239,19 +5238,9 @@ MonoBehaviour:
   - Star Guy
   - Wrestler Suit
   - Happy Mask
+  - HOLO-DAY
   ItemCost: {fileID: 37510307}
-  ItemCosts:
-  - 0
-  - 500
-  - 500
-  - 500
-  - 1000
-  - 1000
-  - 1500
-  - 1500
-  - 1500
-  - 1500
-  - 500
+  ItemCosts: f4010000f4010000f4010000e8030000e8030000dc050000dc050000dc050000dc050000f401000000000000
   snapForce: 2
   playerDataContainer: {fileID: 789245105}
   playerdata: {fileID: 789245106}
@@ -6856,7 +6845,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1694553147}
   - {fileID: 1971740828}
   - {fileID: 878492208}
   - {fileID: 411086050}
@@ -6867,6 +6855,7 @@ RectTransform:
   - {fileID: 1463764820}
   - {fileID: 2033935637}
   - {fileID: 2080298850}
+  - {fileID: 1694553147}
   m_Father: {fileID: 636084396}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
