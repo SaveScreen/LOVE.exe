@@ -154,7 +154,7 @@ public class ShootingMinigameControler : MonoBehaviour
     {
         int ItemIndex = (Random.Range(0, targetsArray.Length));
         int howMany = (Random.Range(0, 100));
-        int ismovingtarget = (Random.Range(0, 100));
+        //int ismovingtarget = (Random.Range(0, 100));
 
         if (howMany >= 60)
         {
@@ -174,7 +174,8 @@ public class ShootingMinigameControler : MonoBehaviour
             targetsArray[ItemIndex].GetComponent<TargetScript>().InitializeTargets();
             targetsArray[ItemIndex].GetComponent<TargetScript>().InitializeTargets();
         }
-        else if (howMany > 60 && ismovingtarget >= 50)
+        
+        if (howMany > 40)
         {
             movingtargetsArray[ItemIndex].GetComponent<TargetScript>().InitializeTargets();
         }

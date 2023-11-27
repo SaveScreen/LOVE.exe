@@ -134,6 +134,10 @@ public class ScrollScriptStore : MonoBehaviour
                         moneyData.LoseMoney(500);
                         playerdata.UnlockOutfit(9);
                         break;
+                    case 10:
+                        moneyData.LoseMoney(0);
+                        playerdata.UnlockOutfit(10);
+                        break;
                 }
 
                 storeController.GetMoney();
