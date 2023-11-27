@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class RhythmMinigameScript : MonoBehaviour
 {
+    public GameObject regularbg;
+    public GameObject christmasbg;
     public GameObject prefab;
     public TextMeshProUGUI scoretext;
     public TextMeshProUGUI speedtext;
@@ -37,6 +39,7 @@ public class RhythmMinigameScript : MonoBehaviour
     private bool didWin;
     private int gamecount;
     private bool isEndlessMode;
+    private bool isChristmas;
     private int rhythmGamesPlayed;
     private int potentialscore;
     private bool firstspawn;
@@ -55,6 +58,18 @@ public class RhythmMinigameScript : MonoBehaviour
         timerinseconds = 3;
 
         isEndlessMode = playerdata.IsEndlessMode();
+        isChristmas = playerdata.GetChristmasTime();
+
+        if (isChristmas)
+        {
+            regularbg.SetActive(false);
+            christmasbg.SetActive(true);
+        }
+        else
+        {
+            regularbg.SetActive(true);
+            christmasbg.SetActive(false);
+        }
 
 
         if (!isEndlessMode) {

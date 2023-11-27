@@ -16,6 +16,7 @@ public class VisNovelDialogueController : MonoBehaviour
     private string[] currentlines;
     private bool[] whoistalking;
     public bool isEnglish;
+    private bool isChristmas;
     private int index;
     public InputActionAsset inputs;
     private InputAction click;

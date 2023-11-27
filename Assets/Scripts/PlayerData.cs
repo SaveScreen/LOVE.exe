@@ -18,6 +18,7 @@ public class PlayerData : MonoBehaviour
     public static bool playerSelected = false;
     public static int playerChibiOutfit;
     public static bool isendlessmode = false;
+    public static bool isChristmas = false;
     public static int endlessgamesplayed = 0;
     //For endless mode, tracks the amount of each game played
     public static int footballgamesplayed = 0;
@@ -189,6 +190,10 @@ public class PlayerData : MonoBehaviour
     {
         endlessgameshiscore = score;
     }
+    public void SetChristmasTime(bool time)
+    {
+        isChristmas = time;
+    }
 
     public void WonGame() 
     {
@@ -274,6 +279,10 @@ public class PlayerData : MonoBehaviour
     public int GetPlayerChibiOutfit()
     {
         return playerChibiOutfit;
+    }
+    public bool GetChristmasTime()
+    {
+        return isChristmas;
     }
 
     public int GetRhythmGameHiScore() 
