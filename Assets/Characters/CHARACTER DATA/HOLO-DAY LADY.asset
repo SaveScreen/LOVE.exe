@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f9fbb3627edbde4b97be632b8ce0af8, type: 3}
+  m_Name: HOLO-DAY LADY
+  m_EditorClassIdentifier: 
+  angrylines:
+  - What are you wearing? That was not in your description...
+  - Greetings Duke Pierre Le-
+  - '*Pierre starts to giggle*'
+  - 'Robot, tell me, did I tell you to speak? You will refer to me as Your Majesty
+    from now on. '
+  - "*systems optimizing speech* Okay Your Majesty, it is a pleasure to meet you.
+    It seems you have ordered my services to quote, \u201Cspoil and pamper you\u201D."
+  - Correct! And such a piece of beautiful machinery as you can cater to my every
+    need correct?
+  - As a companion, I seek to help others through there problems, I am sensing a
+    strong hint of NARCI-
+  - "QUIET. I did not PAY for you to talk to me as such. I\u2019m bored, come entertain
+    me."
+  alWhoistalking: 0001010001000100
+  neutrallines:
+  - Hm. I'll have to train you.
+  - Greetings Duke Pierre Le-
+  - '*Pierre starts to giggle*'
+  - 'Robot, tell me, did I tell you to speak? You will refer to me as Your Majesty
+    from now on. '
+  - "*systems optimizing speech* Okay Your Majesty, it is a pleasure to meet you.
+    It seems you have ordered my services to quote, \u201Cspoil and pamper you\u201D."
+  - Correct! And such a piece of beautiful machinery as you can cater to my every
+    need correct?
+  - As a companion, I seek to help others through there problems, I am sensing a
+    strong hint of NARCI-
+  - "QUIET. I did not PAY for you to talk to me as such. I\u2019m bored, come entertain
+    me."
+  nlWhoistalking: 0001010001000100
+  happylines:
+  - Oh goody, my loyal servant, come to sweep me off my feet
+  - Greetings Duke Pierre Le-
+  - '*Pierre starts to giggle*'
+  - 'Robot, tell me, did I tell you to speak? You will refer to me as Your Majesty
+    from now on. '
+  - "*systems optimizing speech* Okay Your Majesty, it is a pleasure to meet you.
+    It seems you have ordered my services to quote, \u201Cspoil and pamper you\u201D."
+  - Correct! And such a piece of beautiful machinery as you can cater to my every
+    need correct?
+  - As a companion, I seek to help others through there problems, I am sensing a
+    strong hint of NARCI-
+  - "QUIET. I did not PAY for you to talk to me as such. I\u2019m bored, come entertain
+    me."
+  hlWhoistalking: 0001010001000100
+  date2pregamelines:
+  - 'Your majesty, I am not optimized to be a subservient robot. I am a helper, so
+    I will not be indulging in your selfish needs till I help you understand yourself. '
+  - "Aren\u2019t you a robot? Just do your little technology reset thingy and make
+    yourself subservient before I order them to mince you into an aluminium can."
+  - According to my systems, you seem to avoid your problems and put on a spoiled
+    persona to cover the fact you are very lon-
+  - Oh! look over there an arcade game! You should play it for me and when you get
+    the highest score put my name on the leaderboard!
+  - You are ignoring me. I will play along, and perhaps we will dissolve your persona.
+  date2preWhoistalking: 0100010001
+  date2postgamelines:
+  - "HAHA! Good robot! Now everyone will know that the great Duke Pierre Le\u2019Sarcelle
+    has the highest score on Brain Run!"
+  - 'Pierre, you cannot simply take everything and claim it as yours. That''s selfish
+    and egotistical. I am not your servant, you cannot treat everyone as one. '
+  - "Okay- I literally do not care. It\u2019s called, I\u2019m rich and you\u2019ve
+    been paid to serve ME. WHY are you calling me Pierre? God, I do not remember
+    robots being such \u201Cfreethinkers\u201D. You are SO LUCKY I dont call your
+    establishment and get you turned into a toaster you little-"
+  - You are lonely.
+  - "I AM NOT LONELY. I don\u2019t NEED anyone why do you keep saying that-"
+  - "As a companion you sign to give me your consent to read everything about your
+    background in order to assist your needs better. Duke Pierre Le\u2019Sarcelle
+    grew up in large amounts of wealth all his life in Technopolis. You were top
+    of the food chain, but that did not matter."
+  date2postWhoistalking: 000100010001
+  date3pregamelines:
+  - 'My records indicate you wrote many, many requests in your youth requesting a
+    companion bot to pretend to be your siblings. To be your friend. To be your mother.
+    To just spend time with you.Then you would send another request asking to cancel
+    every time. '
+  - "I-I'm not\u2026 Y-you.. Don't know\u2026 a-anything!-"
+  - 'Let me take your hand, Pierre, join me for a dance, and for a second we will
+    be two people who just live in the moment together.  '
+  date3preWhoistalking: 010001
+  date3postgamelines:
+  - '*Pierre slowly drops his tense posture, allowing you to embrace him as he softly
+    cries in your shoulder*'
+  - You are not a bad person, you simply have developed toxic coping mechanisms and
+    we are beginning the steps to reformation.
+  - I was always alone, she always left me alone. They all said I was too scary,
+    that my mother were too scary and their parents would tell them to not hang out
+    with me.
+  - ' Every day. Everyday I spent with servants that were too scared to talk to me,
+    they would just all do what I said.  '
+  - "I don\u2019t want to be like my Mother.."
+  - 'You are Pierre, despite your MOMMY ISSUES,  and I believe Pierre is much more
+    fun to be around when he''s being himself. '
+  - "Thank you\u2026 for being my friend. "
+  date3postWhoistalking: 01010000000100
+  wongamelines:
+  - That's my Big Strong Bot! Now be a good servant and pick up my things, we must
+    get going there are plenty of places you need to take me!
+  wongameWhoistalking: 00
+  lostgamelines:
+  - "You know what I do to little insubordinate idiots like you\u2026"
+  - DO BETTER!
+  - "Ugh, I\u2019m tired of you, don\u2019t call or text me back\u2026"
+  - I know you do better than that, in fact, you will do better than that!
+  lostgameWhoistalking: 00
+  minigameOrder: 010000000200000003000000
