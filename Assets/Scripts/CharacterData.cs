@@ -32,6 +32,37 @@ public class CharacterData : ScriptableObject
     public string[] lostgamelines;
     public bool[] lostgameWhoistalking;
 
+    //*********************************************************************************
+
+    [Header ("Christmas Dialogue")]
+    //Dialogue Date 1
+    public string[] christmasangrylines;
+    public bool[] christmasalWhoistalking;
+    public string[] christmasneutrallines;
+    public bool[] christmasnlWhoistalking;
+    public string[] christmashappylines;
+    public bool[] christmashlWhoistalking;
+
+    //Dialogue Date 2
+    public string[] christmasdate2pregamelines;
+    public bool[] christmasdate2preWhoistalking;
+    public string[] christmasdate2postgamelines;
+    public bool[] christmasdate2postWhoistalking;
+
+    //Dialogue Date 3
+    public string[] christmasdate3pregamelines;
+    public bool[] christmasdate3preWhoistalking;
+    public string[] christmasdate3postgamelines;
+    public bool[] christmasdate3postWhoistalking;
+
+    //Dialogue for games
+    public string[] christmaswongamelines;
+    public bool[] christmaswongameWhoistalking;
+    public string[] christmaslostgamelines;
+    public bool[] christmaslostgameWhoistalking;
+    
+    //*********************************************************************************
+
     //IF BOOL IS TRUE, THE PLAYER BOT IS TALKING
 
     public int[] minigameOrder;
