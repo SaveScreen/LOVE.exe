@@ -55,6 +55,7 @@ public class VisNovelDialogueController : MonoBehaviour
         wonlastgame = playerdata.GetWin();
         playedGame = playerdata.GetPlayedGame();
         date = playerdata.GetPlayerDate() - 1;
+        isChristmas = playerdata.GetChristmasTime();
     }
 
     void OnEnable() {
@@ -76,8 +77,16 @@ public class VisNovelDialogueController : MonoBehaviour
                     switch (visNovelScript.datemoodref) {
                         case 1:
                             if (isEnglish) {
-                                currentlines = characters[date].angrylines;
-                                whoistalking = characters[date].alWhoistalking;
+                                if (isChristmas)
+                                {
+                                    currentlines = characters[date].christmasangrylines;
+                                    whoistalking = characters[date].christmasalWhoistalking;
+                                }
+                                else
+                                {
+                                    currentlines = characters[date].angrylines;
+                                    whoistalking = characters[date].alWhoistalking;
+                                }
                             }
                             else {
                                 //currentlines = jpcowboyangrylines;
@@ -85,8 +94,17 @@ public class VisNovelDialogueController : MonoBehaviour
                         break;
                         case 2:
                             if (isEnglish) {
-                                currentlines = characters[date].neutrallines;
-                                whoistalking = characters[date].nlWhoistalking;
+                                if (isChristmas)
+                                {
+                                    currentlines = characters[date].christmasneutrallines;
+                                    whoistalking = characters[date].christmasnlWhoistalking;
+                                }
+                                else
+                                {
+                                    currentlines = characters[date].neutrallines;
+                                    whoistalking = characters[date].nlWhoistalking;
+                                }
+                                
                             }
                             else {
                                 //currentlines = jpcowboyneutrallines;
@@ -94,8 +112,17 @@ public class VisNovelDialogueController : MonoBehaviour
                         break;
                         case 3:
                             if (isEnglish) {
-                                currentlines = characters[date].happylines;
-                                whoistalking = characters[date].hlWhoistalking;
+                                if (isChristmas)
+                                {
+                                    currentlines = characters[date].christmashappylines;
+                                    whoistalking = characters[date].christmashlWhoistalking;
+                                }
+                                else
+                                {
+                                    currentlines = characters[date].happylines;
+                                    whoistalking = characters[date].hlWhoistalking;
+                                }
+                               
                             }
                             else {
                                 //currentlines = jpcowboyhappylines;
@@ -107,37 +134,91 @@ public class VisNovelDialogueController : MonoBehaviour
                 case 1:
                     if (playedGame) {    
                         if (wonlastgame) {
-                            currentlines = characters[date].wongamelines;
-                            whoistalking = characters[date].wongameWhoistalking;
+                            if (isChristmas)
+                            {
+                                currentlines = characters[date].christmaswongamelines;
+                                whoistalking = characters[date].christmaswongameWhoistalking;
+                            }
+                            else
+                            {
+                                currentlines = characters[date].wongamelines;
+                                whoistalking = characters[date].wongameWhoistalking;
+                            }
+                            
                         }
                         else {
-                            currentlines = characters[date].lostgamelines;
-                            whoistalking = characters[date].lostgameWhoistalking;                                   
+                            if (isChristmas)
+                            {
+                                currentlines = characters[date].christmaslostgamelines;
+                                whoistalking = characters[date].christmaslostgameWhoistalking;
+                            }
+                            else
+                            {
+                                currentlines = characters[date].lostgamelines;
+                                whoistalking = characters[date].lostgameWhoistalking;
+                            }
+                                                               
                         }    
                     }
                     //Next Date
                     else {
-                        currentlines = characters[date].date2pregamelines;
-                        whoistalking = characters[date].date2preWhoistalking;    
+                        if (isChristmas)
+                        {
+                            currentlines = characters[date].christmasdate2pregamelines;
+                            whoistalking = characters[date].christmasdate2preWhoistalking;
+                        }
+                        else
+                        {
+                            currentlines = characters[date].date2pregamelines;
+                            whoistalking = characters[date].date2preWhoistalking;
+                        }
+                            
                     }
                 break;
                 //After playing 2 games
                 case 2:
                     if (playedGame) {
-                        currentlines = characters[date].date2postgamelines;
-                        whoistalking = characters[date].date2postWhoistalking;     
+                        if (isChristmas)
+                        {
+                            currentlines = characters[date].christmasdate2postgamelines;
+                            whoistalking = characters[date].christmasdate2postWhoistalking;
+                        }
+                        else
+                        {
+                            currentlines = characters[date].date2postgamelines;
+                            whoistalking = characters[date].date2postWhoistalking;
+                        }
+                             
                     }
                     //Next Date
                     else {
-                        currentlines = characters[date].date3pregamelines;
-                        whoistalking = characters[date].date3preWhoistalking;                            
+                        if (isChristmas)
+                        {
+                            currentlines = characters[date].christmasdate3pregamelines;
+                            whoistalking = characters[date].christmasdate3preWhoistalking;
+                        }
+                        else
+                        {
+                            currentlines = characters[date].date3pregamelines;
+                            whoistalking = characters[date].date3preWhoistalking;
+                        }
+                                                    
                     }
                 break;
                 //After playing 3 games
                 case 3:
                     if (playedGame) {
-                        currentlines = characters[date].date3postgamelines;
-                        whoistalking = characters[date].date3postWhoistalking;    
+                        if (isChristmas)
+                        {
+                            currentlines = characters[date].christmasdate3postgamelines;
+                            whoistalking = characters[date].christmasdate3postWhoistalking;
+                        }
+                        else
+                        {
+                            currentlines = characters[date].date3postgamelines;
+                            whoistalking = characters[date].date3postWhoistalking;
+                        }
+                            
                     }
                 break;
                 
