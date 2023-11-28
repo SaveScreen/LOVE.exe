@@ -93,6 +93,14 @@ public class ScrollScript1 : MonoBehaviour
         {
             OutfitClickedParticle.Play();
             playerdata.SetPlayerChibiOutfit(currentItem);
+            
+            if (currentItem == 11) {
+                playerdata.SetChristmasTime(true);
+            }
+            else {
+                playerdata.SetChristmasTime(false);
+            }
+            
             ClothesAccept.Play();
         }
         else if(currentItem != 0)
@@ -103,12 +111,21 @@ public class ScrollScript1 : MonoBehaviour
         {
             OutfitClickedParticle.Play();
             playerdata.SetPlayerChibiOutfit(currentItem);
+
+            if (currentItem == 11) {
+                playerdata.SetChristmasTime(true);
+            }
+            else {
+                playerdata.SetChristmasTime(false);
+            }
+
             ClothesAccept.Play();
         }
     }
 
     public void ReturnToAPT()
     {
+        playerdata.SaveGame();
         SceneManager.LoadScene("AptScene");
     }
 }

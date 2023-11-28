@@ -15,6 +15,8 @@ public class AptSceneMenu : MonoBehaviour
     public GameObject player;
     private PlayerData playerdata;
     private int outfitSelect;
+    public GameObject christmasOverlay;
+    private bool isChristmas;
 
     //wear clothes in apartment
     public GameObject[] RoboWearingAPT;
@@ -47,6 +49,15 @@ public class AptSceneMenu : MonoBehaviour
         }
 
         outfitSelect = playerdata.GetPlayerChibiOutfit();
+        isChristmas = playerdata.GetChristmasTime();
+
+        if (isChristmas) {
+            christmasOverlay.SetActive(true);
+        }
+        else if (!isChristmas) {
+            christmasOverlay.SetActive(false);
+        }
+        
 
         GameObject tempObj = RoboWearingAPT[outfitSelect];
         tempObj.SetActive(true);

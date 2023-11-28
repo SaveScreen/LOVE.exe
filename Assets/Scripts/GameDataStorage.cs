@@ -8,6 +8,8 @@ public class GameDataStorage
     public float playerRating;
     public bool playerSelected;
     public bool[] isOutfitUnlocked;
+    public bool isChristmas;
+    public int playerChibiOutfit;
     public int money;
 
     public int rhythmgamehiscore;

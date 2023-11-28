@@ -128,6 +128,7 @@ public class ScrollScriptStore : MonoBehaviour
 
     public void ReturnToAPT()
     {
+        playerdata.SaveGame();
         SceneManager.LoadScene("AptScene");
     }
 

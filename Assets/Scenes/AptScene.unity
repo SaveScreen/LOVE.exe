@@ -1800,6 +1800,7 @@ MonoBehaviour:
   moneyData: {fileID: 1299503618}
   moneyText: {fileID: 1842578957}
   player: {fileID: 1523400854}
+  christmasOverlay: {fileID: 1692625314}
   RoboWearingAPT:
   - {fileID: 1729224842}
   - {fileID: 889167263}
@@ -4132,6 +4133,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1692625314 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 562864314100801963, guid: e0daf4dad72db284eb980891ace5f70c,
+    type: 3}
+  m_PrefabInstance: {fileID: 4041770460187936290}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1729224842
 GameObject:
   m_ObjectHideFlags: 0

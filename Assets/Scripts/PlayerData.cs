@@ -57,6 +57,8 @@ public class PlayerData : MonoBehaviour
         gameData.snakegamehiscore = snakegamehiscore;
         gameData.rhythmgamehiscore = rhythmgamehiscore;
         gameData.endlessgameshiscore = endlessgameshiscore;
+        gameData.isChristmas = isChristmas;
+        gameData.playerChibiOutfit = playerChibiOutfit;
 
         string json = JsonUtility.ToJson(gameData,false);
         File.WriteAllText(Application.dataPath + "/PlayerDataFile.json",json);
@@ -86,6 +88,8 @@ public class PlayerData : MonoBehaviour
         rhythmgamehiscore = gameData.rhythmgamehiscore;
         isOutfitUnlocked = gameData.isOutfitUnlocked;
         endlessgameshiscore = gameData.endlessgameshiscore;
+        isChristmas = gameData.isChristmas;
+        playerChibiOutfit = gameData.playerChibiOutfit;
         int money = gameData.money;
         moneyScript.SetMoney(money);
 
