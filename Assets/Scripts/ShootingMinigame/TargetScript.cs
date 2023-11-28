@@ -29,6 +29,8 @@ public class TargetScript : MonoBehaviour
 
     public int scoreValue;
 
+    public float TimeUp;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -104,9 +106,18 @@ void Update(){
         }
         
         ismoving = !ismoving;
+
+        StartCoroutine(TimerTillDown());
     }
     public void flipuptargets()
     {
         transform.position = uprightpos;
+    }
+
+    public IEnumerator TimerTillDown()
+    {
+        yield return new WaitForSeconds(TimeUp);
+        ResetTargets();
+
     }
 }

@@ -165,13 +165,21 @@ public class ShootingMinigameControler : MonoBehaviour
             //want to make it so depending on the howMany value, different numbers of targets get activated at same time
             //Need to make ItemIndex generate multiple number for this case to work
             targetsArray[ItemIndex].GetComponent<TargetScript>().InitializeTargets();
+
+            ItemIndex = (Random.Range(0, targetsArray.Length));
             targetsArray[ItemIndex].GetComponent<TargetScript>().InitializeTargets();
+
+            ItemIndex = (Random.Range(0, targetsArray.Length));
             targetsArray[ItemIndex].GetComponent<TargetScript>().InitializeTargets();
+
+            ItemIndex = (Random.Range(0, targetsArray.Length));
             targetsArray[ItemIndex].GetComponent<TargetScript>().InitializeTargets();
         }
         else if (howMany > 20 && howMany < 60)
         {
+            ItemIndex = (Random.Range(0, targetsArray.Length));
             targetsArray[ItemIndex].GetComponent<TargetScript>().InitializeTargets();
+            ItemIndex = (Random.Range(0, targetsArray.Length));
             targetsArray[ItemIndex].GetComponent<TargetScript>().InitializeTargets();
         }
         
