@@ -68,6 +68,11 @@ public class ResultScript : MonoBehaviour
     public GameObject Date9B;
     public GameObject Date9A;
     public GameObject Date9S;
+    [Header("Holo tsune")]
+    public GameObject Date10C;
+    public GameObject Date10B;
+    public GameObject Date10A;
+    public GameObject Date10S;
 
     public GameObject playerdatacontainer;
     public PlayerData playerdata;
@@ -293,6 +298,28 @@ public class ResultScript : MonoBehaviour
                         break;
                     case 3:
                         Date9S.SetActive(true);
+                        RankS.SetActive(true);
+                        break;
+                }
+                break;
+            case 10:
+                Date2.SetActive(true);
+                switch (PlayerRank())
+                {
+                    case 0:
+                        Date10C.SetActive(true);
+                        RankC.SetActive(true);
+                        break;
+                    case 1:
+                        Date10B.SetActive(true);
+                        RankB.SetActive(true);
+                        break;
+                    case 2:
+                        Date10A.SetActive(true);
+                        RankA.SetActive(true);
+                        break;
+                    case 3:
+                        Date10S.SetActive(true);
                         RankS.SetActive(true);
                         break;
                 }
