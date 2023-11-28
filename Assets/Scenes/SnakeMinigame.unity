@@ -2824,6 +2824,8 @@ MonoBehaviour:
   ethanDelayDelta: 0.08
   cloneObj: {fileID: 3213517991056240131, guid: a44772bceae41e54b96cce68e9e5e471,
     type: 3}
+  christmasCloneObj: {fileID: 2194273818919873751, guid: 07da20f6550066a4cbeac3f9f7823b28,
+    type: 3}
   littleGuys: []
   audioSource: {fileID: 146183846}
   musicPlayer: {fileID: 121061680}
@@ -2834,6 +2836,8 @@ MonoBehaviour:
   countdowntimer: {fileID: 1980623305}
   regularbg: {fileID: 1468459778}
   christmasbg: {fileID: 408944627}
+  regularfood: {fileID: 1340297916}
+  christmasfood: {fileID: 1449365910}
 --- !u!82 &1181902091
 AudioSource:
   m_ObjectHideFlags: 0

@@ -46,6 +46,7 @@ public class SnakeScript : MonoBehaviour
 
     //debug obj to spawn
     public GameObject cloneObj;
+    public GameObject christmasCloneObj;
 
     public List<GameObject> littleGuys;
 
@@ -68,6 +69,8 @@ public class SnakeScript : MonoBehaviour
 
     public GameObject regularbg;
     public GameObject christmasbg;
+    public GameObject regularfood;
+    public GameObject christmasfood;
     private bool isChristmas;
 
     public void PlaySound(AudioClip audio)
@@ -169,11 +172,15 @@ public class SnakeScript : MonoBehaviour
         {
             regularbg.SetActive(false);
             christmasbg.SetActive(true);
+            regularfood.SetActive(false);
+            christmasfood.SetActive(true);
         }
         else
         {
             regularbg.SetActive(true);
             christmasbg.SetActive(false);
+            regularfood.SetActive(true);
+            christmasfood.SetActive(false);
         }
 
         if (!isendlessmode) {
@@ -263,7 +270,12 @@ public class SnakeScript : MonoBehaviour
     private void Grow()
     {
         ethanDelay += ethanDelayDelta;
-        littleGuys.Add(Instantiate(cloneObj));
+        if (!isChristmas) {
+            littleGuys.Add(Instantiate(cloneObj));
+        }
+        else {
+            littleGuys.Add(Instantiate(christmasCloneObj));
+        }
         littleGuys[littleGuys.Count - 1].GetComponent<TrailGuy>().cadenDelay = ethanDelay;
         littleGuys[littleGuys.Count - 1].GetComponent<TrailGuy>().leader = gameObject;
         littleGuys[littleGuys.Count - 1].transform.position = oldPosition;
