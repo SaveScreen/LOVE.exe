@@ -127,4 +127,91 @@ MonoBehaviour:
   - "I\u2019m never going out with a glorified toaster again"
   - "You remind me of a customer. I\u2019m going to hurt you."
   lostgameWhoistalking: 00
+  christmasangrylines:
+  - Merry Holo-day, Holo! I am glad you agreed to meet me on your break, I hope you
+    are having a fun time outside of the shop!
+  - "I guess you\u2019re also working on Holo-day. No rest for robots, do you have
+    any plans for holo-day other than working?"
+  - "My company has requested me to go around to all of my customers and ensure they
+    are having a good Holo-day\u2026. I came to check up on you between my duties
+    :) "
+  - "Oh? Little tin can came to see me for fun and not for a task? If I was human
+    I\u2019d blush. "
+  - Really?
+  - "No. Let\u2019s hang out and see the lights outside. "
+  christmasalWhoistalking: 010001000100
+  christmasneutrallines:
+  - Merry Holo-day, Holo! I am glad you agreed to meet me on your break, I hope you
+    are having a fun time outside of the shop!
+  - "I guess you\u2019re also working on Holo-day. No rest for robots, do you have
+    any plans for holo-day other than working?"
+  - "My company has requested me to go around to all of my customers and ensure they
+    are having a good Holo-day\u2026. I came to check up on you between my duties
+    :) "
+  - "Oh? Little tin can came to see me for fun and not for a task? If I was human
+    I\u2019d blush. "
+  - Really?
+  - "No. Let\u2019s hang out and see the lights outside. "
+  christmasnlWhoistalking: 010001000100
+  christmashappylines:
+  - Merry Holo-day, Holo! I am glad you agreed to meet me on your break, I hope you
+    are having a fun time outside of the shop!
+  - "I guess you\u2019re also working on Holo-day. No rest for robots, do you have
+    any plans for holo-day other than working?"
+  - "My company has requested me to go around to all of my customers and ensure they
+    are having a good Holo-day\u2026. I came to check up on you between my duties
+    :) "
+  - "Oh? Little tin can came to see me for fun and not for a task? If I was human
+    I\u2019d blush. "
+  - Really?
+  - "No. Let\u2019s hang out and see the lights outside. "
+  christmashlWhoistalking: 010001000100
+  christmasdate2pregamelines:
+  - "Thank you, Holo! I am delighted to hang out with you for Holo-day, even if it\u2019s
+    just for a moment."
+  - "Yeah\u2026 *Holo wavers for a moment, wanting to say more but stops* I\u2019m
+    gonna go check out the new arcade update for Brain Run."
+  christmasdate2preWhoistalking: 000100
+  christmasdate2postgamelines:
+  - Holo,  I have obtained a new high score on Snow Run!
+  - "Congrats\u2026 I should go to the shop soon, usually, I wouldn\u2019t care but
+    working keeps my mind off of things."
+  - Holo, you seem very somber lately. Are you okay?
+  - 'Holo-day always makes me wish I was a human, even though I was created I wish
+    I could have those Holo-day childhood memories you know? Guess these dates are
+    the closest thing I have to feeling human. '
+  - "Holo\u2026. I will be calling a fire threat to your shop :) "
+  - '*Holo pauses, taken aback* Wh- What? '
+  - 'You will be able to be sent home early and enjoy your holo-day, just like everybody
+    else! You do not need to be human to make holo-day memories, I have plenty of
+    fond ones with you. '
+  - "You\u2019re insane. I really like you, let\u2019s make some memories."
+  christmasdate2postWhoistalking: 0100010001000100
+  christmasdate3pregamelines:
+  - Holo,  I have obtained a new high score on Snow Run!
+  - "Congrats\u2026 I should go to the shop soon, usually, I wouldn\u2019t care but
+    working keeps my mind off of things."
+  - Holo, you seem very somber lately. Are you okay?
+  - 'Holo-day always makes me wish I was a human, even though I was created I wish
+    I could have those Holo-day childhood memories you know? Guess these dates are
+    the closest thing I have to feeling human. '
+  - "Holo\u2026. I will be calling a fire threat to your shop :) "
+  - '*Holo pauses, taken aback* Wh- What? '
+  - 'You will be able to be sent home early and enjoy your holo-day, just like everybody
+    else! You do not need to be human to make holo-day memories, I have plenty of
+    fond ones with you. '
+  - "You\u2019re insane. I really like you, let\u2019s make some memories."
+  christmasdate3preWhoistalking: 0100010001000100
+  christmasdate3postgamelines:
+  - 'Thanks for the date... And the threat so I can go home early. '
+  - 'Of course, Holo! I hope you have a very merry Holo-day. '
+  - "You too. Maybe you can come over tonight and see if any sparks fly\u2026 just
+    kidding. *Holo giggles*"
+  christmasdate3postWhoistalking: 000100
+  christmaswongamelines:
+  - 'Nice job, metalhead. '
+  christmaswongameWhoistalking: 00
+  christmaslostgamelines:
+  - That was embarrassing, toaster oven.
+  christmaslostgameWhoistalking: 00
   minigameOrder: 010000000200000003000000
