@@ -113,63 +113,62 @@ MonoBehaviour:
   - "Let me go grab the explosive bat real quick\u2026"
   lostgameWhoistalking: 00
   christmasangrylines:
-  - '"Where''s your ring gear partner?"'
+  - Where's your ring gear partner?
   - Happy Holo-days to you Hitomi! Better Living Co. has tasked me with bringing
     cheer to others and I wanted to check in with you!
-  - "\u201CHello, friend! That means a lot to me, it is truly a wonderful time of
-    the year. I have to say though I am quite sad this go around\u2026\u201D "
+  - "Hello, friend! That means a lot to me, it is truly a wonderful time of the year.
+    I have to say though I am quite sad this go around\u2026 "
   - "Oh, that does not sound like a cheerful Holo-day, let\u2019s do something fun
     so you can relax for a bit."
   christmasalWhoistalking: 00010001
   christmasneutrallines:
-  - '"Hey partner! What are ya up to?"'
+  - Hey partner! What are ya up to?
   - Happy Holo-days to you Hitomi! Better Living Co. has tasked me with bringing
     cheer to others and I wanted to check in with you!
-  - "\u201CHello, friend! That means a lot to me, it is truly a wonderful time of
-    the year. I have to say though I am quite sad this go around\u2026\u201D "
+  - "Hello, friend! That means a lot to me, it is truly a wonderful time of the year.
+    I have to say though I am quite sad this go around\u2026 "
   - "Oh, that does not sound like a cheerful Holo-day, let\u2019s do something fun
     so you can relax for a bit."
   christmasnlWhoistalking: 00010001
   christmashappylines:
-  - '"HAPPY HOLO-DAY PARTNER!"'
+  - HAPPY HOLO-DAY PARTNER!
   - Happy Holo-days to you Hitomi! Better Living Co. has tasked me with bringing
     cheer to others and I wanted to check in with you!
-  - "\u201CHello, friend! That means a lot to me, it is truly a wonderful time of
-    the year. I have to say though I am quite sad this go around\u2026\u201D "
+  - "Hello, friend! That means a lot to me, it is truly a wonderful time of the year.
+    I have to say though I am quite sad this go around\u2026 "
   - "Oh, that does not sound like a cheerful Holo-day, let\u2019s do something fun
     so you can relax for a bit."
   christmashlWhoistalking: 00010001
   christmasdate2pregamelines:
   - Tell me Hitomi what seems to be the issue?
-  - "\u201CWell, Technopolis Championship Wrestling has me working their big Merry
-    Go Round Tournament, which takes place all throughout the season. I won\u2019t
-    be able to see my family for Holo-day and I\u2019d really hate to miss them!\u201D"
+  - "Well, Technopolis Championship Wrestling has me working their big Merry Go Round
+    Tournament, which takes place all throughout the season. I won\u2019t be able
+    to see my family for Holo-day and I\u2019d really hate to miss them!"
   - That sounds dreadful, there must be a way to get you home for Holo-day at least.
-  - "\u201CUnless you can cancel it altogether, I am afraid I will be all alone this
-    Holo-day\u2026\u201D"
+  - "Unless you can cancel it altogether, I am afraid I will be all alone this Holo-day\u2026"
   - "Let\u2019s get your mind off that right now, let\u2019s step outside, perhaps
     that will help ease your mind or give us an idea!"
   christmasdate2preWhoistalking: 0100010001
   christmasdate2postgamelines:
   - WOO! I got it, how about I enter the tourney for you?
-  - "\u201CGENIUS! You could enter under my team, and we can swap places, if you
-    do that for me I would be forever grateful!\u201D"
+  - GENIUS! You could enter under my team, and we can swap places, if you do that
+    for me I would be forever grateful!
   christmasdate2postWhoistalking: 0100
   christmasdate3pregamelines:
   - Of course Hitomi! You are an amazing wrestler and champion, you deserve the time
     away from work. The wonderful Holo-day time to relax, speak, and dance with family!
-  - "\u201CEXACTLY! You are amazing, in fact, may I have your hand in this special
-    Holo-day dance?\u201D"
+  - EXACTLY! You are amazing, in fact, may I have your hand in this special Holo-day
+    dance?
   christmasdate3preWhoistalking: 0100
   christmasdate3postgamelines:
-  - "*Hitomi giggles to herself* \u201CYou are so amazing! Thank you so much for
-    your help partner, and I hope you don\u2019t get bruised up too bad in that tourney!\u201D"
+  - "*Hitomi giggles to herself* You are so amazing! Thank you so much for your help
+    partner, and I hope you don\u2019t get bruised up too bad in that tourney!"
   - "I\u2019ll be alright Hitomi, enjoy your relaxing Holo-day."
   christmasdate3postWhoistalking: 0001
   christmaswongamelines:
-  - '"YOU ROCK! YOU ROCK!"'
+  - YOU ROCK! YOU ROCK!
   christmaswongameWhoistalking: 00
   christmaslostgamelines:
-  - '"That was a rough landing, but it''s alright we can bounce back!"'
+  - That was a rough landing, but it's alright we can bounce back!
   christmaslostgameWhoistalking: 00
   minigameOrder: 020000000100000003000000

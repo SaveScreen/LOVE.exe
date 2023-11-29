@@ -49,46 +49,46 @@ MonoBehaviour:
     about I test that might of yours huh?"
   hlWhoistalking: 000001000100
   date2pregamelines:
-  - "\u201CUgh, whatever, you got lucky\u2026\u201D"
+  - "Ugh, whatever, you got lucky\u2026"
   - 'Woah! Okay, something is definitely up with your systems Merry. Do you mind
     if I run a diagnosis real quick? '
-  - "\u201CYes, I do mind! Also, you have no right to call me Merry. I am a celebrity,
-    thus you should treat me as such.\u201D  "
+  - 'Yes, I do mind! Also, you have no right to call me Merry. I am a celebrity,
+    thus you should treat me as such.  '
   - 'This is very odd behavior, your speech pattern has changed, and the tone went
     from your iconic joyfulness to a bitter and angered one. This bug cannot persist
     cause it will ruin the Holo-day Festival! '
-  - "\u201CNothing will ruin the festival if there isn\u2019t one, these folks do
-    not deserve me!\u201D "
+  - "Nothing will ruin the festival if there isn\u2019t one, these folks do not deserve
+    me! "
   - 'That is definitely not good. Well grumpy, what can I do to bring the Holo-day
     spirit back to you? '
-  - "\u201CNo way, I\u2019m telling you that\u2026unless you can beat me in Snow
-    Run, and a Dance-Off, then maybe I will consider it.\u201D "
+  - "No way, I\u2019m telling you that\u2026unless you can beat me in Snow Run, and
+    a Dance-Off, then maybe I will consider it. "
   - "You are stubborn\u2026fine!"
   date2preWhoistalking: 0001000100010001
   date2postgamelines:
-  - "\u201CBAH! You are a fraud, a scammer, there is no way you are better than me!\u201D"
+  - BAH! You are a fraud, a scammer, there is no way you are better than me!
   - "Listen, Merry, Holo-day isn\u2019t just about the character that embodies it
     or how famous you are. Holo-day is a day to celebrate with your families, it
     is a season to love each other and spread joyfulness all around.  "
-  - "*Merry glitches for a second* \u201CHey! What are you doing? No, this holiday
-    was made for me, I get to decide what it is about!\u201D"
+  - '*Merry glitches for a second* Hey! What are you doing? No, this holiday was
+    made for me, I get to decide what it is about!'
   date2postWhoistalking: 000100
   date3pregamelines:
   - I think this grumpy bug, just wants to ruin Holo-day. It has made you forget
     the value of this day, the fun and inspiration your music has brought made people
     feel more connected to their families and more hopeful about the coming year.
-  - "*Merry glitches once more* \u201CHey, cut that out! We still haven't done our
-    dance battle\u2026\u201D"
+  - "*Merry glitches once more* Hey, cut that out! We still haven't done our dance
+    battle\u2026"
   - How about instead of battling, I take you on this dance to show you the true
     meaning of Holo-day?
   date3preWhoistalking: 010001
   date3postgamelines:
-  - "*Merry relaxes and a smile comes to her face* \u201CWoah! I feel enlightened,
-    joyful, and loved! How did you do that?\u201D"
+  - '*Merry relaxes and a smile comes to her face* Woah! I feel enlightened, joyful,
+    and loved! How did you do that?'
   - 'I learned from the best *you wink at Merry* '
-  - "\u201CYou have such a joyful and caring spirit, I can\u2019t repay you enough
-    for getting that pesky bug out of my system! The show will go on, and I will
-    make sure you have a happy Holo-day\u201D "
+  - "You have such a joyful and caring spirit, I can\u2019t repay you enough for
+    getting that pesky bug out of my system! The show will go on, and I will make
+    sure you have a happy Holo-day "
   - Happy Holo-day Merry, go show them what this day is about!
   date3postWhoistalking: 00010001
   wongamelines:
@@ -98,86 +98,86 @@ MonoBehaviour:
   - BAH HUMBUG, You ruined my festival!
   lostgameWhoistalking: 00
   christmasangrylines:
-  - '"Why friend that outfit is quite eccentric..."'
-  - "\u201CIt is a delight to meet you friend, I am so glad you came, I am an international
-    Holo-day sensation Holo-tsune Merry, but you can call me Merry!\u201D "
+  - Why friend that outfit is quite eccentric...
+  - 'It is a delight to meet you friend, I am so glad you came, I am an international
+    Holo-day sensation Holo-tsune Merry, but you can call me Merry! '
   - 'Merry, it is an honor to assist you! How may I be of service? '
-  - "\u201CWell you see, I have been having some hardware issues recently. I think
-    I may have caught a bug\u2026\u201D "
+  - "Well you see, I have been having some hardware issues recently. I think I may
+    have caught a bug\u2026 "
   - Merry, is everything alright?
-  - "\u201CSkr00g3 mode activated, initiating challenge mode. Hey punk, you know
-    you can\u2019t be talking to a celebrity like me out in public. If you want to
-    be so bold how about I test that might of yours huh?\u201D"
+  - "Skr00g3 mode activated, initiating challenge mode. Hey punk, you know you can\u2019t
+    be talking to a celebrity like me out in public. If you want to be so bold how
+    about I test that might of yours huh?"
   christmasalWhoistalking: 000001000100
   christmasneutrallines:
-  - '"Happy Holo-day friend!"'
-  - "\u201CIt is a delight to meet you friend, I am so glad you came, I am an international
-    Holo-day sensation Holo-tsune Merry, but you can call me Merry!\u201D "
+  - Happy Holo-day friend!
+  - 'It is a delight to meet you friend, I am so glad you came, I am an international
+    Holo-day sensation Holo-tsune Merry, but you can call me Merry! '
   - 'Merry, it is an honor to assist you! How may I be of service? '
-  - "\u201CWell you see, I have been having some hardware issues recently. I think
-    I may have caught a bug\u2026\u201D "
+  - "Well you see, I have been having some hardware issues recently. I think I may
+    have caught a bug\u2026 "
   - Merry, is everything alright?
-  - "\u201CSkr00g3 mode activated, initiating challenge mode. Hey punk, you know
-    you can\u2019t be talking to a celebrity like me out in public. If you want to
-    be so bold how about I test that might of yours huh?\u201D"
-  christmasnlWhoistalking: 000000000000
+  - "Skr00g3 mode activated, initiating challenge mode. Hey punk, you know you can\u2019t
+    be talking to a celebrity like me out in public. If you want to be so bold how
+    about I test that might of yours huh?"
+  christmasnlWhoistalking: 000001000100
   christmashappylines:
-  - "\u201CThat outfit is filled with the Holo-day spirit, I am loving it!\u201D"
-  - "\u201CIt is a delight to meet you friend, I am so glad you came, I am an international
-    Holo-day sensation Holo-tsune Merry, but you can call me Merry!\u201D "
+  - That outfit is filled with the Holo-day spirit, I am loving it!
+  - 'It is a delight to meet you friend, I am so glad you came, I am an international
+    Holo-day sensation Holo-tsune Merry, but you can call me Merry! '
   - 'Merry, it is an honor to assist you! How may I be of service? '
-  - "\u201CWell you see, I have been having some hardware issues recently. I think
-    I may have caught a bug\u2026\u201D "
+  - "Well you see, I have been having some hardware issues recently. I think I may
+    have caught a bug\u2026 "
   - Merry, is everything alright?
-  - "\u201CSkr00g3 mode activated, initiating challenge mode. Hey punk, you know
-    you can\u2019t be talking to a celebrity like me out in public. If you want to
-    be so bold how about I test that might of yours huh?\u201D"
+  - "Skr00g3 mode activated, initiating challenge mode. Hey punk, you know you can\u2019t
+    be talking to a celebrity like me out in public. If you want to be so bold how
+    about I test that might of yours huh?"
   christmashlWhoistalking: 000001000100
   christmasdate2pregamelines:
-  - "\u201CUgh, whatever, you got lucky\u2026\u201D"
+  - "Ugh, whatever, you got lucky\u2026"
   - 'Woah! Okay, something is definitely up with your systems Merry. Do you mind
     if I run a diagnosis real quick? '
-  - "\u201CYes, I do mind! Also, you have no right to call me Merry. I am a celebrity,
-    thus you should treat me as such.\u201D  "
+  - 'Yes, I do mind! Also, you have no right to call me Merry. I am a celebrity,
+    thus you should treat me as such.  '
   - 'This is very odd behavior, your speech pattern has changed, and the tone went
     from your iconic joyfulness to a bitter and angered one. This bug cannot persist
     cause it will ruin the Holo-day Festival! '
-  - "\u201CNothing will ruin the festival if there isn\u2019t one, these folks do
-    not deserve me!\u201D "
+  - "Nothing will ruin the festival if there isn\u2019t one, these folks do not deserve
+    me! "
   - 'That is definitely not good. Well grumpy, what can I do to bring the Holo-day
     spirit back to you? '
-  - "\u201CNo way, I\u2019m telling you that\u2026unless you can beat me in Snow
-    Run, and a Dance-Off, then maybe I will consider it.\u201D "
+  - "No way, I\u2019m telling you that\u2026unless you can beat me in Snow Run, and
+    a Dance-Off, then maybe I will consider it. "
   - "You are stubborn\u2026fine!"
   christmasdate2preWhoistalking: 0001000100010001
   christmasdate2postgamelines:
-  - "\u201CBAH! You are a fraud, a scammer, there is no way you are better than me!\u201D"
+  - BAH! You are a fraud, a scammer, there is no way you are better than me!
   - "Listen, Merry, Holo-day isn\u2019t just about the character that embodies it
     or how famous you are. Holo-day is a day to celebrate with your families, it
     is a season to love each other and spread joyfulness all around.  "
-  - "*Merry glitches for a second* \u201CHey! What are you doing? No, this holiday
-    was made for me, I get to decide what it is about!\u201D"
+  - '*Merry glitches for a second* Hey! What are you doing? No, this holiday was
+    made for me, I get to decide what it is about!'
   christmasdate2postWhoistalking: 000100
   christmasdate3pregamelines:
   - I think this grumpy bug, just wants to ruin Holo-day. It has made you forget
     the value of this day, the fun and inspiration your music has brought made people
     feel more connected to their families and more hopeful about the coming year.
-  - "*Merry glitches once more* \u201CHey, cut that out! We still haven't done our
-    dance battle\u2026\u201D"
+  - "*Merry glitches once more* Hey, cut that out! We still haven't done our dance
+    battle\u2026"
   - How about instead of battling, I take you on this dance to show you the true
     meaning of Holo-day?
   christmasdate3preWhoistalking: 010001
   christmasdate3postgamelines:
-  - "*Merry relaxes and a smile comes to her face* \u201CWoah! I feel enlightened,
-    joyful, and loved! How did you do that?\u201D"
+  - '*Merry relaxes and a smile comes to her face* Woah! I feel enlightened, joyful,
+    and loved! How did you do that?'
   - 'I learned from the best *you wink at Merry* '
-  - "\u201CYou have such a joyful and caring spirit, I can\u2019t repay you enough
-    for getting that pesky bug out of my system! The show will go on, and I will
-    make sure you have a happy Holo-day\u201D "
+  - "You have such a joyful and caring spirit, I can\u2019t repay you enough for
+    getting that pesky bug out of my system! The show will go on, and I will make
+    sure you have a happy Holo-day "
   - Happy Holo-day Merry, go show them what this day is about!
   christmasdate3postWhoistalking: 00010001
   christmaswongamelines:
-  - '*Merry glitches out* "Happy Holo-day!"'
+  - '*Merry glitches out* Happy Holo-day!'
   christmaswongameWhoistalking: 00
   christmaslostgamelines:
   - BAH HUMBUG, You ruined my festival!
