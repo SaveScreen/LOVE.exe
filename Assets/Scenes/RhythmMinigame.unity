@@ -1729,7 +1729,7 @@ GameObject:
   - component: {fileID: 1126797146}
   - component: {fileID: 1126797148}
   m_Layer: 0
-  m_Name: Game Manager
+  m_Name: GAME CONTROLLER
   m_TagString: Rhythmgame
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
