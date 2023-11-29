@@ -87,4 +87,94 @@ MonoBehaviour:
   lostgamelines:
   - "\u201CWhy did I ever trust in a stupid robot? This blows\u201D"
   lostgameWhoistalking: 00
+  christmasangrylines:
+  - Jett! Merry Holo-day! I am pleased to see you again!
+  - "Hey\u2026 Merry Holo-day. It\u2019s been a while. "
+  - 'My systems feel as though you might be sad, you do not seem very festive either.
+    Are you okay? '
+  - "Y-yeah. I mean\u2026 I thought about your advice and I actually talked and befriended
+    my roommate. She\u2019s actually pretty cool, we had a lot in common."
+  - "That\u2019s fantastic, Jett! I am very glad you have followed my advice and
+    made yourself a friend! This is fantastic news but, why are you sad?"
+  - "Hm\u2026 Come take a walk outside with me real quick."
+  christmasalWhoistalking: 010001000100
+  christmasneutrallines:
+  - Jett! Merry Holo-day! I am pleased to see you again!
+  - "Hey\u2026 Merry Holo-day. It\u2019s been a while. "
+  - 'My systems feel as though you might be sad, you do not seem very festive either.
+    Are you okay? '
+  - "Y-yeah. I mean\u2026 I thought about your advice and I actually talked and befriended
+    my roommate. She\u2019s actually pretty cool, we had a lot in common."
+  - "That\u2019s fantastic, Jett! I am very glad you have followed my advice and
+    made yourself a friend! This is fantastic news but, why are you sad?"
+  - "Hm\u2026 Come take a walk outside with me real quick."
+  christmasnlWhoistalking: 010001000100
+  christmashappylines:
+  - Jett! Merry Holo-day! I am pleased to see you again!
+  - "Hey\u2026 Merry Holo-day. It\u2019s been a while. "
+  - 'My systems feel as though you might be sad, you do not seem very festive either.
+    Are you okay? '
+  - "Y-yeah. I mean\u2026 I thought about your advice and I actually talked and befriended
+    my roommate. She\u2019s actually pretty cool, we had a lot in common."
+  - "That\u2019s fantastic, Jett! I am very glad you have followed my advice and
+    made yourself a friend! This is fantastic news but, why are you sad?"
+  - "Hm\u2026 Come take a walk outside with me real quick."
+  christmashlWhoistalking: 010001000100
+  christmasdate2pregamelines:
+  - Jett, what were you saying before?
+  - "She\u2019s great. Really she is. Only problem is, she actually has family and
+    went to visit them for Holo-day season. Really happy for her, just makes me feel
+    bad for not having anyone left to spend it with."
+  - "I understand your loneliness this season, Jett. I am here to spend time with
+    you and I will be able to accompany you this whole season if you\u2019d like.
+    Let\u2019s go play some arcade games!"
+  christmasdate2preWhoistalking: 010001
+  christmasdate2postgamelines:
+  - A new high score on the new mode, nice!
+  - 'Thanks for what you said, I might have to take you up on that offer. '
+  - How were your Holo-days in the past spent in the past? My database tells me you
+    never reached out to our company before.
+  - "Quiet. I was really used to being alone y\u2019know? Never even considered spending
+    a Holo-day with other people. It was actually last Holo-day that I received an
+    ad for Robot Companions and didn\u2019t decide to go for it until my parent\u2019s
+    anniversary passed. I really miss them both."
+  - "My roommate was gonna initially spend it with me, she\u2019s also had plenty
+    of Holo-days alone. This year her parents reached out and she\u2019s gonna go
+    talk with them after a long time. I\u2019m happy for her, really. That\u2019s
+    why I didn't tell her I was gonna be alone. "
+  - "Man, this is lame. Let\u2019s go dance or something."
+  christmasdate2postWhoistalking: 000001000000
+  christmasdate3pregamelines:
+  - A new high score on the new mode, nice!
+  - 'Thanks for what you said, I might have to take you up on that offer. '
+  - How were your Holo-days in the past spent in the past? My database tells me you
+    never reached out to our company before.
+  - "Quiet. I was really used to being alone y\u2019know? Never even considered spending
+    a Holo-day with other people. It was actually last Holo-day that I received an
+    ad for Robot Companions and didn\u2019t decide to go for it until my parent\u2019s
+    anniversary passed. I really miss them both."
+  - "My roommate was gonna initially spend it with me, she\u2019s also had plenty
+    of Holo-days alone. This year her parents reached out and she\u2019s gonna go
+    talk with them after a long time. I\u2019m happy for her, really. That\u2019s
+    why I didn't tell her I was gonna be alone. "
+  - "Man, this is lame. Let\u2019s go dance or something."
+  christmasdate3preWhoistalking: 000001000000
+  christmasdate3postgamelines:
+  - 'Jett, you had some incredible moves out there! As for your roommate, I understand
+    you do not want to burden your friends but friends will be there for you as I
+    am! You should not lie about your circumstances just to not feel like a burden. '
+  - "Yeah.. I guess you\u2019re right\u2026 Oh I just got a text from her... Woah."
+  - '*Jett pauses for a moment, reading through as her face brightens*'
+  - "She asked me to come visit her parents with her, she said she didn\u2019t feel
+    super comfortable going alone anyway and her parents told her I could come."
+  - Jett, that is wonderful news! I am glad it all worked out.
+  - "Thanks for talking with me\u2026 I\u2019m gonna head home to pack\u2026 Merry
+    Holo-day. "
+  christmasdate3postWhoistalking: 010000000100
+  christmaswongamelines:
+  - "Nice kick, it\u2019s pretty outside\u2026"
+  christmaswongameWhoistalking: 00
+  christmaslostgamelines:
+  - "I\u2019m just gonna look away\u2026"
+  christmaslostgameWhoistalking: 00
   minigameOrder: 010000000200000003000000
