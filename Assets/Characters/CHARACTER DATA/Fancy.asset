@@ -99,4 +99,80 @@ MonoBehaviour:
   - "\u201CSitting outside and just playing a measly little sport seems like such
     a waste of time. I could be making money right now\u2026 But I feel so relaxed.\u201D"
   lostgameWhoistalking: 000100
+  christmasangrylines:
+  - 'Merry Holo-day, Frills! I am excited to see you again, how are you feeling this
+    Holo-day Season? '
+  - "Hi, I\u2019ve been fabulous, darling! I actually just got back from Singapulse
+    City! On a business trip, of course. The only problem is we\u2019re under new
+    management and I was just informed I don\u2019t have another work assignment."
+  - That is wonderful news, Frills! I am very excited for you to finally take a break!
+    Why is that a problem?
+  - "It is NOT wonderful news! I\u2019ve never had a Holo-day break and for a WHOLE
+    MONTH? That\u2019s ridiculous. What in the world am I going to do with all of
+    this free time? "
+  - "Let\u2019s go observe the snow outside! I sense you getting more and more distressed."
+  christmasalWhoistalking: 0100010001
+  christmasneutrallines:
+  - 'Merry Holo-day, Frills! I am excited to see you again, how are you feeling this
+    Holo-day Season? '
+  - "Hi, I\u2019ve been fabulous, darling! I actually just got back from Singapulse
+    City! On a business trip, of course. The only problem is we\u2019re under new
+    management and I was just informed I don\u2019t have another work assignment."
+  - That is wonderful news, Frills! I am very excited for you to finally take a break!
+    Why is that a problem?
+  - "It is NOT wonderful news! I\u2019ve never had a Holo-day break and for a WHOLE
+    MONTH? That\u2019s ridiculous. What in the world am I going to do with all of
+    this free time? "
+  - "Let\u2019s go observe the snow outside! I sense you getting more and more distressed."
+  christmasnlWhoistalking: 0100010001
+  christmashappylines:
+  - 'Merry Holo-day, Frills! I am excited to see you again, how are you feeling this
+    Holo-day Season? '
+  - "Hi, I\u2019ve been fabulous, darling! I actually just got back from Singapulse
+    City! On a business trip, of course. The only problem is we\u2019re under new
+    management and I was just informed I don\u2019t have another work assignment."
+  - That is wonderful news, Frills! I am very excited for you to finally take a break!
+    Why is that a problem?
+  - "It is NOT wonderful news! I\u2019ve never had a Holo-day break and for a WHOLE
+    MONTH? That\u2019s ridiculous. What in the world am I going to do with all of
+    this free time? "
+  - "Let\u2019s go observe the snow outside! I sense you getting more and more distressed."
+  christmashlWhoistalking: 0100010001
+  christmasdate2pregamelines:
+  - "The snow is very pretty\u2026 has it always looked so nice out during this season?
+    I\u2019m always flying in and out of Technopolis, I rarely see it during the
+    day.  "
+  - 'Frills, I understand you love your job, but I believe you should take advantage
+    of this opportunity! You will be able to sleep in, wear whatever you want, and
+    do whatever you want for a whole month! '
+  - "My whole life has always revolved around my career, I don\u2019t even have any
+    hobbies! That\u2019s so terrifying\u2026. Oh, it\u2019s so dramatic\u2026 How
+    exciting!  "
+  - "Come, darling, show me that silly little arcade game again! I\u2019m dying to
+    see what bored people do!"
+  christmasdate2preWhoistalking: 00010000
+  christmasdate2postgamelines:
+  - Wow, and a High score at that? Do people really sit around doing this all day?
+    Oh how funny!
+  - Your mood has increased significantly! I am glad to see it, Frills!
+  christmasdate2postWhoistalking: 0001
+  christmasdate3pregamelines:
+  - "Of course, Darling! This is an interesting way for me to see how regular people
+    live and pretend I\u2019m one! Of course, also attending all the fabulous Holo-day
+    raves! I have so many outfits I\u2019ve never had the chance to wear! "
+  - 'Come, Darling, practice with me on the dance floor! '
+  christmasdate3preWhoistalking: 0000
+  christmasdate3postgamelines:
+  - 'Fantastic moves! Oh I am going to look SO GOOD at this Holo-day Rave! I have
+    so much time to try on different outfits! '
+  - Frills! I am very excited to see your Holo-day rave outfit! You are quite the
+    fashionista!
+  - Thank you, angel! Oh! I have so much to do, I am off Darling! Toodle-oo!! Kisses!!
+  christmasdate3postWhoistalking: 000100
+  christmaswongamelines:
+  - Fantastic darling!
+  christmaswongameWhoistalking: 00
+  christmaslostgamelines:
+  - "How\u2026. Embarrassing. I\u2019m going to pretend I don\u2019t know you!"
+  christmaslostgameWhoistalking: 00
   minigameOrder: 010000000200000003000000
