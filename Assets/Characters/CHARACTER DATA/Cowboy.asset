@@ -164,8 +164,8 @@ MonoBehaviour:
   christmasdate3postWhoistalking: 0001
   christmaswongamelines:
   - '"YEEHAW!"'
-  christmaswongameWhoistalking: 
+  christmaswongameWhoistalking: 00
   christmaslostgamelines:
   - '"Darn, partner it''s alright, we can try that again later."'
-  christmaslostgameWhoistalking: 
+  christmaslostgameWhoistalking: 00
   minigameOrder: 010000000200000003000000

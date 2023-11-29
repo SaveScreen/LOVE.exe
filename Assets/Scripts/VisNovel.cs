@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using UnityEngine.InputSystem;
-using System;
+using Unity.VisualScripting;
 
 public class VisNovel : MonoBehaviour
 {
@@ -27,38 +27,48 @@ public class VisNovel : MonoBehaviour
     public GameObject Angry1;
     public GameObject Neutral1;
     public GameObject Happy1;
+    public GameObject christmasCowboy;
 
     public GameObject Angry2;
     public GameObject Neutral2;
     public GameObject Happy2;
+    public GameObject christmasGoth;
 
     public GameObject Angry3;
     public GameObject Neutral3;
     public GameObject Happy3;
+    public GameObject christmasFancy;
+    
     [Header("Gamer Girl")]
     public GameObject Angry4;
     public GameObject Neutral4;
     public GameObject Happy4;
+    public GameObject christmasGamergirl;
     [Header("Bouldergarde")]
     public GameObject Angry5;
     public GameObject Neutral5;
     public GameObject Happy5;
+    public GameObject christmasBouldergarde;
     [Header("Twink")]
     public GameObject Angry6;
     public GameObject Neutral6;
     public GameObject Happy6;
+    public GameObject christmasTwink;
     [Header("Scammer")]
     public GameObject Angry7;
     public GameObject Neutral7;
     public GameObject Happy7;
+    public GameObject christmasScammer;
     [Header("Wrestler")]
     public GameObject Angry8;
     public GameObject Neutral8;
     public GameObject Happy8;
+    public GameObject christmasWrestler;
     [Header("Shopkeeper")]
     public GameObject Angry9;
     public GameObject Neutral9;
     public GameObject Happy9;
+    public GameObject christmasShopkeeper;
     [Header("Shopkeeper")]
     public GameObject Angry10;
     public GameObject Neutral10;
@@ -67,6 +77,7 @@ public class VisNovel : MonoBehaviour
     [Header("Backgrounds")]
     public GameObject normalbg;
     public GameObject christmasbg;
+    public GameObject christmasparticle;
 
     public InputActionAsset inputs;
     private InputAction click;
@@ -92,14 +103,33 @@ public class VisNovel : MonoBehaviour
         DatePref();
         playedGame = playerdata.GetPlayedGame();
         isChristmas = playerdata.GetChristmasTime();
+        Debug.Log("ischristmas" + isChristmas);
 
         if (isChristmas) {
             normalbg.SetActive(false);
             christmasbg.SetActive(true);
+            christmasparticle.SetActive(true);
+            christmasCowboy.SetActive(true);
+            christmasGoth.SetActive(true);
+            christmasFancy.SetActive(true);
+            christmasBouldergarde.SetActive(true);
+            christmasScammer.SetActive(true);
+            christmasTwink.SetActive(true);
+            christmasShopkeeper.SetActive(true);
+            christmasGamergirl.SetActive(true);
         }
         else {
             normalbg.SetActive(true);
             christmasbg.SetActive(false);
+            christmasparticle.SetActive(false);
+            christmasCowboy.SetActive(false);
+            christmasGoth.SetActive(false);
+            christmasFancy.SetActive(false);
+            christmasBouldergarde.SetActive(false);
+            christmasScammer.SetActive(false);
+            christmasTwink.SetActive(false);
+            christmasShopkeeper.SetActive(false);
+            christmasGamergirl.SetActive(false);
         }
       
 
@@ -174,6 +204,7 @@ public class VisNovel : MonoBehaviour
     {
         Date1Choice.SetActive(true);
         dateref = 1;
+        
         switch (state)
         {
             case 1:
