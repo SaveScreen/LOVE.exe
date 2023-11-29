@@ -69,7 +69,7 @@ public class ShootingMinigameControler : MonoBehaviour
 
         respawntime = timer;
         starttimer = timer;
-        timerinseconds = 1;
+        timerinseconds = 3;
 
         gamestarted = false;
         speedtext.text = "Circle/s: " + respawntime;
@@ -78,6 +78,7 @@ public class ShootingMinigameControler : MonoBehaviour
         gameoverscreen.SetActive(false);
         endlessgameoverscreen.SetActive(false);
 
+        endlesscountdown.text = timerinseconds.ToString();
     }
 
     // Update is called once per frame
@@ -107,6 +108,30 @@ public class ShootingMinigameControler : MonoBehaviour
         {
             hiscore = score;
             hiscoretext.text = "Hiscore: " + hiscore;
+        }
+
+        if (!gamestarted)
+        {
+            countdowntimer -= Time.deltaTime;
+            endlesscountdown.text = timerinseconds.ToString();
+            if (countdowntimer <= 3 && timerinseconds == 0)
+            {
+                timerinseconds = 3;
+            }
+            else if (countdowntimer < 2 && timerinseconds == 3)
+            {
+                timerinseconds = 2;
+            }
+            else if (countdowntimer < 1 && timerinseconds == 2)
+            {
+                timerinseconds = 1;
+            }
+            else if (countdowntimer < 0 && timerinseconds == 1)
+            {
+                countdowntimer = 0;
+                endlesscountdown.text = "GO!";
+                StartCoroutine(TimerText());
+            }
         }
     }
 
