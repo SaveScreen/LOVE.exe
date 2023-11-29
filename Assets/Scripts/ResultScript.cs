@@ -85,12 +85,28 @@ public class ResultScript : MonoBehaviour
     public GameObject RankA;
     public GameObject RankS;
 
+    private bool isChristmas;
+    public GameObject[] chrimsOverlays;
+    
+
     // Start is called before the first frame update
     void Start()
     {
+        isChristmas = playerdata.GetChristmasTime();
         moneyData = moneyContainer.GetComponent<MONEYScript>();
         DisplayResult();
         //RankC.SetActive(false); RankB.SetActive(false); RankA.SetActive(false); RankS.SetActive(false);
+        
+        //GameObject[] chrimsOverlays;
+        //chrimsOverlays = GameObject.FindGameObjectsWithTag("crims");
+        
+        if(isChristmas)
+        {
+            foreach (GameObject obj in chrimsOverlays)
+            {
+                obj.SetActive(true);
+            }
+        }
     }
 
     public void DisplayResult()

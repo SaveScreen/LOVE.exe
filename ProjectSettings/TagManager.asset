@@ -10,6 +10,7 @@ TagManager:
   - wall
   - SnakeFood
   - ShootTarget
+  - crims
   layers:
   - Default
   - TransparentFX
