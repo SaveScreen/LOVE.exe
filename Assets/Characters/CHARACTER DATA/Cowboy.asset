@@ -102,4 +102,70 @@ MonoBehaviour:
   lostgamelines:
   - "\u201CYou are going to try harder than that to impress me, partner.\u201D"
   lostgameWhoistalking: 00
+  christmasangrylines:
+  - '"Woah partner, it''s Holo-day, ain''t you got a more festive outfit..."'
+  - Seasons Greetings Jimothy! As a part of the Holo-day Initiative, Better Living
+    Co. has sent me on a mission to make sure our patrons are having a happy holo-day.
+  - "\u201COh isn\u2019t that lovely, I will say this time of year makes me incredibly
+    sentimental\u2026\u201D"
+  - 'This time of year often makes us miss the years in which we were small children
+    enjoying the changing seasons and intimate moments with those close to us. '
+  - "\u201CYou\u2019re darn right, I remember every year me and my pa would go out
+    and toss the old pigskin around\u201D"
+  - Perhaps we partake in this action to regain that nostalgic Holo-day feeling!
+  christmasalWhoistalking: 000100010001
+  christmasneutrallines:
+  - "\u201CWhy hello partner! Happy Holo-day, I sure hope you\u2019ve been having
+    a swell season!\u201D "
+  - Seasons Greetings Jimothy! As a part of the Holo-day Initiative, Better Living
+    Co. has sent me on a mission to make sure our patrons are having a happy Holo-day.
+  - "\u201COh isn\u2019t that lovely, I will say this time of year makes me incredibly
+    sentimental\u2026\u201D"
+  - 'This time of year often makes us miss the years in which we were small children
+    enjoying the changing seasons and intimate moments with those close to us. '
+  - "\u201CYou\u2019re darn right, I remember every year me and my pa would go out
+    and toss the old pigskin around\u201D"
+  - Perhaps we partake in this action to regain that nostalgic Holo-day feeling!
+  christmasnlWhoistalking: 000100010001
+  christmashappylines:
+  - "\u201CWhy hello partner! Happy Holo-day, I sure hope you\u2019ve been having
+    a swell season!\u201D "
+  - Seasons Greetings Jimothy! As a part of the Holo-day Initiative, Better Living
+    Co. has sent me on a mission to make sure our patrons are having a happy Holo-day.
+  - "\u201COh isn\u2019t that lovely, I will say this time of year makes me incredibly
+    sentimental\u2026\u201D "
+  - 'This time of year often makes us miss the years in which we were small children
+    enjoying the changing seasons and intimate moments with those close to us. '
+  - "\u201CYou\u2019re darn right, I remember every year me and my pa would go out
+    and toss the old pigskin around\u201D"
+  - Perhaps we partake in this action to regain that nostalgic Holo-day feeling!
+  christmashlWhoistalking: 000100010001
+  christmasdate2pregamelines:
+  - "\u201CWell, well that did quite make me feel like I was right at home, partner!\u201D"
+  - 'Of course Jimothy, one deserves to feel like they are loved and secure on Holo-days! '
+  - "\u201CY\u2019know, my siblings always loved playing that arcade game there,
+    if my memory serves me right, around the holidays they swap it out for a Holo-day-themed
+    cabinet we should check it out!\u201D"
+  christmasdate2preWhoistalking: 000100
+  christmasdate2postgamelines:
+  - How did that make you feel Jimothy?
+  - "*Jimothy laughs loudly * \u201CMy, my I forgot how fun that game is, thank you
+    again bot.\u201D "
+  christmasdate2postWhoistalking: 0100
+  christmasdate3pregamelines:
+  - "\u201C I think if we truly want to make this a nostalgic Holo-day, we gotta
+    have a good old fashion Holo-day hoedown!\u201D"
+  - '*reconfiguring speech parameters* YEE YEE! Let''s dance partner!'
+  christmasdate3preWhoistalking: 0001
+  christmasdate3postgamelines:
+  - "\u201CMy, my you sure made my Holo-day one to remember partner. I hope the rest
+    of your season is filled with love and care\u201D "
+  - Have a happy Holo-day Jimothy!
+  christmasdate3postWhoistalking: 0001
+  christmaswongamelines:
+  - '"YEEHAW!"'
+  christmaswongameWhoistalking: 
+  christmaslostgamelines:
+  - '"Darn, partner it''s alright, we can try that again later."'
+  christmaslostgameWhoistalking: 
   minigameOrder: 010000000200000003000000
