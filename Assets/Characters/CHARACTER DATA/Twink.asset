@@ -118,4 +118,75 @@ MonoBehaviour:
   - "Ugh, I\u2019m tired of you, don\u2019t call or text me back\u2026"
   - I know you do better than that, in fact, you will do better than that!
   lostgameWhoistalking: 00
+  christmasangrylines:
+  - '"What a dreadful Holo-day outfit..."'
+  - 'Good evening Pierre, and a very happy Holo-day to you! '
+  - "\u201CAh yes, a very happy Holo-day for me, it is my favorite time of the year!\u201D"
+  - That is perfect! This season Better Living Co. has tasked me with making your
+    Holo-day truly delightful!
+  - "\u201COf course, and there is only one way to do that! Give me GIFTS!\u201D"
+  - "Excuse me\u2026I am afraid the initiative has explicitly stated we cannot indulge
+    in your selfish needs, Pierre."
+  - "\u201CDoes not matter. Let us enjoy the Holo-day, they are betting at the football
+    field, whoever can hit a ball into a field goal will get five hundred dollars!
+    That\u2019s more than enough to spend on me!\u201D"
+  christmasalWhoistalking: 00010001000100
+  christmasneutrallines:
+  - 'Good evening Pierre, and a very happy Holo-day to you! '
+  - "\u201CAh yes, a very happy Holo-day for me, it is my favorite time of the year!\u201D"
+  - That is perfect! This season Better Living Co. has tasked me with making your
+    Holo-day truly delightful!
+  - "\u201COf course, and there is only one way to do that! Give me GIFTS!\u201D"
+  - "Excuse me\u2026I am afraid the initiative has explicitly stated we cannot indulge
+    in your selfish needs, Pierre."
+  - "\u201CDoes not matter. Let us enjoy the Holo-day, they are betting at the football
+    field, whoever can hit a ball into a field goal will get five hundred dollars!
+    That\u2019s more than enough to spend on me!\u201D"
+  christmasnlWhoistalking: 010001000100
+  christmashappylines:
+  - '"Happy Holo-day to you, you beautiful bot!"'
+  - 'Good evening Pierre, and a very happy Holo-day to you! '
+  - "\u201CAh yes, a very happy Holo-day for me, it is my favorite time of the year!\u201D"
+  - That is perfect! This season Better Living Co. has tasked me with making your
+    Holo-day truly delightful!
+  - "\u201COf course, and there is only one way to do that! Give me GIFTS!\u201D"
+  - "Excuse me\u2026I am afraid the initiative has explicitly stated we cannot indulge
+    in your selfish needs, Pierre."
+  - "\u201CDoes not matter. Let us enjoy the Holo-day, they are betting at the football
+    field, whoever can hit a ball into a field goal will get five hundred dollars!
+    That\u2019s more than enough to spend on me!\u201D"
+  christmashlWhoistalking: 00010001000100
+  christmasdate2pregamelines:
+  - "\u201COh, darling! I knew you cared for me, thanks for winning for me!\u201D
+    *Pierre winks at you and takes the prize money*"
+  - I really do not think this is a healthy way to spend your Holo-day Pierre, perhaps
+    you should wait for gifts to be given to you rather than forcing me to purchase
+    your gifts.
+  - "\u201CNope! This season is about giving, and it is all mine. There is a snow
+    run tourney in a bit, and the prize is another five hundred dollars! Let\u2019s
+    go!\u201D"
+  christmasdate2preWhoistalking: 000100
+  christmasdate2postgamelines:
+  - "*Pierre snatches the money from your hands* \u201COne thousand bucks to spend
+    on your special guy! You are so sweet!\u201D"
+  - 'Pause, before we do anything else, Pierre, why are you so adamant about having
+    money to buy your gifts? Should you not wait for the gifts to be given? '
+  christmasdate2postWhoistalking: 0001
+  christmasdate3pregamelines:
+  - "\u201C...Listen, my mom and dad never let me have a proper Holo-day. I am just
+    trying to enjoy the freedom and joy from someone making me feel special.\u201D "
+  - "Come with me Pierre, again you are special and you don\u2019t need to force
+    someone to buy you things "
+  christmasdate3preWhoistalking: 0001
+  christmasdate3postgamelines:
+  - "*Pierre slightly cries* \u201CThank you so much, you have made my Holo-day much
+    more wonderful!\u201D"
+  - Of course, Pierre, have a lovely Holo-day!
+  christmasdate3postWhoistalking: 0001
+  christmaswongamelines:
+  - '"Yippie! Oh you are so wonderful!"'
+  christmaswongameWhoistalking: 00
+  christmaslostgamelines:
+  - '"Really? No way you lost, do it again!"'
+  christmaslostgameWhoistalking: 00
   minigameOrder: 010000000200000003000000
