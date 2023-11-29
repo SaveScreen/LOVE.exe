@@ -89,4 +89,72 @@ MonoBehaviour:
     be clowned.\u201D"
   - "\u201CI knew this was an awful idea, I wanna go back home. \u201C"
   lostgameWhoistalking: 00
+  christmasangrylines:
+  - Hello Rosaline! I see you have been vlogging quite frequently! I am very happy
+    for your newfound confidence!
+  - "Hey!! Ohmigosh, it\u2019s so nice to see you again!! I\u2019ve been trying my
+    best.. Mostly vlogging my rhythm game scores for my chat! I\u2019ve been training
+    all year to partake in Vlogmas for my chat! "
+  - "That is wonderful Rosaline! I am very happy to hear you\u2019ve been doing a
+    lot better! Let\u2019s go take a walk together as you tell me more about your
+    adventures!"
+  christmasalWhoistalking: 010001
+  christmasneutrallines:
+  - Hello Rosaline! I see you have been vlogging quite frequently! I am very happy
+    for your newfound confidence!
+  - "Hey!! Ohmigosh, it\u2019s so nice to see you again!! I\u2019ve been trying my
+    best.. Mostly vlogging my rhythm game scores for my chat! I\u2019ve been training
+    all year to partake in Vlogmas for my chat! "
+  - "That is wonderful Rosaline! I am very happy to hear you\u2019ve been doing a
+    lot better! Let\u2019s go take a walk together as you tell me more about your
+    adventures!"
+  christmasnlWhoistalking: 010001
+  christmashappylines:
+  - Hello Rosaline! I see you have been vlogging quite frequently! I am very happy
+    for your newfound confidence!
+  - "Hey!! Ohmigosh, it\u2019s so nice to see you again!! I\u2019ve been trying my
+    best.. Mostly vlogging my rhythm game scores for my chat! I\u2019ve been training
+    all year to partake in Vlogmas for my chat! "
+  - "That is wonderful Rosaline! I am very happy to hear you\u2019ve been doing a
+    lot better! Let\u2019s go take a walk together as you tell me more about your
+    adventures!"
+  christmashlWhoistalking: 010001
+  christmasdate2pregamelines:
+  - " Anyway, as i\u2019ve been saying I\u2019ve been getting a lot more comfortable
+    showing my face on camera! My chat even says I\u2019m cute when I get shy!!"
+  - 'I am very proud of your progress, Rosaline. You have grown so much. There is
+    a new update for Brain Run Holo-day edition, would you like to check it out? '
+  - "THERES A NEW UPDATE??? LET\u2019S GO LET\u2019S GO LET\u2019S GO! "
+  christmasdate2preWhoistalking: 000100
+  christmasdate2postgamelines:
+  - 'That was INCREDIBLE.  '
+  - "Say, you don\u2019t happen to have any connections with stores if certain items
+    would make your customers reaaaaally happy right?"
+  - As a matter of fact, we are partnered with many large corporations specializing
+    in clothing and other entertainment goods! We stay equipped with different ways
+    to keep our customers happy!
+  christmasdate2postWhoistalking: 000001
+  christmasdate3pregamelines:
+  - Okay okay.. You know what would make me reaaaaaally happy?
+  - Please tell me, Rosaline!
+  - "The new TechnoQuest Rift 6!!! I\u2019ve been DYING to buy it but it's sold out
+    EVERYWHERE!  "
+  - Let me scan my databases for the TechnoQuest Rift 6. Let us dance while my systems
+    are processing!
+  christmasdate3preWhoistalking: 00010001
+  christmasdate3postgamelines:
+  - "LET\u2019S GO ROBO! LET\u2019S GO!! You should try out Dance Dance Technolution
+    with me!! I think you\u2019d be a great partner."
+  - I would love to do that for another date, Rosaline! According to my systems,
+    GameStart has one available near us! I have left their service bot a notification
+    to keep it on hold for you.
+  - 'ARE YOU SERIOUS? I could really kiss you!! Thank you soooo much, Oh my gosh!
+    Okay okay, Merry Holo-day!! I gotta go!! '
+  christmasdate3postWhoistalking: 000100
+  christmaswongamelines:
+  - "AWESOME!!! You\u2019re so cool!! "
+  christmaswongameWhoistalking: 
+  christmaslostgamelines:
+  - Well.. at least I wasn't streaming that, that was awful.
+  christmaslostgameWhoistalking: 
   minigameOrder: 010000000200000003000000
