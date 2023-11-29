@@ -15,12 +15,21 @@ public class StartMenuController : MonoBehaviour
     [SerializeField] private RawImage _img;
     [SerializeField] private float _x, _y;
 
+    //Holoday ad
+    public GameObject Ad;
+
     private void Update()
     {
      if (Input.GetMouseButtonDown(0))
         {
             StartScreenSound.Play();
-            FadeToLevel(1);
+
+            Ad.SetActive(false);
+
+            if(!Ad.active)
+            {
+                FadeToLevel(1);
+            }
             
             PlayerData playerdata = player.GetComponent<PlayerData>();
             playerdata.InitialFileCheck();
