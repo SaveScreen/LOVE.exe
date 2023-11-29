@@ -64,6 +64,10 @@ public class VisNovel : MonoBehaviour
     public GameObject Neutral10;
     public GameObject Happy10;
 
+    [Header("Backgrounds")]
+    public GameObject normalbg;
+    public GameObject christmasbg;
+
     public InputActionAsset inputs;
     private InputAction click;
     private bool clicked;
@@ -73,6 +77,7 @@ public class VisNovel : MonoBehaviour
     public int datemoodref;
     public float playerRating;
     private bool playedGame;
+    private bool isChristmas;
 
     void Start()
     {
@@ -86,6 +91,16 @@ public class VisNovel : MonoBehaviour
         datemoodref = 0;
         DatePref();
         playedGame = playerdata.GetPlayedGame();
+        isChristmas = playerdata.GetChristmasTime();
+
+        if (isChristmas) {
+            normalbg.SetActive(false);
+            christmasbg.SetActive(true);
+        }
+        else {
+            normalbg.SetActive(true);
+            christmasbg.SetActive(false);
+        }
       
 
     }
