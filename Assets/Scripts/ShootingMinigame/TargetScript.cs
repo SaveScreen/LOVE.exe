@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TargetScript : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class TargetScript : MonoBehaviour
     public int scoreValue;
 
     public float TimeUp;
+    public TMP_Text ScoreValueText;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +42,7 @@ public class TargetScript : MonoBehaviour
         spawnpos = transform.position;
         minigamemaster = GameObject.FindWithTag("Rhythmgame");
         SMC = minigamemaster.GetComponent<ShootingMinigameControler>();
+        ScoreValueText.text = "" + scoreValue;
     }
 
     // Update is called once per frame
