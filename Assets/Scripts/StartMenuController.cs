@@ -28,7 +28,11 @@ public class StartMenuController : MonoBehaviour
 
             if(!Ad.active)
             {
-                FadeToLevel(1);
+                if (Input.GetMouseButtonDown(0) && !Ad.active)
+                {
+                        FadeToLevel(1);
+                }
+                
             }
             
             PlayerData playerdata = player.GetComponent<PlayerData>();
