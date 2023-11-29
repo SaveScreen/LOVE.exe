@@ -109,75 +109,74 @@ MonoBehaviour:
   - WITCH! Back away, foul being before I slay you!
   lostgameWhoistalking: 00
   christmasangrylines:
-  - "\u201CDREADFUL WITCH STAND BACK!\u201D"
+  - DREADFUL WITCH STAND BACK!
   - Happy Holo-day Sir Bouldegaurde, as a part of the Better Living-
-  - "\u201CI need your help! Oh I know it\u2019s Holo-day but I need your help!\u201D "
+  - "I need your help! Oh I know it\u2019s Holo-day but I need your help! "
   - 'Oh why I can assist with your troubles, after all we are making sure your Holo-day
     is merry and bright. '
-  - "\u201CRight now, it is quite dreadful and desolate\u2026I need to get my mind
-    off of my recent Taverns and Trolls campaign.\u201D"
+  - "Right now, it is quite dreadful and desolate\u2026I need to get my mind off
+    of my recent Taverns and Trolls campaign."
   - "Let\u2019s go get some fresh air, and relax for a second sir."
   christmasalWhoistalking: 000100010001
   christmasneutrallines:
-  - "\u201CAh, if it isn\u2019t the Cybernetic Dating Bot, come to bless my Holo-day?\u201D"
+  - "Ah, if it isn\u2019t the Cybernetic Dating Bot, come to bless my Holo-day?"
   - Happy Holo-day Sir Bouldegaurde, as a part of the Better Living-
-  - "\u201CI need your help! Oh I know it\u2019s Holo-day but I need your help!\u201D"
+  - "I need your help! Oh I know it\u2019s Holo-day but I need your help!"
   - Oh why I can assist with your troubles, after all we are making sure your Holo-day
     is merry and bright.
-  - "\u201CRight now, it is quite dreadful and desolate\u2026I need to get my mind
-    off of my recent Taverns and Trolls campaign.\u201D"
+  - "Right now, it is quite dreadful and desolate\u2026I need to get my mind off
+    of my recent Taverns and Trolls campaign."
   - "Let\u2019s go get some fresh air, and relax for a second sir."
   christmasnlWhoistalking: 000100010001
   christmashappylines:
-  - "\u201CBy the Gods! You look fantastic! Truly ethereal!\u201D"
+  - By the Gods! You look fantastic! Truly ethereal!
   - Happy Holo-day Sir Bouldegaurde, as a part of the Better Living-
-  - "\u201CI need your help! Oh I know it\u2019s Holo-day but I need your help!\u201D"
+  - "I need your help! Oh I know it\u2019s Holo-day but I need your help!"
   - Oh why I can assist with your troubles, after all we are making sure your Holo-day
     is merry and bright.
-  - "\u201CRight now, it is quite dreadful and desolate\u2026I need to get my mind
-    off of my recent Taverns and Trolls campaign.\u201D"
+  - "Right now, it is quite dreadful and desolate\u2026I need to get my mind off
+    of my recent Taverns and Trolls campaign."
   - "Let\u2019s go get some fresh air, and relax for a second sir."
   christmashlWhoistalking: 000100010001
   christmasdate2pregamelines:
   - So tell me Bouldegaurde what do you need assistance on?
-  - "\u201CIn my recent campaign, we are traversing the Great Mount Sno, in order
-    to barter with this ancient green dragon to avoid him from attacking the local
-    town.\u201D"
+  - In my recent campaign, we are traversing the Great Mount Sno, in order to barter
+    with this ancient green dragon to avoid him from attacking the local town.
   - "That doesn\u2019t sound bad, I am sure your expertise in Taverns and Trolls
     can help avoid any catastrophes."
-  - "\u201CThat is my exact issue! I got too greedy and stole a shiny statue before
-    we could barter with the green dragon which has now made him angry at us!\u201D"
+  - That is my exact issue! I got too greedy and stole a shiny statue before we could
+    barter with the green dragon which has now made him angry at us!
   - "*indicating rise in anxiety, activating comfort mode* Bouldegaurde, lets take
     a second, you are doing fine, you are here, let\u2019s play some Snow Run to
     get your mind off it."
   christmasdate2preWhoistalking: 0100010001
   christmasdate2postgamelines:
-  - "\u201CThat calmed me down a bit, thank you so much my liege. I just want to
-    know what would be the best route to avoid having my friends characters killed\u201D"
+  - "That calmed me down a bit, thank you so much my liege. I just want to know what
+    would be the best route to avoid having my friends characters killed\u201D"
   - Perhaps your group can barter with the green dragon. Offer it the gold statue,
     in exchange for not attacking the city.
-  - "\u201CThat does seem rational, I still worry that my friends will hate me for
-    ruining the campaign.\u201D"
+  - That does seem rational, I still worry that my friends will hate me for ruining
+    the campaign.
   - "Come with me sir, let\u2019s get your mind off with a noble dance."
   christmasdate2postWhoistalking: 00010001
   christmasdate3pregamelines:
-  - "\u201CThat calmed me down a bit, thank you so much my liege. I just want to
-    know what would be the best route to avoid having my friends characters killed\u201D"
+  - That calmed me down a bit, thank you so much my liege. I just want to know what
+    would be the best route to avoid having my friends characters killed
   - Perhaps your group can barter with the green dragon. Offer it the gold statue,
     in exchange for not attacking the city.
-  - "\u201CThat does seem rational, I still worry that my friends will hate me for
-    ruining the campaign.\u201D"
+  - That does seem rational, I still worry that my friends will hate me for ruining
+    the campaign.
   - "Come with me sir, let\u2019s get your mind off with a noble dance."
   christmasdate3preWhoistalking: 00010001
   christmasdate3postgamelines:
-  - "\u201CI feel much calmer, thank you so much m\u2019bot.\u201D *Bouldegaurde
-    gives you a bow* "
+  - "I feel much calmer, thank you so much m\u2019bot. *Bouldegaurde gives you a
+    bow* "
   - No need to thank me, sir, it is all part of my job. Have a happy Holo-day Bouldegaurde!
   christmasdate3postWhoistalking: 0001
   christmaswongamelines:
-  - "\u201CA truly skilled warrior, it is a blessing to have you on my side.\u201D"
+  - A truly skilled warrior, it is a blessing to have you on my side.
   christmaswongameWhoistalking: 00
   christmaslostgamelines:
-  - "\u201CPick yourself up friend, I can\u2019t lose my friends\u2026\u201D"
+  - "Pick yourself up friend, I can\u2019t lose my friends\u2026"
   christmaslostgameWhoistalking: 00
   minigameOrder: 010000000200000003000000
