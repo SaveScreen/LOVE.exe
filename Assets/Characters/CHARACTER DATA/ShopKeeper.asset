@@ -127,4 +127,45 @@ MonoBehaviour:
   - "I\u2019m never going out with a glorified toaster again"
   - "You remind me of a customer. I\u2019m going to hurt you."
   lostgameWhoistalking: 00
+  christmasangrylines:
+  - 'Merry Holo-day, Holo! I am glad you agreed to meet me on your break, I hope
+    you are having a fun time outside of the shop! '
+  - "I guess you\u2019re also working on Holo-day. No rest for robots, do you have
+    any plans for holo-day other than working? "
+  - "My company has requested me to go around to all of my customers and ensure they
+    are having a good Holo-day\u2026. I came to check up on you between my duties
+    :)  "
+  - "Oh? Little tin can came to see me for fun and not for a task? If I was human
+    I\u2019d blush."
+  - Really?
+  - "No. Let\u2019s hang out and see the lights outside."
+  christmasalWhoistalking: 000000000000
+  christmasneutrallines:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  christmasnlWhoistalking: 000000000000
+  christmashappylines:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  christmashlWhoistalking: 000000000000
+  christmasdate2pregamelines: []
+  christmasdate2preWhoistalking: 
+  christmasdate2postgamelines: []
+  christmasdate2postWhoistalking: 
+  christmasdate3pregamelines: []
+  christmasdate3preWhoistalking: 
+  christmasdate3postgamelines: []
+  christmasdate3postWhoistalking: 
+  christmaswongamelines: []
+  christmaswongameWhoistalking: 
+  christmaslostgamelines: []
+  christmaslostgameWhoistalking: 
   minigameOrder: 010000000200000003000000

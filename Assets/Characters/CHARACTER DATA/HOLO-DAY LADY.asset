@@ -13,40 +13,40 @@ MonoBehaviour:
   m_Name: HOLO-DAY LADY
   m_EditorClassIdentifier: 
   angrylines:
-  - '"Why friend that outfit is quite eccentric..."'
-  - "\u201CIt is a delight to meet you friend, I am so glad you came, I am an international
-    Holo-day sensation Holo-tsune Merry, but you can call me Merry!\u201D "
+  - Why friend that outfit is quite eccentric...
+  - 'It is a delight to meet you friend, I am so glad you came, I am an international
+    Holo-day sensation Holo-tsune Merry, but you can call me Merry! '
   - 'Merry, it is an honor to assist you! How may I be of service? '
-  - "\u201CWell you see, I have been having some hardware issues recently. I think
-    I may have caught a bug\u2026\u201D "
+  - "Well you see, I have been having some hardware issues recently. I think I may
+    have caught a bug\u2026"
   - Merry, is everything alright?
-  - "\u201CSkr00g3 mode activated, initiating challenge mode. Hey punk, you know
-    you can\u2019t be talking to a celebrity like me out in public. If you want to
-    be so bold how about I test that might of yours huh?\u201D"
+  - "Skr00g3 mode activated, initiating challenge mode. Hey punk, you know you can\u2019t
+    be talking to a celebrity like me out in public. If you want to be so bold how
+    about I test that might of yours huh?"
   alWhoistalking: 000001000100
   neutrallines:
-  - '"Happy Holo-day friend!"'
-  - "\u201CIt is a delight to meet you friend, I am so glad you came, I am an international
-    Holo-day sensation Holo-tsune Merry, but you can call me Merry!\u201D "
+  - Happy Holo-day friend!
+  - 'It is a delight to meet you friend, I am so glad you came, I am an international
+    Holo-day sensation Holo-tsune Merry, but you can call me Merry! '
   - 'Merry, it is an honor to assist you! How may I be of service? '
-  - "\u201CWell you see, I have been having some hardware issues recently. I think
-    I may have caught a bug\u2026\u201D "
+  - "Well you see, I have been having some hardware issues recently. I think I may
+    have caught a bug\u2026 "
   - Merry, is everything alright?
-  - "\u201CSkr00g3 mode activated, initiating challenge mode. Hey punk, you know
-    you can\u2019t be talking to a celebrity like me out in public. If you want to
-    be so bold how about I test that might of yours huh?\u201D"
+  - "Skr00g3 mode activated, initiating challenge mode. Hey punk, you know you can\u2019t
+    be talking to a celebrity like me out in public. If you want to be so bold how
+    about I test that might of yours huh?"
   nlWhoistalking: 000001000100
   happylines:
-  - "\u201CThat outfit is filled with the Holo-day spirit, I am loving it!\u201D"
-  - "\u201CIt is a delight to meet you friend, I am so glad you came, I am an international
-    Holo-day sensation Holo-tsune Merry, but you can call me Merry!\u201D "
+  - That outfit is filled with the Holo-day spirit, I am loving it!
+  - 'It is a delight to meet you friend, I am so glad you came, I am an international
+    Holo-day sensation Holo-tsune Merry, but you can call me Merry! '
   - 'Merry, it is an honor to assist you! How may I be of service? '
-  - "\u201CWell you see, I have been having some hardware issues recently. I think
-    I may have caught a bug\u2026\u201D "
+  - "Well you see, I have been having some hardware issues recently. I think I may
+    have caught a bug\u2026 "
   - Merry, is everything alright?
-  - "\u201CSkr00g3 mode activated, initiating challenge mode. Hey punk, you know
-    you can\u2019t be talking to a celebrity like me out in public. If you want to
-    be so bold how about I test that might of yours huh?\u201D"
+  - "Skr00g3 mode activated, initiating challenge mode. Hey punk, you know you can\u2019t
+    be talking to a celebrity like me out in public. If you want to be so bold how
+    about I test that might of yours huh?"
   hlWhoistalking: 000001000100
   date2pregamelines:
   - "\u201CUgh, whatever, you got lucky\u2026\u201D"
