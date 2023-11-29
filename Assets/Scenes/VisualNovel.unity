@@ -412,6 +412,8 @@ GameObject:
   - component: {fileID: 108976759}
   - component: {fileID: 108976761}
   - component: {fileID: 108976760}
+  - component: {fileID: 108976763}
+  - component: {fileID: 108976762}
   m_Layer: 5
   m_Name: holo day twink
   m_TagString: Untagged
@@ -477,6 +479,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108976758}
   m_CullTransparentMesh: 1
+--- !u!114 &108976762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108976758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 957eedb606341dd47b851c1b7e8dcaea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChristmasAnimator: {fileID: 108976763}
+  isHappy: 0
+  isAngry: 0
+  AngryChara: {fileID: 1393010760}
+  HappyChara: {fileID: 369342078}
+--- !u!95 &108976763
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108976758}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a7bbdbfbd375c21438bffad486beb33b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &140988231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1937,6 +1977,8 @@ GameObject:
   - component: {fileID: 803374609}
   - component: {fileID: 803374611}
   - component: {fileID: 803374610}
+  - component: {fileID: 803374613}
+  - component: {fileID: 803374612}
   m_Layer: 5
   m_Name: holo day bolder
   m_TagString: Untagged
@@ -2002,6 +2044,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 803374608}
   m_CullTransparentMesh: 1
+--- !u!95 &803374612
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803374608}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a7bbdbfbd375c21438bffad486beb33b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &803374613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803374608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 957eedb606341dd47b851c1b7e8dcaea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChristmasAnimator: {fileID: 803374612}
+  isHappy: 0
+  isAngry: 0
+  AngryChara: {fileID: 1693534138}
+  HappyChara: {fileID: 930211772}
 --- !u!1 &811734316
 GameObject:
   m_ObjectHideFlags: 0
@@ -2187,6 +2267,8 @@ GameObject:
   - component: {fileID: 893478583}
   - component: {fileID: 893478585}
   - component: {fileID: 893478584}
+  - component: {fileID: 893478587}
+  - component: {fileID: 893478586}
   m_Layer: 5
   m_Name: holo day shop
   m_TagString: Untagged
@@ -2252,6 +2334,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 893478582}
   m_CullTransparentMesh: 1
+--- !u!114 &893478586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893478582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 957eedb606341dd47b851c1b7e8dcaea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChristmasAnimator: {fileID: 893478587}
+  isHappy: 0
+  isAngry: 0
+  AngryChara: {fileID: 423175591}
+  HappyChara: {fileID: 1669391002}
+--- !u!95 &893478587
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893478582}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a7bbdbfbd375c21438bffad486beb33b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &904512880
 GameObject:
   m_ObjectHideFlags: 0
@@ -2264,6 +2384,7 @@ GameObject:
   - component: {fileID: 904512883}
   - component: {fileID: 904512882}
   - component: {fileID: 904512884}
+  - component: {fileID: 904512885}
   m_Layer: 5
   m_Name: Date1AngryIMG
   m_TagString: Untagged
@@ -2350,6 +2471,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &904512885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904512880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce738797038d2b64cb4bbf668a4f2161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AngryAnimator: {fileID: 904512884}
+  HappyAnimator: {fileID: 0}
 --- !u!1 &930211772
 GameObject:
   m_ObjectHideFlags: 0
@@ -3249,6 +3384,8 @@ GameObject:
   - component: {fileID: 1203757319}
   - component: {fileID: 1203757321}
   - component: {fileID: 1203757320}
+  - component: {fileID: 1203757323}
+  - component: {fileID: 1203757322}
   m_Layer: 5
   m_Name: holo day jett
   m_TagString: Untagged
@@ -3314,6 +3451,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1203757318}
   m_CullTransparentMesh: 1
+--- !u!114 &1203757322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203757318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 957eedb606341dd47b851c1b7e8dcaea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChristmasAnimator: {fileID: 1203757323}
+  isHappy: 0
+  isAngry: 0
+  AngryChara: {fileID: 1186667727}
+  HappyChara: {fileID: 70340413}
+--- !u!95 &1203757323
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203757318}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a7bbdbfbd375c21438bffad486beb33b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1261505851
 GameObject:
   m_ObjectHideFlags: 0
@@ -3553,6 +3728,8 @@ GameObject:
   - component: {fileID: 1330423026}
   - component: {fileID: 1330423028}
   - component: {fileID: 1330423027}
+  - component: {fileID: 1330423030}
+  - component: {fileID: 1330423029}
   m_Layer: 5
   m_Name: holo day hitomi
   m_TagString: Untagged
@@ -3618,6 +3795,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1330423025}
   m_CullTransparentMesh: 1
+--- !u!114 &1330423029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330423025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 957eedb606341dd47b851c1b7e8dcaea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChristmasAnimator: {fileID: 1330423030}
+  isHappy: 0
+  isAngry: 0
+  AngryChara: {fileID: 1621498522}
+  HappyChara: {fileID: 1782637470}
+--- !u!95 &1330423030
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330423025}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a7bbdbfbd375c21438bffad486beb33b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1393010760
 GameObject:
   m_ObjectHideFlags: 0
@@ -3727,6 +3942,8 @@ GameObject:
   - component: {fileID: 1395302995}
   - component: {fileID: 1395302997}
   - component: {fileID: 1395302996}
+  - component: {fileID: 1395302999}
+  - component: {fileID: 1395302998}
   m_Layer: 5
   m_Name: holo day frills (1)
   m_TagString: Untagged
@@ -3792,6 +4009,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1395302994}
   m_CullTransparentMesh: 1
+--- !u!95 &1395302998
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395302994}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a7bbdbfbd375c21438bffad486beb33b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1395302999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395302994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 957eedb606341dd47b851c1b7e8dcaea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChristmasAnimator: {fileID: 1395302998}
+  isHappy: 0
+  isAngry: 0
+  AngryChara: {fileID: 821048120}
+  HappyChara: {fileID: 962356736}
 --- !u!1 &1401711713
 GameObject:
   m_ObjectHideFlags: 0
@@ -3895,7 +4150,7 @@ RectTransform:
   m_GameObject: {fileID: 1407588021}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 503}
-  m_LocalScale: {x: 2.1182399, y: 2.1182399, z: 2.1182399}
+  m_LocalScale: {x: 4.5520973, y: 4.5520973, z: 4.5520973}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 606243845}
@@ -3926,7 +4181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6019120073e32a34fa25c90aa6b7f4e9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 17fec52e293f2ab459163bef3dcb113e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4400,6 +4655,8 @@ GameObject:
   - component: {fileID: 1495926948}
   - component: {fileID: 1495926950}
   - component: {fileID: 1495926949}
+  - component: {fileID: 1495926952}
+  - component: {fileID: 1495926951}
   m_Layer: 5
   m_Name: holo day barry
   m_TagString: Untagged
@@ -4465,6 +4722,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1495926947}
   m_CullTransparentMesh: 1
+--- !u!95 &1495926951
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495926947}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a7bbdbfbd375c21438bffad486beb33b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1495926952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495926947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 957eedb606341dd47b851c1b7e8dcaea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChristmasAnimator: {fileID: 1495926951}
+  isHappy: 0
+  isAngry: 0
+  AngryChara: {fileID: 1900352948}
+  HappyChara: {fileID: 17569696}
 --- !u!1 &1524928566
 GameObject:
   m_ObjectHideFlags: 0
@@ -5453,6 +5748,8 @@ GameObject:
   - component: {fileID: 1772298815}
   - component: {fileID: 1772298818}
   - component: {fileID: 1772298817}
+  - component: {fileID: 1772298819}
+  - component: {fileID: 1772298820}
   m_Layer: 5
   m_Name: holoday jim
   m_TagString: Untagged
@@ -5518,6 +5815,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1772298814}
   m_CullTransparentMesh: 1
+--- !u!114 &1772298819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772298814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 957eedb606341dd47b851c1b7e8dcaea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChristmasAnimator: {fileID: 1772298820}
+  isHappy: 0
+  isAngry: 0
+  AngryChara: {fileID: 904512880}
+  HappyChara: {fileID: 1876937131}
+--- !u!95 &1772298820
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772298814}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a7bbdbfbd375c21438bffad486beb33b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1782637470
 GameObject:
   m_ObjectHideFlags: 0
@@ -6225,6 +6560,8 @@ GameObject:
   - component: {fileID: 1960175872}
   - component: {fileID: 1960175874}
   - component: {fileID: 1960175873}
+  - component: {fileID: 1960175876}
+  - component: {fileID: 1960175875}
   m_Layer: 5
   m_Name: holo day rosa
   m_TagString: Untagged
@@ -6290,6 +6627,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960175871}
   m_CullTransparentMesh: 1
+--- !u!114 &1960175875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960175871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 957eedb606341dd47b851c1b7e8dcaea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChristmasAnimator: {fileID: 0}
+  isHappy: 0
+  isAngry: 0
+  AngryChara: {fileID: 252249477}
+  HappyChara: {fileID: 1524928566}
+--- !u!95 &1960175876
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960175871}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a7bbdbfbd375c21438bffad486beb33b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2001935907
 GameObject:
   m_ObjectHideFlags: 0
