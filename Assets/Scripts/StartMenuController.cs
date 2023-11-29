@@ -20,6 +20,10 @@ public class StartMenuController : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetMouseButtonDown(0) && !Ad.active)
+                {
+                        FadeToLevel(1);
+                }
      if (Input.GetMouseButtonDown(0))
         {
             StartScreenSound.Play();
@@ -28,12 +32,10 @@ public class StartMenuController : MonoBehaviour
 
             if(!Ad.active)
             {
-                if (Input.GetMouseButtonDown(0) && !Ad.active)
-                {
-                        FadeToLevel(1);
-                }
+                
                 
             }
+
             
             PlayerData playerdata = player.GetComponent<PlayerData>();
             playerdata.InitialFileCheck();
