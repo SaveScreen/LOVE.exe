@@ -13,14 +13,30 @@ public class DateSelectionScript : MonoBehaviour
     private PlayerData playerdata;
     public int dateoption;
 
+    private bool isChristmas;
+    public GameObject[] ChristmasOverlays;
+
     // Start is called before the first frame update
     void Start()
     {
         playerdata = playerdatacontainer.GetComponent<PlayerData>();
+        isChristmas = playerdata.GetChristmasTime();
         dateoption = 0;
 
         choosedatemenu.SetActive(true);
         confirmscreen.SetActive(false);
+
+        if (isChristmas)
+        {
+            //ChristmasOverlays.SetActive(true);
+
+            foreach (GameObject obj in ChristmasOverlays)
+            {
+                obj.SetActive(true);
+            }
+        }
+
+            
     }
 
     // Update is called once per frame

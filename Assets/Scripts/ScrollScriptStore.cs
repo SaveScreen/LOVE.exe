@@ -97,6 +97,17 @@ public class ScrollScriptStore : MonoBehaviour
 
                 storeController.GetMoney();
                 StoreClothes.Play();
+
+                playerdata.SetPlayerChibiOutfit(currentItem);
+                if (currentItem == 11)
+                {
+                    playerdata.SetChristmasTime(true);
+                }
+                else
+                {
+                    playerdata.SetChristmasTime(false);
+                }
+
             }
             else
             {
@@ -112,7 +123,7 @@ public class ScrollScriptStore : MonoBehaviour
         moneyData = moneyContainer.GetComponent<MONEYScript>();
         howMuch = moneyData.GetGAINZ();
         moneyText.SetText("Money: " + howMuch);
-    
+        
 
     }
 

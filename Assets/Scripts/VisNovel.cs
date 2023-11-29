@@ -69,7 +69,7 @@ public class VisNovel : MonoBehaviour
     public GameObject Neutral9;
     public GameObject Happy9;
     public GameObject christmasShopkeeper;
-    [Header("Shopkeeper")]
+    [Header("Holo-Day Lady")]
     public GameObject Angry10;
     public GameObject Neutral10;
     public GameObject Happy10;

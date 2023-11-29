@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1619,12 +1619,12 @@ GameObject:
   - component: {fileID: 407017307}
   - component: {fileID: 407017306}
   m_Layer: 5
-  m_Name: Image (7)
+  m_Name: crims9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &407017305
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2442,12 +2442,12 @@ GameObject:
   - component: {fileID: 614897343}
   - component: {fileID: 614897342}
   m_Layer: 5
-  m_Name: Image (7)
+  m_Name: crims3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &614897341
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3813,12 +3813,12 @@ GameObject:
   - component: {fileID: 820223815}
   - component: {fileID: 820223814}
   m_Layer: 5
-  m_Name: Image (7)
+  m_Name: crims4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &820223813
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4312,12 +4312,12 @@ GameObject:
   - component: {fileID: 979300067}
   - component: {fileID: 979300066}
   m_Layer: 5
-  m_Name: Image (7)
+  m_Name: crims8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &979300065
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5566,12 +5566,12 @@ GameObject:
   - component: {fileID: 1414161151}
   - component: {fileID: 1414161150}
   m_Layer: 5
-  m_Name: Image (7)
+  m_Name: crims6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1414161149
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5777,12 +5777,12 @@ GameObject:
   - component: {fileID: 1467841421}
   - component: {fileID: 1467841420}
   m_Layer: 5
-  m_Name: Image (6)
+  m_Name: crims2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1467841419
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5853,12 +5853,12 @@ GameObject:
   - component: {fileID: 1488897917}
   - component: {fileID: 1488897916}
   m_Layer: 5
-  m_Name: Image (7)
+  m_Name: crims5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1488897915
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6236,6 +6236,16 @@ MonoBehaviour:
   datechoicetext: {fileID: 807919614}
   playerdatacontainer: {fileID: 590584168}
   dateoption: 0
+  ChristmasOverlays:
+  - {fileID: 1922231040}
+  - {fileID: 1467841418}
+  - {fileID: 614897340}
+  - {fileID: 820223812}
+  - {fileID: 1488897914}
+  - {fileID: 1414161148}
+  - {fileID: 2050411763}
+  - {fileID: 979300064}
+  - {fileID: 407017304}
 --- !u!1 &1626048266
 GameObject:
   m_ObjectHideFlags: 0
@@ -7207,7 +7217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1922231041
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7705,7 +7715,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2050411764
 RectTransform:
   m_ObjectHideFlags: 0
