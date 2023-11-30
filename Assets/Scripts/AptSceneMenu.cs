@@ -62,8 +62,9 @@ public class AptSceneMenu : MonoBehaviour
         GameObject tempObj = RoboWearingAPT[outfitSelect];
         tempObj.SetActive(true);
         FadeOBJ.SetActive(true);
+        
 
-        if(PlayerData.firstLoad == true)
+        if (PlayerData.firstLoad == true)
         {
             tutTXT.SetActive(true);
             moneyData.SetMoney(500);
