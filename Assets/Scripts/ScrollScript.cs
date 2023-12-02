@@ -23,7 +23,7 @@ public class ScrollScript : MonoBehaviour
     float snapSpeed;
     public float snapForce;
 
-    private int currentItem;
+    [SerializeField] private int currentItem;
 
 
     private void Start()
