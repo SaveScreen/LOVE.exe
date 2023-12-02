@@ -63,7 +63,7 @@ public class ScrollScript1 : MonoBehaviour
         currentItem = Mathf.RoundToInt((0 - contentPanel.localPosition.x / (sampleListItem.rect.width + HLG.spacing)));
         Debug.Log(currentItem);
 
-        if (scrollRect.velocity.magnitude < 5 && !isSnapped)
+        if (scrollRect.velocity.magnitude < 20 && !isSnapped)
         {
             scrollRect.velocity = Vector2.zero;
             snapSpeed += snapForce * Time.deltaTime;
@@ -78,7 +78,7 @@ public class ScrollScript1 : MonoBehaviour
                 isSnapped = true;
             }
         }
-        if (scrollRect.velocity.magnitude > 5)
+        if (scrollRect.velocity.magnitude > 20)
         {
             ItemName.text = "_____";
             RoboWearing[currentItem].SetActive(false);

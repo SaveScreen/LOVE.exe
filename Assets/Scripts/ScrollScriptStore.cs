@@ -59,7 +59,7 @@ public class ScrollScriptStore : MonoBehaviour
         currentItem = Mathf.RoundToInt((0 - contentPanel.localPosition.x / (sampleListItem.rect.width + HLG.spacing)));
         Debug.Log(currentItem);
 
-        if (scrollRect.velocity.magnitude < 5 && !isSnapped)
+        if (scrollRect.velocity.magnitude < 20 && !isSnapped)
         {
             scrollRect.velocity = Vector2.zero;
             snapSpeed += snapForce * Time.deltaTime;
@@ -74,7 +74,7 @@ public class ScrollScriptStore : MonoBehaviour
                 isSnapped = true;
             }
         }
-        if (scrollRect.velocity.magnitude > 5)
+        if (scrollRect.velocity.magnitude > 20)
         {
             ItemName.text = "_____";
             ItemCost.text = "Cost:___";
