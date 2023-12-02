@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BoltManager : MonoBehaviour
 {
-    /*
+    
     public static BoltManager instance;
 
     [SerializeField]
@@ -12,7 +12,9 @@ public class BoltManager : MonoBehaviour
 
     private BoltSpawnHelper spawnHelper;
 
-    void Awake()
+    private readonly float spawningSpeed = 1f;
+
+    private void Awake()
     {
         SinglePattern();
         spawnHelper = gameObject.AddComponent<BoltSpawnHelper>();
@@ -20,7 +22,25 @@ public class BoltManager : MonoBehaviour
 
     private void Start()
     {
-        spawnHelper.SpawnBolts();
+        StartCoroutine(spawnBolts());
+    }
+
+    private IEnumerator spawnBolts()
+    {
+        while (1 == 1)
+        {
+            yield return new WaitForSeconds(spawningSpeed);
+
+            SpawnMoreBolts();
+        }
+    }
+
+    private void SpawnMoreBolts()
+    {
+        for(int i = 0; i < Random.Range (2,3); i++)
+            {
+                spawnHelper.spawnBolts();
+            }
     }
     
 
@@ -35,6 +55,6 @@ public class BoltManager : MonoBehaviour
         }
     }
 
-    */
+    
     
 }

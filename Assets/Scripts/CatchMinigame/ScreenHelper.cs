@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ScreenHelper : MonoBehaviour
 {
-    /*
+    
     public static float ScreenTop;
     public static float ScreenLeft;
     public static float ScreenRight;
@@ -16,5 +16,5 @@ public class ScreenHelper : MonoBehaviour
         ScreenLeft = cameraPosition.x - Camera.main.transform.localScale.x + 1f;
         ScreenRight = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height,0)).x -.5f;
     }
-    */
+    
 }

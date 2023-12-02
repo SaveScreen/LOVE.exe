@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class BoltPositionHelper : MonoBehaviour
 {
-    /*
+    
     Vector3 lastSpawnPoint;
 
     private readonly float SpawnMinDistance = 1f;
 
 
-    private Vector3 GetSpawnPosition()
+    public Vector3 GetSpawnPosition()
     {
-        return new Vector3(Random.Range(ScreenHelper.ScreenLeft, ScreenHelper.ScreenRight), ScreenHelper.ScreenTop + Random.Range(5, 7));
+        Vector3 newSpawnPoint = new Vector3(Random.Range(ScreenHelper.ScreenLeft, ScreenHelper.ScreenRight), ScreenHelper.ScreenTop + Random.Range(3, 7));
 
         if(Vector3.Distance(newSpawnPoint, lastSpawnPoint) > SpawnMinDistance)
         {
@@ -24,5 +24,5 @@ public class BoltPositionHelper : MonoBehaviour
             return GetSpawnPosition();
         }
     }
-    */
+    
 }

@@ -4,26 +4,56 @@ using UnityEngine;
 
 public class BoltSpawnHelper : MonoBehaviour
 {
-    /*
+    
     private BoltPositionHelper positionHelper;
 
-    private void Awake(){
+    private List<GameObject> spawnedBolts = new List<GameObject>();
+
+    private void Awake()
+    {
         positionHelper = new BoltPositionHelper();
     }
 
    public void spawnBolts()
     {
-        for(int i= 0; i<3; i++)
+        if(BoltSpawnVisible())
         {
-            Instantiate(getRandomBolt(), positionHelper.GetSpawnPosition(), Quaternion.identity);
+            Reuse();
+        }
+        else
+        {
+            Spawn();
+        }
+     
+    }
+
+    private bool BoltSpawnVisible()
+    {
+        return spawnedBolts.Exists(x => !x.activeSelf && x != null);
+    }
+
+    private void Spawn()
+    {
+        for(int i = 0; i < 3; i++)
+        {
+            GameObject spawnedBolts = Instantiate(getRandomBolt(), positionHelper.GetSpawnPosition(), Quaternion.identity);
+            spawnedBolts.Add(spawnedBolts);
         }
     }
 
-      GameObject getRandomBolt()
+    private void Reuse()
+    {
+      GameObject boltReuse = spawnedBolts.Find(x => !x.activeSelf && x != null);
+      boltReuse.SetActive(true);
+      boltReuse.transform.position = positionHelper.GetSpawnPosition();
+      boltReuse.GetComponent<Bolts>().Reset();
+    }
+
+    GameObject getRandomBolt()
     {
         return BoltManager.instance.boltsPrefabs[Random.Range(0, BoltManager.instance.boltsPrefabs.Count)];
     }
 
-    */
+    
 
 }

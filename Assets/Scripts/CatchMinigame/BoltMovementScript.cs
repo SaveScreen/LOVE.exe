@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CatchingScript : MonoBehaviour
 {
-    /*
+    
     private const int targetY = -20;
     Vector3 target;
     private void Awake()
@@ -12,7 +12,7 @@ public class CatchingScript : MonoBehaviour
         Reset();
     }
 
-    private void Reset()
+    public void Reset()
     {
         target = transform.position;
         target.y= targetY;
@@ -28,5 +28,10 @@ public class CatchingScript : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, target, step);
 
     }
-    */
+    
+    private void OnBecameInvisible()
+    {
+        if(transform.position.y > ScreenHelper.ScreenTop) { return; }
+        gameObject.SetActive(false);
+    }
 }
