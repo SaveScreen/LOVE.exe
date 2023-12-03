@@ -248,7 +248,7 @@ MonoBehaviour:
   uprightpos: {x: 0, y: 0, z: 0}
   currentpos: {x: 0, y: 0, z: 0}
   animator: {fileID: 3126925706880095419}
-  snare: {fileID: 8300000, guid: 4f5a8b89d0232fd4b8461af28b0a07f5, type: 3}
+  snare: {fileID: 8300000, guid: 070394333fb640647b5d1f155c6720f3, type: 3}
   audiosource: {fileID: 7909889504098385558}
   speed: 20
   ismovingspeed: 0
@@ -270,7 +270,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: b5c10e8b51f7d8c43a6b92031de5bab9,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 4f5a8b89d0232fd4b8461af28b0a07f5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 070394333fb640647b5d1f155c6720f3, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

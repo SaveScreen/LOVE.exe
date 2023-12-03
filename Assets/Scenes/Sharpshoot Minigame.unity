@@ -4486,7 +4486,7 @@ GameObject:
   - component: {fileID: 1142629402}
   - component: {fileID: 1142629401}
   m_Layer: 0
-  m_Name: RhytmMinigameMusic
+  m_Name: ShootinMinigameMusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4503,7 +4503,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -6415564691299213510, guid: b5c10e8b51f7d8c43a6b92031de5bab9,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: b26a4cc6a9560f240a9652c5a716a270, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1df5ef369e5d3ed4fb323bb173eca912, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.098
   m_Pitch: 1
