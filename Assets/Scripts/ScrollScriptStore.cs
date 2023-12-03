@@ -43,6 +43,8 @@ public class ScrollScriptStore : MonoBehaviour
 
     public AudioSource StoreClothes;
 
+    public FadeController fadecontroller;
+
 
     private void Start()
     {
@@ -123,8 +125,6 @@ public class ScrollScriptStore : MonoBehaviour
         moneyData = moneyContainer.GetComponent<MONEYScript>();
         howMuch = moneyData.GetGAINZ();
         moneyText.SetText("Money: " + howMuch);
-        
-
     }
 
     public bool canAfford(int money)
@@ -140,7 +140,10 @@ public class ScrollScriptStore : MonoBehaviour
     public void ReturnToAPT()
     {
         playerdata.SaveGame();
-        SceneManager.LoadScene("AptScene");
+        //SceneManager.LoadScene("AptScene");
+        fadecontroller.FadeToLevel(1);
+        //fadecontroller.OnFadeComplete();
+        
     }
 
     /*
