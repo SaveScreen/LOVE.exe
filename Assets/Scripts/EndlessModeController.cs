@@ -109,7 +109,7 @@ public class EndlessModeController : MonoBehaviour
     }
 
     public void StartEndlessMode() {
-        int rand = Random.Range(0,3);
+        int rand = Random.Range(0,4);
         switch (rand) {
             case 0:
                 playerData.StartEndlessMode();
@@ -122,12 +122,16 @@ public class EndlessModeController : MonoBehaviour
             case 2:
                 playerData.StartEndlessMode();
                 SceneManager.LoadScene("RhythmMinigame");
+            break;
+            case 3:
+                playerData.StartEndlessMode();
+                SceneManager.LoadScene("Sharpshoot Minigame");
             break;
         }
     }
 
     public void ContinueEndlessMode() {
-        int rand = Random.Range(0,3);
+        int rand = Random.Range(0,4);
         switch (rand) {
             case 0:
                 
@@ -140,6 +144,9 @@ public class EndlessModeController : MonoBehaviour
             case 2:
                 
                 SceneManager.LoadScene("RhythmMinigame");
+            break;
+            case 3:
+                SceneManager.LoadScene("Sharpshoot Minigame");
             break;
         }
     }

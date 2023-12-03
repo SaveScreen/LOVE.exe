@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -608,7 +608,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &244802935
 Transform:
   m_ObjectHideFlags: 0
@@ -3538,7 +3538,7 @@ RectTransform:
   m_GameObject: {fileID: 938855139}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 5.431588}
-  m_LocalScale: {x: 0.66415, y: 0.66415, z: 0.66415}
+  m_LocalScale: {x: 0.51402074, y: 0.51402074, z: 0.51402074}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 244802935}
@@ -3569,7 +3569,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: DANCE OVER
+  m_text: OUT OF BULLETS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 499d97042fd94ee4384d480f23e60324, type: 2}
   m_sharedMaterial: {fileID: 5763011166063125080, guid: 499d97042fd94ee4384d480f23e60324,
@@ -4471,10 +4471,10 @@ MonoBehaviour:
   loseAudio: {fileID: 8300000, guid: 3a54d6093e5d7c8479c8b1bd59e4053d, type: 3}
   winAudio: {fileID: 8300000, guid: 65096ae53b8dac7419c518389b604310, type: 3}
   score: 0
-  requiredscore: 200
   hiscoretext: {fileID: 17047227}
   scoretext: {fileID: 1192827248}
   requiredscoretext: {fileID: 1333098024}
+  isEndlessMode: 0
 --- !u!1 &1142629400
 GameObject:
   m_ObjectHideFlags: 0
@@ -4877,8 +4877,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: RhythmMinigameScript, Assembly-CSharp
+      - m_Target: {fileID: 1126797149}
+        m_TargetAssemblyTypeName: ShootingMinigameControler, Assembly-CSharp
         m_MethodName: Continue
         m_Mode: 1
         m_Arguments:
@@ -5897,8 +5897,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: RhythmMinigameScript, Assembly-CSharp
+      - m_Target: {fileID: 1126797149}
+        m_TargetAssemblyTypeName: ShootingMinigameControler, Assembly-CSharp
         m_MethodName: Continue
         m_Mode: 1
         m_Arguments:
@@ -7046,8 +7046,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: RhythmMinigameScript, Assembly-CSharp
+      - m_Target: {fileID: 1126797149}
+        m_TargetAssemblyTypeName: ShootingMinigameControler, Assembly-CSharp
         m_MethodName: Continue
         m_Mode: 1
         m_Arguments:

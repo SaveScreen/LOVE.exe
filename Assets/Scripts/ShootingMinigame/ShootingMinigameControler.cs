@@ -48,19 +48,48 @@ public class ShootingMinigameControler : MonoBehaviour
 
     [Header("Score")]
     public int score;
-    public int requiredscore;
+    private int requiredscore;
     private int hiscore;
     public TextMeshProUGUI hiscoretext;
     public TextMeshProUGUI scoretext;
     public TextMeshProUGUI requiredscoretext;
+    public bool isEndlessMode;
 
     // Start is called before the first frame update
     void Start()
     {
         playerdata = playerdatacontainer.GetComponent<PlayerData>();
-        hiscore = playerdata.GetRhythmGameHiScore();
+        hiscore = playerdata.GetShootingGameHiScore();
+        isEndlessMode = playerdata.IsEndlessMode();
         scoretext.text = "Score: ";
-        requiredscoretext.text = "score at least " + requiredscore + " to win!";
+        
+        if (isEndlessMode) {
+            hiscoretext.text = "";
+            requiredscore = 100;
+            int endlessshootinggamesplayed = playerdata.GetShootingGamesPlayed();
+            if (endlessshootinggamesplayed > 0) {
+                requiredscore += 10 * endlessshootinggamesplayed;
+            }
+            requiredscoretext.text = "score at least " + requiredscore + " to win!";
+        }
+        else {
+            int gamecount = playerdata.GetGameCount();
+
+            switch (gamecount) {
+                case 0:
+                    requiredscore = 100;
+                break;
+                case 1:
+                    requiredscore = 120;
+                break;
+                case 2:
+                    requiredscore = 150;
+                break;
+            }
+
+            hiscoretext.text = "Hiscore: " + hiscore;
+            requiredscoretext.text = "score at least " + requiredscore + " to win!"; 
+        }
 
         cam = Camera.main;
         print(cam.name);
@@ -96,19 +125,32 @@ public class ShootingMinigameControler : MonoBehaviour
             ShrinkRespawnTime();
         }
 
-
-        if(Input.GetMouseButtonDown(0))
-        {
-            Fire();
+        if (!gameover && gamestarted) {
+            if(Input.GetMouseButtonDown(0))
+            {
+                Fire();
+            }
         }
+        
         UpdateAmmoText();
 
-        scoretext.text = "Score: " + score;
-        if (score > hiscore)
-        {
-            hiscore = score;
-            hiscoretext.text = "Hiscore: " + hiscore;
+        if (isEndlessMode) {
+            scoretext.text = "Score: " + score;
+            if (score >= requiredscore && !gameover) {
+                MinigameComplete();
+                MusicPlayer.SetActive(false);
+                PlaySound(winAudio);
+            } 
         }
+        else {
+            scoretext.text = "Score: " + score;
+            if (score > hiscore)
+            {
+                hiscore = score;
+                hiscoretext.text = "Hiscore: " + hiscore;
+            }
+        }
+        
 
         if (!gamestarted)
         {
@@ -236,29 +278,90 @@ public class ShootingMinigameControler : MonoBehaviour
 
     public void GameOver()
     {
-        if (score >= requiredscore)
-        {
-            Debug.Log(didWin);
-            Time.timeScale = 0;
-            gameoverscreen.SetActive(true);
-            gameovertext.text = "You win";
-            MusicPlayer.SetActive(false);
-            PlaySound(winAudio);
-            gameover = true;
-            didWin = true;
+        if (!isEndlessMode) {
+            if (score >= requiredscore)
+            {
+                Debug.Log(didWin);
+                Time.timeScale = 0;
+                gameoverscreen.SetActive(true);
+                gameovertext.text = "You win";
+                MusicPlayer.SetActive(false);
+                PlaySound(winAudio);
+                gameover = true;
+                didWin = true;
+            }
+            else
+            {
+                Time.timeScale = 0;
+                gameover = true;
+                gameoverscreen.SetActive(true);
+                gameovertext.text = "You lose";
+                MusicPlayer.SetActive(false);
+                PlaySound(loseAudio);
+                gameover = true;
+                didWin = false;
+            }
         }
-        else
-        {
-            Time.timeScale = 0;
-            gameover = true;
-            gameoverscreen.SetActive(true);
-            gameovertext.text = "You lose";
-            MusicPlayer.SetActive(false);
-            PlaySound(loseAudio);
-            gameover = true;
-            didWin = false;
+        else {
+            if (score >= requiredscore)
+            {
+                MusicPlayer.SetActive(false);
+                PlaySound(winAudio);
+                gameover = true;
+                didWin = true;
+                Time.timeScale = 0;
+                endlessgamewinscreen.SetActive(true);
+            }
+            else {
+                MusicPlayer.SetActive(false);
+                PlaySound(loseAudio);
+                gameover = true;
+                didWin = false;
+                Time.timeScale = 0;
+                endlessgameoverscreen.SetActive(true);
+            }
         }
+        
     }
+
+    public void Continue() {
+        if (!isEndlessMode) {
+            playerdata.UpdatePlayerDateScore(didWin);
+            if (hiscore > playerdata.GetShootingGameHiScore()) {
+                playerdata.NewShootingGameHiScore(hiscore);
+            }
+            playerdata.IncreaseGameCount();
+
+            if (didWin) {
+                playerdata.WonGame();
+            }
+            else {
+                playerdata.LostGame();
+            }
+
+            SceneManager.LoadScene("VisualNovel");
+            
+            Time.timeScale = 1;
+        }
+        else {
+            if (didWin) {
+                playerdata.IncreaseEndlessGamesPlayed();
+                playerdata.IncreaseShootingGamesPlayed();
+                SceneManager.LoadScene("EndlessMode");
+                Time.timeScale = 1;
+                
+            }
+            else {
+                playerdata.DecreaseEndlessLives();
+
+                SceneManager.LoadScene("EndlessMode");
+                Time.timeScale = 1;
+                
+            }
+        }
+        
+    }
+
     public void Restart()
     {
         Time.timeScale = 1;

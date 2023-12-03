@@ -24,6 +24,7 @@ public class PlayerData : MonoBehaviour
     public static int footballgamesplayed = 0;
     public static int snakegamesplayed = 0;
     public static int rhythmgamesplayed = 0;
+    public static int shootinggamesplayed = 0;
     public static int endlesslivesleft = 0;
     
     public bool loadingdata = false;
@@ -31,6 +32,7 @@ public class PlayerData : MonoBehaviour
 
     public static int rhythmgamehiscore = 0;
     public static int snakegamehiscore = 0;
+    public static int shootinggamehiscore = 0;
     public static int endlessgameshiscore = 0;
 
     public static bool[] isOutfitUnlocked = new bool[12];
@@ -56,6 +58,7 @@ public class PlayerData : MonoBehaviour
         gameData.money = money;
         gameData.snakegamehiscore = snakegamehiscore;
         gameData.rhythmgamehiscore = rhythmgamehiscore;
+        gameData.shootinggamehiscore = shootinggamehiscore;
         gameData.endlessgameshiscore = endlessgameshiscore;
         gameData.isChristmas = isChristmas;
         gameData.playerChibiOutfit = playerChibiOutfit;
@@ -86,6 +89,7 @@ public class PlayerData : MonoBehaviour
         playerbot = gameData.playerBot;
         snakegamehiscore = gameData.snakegamehiscore;
         rhythmgamehiscore = gameData.rhythmgamehiscore;
+        shootinggamehiscore = gameData.shootinggamehiscore;
         isOutfitUnlocked = gameData.isOutfitUnlocked;
         endlessgameshiscore = gameData.endlessgameshiscore;
         isChristmas = gameData.isChristmas;
@@ -160,6 +164,10 @@ public class PlayerData : MonoBehaviour
     {
         rhythmgamesplayed++;
     }
+    public void IncreaseShootingGamesPlayed()
+    {
+        shootinggamesplayed++;
+    }
     public void ResetFootballGamesPlayed() 
     {
         footballgamesplayed = 0;
@@ -171,6 +179,10 @@ public class PlayerData : MonoBehaviour
     public void ResetRhythmGamesPlayed()
     {
         rhythmgamesplayed = 0;
+    }
+    public void ResetShootingGamesPlayed()
+    {
+        shootinggamesplayed = 0;
     }
     public void ResetPlayedGame() 
     {
@@ -189,6 +201,10 @@ public class PlayerData : MonoBehaviour
     public void NewSnakeGameHiScore(int score) 
     {
         snakegamehiscore = score;
+    }
+    public void NewShootingGameHiScore(int score) 
+    {
+        shootinggamehiscore = score;
     }
     public void NewEndlessHiScore(int score)
     {
@@ -249,6 +265,10 @@ public class PlayerData : MonoBehaviour
     {
         return rhythmgamesplayed;
     }
+    public int GetShootingGamesPlayed()
+    {
+        return shootinggamesplayed;
+    }
     public bool GetWin() {
         return wonGame;
     }
@@ -297,6 +317,10 @@ public class PlayerData : MonoBehaviour
     public int GetSnakeGameHiScore() 
     {
         return snakegamehiscore;
+    }
+    public int GetShootingGameHiScore() 
+    {
+        return shootinggamehiscore;
     }
     public int GetEndlessHiScore()
     {
@@ -508,6 +532,7 @@ public class PlayerData : MonoBehaviour
         playerSelected = false;
         rhythmgamehiscore = 0;
         snakegamehiscore = 0;
+        shootinggamehiscore = 0;
         endlessgameshiscore = 0;
         moneyScript.SetMoney(0);
     }

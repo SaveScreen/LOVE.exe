@@ -66,7 +66,7 @@ void Update(){
             }
         }
 
-        
+        /*
         if (Input.GetKeyDown(KeyCode.W))
         {
             InitializeTargets();
@@ -79,6 +79,7 @@ void Update(){
         {
             flipuptargets();
         }
+        */
     }
 
     public void AddScore()
