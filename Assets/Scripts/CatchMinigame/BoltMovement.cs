@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BoltMovement : MonoBehaviour
 {
+    /*
     private const int targetY = -20;
     Vector3 target;
     private void Awake()
@@ -48,4 +49,5 @@ public class BoltMovement : MonoBehaviour
         gameObject.SetActive(false);
         //LevelManager.instance.BoltCatch(BoltType);
     }
+    */
 }

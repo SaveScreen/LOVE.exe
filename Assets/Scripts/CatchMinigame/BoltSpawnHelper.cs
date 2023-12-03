@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BoltSpawnHelper : MonoBehaviour
 {
-    
+    /*
     private BoltPositionHelper positionHelper;
 
     private List<GameObject> spawnedBolts = new List<GameObject>();
@@ -52,7 +52,7 @@ public class BoltSpawnHelper : MonoBehaviour
     {
         return BoltManager.instance.boltsPrefabs[Random.Range(0, BoltManager.instance.boltsPrefabs.Count)];
     }
-
+*/
     
 
 }

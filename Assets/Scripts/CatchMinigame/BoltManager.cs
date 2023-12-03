@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BoltManager : MonoBehaviour
 {
-    
+    /*
     public static BoltManager instance;
 
     [SerializeField]
@@ -76,6 +76,6 @@ public class BoltManager : MonoBehaviour
         }
     }
 
-    
+    */
     
 }
