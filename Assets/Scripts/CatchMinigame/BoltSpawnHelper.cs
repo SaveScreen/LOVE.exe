@@ -34,11 +34,10 @@ public class BoltSpawnHelper : MonoBehaviour
 
     private void Spawn()
     {
-        for(int i = 0; i < 3; i++)
-        {
+        
             GameObject spawnedBolts = Instantiate(getRandomBolt(), positionHelper.GetSpawnPosition(), Quaternion.identity);
-            //spawnedBolts.Add(spawnedBolts);
-        }
+            spawnedBolts.Add(spawnedBolts);
+        
     }
 
     private void Reuse()
@@ -46,7 +45,7 @@ public class BoltSpawnHelper : MonoBehaviour
       GameObject boltReuse = spawnedBolts.Find(x => !x.activeSelf && x != null);
       boltReuse.SetActive(true);
       boltReuse.transform.position = positionHelper.GetSpawnPosition();
-      //boltReuse.GetComponent<Bolts>().Reset();
+      boltReuse.GetComponent<Bolt>().Reset();
     }
 
     GameObject getRandomBolt()

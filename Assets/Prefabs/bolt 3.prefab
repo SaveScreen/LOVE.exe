@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1973921128937285871}
   - component: {fileID: 1484433749661904805}
-  - component: {fileID: 7864705908583853593}
   m_Layer: 0
   m_Name: bolt 3
   m_TagString: Untagged
@@ -86,15 +85,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7864705908583853593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1968530483166694554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dab037cc9c4340f47aac31807ea44efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

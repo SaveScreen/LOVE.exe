@@ -10,6 +10,10 @@ public class BoltManager : MonoBehaviour
     [SerializeField]
     public List<GameObject> boltsPrefabs = null;
 
+    public float currentFallingSpeed;
+
+    private float normalFallingSpeed = 3f;
+
     private BoltSpawnHelper spawnHelper;
 
     private readonly float spawningSpeed = 1f;
@@ -18,6 +22,12 @@ public class BoltManager : MonoBehaviour
     {
         SinglePattern();
         spawnHelper = gameObject.AddComponent<BoltSpawnHelper>();
+        ResetFallingSpeed();
+    }
+
+    public void ResetFallingSpeed()
+    {
+        currentFallingSpeed = normalFallingSpeed;
     }
 
     private void Start()
@@ -42,14 +52,25 @@ public class BoltManager : MonoBehaviour
                 spawnHelper.spawnBolts();
             }
     }
-    
+
+    public void HideBolts()
+    {
+        StopAllCoroutines();
+        foreach (GameObject bolt in GameObject.FindGameObjectsWithTag("Bolt"))
+        {
+            bolt.GetComponent<Bolt>().Hide();
+        }
+    }
+
+
 
     private void SinglePattern()
     {
         if (instance == null)
         {
             instance = this;
-        }else if(instance != this)
+        }
+        else if(instance != this)
         {
             Destroy(gameObject);
         }

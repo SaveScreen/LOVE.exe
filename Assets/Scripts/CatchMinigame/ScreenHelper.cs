@@ -13,7 +13,7 @@ public class ScreenHelper : MonoBehaviour
     {
         Vector3 cameraPosition = Camera.main.ViewportToWorldPoint(new Vector3(0, 1, 0));
         ScreenTop = cameraPosition.y;
-        ScreenLeft = cameraPosition.x - Camera.main.transform.localScale.x + 1f;
+        ScreenLeft = cameraPosition.x - Camera.main.transform.localScale.x + 1.5f;
         ScreenRight = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height,0)).x -.5f;
     }
     

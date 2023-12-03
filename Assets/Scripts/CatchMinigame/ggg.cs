@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CatchingScript : MonoBehaviour
+public class BoltMovement : MonoBehaviour
 {
-    
     private const int targetY = -20;
     Vector3 target;
     private void Awake()
@@ -15,8 +14,9 @@ public class CatchingScript : MonoBehaviour
     public void Reset()
     {
         target = transform.position;
-        target.y= targetY;
+        target.y = targetY;
     }
+
     void Update()
     {
         MoveDown();
@@ -24,14 +24,28 @@ public class CatchingScript : MonoBehaviour
 
     private void MoveDown()
     {
-        float step = 2f * Time.deltaTime;
+        float step = BoltManager.instance.currentFallingSpeed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target, step);
-
     }
-    
+
+    public void Hide()
+    {
+        transform.position = target;
+        gameObject.SetActive(false);
+    }
+
     private void OnBecameInvisible()
     {
         if(transform.position.y > ScreenHelper.ScreenTop) { return; }
         gameObject.SetActive(false);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!collision.transform.CompareTag("Player")) { return; }
+
+        transform.position = target;
+        gameObject.SetActive(false);
+        //LevelManager.instance.BoltCatch(BoltType);
     }
 }
