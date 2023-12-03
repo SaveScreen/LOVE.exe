@@ -48,6 +48,8 @@ public class ScrollScript1 : MonoBehaviour
 
     public int currentItem;
 
+    public FadeController fadecontroller;
+
     private void Start()
     {
         isSnapped = false;
@@ -126,6 +128,8 @@ public class ScrollScript1 : MonoBehaviour
     public void ReturnToAPT()
     {
         playerdata.SaveGame();
-        SceneManager.LoadScene("AptScene");
+        //SceneManager.LoadScene("AptScene");
+        fadecontroller.FadeToLevel(1);
+        //fadecontroller.OnFadeComplete();
     }
 }

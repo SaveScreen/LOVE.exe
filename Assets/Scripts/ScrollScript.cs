@@ -57,6 +57,7 @@ public class ScrollScript : MonoBehaviour
         if (scrollRect.velocity.magnitude > 20)
         {
             ItemName.text = "_____";
+            fuckingPRONOUNS.text = "___";
             isSnapped = false;
             snapSpeed = 0;
         }
