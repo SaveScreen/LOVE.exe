@@ -63,8 +63,9 @@ MonoBehaviour:
   - "\"My old man told me there\u2019s no such thing as a horse and told me to grow
     up. Took me to get my first little gadget on my face and told me to 'cyber up'.
     \u201D"
-  - "\u201COh shoot. That there arcade cabinet looks mighty familiar from my childhood,
-    mind if we go check it out?\""
+  - "\u201CYou\u2019ve been mighty kind to me, let me take you to one of my favorite
+    spots in town. It\u2019s right on down the road, and we can come back before
+    the sun is up.\u201D"
   date2preWhoistalking: 01000000
   date2postgamelines:
   - '- I am happy you seem to be opening up to me more Jimothy! Your situation with
@@ -145,7 +146,7 @@ MonoBehaviour:
   - 'Of course Jimothy, one deserves to feel like they are loved and secure on Holo-days! '
   - "\u201CY\u2019know, my siblings always loved playing that arcade game there,
     if my memory serves me right, around the holidays they swap it out for a Holo-day-themed
-    cabinet we should check it out!\u201D"
+    gallery we should check it out!\u201D"
   christmasdate2preWhoistalking: 000100
   christmasdate2postgamelines:
   - How did that make you feel Jimothy?
@@ -168,4 +169,4 @@ MonoBehaviour:
   christmaslostgamelines:
   - '"Darn, partner it''s alright, we can try that again later."'
   christmaslostgameWhoistalking: 00
-  minigameOrder: 010000000200000003000000
+  minigameOrder: 010000000400000003000000
