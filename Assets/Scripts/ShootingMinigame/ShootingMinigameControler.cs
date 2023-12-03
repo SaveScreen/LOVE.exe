@@ -220,6 +220,7 @@ public class ShootingMinigameControler : MonoBehaviour
     void RandomTargetSelect()
     {
         int ItemIndex = (Random.Range(0, targetsArray.Length));
+        int ItemIndex2 = (Random.Range(0, movingtargetsArray.Length));
         int howMany = (Random.Range(0, 100));
         //int ismovingtarget = (Random.Range(0, 100));
 
@@ -252,7 +253,7 @@ public class ShootingMinigameControler : MonoBehaviour
         
         if (howMany > 40)
         {
-            movingtargetsArray[ItemIndex].GetComponent<TargetScript>().InitializeTargets();
+            movingtargetsArray[ItemIndex2].GetComponent<TargetScript>().InitializeTargets();
         }
         
 
