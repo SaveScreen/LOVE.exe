@@ -452,6 +452,9 @@ public class VisNovel : MonoBehaviour
                             case 3:
                             SceneManager.LoadScene("RhythmMinigame");
                             break;
+                            case 4:
+                            SceneManager.LoadScene("Sharpshoot Minigame");
+                            break;
                         }
                         
                     }
