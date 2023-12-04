@@ -51,7 +51,7 @@ public class StartMenuController : MonoBehaviour
     public void OnFadeComplete ()
     {
         PlayerData playerdata = player.GetComponent<PlayerData>();
-        //playerdata.InitialFileCheck();
+        playerdata.InitialFileCheck();
         bool playerSelected = playerdata.GetPlayerSelected();
         if (playerSelected) {
             playerdata.LoadGame();
