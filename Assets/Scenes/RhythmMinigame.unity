@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1644,7 +1644,7 @@ GameObject:
   - component: {fileID: 1103925546}
   m_Layer: 0
   m_Name: Regular BG
-  m_TagString: Untagged
+  m_TagString: killbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1783,6 +1783,10 @@ MonoBehaviour:
   endlessgamewinscreen: {fileID: 814956577}
   gameover: 0
   restart: 0
+  circlescript: {fileID: 2556680236565548267, guid: b745bad4c3341ab4e910ea01b87bf5d7,
+    type: 3}
+  targets: []
+  circles: []
 --- !u!61 &1126797147
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3318,7 +3322,7 @@ GameObject:
   - component: {fileID: 2098975372}
   m_Layer: 0
   m_Name: Christmas BG
-  m_TagString: Untagged
+  m_TagString: killbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -22,6 +22,10 @@ public class CircleScript : MonoBehaviour
     private bool clicked;
     private Vector2 mousepos;
     //private bool isOnMobile;
+
+    public GameObject Child;
+    public float growFactor;
+    public GameObject self;
     
 
     // Start is called before the first frame update
@@ -55,23 +59,16 @@ public class CircleScript : MonoBehaviour
         if (!gameover) {
             if (c > 0f) {
             c = Mathf.Lerp(1,0,rate);
-            sprrender.color = new Color(1,c,c,1);
-            rate += speed * Time.deltaTime;
+                //sprrender.color = new Color(1,c,c,1);
+                rate += speed * Time.deltaTime;
+                Child.transform.localScale += new Vector3(.1f, .1f, 0) * growFactor * Time.deltaTime;
             }
             else {
                 Destroy(gameObject);
                 rms.GameOver();
             }
 
-            if (clicked) {
-                var rayHit = Physics2D.GetRayIntersection(maincamera.ScreenPointToRay(mousepos));
-
-                if (!rayHit.collider) return;
-                if (rayHit.collider.gameObject == gameObject) {
-                    AddScore();
-                    Destroy(gameObject);
-                }
-            }
+            
         } 
         else {
             if (rms.restart == true) {
@@ -85,6 +82,7 @@ public class CircleScript : MonoBehaviour
     public void AddScore() {
         rms.PlaySound(snare);
         rms.score += 1;
+        Destroy(self);
     }
     
 }

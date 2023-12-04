@@ -44,10 +44,13 @@ public class RhythmMinigameScript : MonoBehaviour
     private int potentialscore;
     private bool firstspawn;
 
+    private Camera maincamera;
+    [SerializeField] private CircleScript circlescript;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        maincamera = FindObjectOfType<Camera>();
         playerdata = playerdatacontainer.GetComponent<PlayerData>();
         audioSource = GetComponent<AudioSource>();
         respawntime = timer;
@@ -120,6 +123,30 @@ public class RhythmMinigameScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        circlescript = FindObjectOfType<CircleScript>();
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray cameraRay = maincamera.ScreenPointToRay(Input.mousePosition);
+            RaycastHit Hit = new RaycastHit();
+
+            if (Physics.Raycast(cameraRay, out Hit))
+            {
+                if (Hit.collider.CompareTag("ShootTarget"))
+                {
+                    circlescript.AddScore();
+                }
+                else
+                {
+                    Debug.Log("Missed");
+                }
+            }
+        }
+
+
+
+
+
         if (!isEndlessMode) {
             if (timer > 0) {
                 timer -= Time.deltaTime;
@@ -282,6 +309,7 @@ public class RhythmMinigameScript : MonoBehaviour
         gameoverscreen.SetActive(false);
         MusicPlayer.SetActive(true);
         Generate();
+        SceneManager.LoadScene("RhythmMinigame");
     }
 
     public void Continue() {
