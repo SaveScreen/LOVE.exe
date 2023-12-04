@@ -99,7 +99,7 @@ public class DateSelectionScript : MonoBehaviour
                 CharaUiBG.GetComponent<Image>().color = new Color32(124, 255, 131, 255);
                 break;
             case 6:
-                datechoicetext.text = "Pierre Le�Sarcelle";
+                datechoicetext.text = "Pierre Le Sarcelle";
                 dateLikes.text = "Being Pampered <br> Luxurious Gifts";
                 dateDislikes.text = "Old People Fashion <br> Poor People";
                 ConfirmDates[5].SetActive(true);
