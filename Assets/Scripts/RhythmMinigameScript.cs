@@ -123,7 +123,6 @@ public class RhythmMinigameScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        circlescript = FindObjectOfType<CircleScript>();
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -134,6 +133,7 @@ public class RhythmMinigameScript : MonoBehaviour
             {
                 if (Hit.collider.CompareTag("ShootTarget"))
                 {
+                    circlescript = Hit.transform.gameObject.GetComponent<CircleScript>();
                     circlescript.AddScore();
                 }
                 else
