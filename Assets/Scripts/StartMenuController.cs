@@ -20,18 +20,18 @@ public class StartMenuController : MonoBehaviour
 
     private void Update()
     {
+
      if (Input.GetMouseButtonDown(0))
+     {
+            Destroy(Ad);
+     }
+
+        if (Input.GetMouseButtonDown(0) && Ad == null)
         {
-            Ad.SetActive(false);
-
-            if(!Ad.active)
-            {
-                PlayerData playerdata = player.GetComponent<PlayerData>();
-                playerdata.InitialFileCheck();
-                FadeToLevel(1);
-                StartScreenSound.Play();
-            }
-
+            PlayerData playerdata = player.GetComponent<PlayerData>();
+            playerdata.InitialFileCheck();
+            FadeToLevel(1);
+            StartScreenSound.Play();
         }
 
         _img.uvRect = new Rect(_img.uvRect.position + new Vector2(_x, _y) * Time.deltaTime, _img.uvRect.size);
