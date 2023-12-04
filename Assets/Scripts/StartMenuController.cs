@@ -18,18 +18,23 @@ public class StartMenuController : MonoBehaviour
     //Holoday ad
     public GameObject Ad;
 
+    private void Start()
+    {
+        PlayerData playerdata = player.GetComponent<PlayerData>();
+        playerdata.InitialFileCheck();
+    }
     private void Update()
     {
-
-     if (Input.GetMouseButtonDown(0))
-     {
+        
+        if (Input.GetMouseButtonDown(0))
+         {
             Destroy(Ad);
-     }
+            
+        }
 
         if (Input.GetMouseButtonDown(0) && Ad == null)
         {
-            PlayerData playerdata = player.GetComponent<PlayerData>();
-            playerdata.InitialFileCheck();
+
             FadeToLevel(1);
             StartScreenSound.Play();
         }
