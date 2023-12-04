@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 public class CharacterSelect : MonoBehaviour
 {
 
@@ -17,6 +17,9 @@ public class CharacterSelect : MonoBehaviour
     public TextMeshProUGUI namechoicetext;
     public GameObject playerdatacontainer;
     private PlayerData playerdata;
+
+    public Image ConfirmButton;
+    public Image StartOverButton;
 
 
     // Start is called before the first frame update
@@ -49,12 +52,18 @@ public class CharacterSelect : MonoBehaviour
         confirmscreen.SetActive(true);
         if (botoption == 1) {
             botchoicetext.text = "Model_M";
+            ConfirmButton.GetComponent<Image>().color = new Color32(76, 255, 248, 255);
+            StartOverButton.GetComponent<Image>().color = new Color32(76, 255, 248, 255);
         }
         if (botoption == 2) {
             botchoicetext.text = "Model_S";
+            ConfirmButton.GetComponent<Image>().color = new Color32(255, 253, 0, 255);
+            StartOverButton.GetComponent<Image>().color = new Color32(255, 253, 0, 255);
         }
         if (botoption == 3) {
             botchoicetext.text = "Model_T";
+            ConfirmButton.GetComponent<Image>().color = new Color32(243, 0, 255, 255);
+            StartOverButton.GetComponent<Image>().color = new Color32(243, 0, 255, 255);
         }
         namechoicetext.text = nameoption;
         Debug.Log("Name chosen as " + nameoption);
