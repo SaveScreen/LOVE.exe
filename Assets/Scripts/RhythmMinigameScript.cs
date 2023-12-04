@@ -43,7 +43,6 @@ public class RhythmMinigameScript : MonoBehaviour
     private int rhythmGamesPlayed;
     private int potentialscore;
     private bool firstspawn;
-    private bool theresaCircle = false;
 
     private Camera maincamera;
     [SerializeField] private CircleScript circlescript;
@@ -93,7 +92,6 @@ public class RhythmMinigameScript : MonoBehaviour
             }
 
             Generate();
-            theresaCircle = true;
             endlesscountdown.text = "";
             hiscoretext.text = "Hiscore: " + hiscore;
         }
@@ -136,9 +134,7 @@ public class RhythmMinigameScript : MonoBehaviour
             {
                 if (Hit.collider.CompareTag("ShootTarget"))
                 {
-                    Debug.Log("Circle Hit");
                     circlescript.AddScore();
-                    theresaCircle = false;
                 }
                 else
                 {
@@ -152,26 +148,19 @@ public class RhythmMinigameScript : MonoBehaviour
 
 
         if (!isEndlessMode) {
-            if(!theresaCircle)
-            {
-                if (timer > 0)
-                {
-                    timer -= Time.deltaTime;
-                }
-                else
-                {
-                    Generate();
-                    theresaCircle = true;
-                    timer = respawntime;
-                    ShrinkRespawnTime();
-                }
-                scoretext.text = "Score: " + score;
+            if (timer > 0) {
+                timer -= Time.deltaTime;
+            }
+            else {
+                Generate();
+                timer = respawntime;
+                ShrinkRespawnTime();
+            }
+            scoretext.text = "Score: " + score;
 
-                if (score > hiscore)
-                {
-                    hiscore = score;
-                    hiscoretext.text = "Hiscore: " + hiscore;
-                }
+            if (score > hiscore) {
+                hiscore = score;
+                hiscoretext.text = "Hiscore: " + hiscore;
             }
         }
         else {
@@ -196,7 +185,6 @@ public class RhythmMinigameScript : MonoBehaviour
             else {
                 if (!firstspawn) {
                     Generate();
-                    theresaCircle = true;
                     firstspawn = true;
                 }
                 else {
@@ -205,7 +193,6 @@ public class RhythmMinigameScript : MonoBehaviour
                     }
                     else {
                         Generate();
-                        theresaCircle = true;
                         timer = respawntime;
                         ShrinkRespawnTime();
                     }
@@ -322,7 +309,6 @@ public class RhythmMinigameScript : MonoBehaviour
         gameoverscreen.SetActive(false);
         MusicPlayer.SetActive(true);
         Generate();
-        theresaCircle = true;
         SceneManager.LoadScene("RhythmMinigame");
     }
 
