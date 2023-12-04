@@ -339,14 +339,12 @@ public class PlayerData : MonoBehaviour
             case 1: //Cowboy
                 if (firstLoad)
                 {
-                    if (playeroutfit == 1)
+                    if (playeroutfit == 1 || playeroutfit == 3)
                         playerRating += 1f;
-                    else if (playeroutfit == 3)
-                        playerRating += 0.5f;
-                    else if (playeroutfit > 3)
-                        playerRating += Random.Range(0,1f);
-                    else 
+                    else if (playeroutfit == 2 || playeroutfit == 6)
                         playerRating += 0;
+                    else 
+                        playerRating += 0.5f;
                     Debug.Log("Firstloaded");
                 }
                 firstLoad = false;
@@ -356,14 +354,12 @@ public class PlayerData : MonoBehaviour
             case 2: //Goth
                 if (firstLoad)
                 {
-                    if (playeroutfit == 3)
+                    if (playeroutfit == 3 || playeroutfit == 8)
                         playerRating += 1f;
-                    else if (playeroutfit == 2)
-                        playerRating += 0.5f;
-                    else if (playeroutfit > 3)
-                        playerRating += Random.Range(0.0f,1.0f);
-                    else
+                    else if (playeroutfit == 1 || playeroutfit == 7)
                         playerRating += 0;
+                    else
+                        playerRating += 0.5f;
                     Debug.Log("Firstloaded");
                 }
                 firstLoad = false;
@@ -373,14 +369,12 @@ public class PlayerData : MonoBehaviour
             case 3: //Fancy
                 if (firstLoad)
                 {
-                    if (playeroutfit == 2)
+                    if (playeroutfit == 2 || playeroutfit == 6)
                         playerRating += 1f;
-                    else if (playeroutfit == 1)
-                        playerRating += 0.5f;
-                    else if (playeroutfit > 3)
-                        playerRating += Random.Range(0,1f);
-                    else
+                    else if (playeroutfit == 5 || playeroutfit == 7)
                         playerRating += 0;
+                    else
+                        playerRating += 0.5f;
                     Debug.Log("Firstloaded");
                 }
                 firstLoad = false;
@@ -390,99 +384,87 @@ public class PlayerData : MonoBehaviour
             case 4: //Gamer
                 if (firstLoad)
                 {
-                    if (playeroutfit == 2)
+                    if (playeroutfit == 7 || playeroutfit == 8)
                         playerRating += 1f;
-                    else if (playeroutfit == 3)
-                        playerRating += 0.5f;
-                    else if (playeroutfit > 3)
-                        playerRating += Random.Range(0, 1f);
-                    else
+                    else if (playeroutfit == 9 || playeroutfit == 2)
                         playerRating += 0;
+                    else
+                        playerRating += 0.5f;
                     Debug.Log("Firstloaded");
                 }
                 firstLoad = false;
                 Debug.Log("Player Rating: " + playerRating);
                 return playerRating;
 
-            case 5: //Gamer
+            case 5: //Bouldergarde
                 if (firstLoad)
                 {
-                    if (playeroutfit == 2)
+                    if (playeroutfit == 6 || playeroutfit == 8)
                         playerRating += 1f;
-                    else if (playeroutfit == 3)
-                        playerRating += 0.5f;
-                    else if (playeroutfit > 3)
-                        playerRating += Random.Range(0, 1f);
-                    else
+                    else if (playeroutfit == 3 || playeroutfit == 1)
                         playerRating += 0;
+                    else
+                        playerRating += 0.5f;
                     Debug.Log("Firstloaded");
                 }
                 firstLoad = false;
                 Debug.Log("Player Rating: " + playerRating);
                 return playerRating;
 
-            case 6: //Gamer
+            case 6: //Twink
                 if (firstLoad)
                 {
-                    if (playeroutfit == 2)
+                    if (playeroutfit == 6 || playeroutfit == 7)
                         playerRating += 1f;
-                    else if (playeroutfit == 3)
-                        playerRating += 0.5f;
-                    else if (playeroutfit > 3)
-                        playerRating += Random.Range(0, 1f);
-                    else
+                    else if (playeroutfit == 1 || playeroutfit == 5)
                         playerRating += 0;
+                    else
+                        playerRating += 0.5f;
                     Debug.Log("Firstloaded");
                 }
                 firstLoad = false;
                 Debug.Log("Player Rating: " + playerRating);
                 return playerRating;
 
-            case 7: //Gamer
+            case 7: //Pyramid Scheme
                 if (firstLoad)
                 {
-                    if (playeroutfit == 2)
+                    if (playeroutfit == 2 || playeroutfit == 10)
                         playerRating += 1f;
-                    else if (playeroutfit == 3)
-                        playerRating += 0.5f;
-                    else if (playeroutfit > 3)
-                        playerRating += Random.Range(0, 1f);
-                    else
+                    else if (playeroutfit == 3 || playeroutfit == 5)
                         playerRating += 0;
+                    else
+                        playerRating += 0.5f;
                     Debug.Log("Firstloaded");
                 }
                 firstLoad = false;
                 Debug.Log("Player Rating: " + playerRating);
                 return playerRating;
 
-            case 8: //Gamer
+            case 8: //Hitomi
                 if (firstLoad)
                 {
-                    if (playeroutfit == 2)
+                    if (playeroutfit == 9 || playeroutfit == 7)
                         playerRating += 1f;
-                    else if (playeroutfit == 3)
-                        playerRating += 0.5f;
-                    else if (playeroutfit > 3)
-                        playerRating += Random.Range(0, 1f);
-                    else
+                    else if (playeroutfit == 3 || playeroutfit == 1)
                         playerRating += 0;
+                    else
+                        playerRating += 0.5f;
                     Debug.Log("Firstloaded");
                 }
                 firstLoad = false;
                 Debug.Log("Player Rating: " + playerRating);
                 return playerRating;
 
-            case 9: //Gamer
+            case 9: //Shopkeeper
                 if (firstLoad)
                 {
-                    if (playeroutfit == 2)
+                    if (playeroutfit == 2 || playeroutfit == 5)
                         playerRating += 1f;
-                    else if (playeroutfit == 3)
-                        playerRating += 0.5f;
-                    else if (playeroutfit > 3)
-                        playerRating += Random.Range(0, 1f);
-                    else
+                    else if (playeroutfit == 6 || playeroutfit == 10)
                         playerRating += 0;
+                    else
+                        playerRating += 0.5f;
                     Debug.Log("Firstloaded");
                 }
                 firstLoad = false;
@@ -491,12 +473,8 @@ public class PlayerData : MonoBehaviour
             case 10: //HOLODAY
                 if (firstLoad)
                 {
-                    if (playeroutfit == 2)
+                    if (playeroutfit == 11)
                         playerRating += 1f;
-                    else if (playeroutfit == 3)
-                        playerRating += 1f;
-                    else if (playeroutfit > 3)
-                        playerRating += Random.Range(0, 1f);
                     else
                         playerRating += 0;
                     Debug.Log("Firstloaded");
