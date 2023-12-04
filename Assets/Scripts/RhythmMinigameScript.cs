@@ -194,37 +194,28 @@ public class RhythmMinigameScript : MonoBehaviour
                 }
             }
             else {
-                if (!theresaCircle)
-                {
-                    if (!firstspawn)
-                    {
+                if (!firstspawn) {
+                    Generate();
+                    theresaCircle = true;
+                    firstspawn = true;
+                }
+                else {
+                    if (timer > 0) {
+                    timer -= Time.deltaTime;
+                    }
+                    else {
                         Generate();
                         theresaCircle = true;
-                        firstspawn = true;
+                        timer = respawntime;
+                        ShrinkRespawnTime();
                     }
-                    else
-                    {
-                        if (timer > 0)
-                        {
-                            timer -= Time.deltaTime;
-                        }
-                        else
-                        {
-                            Generate();
-                            theresaCircle = true;
-                            timer = respawntime;
-                            ShrinkRespawnTime();
-                        }
-                        scoretext.text = "Score: " + score;
+                    scoretext.text = "Score: " + score;
 
-                        if (score >= potentialscore)
-                        {
-                            if (!gameover)
-                            {
-                                MusicPlayer.SetActive(false);
-                                PlaySound(winAudio);
-                                MinigameComplete();
-                            }
+                    if (score >= potentialscore) {
+                        if (!gameover) {
+                            MusicPlayer.SetActive(false);
+                            PlaySound(winAudio);
+                            MinigameComplete();
                         }
                     }
                 }
