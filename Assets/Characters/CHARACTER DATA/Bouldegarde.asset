@@ -13,116 +13,124 @@ MonoBehaviour:
   m_Name: Bouldegarde
   m_EditorClassIdentifier: 
   angrylines:
-  - BACK BEGONE YOU FOUL TROLL! Oh, I do apologize I have mistaken you for a foul
-    creature due to your apparel.
-  - "Good Evening, Michelangelo Boldegaurde it is a pleasure to meet you, I'm looking
+  - BACK! BEGONE YOU FOUL TROLL!
+  - Oh, I do apologize. I have mistaken you for a foul creature due to your apparel.
+  - "Good Evening, Michelangelo Boldegarde. It is a pleasure to meet you. I'm looking
     forward to completing your Mother\u2019s specified request of \u201Cbreaking
-    your shell"
-  - My armor is made from the hardiest hide of Dragons and the finest gold of said
-    beasts. My mother would never want me to damage it
-  - "I also advise you to refer to me by the proper name \u201CSIR Boldegaurde"
-  - "I do not believe that is what she was referring to, but alas I will still look
-    to help you\u2026Sir Bouldegaurde. "
-  - "The only help Sir Bouldegaurde needs is finding his fair damsel to save from
-    danger! I believe you may yet be a beneficial party member, but first I must
-    assess your stats\u201D *starts to flex*"
+    out of your shell\"."
+  - My armor is made from the hardiest hide of Dragons and lined with the finest
+    gold found within the den of said beasts. My mother would never want me to damage
+    it.
+  - "I also advise you to refer to me by the proper name, \u201CSIR Boldegarde\"!"
+  - "I do not believe that is what she was referring to, but alas, I will still look
+    to help you\u2026Sir Bouldegarde. "
+  - The only help Sir Bouldegarde needs is finding his fair damsel to save from danger!
+    I believe you may yet serve as a beneficial party member, but first I must assess
+    your stats. *Starts to flex*
   - '*Robotic Sigh*'
-  alWhoistalking: 00010000010001
+  alWhoistalking: 0000010000010001
   neutrallines:
-  - Ah, I see Mother has acquired me the services of a Cybernetic Dating Bot, I do
-    not see the need for this but I will indulge either way.
-  - "Good Evening, Michelangelo Boldegaurde it is a pleasure to meet you, I'm looking
+  - Ah, I see Mother has acquired me the services of a Cybernetic Dating Bot. I do
+    not see the need for this, but I will indulge either way.
+  - "Good Evening, Michelangelo Boldegarde. It is a pleasure to meet you. I'm looking
     forward to completing your Mother\u2019s specified request of \u201Cbreaking
-    your shell"
-  - My armor is made from the hardiest hide of Dragons and the finest gold of said
-    beasts. My mother would never want me to damage it
-  - "I also advise you to refer to me by the proper name \u201CSIR Boldegaurde"
-  - "I do not believe that is what she was referring to, but alas I will still look
-    to help you\u2026Sir Bouldegaurde. "
-  - "The only help Sir Bouldegaurde needs is finding his fair damsel to save from
-    danger! I believe you may yet be a beneficial party member, but first I must
-    assess your stats\u201D *starts to flex*"
+    out of your shell\"."
+  - My armor is made from the hardiest hide of Dragons and lined with the finest
+    gold found within the den of said beasts. My mother would never want me to damage
+    it.
+  - "I also advise you to refer to me by the proper name, \u201CSIR Boldegarde\"!"
+  - "I do not believe that is what she was referring to, but alas, I will still look
+    to help you\u2026Sir Bouldegarde. "
+  - The only help Sir Bouldegarde needs is finding his fair damsel to save from danger!
+    I believe you may yet serve as a beneficial party member, but first I must assess
+    your stats. *Starts to flex*
   - '*Robotic Sigh*'
   nlWhoistalking: 00010000010001
   happylines:
   - What an astonishing warrior, I am blessed to have such magnificent elegance standing
     before me!
-  - "Good Evening, Michelangelo Boldegaurde it is a pleasure to meet you, I'm looking
+  - "Good Evening, Michelangelo Boldegarde. It is a pleasure to meet you. I'm looking
     forward to completing your Mother\u2019s specified request of \u201Cbreaking
-    your shell"
-  - My armor is made from the hardiest hide of Dragons and the finest gold of said
-    beasts. My mother would never want me to damage it
-  - "I also advise you to refer to me by the proper name \u201CSIR Boldegaurde"
-  - "I do not believe that is what she was referring to, but alas I will still look
-    to help you\u2026Sir Bouldegaurde. "
-  - "The only help Sir Bouldegaurde needs is finding his fair damsel to save from
-    danger! I believe you may yet be a beneficial party member, but first I must
-    assess your stats\u201D *starts to flex*"
+    out of your shell\"."
+  - My armor is made from the hardiest hide of Dragons and lined with the finest
+    gold found within the den of said beasts. My mother would never want me to damage
+    it.
+  - "I also advise you to refer to me by the proper name, \u201CSIR Boldegarde\"!"
+  - "I do not believe that is what she was referring to, but alas, I will still look
+    to help you\u2026Sir Bouldegarde. "
+  - The only help Sir Bouldegarde needs is finding his fair damsel to save from danger!
+    I believe you may yet serve as a beneficial party member, but first I must assess
+    your stats. *Starts to flex*
   - '*Robotic Sigh*'
   hlWhoistalking: 00010000010001
   date2pregamelines:
-  - '*reconfiguring speech parameters* Sir Bouldegaurde, doth thou not feel as if
-    he has been casting a spell of masks, hiding thines true beauty behind the facade
-    of a brave paladin?'
-  - "...hey that\u2019s not true\u2026Besides, my dear bot, the brave Bouldegaurde
-    is not a spell caster I am a fighter, I engage in only sword-to-sword combat!"
-  - 'I believe that you are playing some sort of magic trickery upon me, Sir, I will
-    not believe your facade unless proven otherwise. In fact, they should refer to
-    thine mighty as Sir Bouldegaurde the Deceiver! '
+  - '*reconfiguring speech parameters* Sir Bouldegarde, doth thou not feel as if
+    thou hast cast a spell of masks, hiding thine true beauty behind the facade of
+    a brave paladin?'
+  - "...Hey that\u2019s not true\u2026 Besides, my dear companion, the brave Bouldegarde
+    is not a spell caster. I am a fighter! I engage in only sword-to-sword combat!"
+  - I believe thou is playing some sort of magic trickery upon me, Sir. I musn't
+    believe thy facade unless proven otherwise. Lest all should refer to thine mighty
+    as Sir Bouldegaurde the Deceiver!
   - "I am not! I am a mighty warrior, I'm sure you can\u2019t pass my constitution
-    check\u2026only the best have beaten my high score!"
+    check\u2026Only the best have beaten my high score!"
   date2preWhoistalking: 01000100
   date2postgamelines:
-  - How is that even possible? I guess your stats are quite high, but I still hold
-    my reservations about you as you do not trust me
-  - Dear Sir, you have not proven to me otherwise, the great Sir Bouldegaurde would
-    not hide his true self just to protect the world, he would lift himself up, and
-    allow himself to be free
-  - '*Michaelangelo calms down a bit, sitting on a stool by the bar head cupped in
-    his hands and body slouched over* You are right I do this cause it just helps
-    me feel powerful and not feel like a loser'
-  date2postWhoistalking: 000100
+  - I've been bested? How is that possible? I guess your stats are quite high, but
+    I still hold my prejudice against you as you do not completely trust me.
+  - Dear Sir, you have not proven to me otherwise. The great Sir Bouldegarde would
+    not hide his true self just to protect the world. He would lift himself up and
+    allow himself to be free!
+  - '*Michaelangelo calms down a bit, sitting on a stool by the bar. Head cupped
+    in his hands and body slouched over*'
+  - You are right... I do this cause it just helps me feel powerful and not to appear
+    as though I am a fool.
+  date2postWhoistalking: 00010000
   date3pregamelines:
-  - Sir Bouldeguard, you never need to hide your fascination or love for things.
+  - Sir Bouldegard, you never need to hide your fascinations or love for things.
     It is what makes you a well-rounded warrior. You are brave for loving what you
     do, and you need not be afraid of that.
-  - "Oh\u2026thank you, that means a lot to me fair traveler, I think we have one
-    more check for this date, the one of dexterity. May I have your hand?"
+  - 'Thank you. That means a lot to me, fair traveler. I think we have one more check
+    for this date: the one of dexterity. May I have your hand?'
   date3preWhoistalking: 0100
   date3postgamelines:
-  - "*Configuring back to normal speech* That was quite fun Sir Bouldegaurde! I see
-    you coming into your own, you don't seem as secretive anymore, I believe your
-    \u201Cshell\u201D has broken!"
-  - "That was so fun, I\u2019ve never felt more like myself in ages, thank you, dear.
-    As a reward for your success, the services of Michaelangelo Bouldegaurde are
-    at your will  *He gives you a bow of respect and a kiss on the hand*"
-  date3postWhoistalking: 0100
+  - "*Configuring back to normal speech* That was quite fun Sir Bouldegarde! I see
+    you loosening up. You don't seem as secretive anymore and I believe your \u201Cshell\u201D
+    has been broken!"
+  - "Aye, that was so fun. I\u2019ve never felt more like myself in ages. Thank you,
+    dear. As a reward for your success, the services of Michaelangelo Bouldegarde
+    shall be summoned at your call.  *He gives you a bow of respect and a kiss on
+    the hand*"
+  - '*Boldergarde gives a bow of respect and kisses your hand*'
+  date3postWhoistalking: 010000
   wongamelines:
-  - WOW! You are a mighty warrior, your strength shines above the rest of the regulars.
+  - WOW! You are a mighty warrior, indeed! Your strength and resilience shines above
+    the rest of the commoners.
   wongameWhoistalking: 00
   lostgamelines:
-  - AHA, See I knew only the bravest warriors could be on my party and your stats
+  - AHA! See I knew only the bravest warriors could be on my party, and your stats
     do not meet the requirements!
   - Natural One! Too bad!
-  - You are a mimic, no bot would be so bad at such a simple task unless it was overtaken
-    by a malevolent being!
+  - You are a mere mimic. No bot would be so bad at such a simple task unless it
+    was overtaken by a malevolent being!
   - WITCH! Back away, foul being before I slay you!
-  lostgameWhoistalking: 00
+  lostgameWhoistalking: 00000000
   christmasangrylines:
-  - DREADFUL WITCH STAND BACK!
-  - Happy Holo-day Sir Bouldegaurde, as a part of the Better Living-
-  - "I need your help! Oh I know it\u2019s Holo-day but I need your help! "
-  - 'Oh why I can assist with your troubles, after all we are making sure your Holo-day
-    is merry and bright. '
-  - "Right now, it is quite dreadful and desolate\u2026I need to get my mind off
+  - DREADFUL WITCH! STAND BACK!
+  - Happy Holo-day, Sir Bouldegarde! As a part of the Better Living-
+  - "Wait, I need your help! I know it\u2019s Holo-day but I need your help!"
+  - Oh, why I can assist with your troubles. After all, we are making sure your Holo-day
+    is merry and bright.
+  - "Right now it is quite dreadful and desolate\u2026 I need to get my mind off
     of my recent Taverns and Trolls campaign."
-  - "Let\u2019s go get some fresh air, and relax for a second sir."
+  - "Let\u2019s go get some fresh air, and relax for a second, sir."
   christmasalWhoistalking: 000100010001
   christmasneutrallines:
-  - "Ah, if it isn\u2019t the Cybernetic Dating Bot, come to bless my Holo-day?"
-  - Happy Holo-day Sir Bouldegaurde, as a part of the Better Living-
-  - "I need your help! Oh I know it\u2019s Holo-day but I need your help!"
-  - Oh why I can assist with your troubles, after all we are making sure your Holo-day
+  - "Ah, if it isn\u2019t the Cybernetic Dating Bot who seems to have come to bless
+    my Holo-day?"
+  - Happy Holo-day, Sir Bouldegarde! As a part of the Better Living-
+  - "Wait, I need your help! I know it\u2019s Holo-day but I need your help!"
+  - Oh, why I can assist with your troubles. After all, we are making sure your Holo-day
     is merry and bright.
   - "Right now, it is quite dreadful and desolate\u2026I need to get my mind off
     of my recent Taverns and Trolls campaign."
@@ -130,37 +138,39 @@ MonoBehaviour:
   christmasnlWhoistalking: 000100010001
   christmashappylines:
   - By the Gods! You look fantastic! Truly ethereal!
-  - Happy Holo-day Sir Bouldegaurde, as a part of the Better Living-
-  - "I need your help! Oh I know it\u2019s Holo-day but I need your help!"
-  - Oh why I can assist with your troubles, after all we are making sure your Holo-day
+  - Happy Holo-day, Sir Bouldegarde! As a part of the Better Living-
+  - "Wait, I need your help! I know it\u2019s Holo-day but I need your help!"
+  - Oh, why I can assist with your troubles. After all, we are making sure your Holo-day
     is merry and bright.
   - "Right now, it is quite dreadful and desolate\u2026I need to get my mind off
     of my recent Taverns and Trolls campaign."
   - "Let\u2019s go get some fresh air, and relax for a second sir."
   christmashlWhoistalking: 000100010001
   christmasdate2pregamelines:
-  - So tell me Bouldegaurde what do you need assistance on?
+  - So tell me Bouldegarde what do you need assistance on?
   - In my recent campaign, we are traversing the Great Mount Sno, in order to barter
     with this ancient green dragon to avoid him from attacking the local town.
-  - "That doesn\u2019t sound bad, I am sure your expertise in Taverns and Trolls
+  - "That doesn\u2019t sound too bad. I am sure your expertise in Taverns and Trolls
     can help avoid any catastrophes."
   - That is my exact issue! I got too greedy and stole a shiny statue before we could
-    barter with the green dragon which has now made him angry at us!
-  - "*indicating rise in anxiety, activating comfort mode* Bouldegaurde, lets take
+    barter with the green dragon, which has now made him angry at us!
+  - "*indicating rise in anxiety, activating comfort mode* Bouldegarde, lets take
     a second, you are doing fine, you are here, let\u2019s play some Snow Run to
     get your mind off it."
+  - "Bouldegarde, lets take a second. You are doing fine. Let\u2019s play some Snow
+    Run to get your mind off this for a little bit."
   christmasdate2preWhoistalking: 0100010001
   christmasdate2postgamelines:
-  - "That calmed me down a bit, thank you so much my liege. I just want to know what
-    would be the best route to avoid having my friends characters killed\u201D"
-  - Perhaps your group can barter with the green dragon. Offer it the gold statue,
+  - That calmed me down a bit. Thank you so much, my liege. I just want to know what
+    would be the best route to avoid having my friends characters killed?
+  - Perhaps your group can barter with the green dragon. Offer it the gold statue
     in exchange for not attacking the city.
-  - That does seem rational, I still worry that my friends will hate me for ruining
-    the campaign.
-  - "Come with me sir, let\u2019s get your mind off with a noble dance."
+  - That does seem rational... I still worry that my friends will despise me for
+    ruining the campaign.
+  - "Come with me, sir, let\u2019s get your mind off of this with a dance for nobles."
   christmasdate2postWhoistalking: 00010001
   christmasdate3pregamelines:
-  - That calmed me down a bit, thank you so much my liege. I just want to know what
+  - That calmed me down a bit. Thank you so much my liege. I just want to know what
     would be the best route to avoid having my friends characters killed
   - Perhaps your group can barter with the green dragon. Offer it the gold statue,
     in exchange for not attacking the city.
@@ -169,12 +179,12 @@ MonoBehaviour:
   - "Come with me sir, let\u2019s get your mind off with a noble dance."
   christmasdate3preWhoistalking: 00010001
   christmasdate3postgamelines:
-  - "I feel much calmer, thank you so much m\u2019bot. *Bouldegaurde gives you a
-    bow* "
-  - No need to thank me, sir, it is all part of my job. Have a happy Holo-day Bouldegaurde!
+  - "I feel much calmer. Thank you so much m\u2019bot. *Bouldegarde gives you a bow* "
+  - No need to thank me, sir.Iit is all simply part of my job. Have a happy Holo-day
+    Bouldegarde!
   christmasdate3postWhoistalking: 0001
   christmaswongamelines:
-  - A truly skilled warrior, it is a blessing to have you on my side.
+  - A truly skilled warrior! It is a blessing to have you on my side.
   christmaswongameWhoistalking: 00
   christmaslostgamelines:
   - "Pick yourself up friend, I can\u2019t lose my friends\u2026"

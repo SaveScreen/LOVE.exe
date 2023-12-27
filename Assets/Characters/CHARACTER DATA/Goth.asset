@@ -16,10 +16,10 @@ MonoBehaviour:
   - "\u201CAh, this is not what I expected\u2026\u201D"
   - '- My systems are telling me that you are having trouble expressing your feelings
     and connecting with others. Would you like to practice with me? '
-  - "\u201COh, well.. people just are very unreliable in this city. Technopolis isn\u2019t
-    really a place you get a happy ending in, every man for himself y'know? Here,
+  - "\u201COh, well.. people are very unreliable in this city. Technopolis isn\u2019t
+    really a place you get a happy ending in. Every man for himself y'know? Here,
     I'll show you one of my favorite spots.\u201D"
-  - '- Humans have a lot more in common than you might believe Jett, would you like
+  - '- Humans have a lot more in common than you might believe Jett. Would you like
     to explore it together?'
   alWhoistalking: 00010001
   neutrallines:
@@ -28,20 +28,20 @@ MonoBehaviour:
     so bad after all\u2026\u201D"
   - '- My systems are telling me that you are having trouble expressing your feelings
     and connecting with others. Would you like to practice with me? '
-  - "\u201COh, well.. people just are very unreliable in this city. Technopolis isn\u2019t
-    really a place you get a happy ending in, every man for himself y'know? Here,
+  - "\u201COh, well.. people are very unreliable in this city. Technopolis isn\u2019t
+    really a place you get a happy ending in. Every man for himself y'know? Here,
     I'll show you one of my favorite spots.\u201D"
-  - '- Humans have a lot more in common than you might believe Jett, would you like
+  - '- Humans have a lot more in common than you might believe Jett. Would you like
     to explore it together?'
   nlWhoistalking: 0000010001
   happylines:
   - "\u201CSick! You look cool.\u201D"
   - '- My systems are telling me that you are having trouble expressing your feelings
     and connecting with others. Would you like to practice with me? '
-  - "\u201COh, well.. people just are very unreliable in this city. Technopolis isn\u2019t
-    really a place you get a happy ending in, every man for himself y'know? Here,
+  - "\u201COh, well.. people are very unreliable in this city. Technopolis isn\u2019t
+    really a place you get a happy ending in. Every man for himself y'know? Here,
     I'll show you one of my favorite spots.\u201D"
-  - '- Humans have a lot more in common than you might believe Jett, would you like
+  - '- Humans have a lot more in common than you might believe Jett. Would you like
     to explore it together?'
   hlWhoistalking: 00010001
   date2pregamelines:
@@ -49,33 +49,33 @@ MonoBehaviour:
     I decided to date a robot.\u201D"
   - "\u201CMost people are just lame, everyone always just follows the latest trends
     and focuses on what's the newest thing. We\u2019re all becoming clones y'know?\u201D"
-  date2preWhoistalking: 0000
-  date2postgamelines:
   - '- Jett, my data system has calculated you might have ABANDONMENT ISSUES. Would
     you like to work through them with me?'
+  date2preWhoistalking: 000001
+  date2postgamelines:
   - "\u201CThis arcade game was pretty fun\u2026 never really explored this bar.
     I have always lived in this city, people come and go. But a robot? You will always
     stay won\u2019t you?\""
   - "\"Maybe that\u2019s why I keep talking to you. It feels like you understand
     me and I might understand you.\" "
-  - '- In my robot opinion, Humans are very interesting and cool! No human is the
-    same, they are all very unique in their own way!'
+  - '- In my robot opinion, humans are very interesting and cool! No human is the
+    same, they are all very unique in their own ways!'
   - "\u201CI don\u2019t think I have anything in common with anyone\u2026 But you
     seem very sure of yourself... Maybe you are right.\u201D"
-  date2postWhoistalking: 0100000100
+  date2postWhoistalking: 00000100
   date3pregamelines:
   - "\u201CBoth of us are just considered weirdos.  I\u2019ve never liked trying,
-    especially when it comes to people. They were all always so judgemental, I\u2019ve
-    always felt alone. I trust you though, if you say people are cool, maybe they
-    might just be.\u201D"
+    especially when it comes to people. They were all always so judgemental. I\u2019ve
+    always felt alone...\""
+  - "\"I trust you though. If you say people are cool, maybe they might just be.\u201D"
   - '- Jett. You need to let loose more. Let us dance!'
-  date3preWhoistalking: 0001
+  date3preWhoistalking: 000001
   date3postgamelines:
   - "\u201CI didn\u2019t think it was that much fun to dance\u2026 I really enjoyed
     myself. Maybe instead of judging others while sitting off to the side by myself,
     I should just join in with them.\u201D "
   - '- Jett, you are very understanding and kind. If you were to show this side to
-    others your fear of people disliking you would vanish!'
+    others, your fear of people disliking you would vanish!'
   - "\u201CI\u2019ve always felt like a discarded puzzle piece in the wrong set,
     but maybe I might have found my place after all in this city. It\u2019s all thanks
     to you, friend.\u201D"
@@ -95,7 +95,7 @@ MonoBehaviour:
   - "Y-yeah. I mean\u2026 I thought about your advice and I actually talked and befriended
     my roommate. She\u2019s actually pretty cool, we had a lot in common."
   - "That\u2019s fantastic, Jett! I am very glad you have followed my advice and
-    made yourself a friend! This is fantastic news but, why are you sad?"
+    made yourself a friend! This is fantastic news, but why are you sad?"
   - "Hm\u2026 Come take a walk outside with me real quick."
   christmasalWhoistalking: 010001000100
   christmasneutrallines:
@@ -106,7 +106,7 @@ MonoBehaviour:
   - "Y-yeah. I mean\u2026 I thought about your advice and I actually talked and befriended
     my roommate. She\u2019s actually pretty cool, we had a lot in common."
   - "That\u2019s fantastic, Jett! I am very glad you have followed my advice and
-    made yourself a friend! This is fantastic news but, why are you sad?"
+    made yourself a friend! This is fantastic news, but why are you sad?"
   - "Hm\u2026 Come take a walk outside with me real quick."
   christmasnlWhoistalking: 010001000100
   christmashappylines:
@@ -117,7 +117,7 @@ MonoBehaviour:
   - "Y-yeah. I mean\u2026 I thought about your advice and I actually talked and befriended
     my roommate. She\u2019s actually pretty cool, we had a lot in common."
   - "That\u2019s fantastic, Jett! I am very glad you have followed my advice and
-    made yourself a friend! This is fantastic news but, why are you sad?"
+    made yourself a friend! This is fantastic news, but why are you sad?"
   - "Hm\u2026 Come take a walk outside with me real quick."
   christmashlWhoistalking: 010001000100
   christmasdate2pregamelines:
@@ -146,35 +146,36 @@ MonoBehaviour:
   christmasdate2postWhoistalking: 000001000000
   christmasdate3pregamelines:
   - A new high score on the new mode, nice!
-  - 'Thanks for what you said, I might have to take you up on that offer. '
-  - How were your Holo-days in the past spent in the past? My database tells me you
-    never reached out to our company before.
+  - 'Thanks for what you said. I might have to take you up on that offer. '
+  - How were your Holo-days spent in the past? My database tells me you never reached
+    out to our company before.
   - "Quiet. I was really used to being alone y\u2019know? Never even considered spending
-    a Holo-day with other people. It was actually last Holo-day that I received an
-    ad for Robot Companions and didn\u2019t decide to go for it until my parent\u2019s
-    anniversary passed. I really miss them both."
+    a Holo-day with other people."
+  - "It was actually last Holo-day that I received an ad for Robot Companions and
+    didn\u2019t decide to go for it until my parent\u2019s anniversary passed. I
+    really miss them both."
   - "My roommate was gonna initially spend it with me, she\u2019s also had plenty
     of Holo-days alone. This year her parents reached out and she\u2019s gonna go
     talk with them after a long time. I\u2019m happy for her, really. That\u2019s
     why I didn't tell her I was gonna be alone. "
   - "Man, this is lame. Let\u2019s go dance or something."
-  christmasdate3preWhoistalking: 000001000000
+  christmasdate3preWhoistalking: 00000100000000
   christmasdate3postgamelines:
   - 'Jett, you had some incredible moves out there! As for your roommate, I understand
-    you do not want to burden your friends but friends will be there for you as I
-    am! You should not lie about your circumstances just to not feel like a burden. '
-  - "Yeah.. I guess you\u2019re right\u2026 Oh I just got a text from her... Woah."
+    you do not want to burden your friends, but friends will be there for you as
+    I am! You should not lie about your circumstances just to not feel like a burden. '
+  - "Yeah, I guess you\u2019re right\u2026 Oh I just got a text from her... Woah."
   - '*Jett pauses for a moment, reading through as her face brightens*'
   - "She asked me to come visit her parents with her, she said she didn\u2019t feel
     super comfortable going alone anyway and her parents told her I could come."
   - Jett, that is wonderful news! I am glad it all worked out.
   - "Thanks for talking with me\u2026 I\u2019m gonna head home to pack\u2026 Merry
-    Holo-day. "
+    Holo-day!"
   christmasdate3postWhoistalking: 010000000100
   christmaswongamelines:
   - "Nice kick, it\u2019s pretty outside\u2026"
   christmaswongameWhoistalking: 00
   christmaslostgamelines:
-  - "I\u2019m just gonna look away\u2026"
+  - "I\u2019m just gonna look away next time\u2026"
   christmaslostgameWhoistalking: 00
   minigameOrder: 010000000200000003000000

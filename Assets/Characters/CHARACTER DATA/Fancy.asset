@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fancy
   m_EditorClassIdentifier: 
   angrylines:
-  - '"Oh dear, that is absolutely dreadful, have these boys not given you a lesson
+  - '"Oh dear, that is absolutely dreadful! Have these boys not given you a lesson
     in class?"'
   - "\u201CI\u2019ve had plenty of robot companions, they\u2019re all so very dull.
     I hope you will be of some use to me and provide optimal entertainment.\u201D"
@@ -24,8 +24,8 @@ MonoBehaviour:
     Maybe this location was a bad idea..\u201D"
   alWhoistalking: 00000100
   neutrallines:
-  - '"Your vision is interesting, and the style is there but the formality is lacking. 
-    We can work with this.."'
+  - '"Your vision is interesting, and the style is there, but the formality is lacking. 
+    We can work with this..."'
   - "\u201CI\u2019ve had plenty of robot companions, they\u2019re all so very dull.
     I hope you will be of some use to me and provide optimal entertainment.\u201D"
   - '- Frills, you contacted my CEO personally to discuss wanting to have a NORMAL
@@ -50,7 +50,7 @@ MonoBehaviour:
     people every morning!\""
   - "\"I love it\u2026 of course I love it.\u201D "
   - "\u201CMaybe it could be.. Beneficial, to me to use this date as a way to pretend
-    I am a simple citizen in Technopolis.\""
+    I am a simple citizen living in Technopolis.\""
   - "\"Yes.. this could be.. Avant garde in a way. Let's try that measly little arcade
     game common folk like so much!\u201D"
   date2preWhoistalking: 00000000
@@ -66,7 +66,7 @@ MonoBehaviour:
     for a while... Maybe ever. For that, I must thank you, dearly.\u201D"
   date2postWhoistalking: 01000000
   date3pregamelines:
-  - '- Frills! Let us engage and let loose with dance! My systems tell me you have
+  - '- Frills, let us engage and let loose with dance! My systems tell me you have
     listed NONE for personal hobbies!'
   - "\"You don\u2019t really need hobbies when you\u2019re making millions sweetheart.
     I just need you to bring me on a fun and normal date. Whatever you bring your
@@ -89,7 +89,7 @@ MonoBehaviour:
   - '- You seem like you are putting on a facade Frills! It is okay to let loose
     sometimes and be who you really are!'
   - "\u201CSitting outside and just playing a measly little sport seems like such
-    a waste of time. I could be making money right now\u2026 But I feel so relaxed.\u201D"
+    a waste of time. I could be making money right now\u2026 And yet, I feel so relaxed.\u201D"
   wongameWhoistalking: 0100
   lostgamelines:
   - "\u201CUgh, I am contacting my lawyer, your company will never hear the end of
@@ -97,12 +97,12 @@ MonoBehaviour:
   - '- You seem like you are putting on a facade, Frills! It is okay to let loose
     sometimes and be who you really are!'
   - "\u201CSitting outside and just playing a measly little sport seems like such
-    a waste of time. I could be making money right now\u2026 But I feel so relaxed.\u201D"
+    a waste of time. I could be making money right now\u2026 And yet, I feel so relaxed.\u201D"
   lostgameWhoistalking: 000100
   christmasangrylines:
-  - 'Merry Holo-day, Frills! I am excited to see you again, how are you feeling this
+  - 'Merry Holo-day, Frills! I am excited to see you again. How are you feeling this
     Holo-day Season? '
-  - "Hi, I\u2019ve been fabulous, darling! I actually just got back from Singapulse
+  - "Oh I\u2019ve been fabulous, darling! I actually just got back from Singapulse
     City! On a business trip, of course. The only problem is we\u2019re under new
     management and I was just informed I don\u2019t have another work assignment."
   - That is wonderful news, Frills! I am very excited for you to finally take a break!
@@ -113,7 +113,7 @@ MonoBehaviour:
   - "Let\u2019s go observe the snow outside! I sense you getting more and more distressed."
   christmasalWhoistalking: 0100010001
   christmasneutrallines:
-  - 'Merry Holo-day, Frills! I am excited to see you again, how are you feeling this
+  - 'Merry Holo-day, Frills! I am excited to see you again. How are you feeling this
     Holo-day Season? '
   - "Hi, I\u2019ve been fabulous, darling! I actually just got back from Singapulse
     City! On a business trip, of course. The only problem is we\u2019re under new
@@ -126,7 +126,7 @@ MonoBehaviour:
   - "Let\u2019s go observe the snow outside! I sense you getting more and more distressed."
   christmasnlWhoistalking: 0100010001
   christmashappylines:
-  - 'Merry Holo-day, Frills! I am excited to see you again, how are you feeling this
+  - 'Merry Holo-day, Frills! I am excited to see you again. How are you feeling this
     Holo-day Season? '
   - "Hi, I\u2019ve been fabulous, darling! I actually just got back from Singapulse
     City! On a business trip, of course. The only problem is we\u2019re under new
@@ -139,13 +139,13 @@ MonoBehaviour:
   - "Let\u2019s go observe the snow outside! I sense you getting more and more distressed."
   christmashlWhoistalking: 0100010001
   christmasdate2pregamelines:
-  - "The snow is very pretty\u2026 has it always looked so nice out during this season?
-    I\u2019m always flying in and out of Technopolis, I rarely see it during the
-    day.  "
+  - "The snow is very pretty\u2026 Has it always looked so nice out during this season?
+    I\u2019m always flying in and out of Technopolis, so I rarely see it during the
+    day."
   - 'Frills, I understand you love your job, but I believe you should take advantage
     of this opportunity! You will be able to sleep in, wear whatever you want, and
     do whatever you want for a whole month! '
-  - "My whole life has always revolved around my career, I don\u2019t even have any
+  - "My whole life has always revolved around my career. I don\u2019t even have any
     hobbies! That\u2019s so terrifying\u2026. Oh, it\u2019s so dramatic\u2026 How
     exciting!  "
   - "Come, darling, show me that silly little arcade game again! I\u2019m dying to
@@ -158,8 +158,8 @@ MonoBehaviour:
   christmasdate2postWhoistalking: 0001
   christmasdate3pregamelines:
   - "Of course, Darling! This is an interesting way for me to see how regular people
-    live and pretend I\u2019m one! Of course, also attending all the fabulous Holo-day
-    raves! I have so many outfits I\u2019ve never had the chance to wear! "
+    live and pretend I\u2019m one of them! Of course, also attending all the fabulous
+    Holo-day raves! I have so many outfits I\u2019ve never had the chance to wear! "
   - 'Come, Darling, practice with me on the dance floor! '
   christmasdate3preWhoistalking: 0000
   christmasdate3postgamelines:
