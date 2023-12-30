@@ -17,7 +17,7 @@ MonoBehaviour:
     my systems for agreeing to this."
   - Hello, fellow bot! I am happy to have you accompany me on this date! It is not
     often I get to ask someone on a date outside of work!
-  - Yeah hi. This date better be more entertaining than sitting at home. What are
+  - Yeah, hi. This date better be more entertaining than sitting at home. What are
     you? Like a- a date robot? Do you do anything freaky or do you just listen to
     their problems all day?
   - "I do not know what you mean by \u201CDo anything Freaky\u201D. I am a companion
@@ -38,7 +38,7 @@ MonoBehaviour:
     my systems for agreeing to this."
   - Hello, fellow bot! I am happy to have you accompany me on this date! It is not
     often I get to ask someone on a date outside of work!
-  - Yeah hi. This date better be more entertaining than sitting at home. What are
+  - Yeah, hi. This date better be more entertaining than sitting at home. What are
     you? Like a- a date robot? Do you do anything freaky or do you just listen to
     their problems all day?
   - "I do not know what you mean by \u201CDo anything Freaky\u201D. I am a companion
@@ -59,7 +59,7 @@ MonoBehaviour:
     my systems for agreeing to this."
   - Hello, fellow bot! I am happy to have you accompany me on this date! It is not
     often I get to ask someone on a date outside of work!
-  - Yeah hi. This date better be more entertaining than sitting at home. What are
+  - Yeah, hi. This date better be more entertaining than sitting at home. What are
     you? Like a- a date robot? Do you do anything freaky or do you just listen to
     their problems all day?
   - "I do not know what you mean by \u201CDo anything Freaky\u201D. I am a companion
@@ -67,7 +67,8 @@ MonoBehaviour:
   - "Yeah. Sounds \u201CFulfilling\u201D. Do they ever even ask you how YOU are?"
   - 'I am always neutral! I am a bot without emotions! I do not need my own emotions
     to carry out my duties :) '
-  - You are such a buzzkill. Do you do? Anything? Outside of working? Like any hobbies?
+  - You are such a buzzkill. Do you do... anything? Outside of working? Like any
+    hobbies?
   - I like to go shopping!-
   - Oh okay-
   - For clothes my customers will enjoy! :)
@@ -81,7 +82,7 @@ MonoBehaviour:
     I cannot detect what your system feels.
   - "That's the point. You\u2019re not supposed to match how I feel, you\u2019re
     supposed to determine how you feel."
-  - I do not understand. Model SK 876, Are you defective?
+  - I do not understand. Model SK 876, are you defective?
   - "What??? Don\u2019t EVER say that to me. I am not defective. I will crush your
     little circuit board between my fingers if you ever say that to me again you
     empty tin case."
@@ -92,7 +93,7 @@ MonoBehaviour:
     Try this game out and tell me how you feel."
   date2preWhoistalking: 010001000100
   date2postgamelines:
-  - "My system is full of sparks Model SK 876!!! Is this not a system malfunction?
+  - "My system is full of sparks, Model SK 876!!! Is this not a system malfunction?
     Can this be\u2026 excitement?"
   - I don't know, probably. Can you stop calling me my model name? I go by Holo.
     H-O-L-O. Got it?
@@ -108,13 +109,13 @@ MonoBehaviour:
   date3postgamelines:
   - "I am always used to helping out others and listening to human problems all day
     long. It is nice to be\u2026 Heard"
-  - Glad I could be your robot therapist for tonight sparky. I had fun too.. I guess.
+  - Glad I could be your robot therapist for tonight, sparky. I had fun too.. I guess.
   - I am feeling a strange emotion. I want to see you more, but I am anxious to hear
     what you will say to that.
   - Oh? Does Little Tin Can have a crush?.... Cute. Maybe I want to see you more
     too. Maybe. Call me sometime when you get tired of this whole gig, maybe we can
     go somewhere new.
-  - 'I will miss this moment Holo. '
+  - 'I will miss this moment, Holo. '
   - "I\u2019ll miss it too. Hope you don\u2019t reboot. Catch you at the shop sometime,
     yeah?"
   date3postWhoistalking: 010001000100
@@ -124,48 +125,51 @@ MonoBehaviour:
   wongameWhoistalking: 0100
   lostgamelines:
   - This is so lame.
-  - "I\u2019m never going out with a glorified toaster again"
+  - "I\u2019m never going out with a glorified toaster again."
   - "You remind me of a customer. I\u2019m going to hurt you."
-  lostgameWhoistalking: 00
+  lostgameWhoistalking: 000000
   christmasangrylines:
-  - Merry Holo-day, Holo! I am glad you agreed to meet me on your break, I hope you
+  - Merry Holo-day, Holo! I am glad you agreed to meet me on your break. I hope you
     are having a fun time outside of the shop!
-  - "I guess you\u2019re also working on Holo-day. No rest for robots, do you have
+  - "I guess you\u2019re also working on Holo-day. No rest for robots. Do you have
     any plans for holo-day other than working?"
   - "My company has requested me to go around to all of my customers and ensure they
     are having a good Holo-day\u2026. I came to check up on you between my duties
     :) "
-  - "Oh? Little tin can came to see me for fun and not for a task? If I was human
-    I\u2019d blush. "
+  - "Oh? Little tin can came to see me for fun and not for a task? If I was a human,
+    I\u2019d blush."
   - Really?
-  - "No. Let\u2019s hang out and see the lights outside. "
-  christmasalWhoistalking: 010001000100
+  - No.
+  - "Let\u2019s hang out and see the lights outside. "
+  christmasalWhoistalking: 01000100010000
   christmasneutrallines:
-  - Merry Holo-day, Holo! I am glad you agreed to meet me on your break, I hope you
+  - Merry Holo-day, Holo! I am glad you agreed to meet me on your break. I hope you
     are having a fun time outside of the shop!
-  - "I guess you\u2019re also working on Holo-day. No rest for robots, do you have
+  - "I guess you\u2019re also working on Holo-day. No rest for robots. Do you have
     any plans for holo-day other than working?"
   - "My company has requested me to go around to all of my customers and ensure they
     are having a good Holo-day\u2026. I came to check up on you between my duties
     :) "
-  - "Oh? Little tin can came to see me for fun and not for a task? If I was human
-    I\u2019d blush. "
+  - "Oh? Little tin can came to see me for fun and not for a task? If I was a human,
+    I\u2019d blush."
   - Really?
-  - "No. Let\u2019s hang out and see the lights outside. "
-  christmasnlWhoistalking: 010001000100
+  - No.
+  - "Let\u2019s hang out and see the lights outside. "
+  christmasnlWhoistalking: 01000100010000
   christmashappylines:
-  - Merry Holo-day, Holo! I am glad you agreed to meet me on your break, I hope you
+  - Merry Holo-day, Holo! I am glad you agreed to meet me on your break. I hope you
     are having a fun time outside of the shop!
-  - "I guess you\u2019re also working on Holo-day. No rest for robots, do you have
+  - "I guess you\u2019re also working on Holo-day. No rest for robots. Do you have
     any plans for holo-day other than working?"
   - "My company has requested me to go around to all of my customers and ensure they
     are having a good Holo-day\u2026. I came to check up on you between my duties
     :) "
-  - "Oh? Little tin can came to see me for fun and not for a task? If I was human
-    I\u2019d blush. "
+  - "Oh? Little tin can came to see me for fun and not for a task? If I was a human,
+    I\u2019d blush."
   - Really?
-  - "No. Let\u2019s hang out and see the lights outside. "
-  christmashlWhoistalking: 010001000100
+  - No.
+  - "Let\u2019s hang out and see the lights outside. "
+  christmashlWhoistalking: 01000100010000
   christmasdate2pregamelines:
   - "Thank you, Holo! I am delighted to hang out with you for Holo-day, even if it\u2019s
     just for a moment."
@@ -174,19 +178,20 @@ MonoBehaviour:
   christmasdate2preWhoistalking: 000100
   christmasdate2postgamelines:
   - Holo,  I have obtained a new high score on Snow Run!
-  - "Congrats\u2026 I should go to the shop soon, usually, I wouldn\u2019t care but
-    working keeps my mind off of things."
+  - "Congrats\u2026 I should go to the shop soon. Usually, I wouldn\u2019t care,
+    but working keeps my mind off of things."
   - Holo, you seem very somber lately. Are you okay?
-  - 'Holo-day always makes me wish I was a human, even though I was created I wish
-    I could have those Holo-day childhood memories you know? Guess these dates are
-    the closest thing I have to feeling human. '
+  - Holo-day always makes me wish I was a human. Even though I was created by humans,
+    I wish I could have those Holo-day childhood memories, you know? Guess these
+    dates are the closest thing I have to feeling human.
   - "Holo\u2026. I will be calling a fire threat to your shop :) "
   - '*Holo pauses, taken aback* Wh- What? '
   - 'You will be able to be sent home early and enjoy your holo-day, just like everybody
-    else! You do not need to be human to make holo-day memories, I have plenty of
-    fond ones with you. '
-  - "You\u2019re insane. I really like you, let\u2019s make some memories."
-  christmasdate2postWhoistalking: 0100010001000100
+    else! '
+  - You do not need to be human to make Holo-Day memories. I have plenty of fond
+    ones with you.
+  - "You\u2019re insane... I really like you. Let\u2019s make some memories."
+  christmasdate2postWhoistalking: 010001000100010100
   christmasdate3pregamelines:
   - Holo,  I have obtained a new high score on Snow Run!
   - "Congrats\u2026 I should go to the shop soon, usually, I wouldn\u2019t care but
@@ -203,8 +208,8 @@ MonoBehaviour:
   - "You\u2019re insane. I really like you, let\u2019s make some memories."
   christmasdate3preWhoistalking: 0100010001000100
   christmasdate3postgamelines:
-  - 'Thanks for the date... And the threat so I can go home early. '
-  - 'Of course, Holo! I hope you have a very merry Holo-day. '
+  - 'Thanks for the date... and the threat so I can go home early. '
+  - 'Of course, Holo! I hope you have a very merry Holo-Day. '
   - "You too. Maybe you can come over tonight and see if any sparks fly\u2026 just
     kidding. *Holo giggles*"
   christmasdate3postWhoistalking: 000100

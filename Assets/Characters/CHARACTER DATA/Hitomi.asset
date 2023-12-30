@@ -15,7 +15,7 @@ MonoBehaviour:
   angrylines:
   - I knew you were a Hitomi-maniac in your heart!
   - H I T O M I! YEAH!
-  - "Hello Hitomi Nakamura, It is a pleasure to meet you in person seeing as your
+  - "Hello Hitomi Nakamura, it is a pleasure to meet you in person. Seeing as your
     profile has you as a Technopolis Championship Wrestling\u2019s rookie of the
     previous year!"
   - Oh my! It seems we have a real super fan here! It is a pleasure to have your
@@ -24,15 +24,15 @@ MonoBehaviour:
     due to the tag team known as Gloom & Doom. They made you lose your championship
     last Christmas after Fabulous Phlair distracted you in your match with Judgement
     Ripley.
-  - "\u2026Correct, see I am not one for cheating but having a partner by my side
-    so I can take down those dastardly villains will help me regain my confidence
-    and glory. But first I need to test your strength, endurance, and speed"
+  - Correct... See, I am not one for cheating, but having a partner by my side so
+    I can take down those dastardly villains will help me regain my confidence and
+    glory. But first I need to test your strength, endurance, and speed.
   - "Testing endurance on a videogame machine is quite\u2026odd. "
   alWhoistalking: 00000100010001
   neutrallines:
   - I knew you were a Hitomi-maniac in your heart!
   - H I T O M I! YEAH!
-  - "Hello Hitomi Nakamura, It is a pleasure to meet you in person seeing as your
+  - "Hello Hitomi Nakamura, it is a pleasure to meet you in person. Seeing as your
     profile has you as a Technopolis Championship Wrestling\u2019s rookie of the
     previous year!"
   - Oh my! It seems we have a real super fan here! It is a pleasure to have your
@@ -41,15 +41,15 @@ MonoBehaviour:
     due to the tag team known as Gloom & Doom. They made you lose your championship
     last Christmas after Fabulous Phlair distracted you in your match with Judgement
     Ripley.
-  - "\u2026Correct, see I am not one for cheating but having a partner by my side
-    so I can take down those dastardly villains will help me regain my confidence
-    and glory. But first I need to test your strength, endurance, and speed"
+  - Correct... See, I am not one for cheating, but having a partner by my side so
+    I can take down those dastardly villains will help me regain my confidence and
+    glory. But first I need to test your strength, endurance, and speed.
   - "Testing endurance on a videogame machine is quite\u2026odd. "
   nlWhoistalking: 00000100010001
   happylines:
   - I knew you were a Hitomi-maniac in your heart!
   - H I T O M I! YEAH!
-  - "Hello Hitomi Nakamura, It is a pleasure to meet you in person seeing as your
+  - "Hello Hitomi Nakamura, it is a pleasure to meet you in person. Seeing as your
     profile has you as a Technopolis Championship Wrestling\u2019s rookie of the
     previous year!"
   - Oh my! It seems we have a real super fan here! It is a pleasure to have your
@@ -58,23 +58,23 @@ MonoBehaviour:
     due to the tag team known as Gloom & Doom. They made you lose your championship
     last Christmas after Fabulous Phlair distracted you in your match with Judgement
     Ripley.
-  - "\u2026Correct, see I am not one for cheating but having a partner by my side
-    so I can take down those dastardly villains will help me regain my confidence
-    and glory. But first I need to test your strength, endurance, and speed"
+  - Correct... See, I am not one for cheating, but having a partner by my side so
+    I can take down those dastardly villains will help me regain my confidence and
+    glory. But first I need to test your strength, endurance, and speed.
   - "Testing endurance on a videogame machine is quite\u2026odd. "
   hlWhoistalking: 00000100010001
   date2pregamelines:
-  - "That\u2019s the spirit get into it! We have to come up with a name for you,
-    one to match yours truly of course. Something to strike fear into the hearts
-    of our enemies! But also make the audience fall madly in love with you.  "
+  - "That\u2019s the spirit! Get into it! We have to come up with a name for you,
+    one to match yours truly, of course. Something to strike fear into the hearts
+    of our enemies, but also make the audience fall madly in love with you!"
   - '*scanning for appropriate ring names* How about the Bruiser Bot? Or the Agile
     Android? '
   - "Love the creativity, but I was thinking of something with a bit more punch to
-    it, something to get the crowd pumped up! Let me test your strength and maybe
+    it. Something to get the crowd pumped up! Let me test your strength and maybe
     something will come to my mind\u2026 "
   date2preWhoistalking: 000100
   date2postgamelines:
-  - 'WOOO! I got it, I know what we should call you! Stick with me here Punchimi
+  - 'WOOO! I got it! I know what we should call you! Stick with me here, Punchimi
     The Bruiser Bot! Combines your idea and kinda intertwines with my gimmick! '
   - "That sounds\u2026WONDERFUL! Together Hitomi and Punchimi will take over the
     TCW and show the city what true heroes look like!"
@@ -84,12 +84,12 @@ MonoBehaviour:
     agility!"
   date2postWhoistalking: 000100
   date3pregamelines:
-  - How do you propose we do that Hitomi, we are in the middle of a bar.
-  - The dance floor silly, come let me guide you, and then you got to show me your
+  - How do you propose we do that, Hitomi? We are in the middle of a bar.
+  - The dance floor, silly! Come, let me guide you and then you got to show me your
     moves Punchimi. *winks cheekily at you*
   date3preWhoistalking: 0100
   date3postgamelines:
-  - "You can\u2019t stop us! You are perfect, I believe I have found the perfect
+  - "You can\u2019t stop us! You are perfect! I believe I have found the perfect
     tag team partner to help me gain my glory back!"
   - 'Of course Hitomi, you are a star, even if my services were not here you would
     not need my assistance to succeed. '
@@ -99,76 +99,77 @@ MonoBehaviour:
   - 'I would enjoy that alot, partner! '
   date3postWhoistalking: 00010001
   wongamelines:
-  - 'YEAH! You are a superstar, definitely see that grit inside you that makes someone
-    a perfect wrestler. '
-  - '*changing dialogue parameters* Well sister, I can see us being a two-person
+  - YEAH! You are a superstar! Definitely see that grit inside you that makes someone
+    a perfect wrestler.
+  - '*changing dialogue parameters* Well, sister, I can see us being a two-person
     power team in the TCW making sure you get your championship back from those conniving
     cheaters known as Gloom & Doom.'
   wongameWhoistalking: 0001
   lostgamelines:
-  - Another loss to my perfect record, suffering succotash.
+  - Another loss to my perfect record... Suffering succotash.
   - "I\u2019m hurt, I'm tired, I\u2019m heartbroken, and I work with idiots like
-    you"
+    you..."
   - "If you can\u2019t be my partner, give me a HECK YEAH!"
   - "Let me go grab the explosive bat real quick\u2026"
-  lostgameWhoistalking: 00
+  lostgameWhoistalking: 00000000
   christmasangrylines:
   - Where's your ring gear partner?
   - Happy Holo-days to you Hitomi! Better Living Co. has tasked me with bringing
     cheer to others and I wanted to check in with you!
-  - "Hello, friend! That means a lot to me, it is truly a wonderful time of the year.
-    I have to say though I am quite sad this go around\u2026 "
-  - "Oh, that does not sound like a cheerful Holo-day, let\u2019s do something fun
+  - "Hello, friend! That means a lot to me. It is truly a wonderful time of the year.
+    I have to say, though, I am quite sad this go around\u2026 "
+  - "Oh, that does not sound like a cheerful Holo-day. Let\u2019s do something fun
     so you can relax for a bit."
   christmasalWhoistalking: 00010001
   christmasneutrallines:
   - Hey partner! What are ya up to?
   - Happy Holo-days to you Hitomi! Better Living Co. has tasked me with bringing
     cheer to others and I wanted to check in with you!
-  - "Hello, friend! That means a lot to me, it is truly a wonderful time of the year.
-    I have to say though I am quite sad this go around\u2026 "
-  - "Oh, that does not sound like a cheerful Holo-day, let\u2019s do something fun
+  - "Hello, friend! That means a lot to me. It is truly a wonderful time of the year.
+    I have to say, though, I am quite sad this go around\u2026 "
+  - "Oh, that does not sound like a cheerful Holo-day. Let\u2019s do something fun
     so you can relax for a bit."
   christmasnlWhoistalking: 00010001
   christmashappylines:
   - HAPPY HOLO-DAY PARTNER!
   - Happy Holo-days to you Hitomi! Better Living Co. has tasked me with bringing
     cheer to others and I wanted to check in with you!
-  - "Hello, friend! That means a lot to me, it is truly a wonderful time of the year.
-    I have to say though I am quite sad this go around\u2026 "
-  - "Oh, that does not sound like a cheerful Holo-day, let\u2019s do something fun
+  - "Hello, friend! That means a lot to me. It is truly a wonderful time of the year.
+    I have to say, though, I am quite sad this go around\u2026 "
+  - "Oh, that does not sound like a cheerful Holo-day. Let\u2019s do something fun
     so you can relax for a bit."
   christmashlWhoistalking: 00010001
   christmasdate2pregamelines:
-  - Tell me Hitomi what seems to be the issue?
+  - Tell me, Hitomi, what seems to be the issue?
   - "Well, Technopolis Championship Wrestling has me working their big Merry Go Round
     Tournament, which takes place all throughout the season. I won\u2019t be able
     to see my family for Holo-day and I\u2019d really hate to miss them!"
-  - That sounds dreadful, there must be a way to get you home for Holo-day at least.
+  - That sounds dreadful. There must be a way to get you home for Holo-day at least.
   - "Unless you can cancel it altogether, I am afraid I will be all alone this Holo-day\u2026"
-  - "Let\u2019s get your mind off that right now, let\u2019s step outside, perhaps
+  - "Let\u2019s get your mind off that right now, let\u2019s step outside. Perhaps
     that will help ease your mind or give us an idea!"
   christmasdate2preWhoistalking: 0100010001
   christmasdate2postgamelines:
-  - WOO! I got it, how about I enter the tourney for you?
-  - GENIUS! You could enter under my team, and we can swap places, if you do that
+  - WOO! I got it! How about I enter the tourney for you?
+  - GENIUS! You could enter under my team, and we can swap places. If you do that
     for me I would be forever grateful!
   christmasdate2postWhoistalking: 0100
   christmasdate3pregamelines:
-  - Of course Hitomi! You are an amazing wrestler and champion, you deserve the time
-    away from work. The wonderful Holo-day time to relax, speak, and dance with family!
-  - EXACTLY! You are amazing, in fact, may I have your hand in this special Holo-day
+  - Of course, Hitomi! You are an amazing wrestler and champion! You deserve the
+    time away from work. The wonderful Holo-day time is for relaxing, talking, and
+    dancing with family!
+  - EXACTLY! You are amazing! In fact, may I have your hand in this special Holo-day
     dance?
   christmasdate3preWhoistalking: 0100
   christmasdate3postgamelines:
-  - "*Hitomi giggles to herself* You are so amazing! Thank you so much for your help
+  - "*Hitomi giggles to herself* You are so amazing! Thank you so much for your help,
     partner, and I hope you don\u2019t get bruised up too bad in that tourney!"
-  - "I\u2019ll be alright Hitomi, enjoy your relaxing Holo-day."
+  - "I\u2019ll be alright, Hitomi. Enjoy your relaxing Holo-day."
   christmasdate3postWhoistalking: 0001
   christmaswongamelines:
   - YOU ROCK! YOU ROCK!
   christmaswongameWhoistalking: 00
   christmaslostgamelines:
-  - That was a rough landing, but it's alright we can bounce back!
+  - That was a rough landing, but it's alright. We can bounce back!
   christmaslostgameWhoistalking: 00
   minigameOrder: 020000000100000003000000

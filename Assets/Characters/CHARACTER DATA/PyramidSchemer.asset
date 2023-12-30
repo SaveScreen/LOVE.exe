@@ -18,7 +18,8 @@ MonoBehaviour:
   - Oh, wonderful! We can begin our meeting.
   - " I apologize, but I wasn\u2019t expecting a \u201Cmeeting\u201D today.  My manufacturer
     programmed me as an interface designed only for dating and companionship."
-  - Oh but- Hold on a minute Bot! I actually very much need you for something!
+  - Oh but-
+  - Hold on a minute Bot! I actually very much need you for something!
   - "I want you to try a new product that\u2019s been flying off shelves lately and
     conduct a series of tests!"
   - "It's called a \u2018Happy Mask\u2019, and it's said that those who wear their
@@ -30,14 +31,15 @@ MonoBehaviour:
   - ' It is a bit tight. I am not sure if it is suited for me.'
   - "That\u2019s totally normal. You\u2019ll get used to it! Now I would like to
     take you to a park to run my first test. Shall we go?"
-  alWhoistalking: 00010001000000010001000100
+  alWhoistalking: 0001000101000000010001000100
   neutrallines:
   - ...
   - Excuse me, sir? Barry D. Money?
   - Oh, wonderful! We can begin our meeting.
-  - " I apologize, but I wasn\u2019t expecting a \u201Cmeeting\u201D today.  My manufacturer
+  - "I apologize, but I wasn\u2019t expecting a \u201Cmeeting\u201D today.  My manufacturer
     programmed me as an interface designed only for dating and companionship."
-  - Oh but- Hold on a minute Bot! I actually very much need you for something!
+  - Oh but-
+  - Hold on a minute Bot! I actually very much need you for something!
   - "I want you to try a new product that\u2019s been flying off shelves lately and
     conduct a series of tests!"
   - "It's called a \u2018Happy Mask\u2019, and it's said that those who wear their
@@ -49,14 +51,15 @@ MonoBehaviour:
   - ' It is a bit tight. I am not sure if it is suited for me.'
   - "That\u2019s totally normal. You\u2019ll get used to it! Now I would like to
     take you to a park to run my first test. Shall we go?"
-  nlWhoistalking: 00010001000000010001000100
+  nlWhoistalking: 0001000101000000010001000100
   happylines:
   - ...
   - Excuse me, sir? Barry D. Money?
   - Oh, wonderful! We can begin our meeting.
   - " I apologize, but I wasn\u2019t expecting a \u201Cmeeting\u201D today.  My manufacturer
     programmed me as an interface designed only for dating and companionship."
-  - Oh but- Hold on a minute Bot! I actually very much need you for something!
+  - Oh but-
+  - Hold on a minute Bot! I actually very much need you for something!
   - "I want you to try a new product that\u2019s been flying off shelves lately and
     conduct a series of tests!"
   - "It's called a \u2018Happy Mask\u2019, and it's said that those who wear their
@@ -68,7 +71,7 @@ MonoBehaviour:
   - ' It is a bit tight. I am not sure if it is suited for me.'
   - "That\u2019s totally normal. You\u2019ll get used to it! Now I would like to
     take you to a park to run my first test. Shall we go?"
-  hlWhoistalking: 00010001000000010001000100
+  hlWhoistalking: 0001000101000000010001000100
   date2pregamelines:
   - So how do you feel after that first activity?
   - I do not feel much difference in my system.
@@ -145,4 +148,22 @@ MonoBehaviour:
   - Are you with the corpos??
   - I'm... getting a business call!
   lostgameWhoistalking: 00
+  christmasangrylines: []
+  christmasalWhoistalking: 
+  christmasneutrallines: []
+  christmasnlWhoistalking: 
+  christmashappylines: []
+  christmashlWhoistalking: 
+  christmasdate2pregamelines: []
+  christmasdate2preWhoistalking: 
+  christmasdate2postgamelines: []
+  christmasdate2postWhoistalking: 
+  christmasdate3pregamelines: []
+  christmasdate3preWhoistalking: 
+  christmasdate3postgamelines: []
+  christmasdate3postWhoistalking: 
+  christmaswongamelines: []
+  christmaswongameWhoistalking: 
+  christmaslostgamelines: []
+  christmaslostgameWhoistalking: 
   minigameOrder: 010000000200000003000000
