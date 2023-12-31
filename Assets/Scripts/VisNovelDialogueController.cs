@@ -12,10 +12,14 @@ public class VisNovelDialogueController : MonoBehaviour
     public TextMeshProUGUI pinktextbox;
     public TextMeshProUGUI yellowtextbox; 
     public TextMeshProUGUI jptextbox;
+    public TextMeshProUGUI jpbluetextbox;
+    public TextMeshProUGUI jppinktextbox;
+    public TextMeshProUGUI jpyellowtextbox;
     public CharacterData[] characters;
+    public CharacterData[] jpCharacters;
     private string[] currentlines;
     private bool[] whoistalking;
-    public bool isEnglish;
+    private int language;
     private bool isChristmas;
     private int index;
     public InputActionAsset inputs;
@@ -48,6 +52,9 @@ public class VisNovelDialogueController : MonoBehaviour
         bluetextbox.text = "";
         pinktextbox.text = "";
         yellowtextbox.text = "";
+        jpbluetextbox.text = "";
+        jppinktextbox.text = "";
+        jpyellowtextbox.text = "";
         dialoguestarted = false;
         dialoguefinished = false;
         
@@ -56,6 +63,7 @@ public class VisNovelDialogueController : MonoBehaviour
         playedGame = playerdata.GetPlayedGame();
         date = playerdata.GetPlayerDate() - 1;
         isChristmas = playerdata.GetChristmasTime();
+        language = playerdata.GetLanguage();
     }
 
     void OnEnable() {
@@ -76,7 +84,8 @@ public class VisNovelDialogueController : MonoBehaviour
                 case 0:
                     switch (visNovelScript.datemoodref) {
                         case 1:
-                            if (isEnglish) {
+                            if (language == 0) {
+                                //English Lines
                                 if (isChristmas)
                                 {
                                     currentlines = characters[date].christmasangrylines;
@@ -89,11 +98,21 @@ public class VisNovelDialogueController : MonoBehaviour
                                 }
                             }
                             else {
-                                //currentlines = jpcowboyangrylines;
+                                //Japanese Lines
+                                if (isChristmas)
+                                {
+                                    currentlines = jpCharacters[date].christmasangrylines;
+                                    whoistalking = jpCharacters[date].christmasalWhoistalking;
+                                }
+                                else
+                                {
+                                    currentlines = jpCharacters[date].angrylines;
+                                    whoistalking = jpCharacters[date].alWhoistalking;
+                                }
                             }                        
                         break;
                         case 2:
-                            if (isEnglish) {
+                            if (language == 0) {
                                 if (isChristmas)
                                 {
                                     currentlines = characters[date].christmasneutrallines;
@@ -107,11 +126,20 @@ public class VisNovelDialogueController : MonoBehaviour
                                 
                             }
                             else {
-                                //currentlines = jpcowboyneutrallines;
+                                if (isChristmas)
+                                {
+                                    currentlines = jpCharacters[date].christmasneutrallines;
+                                    whoistalking = jpCharacters[date].christmasnlWhoistalking;
+                                }
+                                else
+                                {
+                                    currentlines = jpCharacters[date].neutrallines;
+                                    whoistalking = jpCharacters[date].nlWhoistalking;
+                                }
                             }                            
                         break;
                         case 3:
-                            if (isEnglish) {
+                            if (language == 0) {
                                 if (isChristmas)
                                 {
                                     currentlines = characters[date].christmashappylines;
@@ -125,7 +153,16 @@ public class VisNovelDialogueController : MonoBehaviour
                                
                             }
                             else {
-                                //currentlines = jpcowboyhappylines;
+                                if (isChristmas)
+                                {
+                                    currentlines = jpCharacters[date].christmashappylines;
+                                    whoistalking = jpCharacters[date].christmashlWhoistalking;
+                                }
+                                else
+                                {
+                                    currentlines = jpCharacters[date].happylines;
+                                    whoistalking = jpCharacters[date].hlWhoistalking;
+                                }
                             }      
                         break;
                     }                    
@@ -134,91 +171,169 @@ public class VisNovelDialogueController : MonoBehaviour
                 case 1:
                     if (playedGame) {    
                         if (wonlastgame) {
-                            if (isChristmas)
-                            {
-                                currentlines = characters[date].christmaswongamelines;
-                                whoistalking = characters[date].christmaswongameWhoistalking;
+                            if (language == 0) {
+                                if (isChristmas)
+                                {
+                                    currentlines = characters[date].christmaswongamelines;
+                                    whoistalking = characters[date].christmaswongameWhoistalking;
+                                }
+                                else
+                                {
+                                    currentlines = characters[date].wongamelines;
+                                    whoistalking = characters[date].wongameWhoistalking;
+                                }
                             }
-                            else
-                            {
-                                currentlines = characters[date].wongamelines;
-                                whoistalking = characters[date].wongameWhoistalking;
+                            else {
+                                if (isChristmas)
+                                {
+                                    currentlines = jpCharacters[date].christmaswongamelines;
+                                    whoistalking = jpCharacters[date].christmaswongameWhoistalking;
+                                }
+                                else
+                                {
+                                    currentlines = jpCharacters[date].wongamelines;
+                                    whoistalking = jpCharacters[date].wongameWhoistalking;
+                                }
                             }
-                            
                         }
                         else {
-                            if (isChristmas)
-                            {
-                                currentlines = characters[date].christmaslostgamelines;
-                                whoistalking = characters[date].christmaslostgameWhoistalking;
+                            if (language == 0) {
+                                if (isChristmas)
+                                {
+                                    currentlines = characters[date].christmaslostgamelines;
+                                    whoistalking = characters[date].christmaslostgameWhoistalking;
+                                }
+                                else
+                                {
+                                    currentlines = characters[date].lostgamelines;
+                                    whoistalking = characters[date].lostgameWhoistalking;
+                                }
                             }
-                            else
-                            {
-                                currentlines = characters[date].lostgamelines;
-                                whoistalking = characters[date].lostgameWhoistalking;
-                            }
-                                                               
+                            else {
+                                if (isChristmas)
+                                {
+                                    currentlines = jpCharacters[date].christmaslostgamelines;
+                                    whoistalking = jpCharacters[date].christmaslostgameWhoistalking;
+                                }
+                                else
+                                {
+                                    currentlines = jpCharacters[date].lostgamelines;
+                                    whoistalking = jpCharacters[date].lostgameWhoistalking;
+                                }
+                            }                                      
                         }    
                     }
                     //Next Date
                     else {
-                        if (isChristmas)
-                        {
-                            currentlines = characters[date].christmasdate2pregamelines;
-                            whoistalking = characters[date].christmasdate2preWhoistalking;
+                        if (language == 0) {
+                            if (isChristmas)
+                            {
+                                currentlines = characters[date].christmasdate2pregamelines;
+                                whoistalking = characters[date].christmasdate2preWhoistalking;
+                            }
+                            else
+                            {
+                                currentlines = characters[date].date2pregamelines;
+                                whoistalking = characters[date].date2preWhoistalking;
+                            }
                         }
-                        else
-                        {
-                            currentlines = characters[date].date2pregamelines;
-                            whoistalking = characters[date].date2preWhoistalking;
-                        }
-                            
+                        else {
+                            if (isChristmas)
+                            {
+                                currentlines = jpCharacters[date].christmasdate2pregamelines;
+                                whoistalking = jpCharacters[date].christmasdate2preWhoistalking;
+                            }
+                            else
+                            {
+                                currentlines = jpCharacters[date].date2pregamelines;
+                                whoistalking = jpCharacters[date].date2preWhoistalking;
+                            }
+                        }          
                     }
                 break;
                 //After playing 2 games
                 case 2:
                     if (playedGame) {
-                        if (isChristmas)
-                        {
-                            currentlines = characters[date].christmasdate2postgamelines;
-                            whoistalking = characters[date].christmasdate2postWhoistalking;
+                        if (language == 0) {
+                            if (isChristmas)
+                            {
+                                currentlines = characters[date].christmasdate2postgamelines;
+                                whoistalking = characters[date].christmasdate2postWhoistalking;
+                            }
+                            else
+                            {
+                                currentlines = characters[date].date2postgamelines;
+                                whoistalking = characters[date].date2postWhoistalking;
+                            }
                         }
-                        else
-                        {
-                            currentlines = characters[date].date2postgamelines;
-                            whoistalking = characters[date].date2postWhoistalking;
-                        }
-                             
+                        else {
+                            if (isChristmas)
+                            {
+                                currentlines = jpCharacters[date].christmasdate2postgamelines;
+                                whoistalking = jpCharacters[date].christmasdate2postWhoistalking;
+                            }
+                            else
+                            {
+                                currentlines = jpCharacters[date].date2postgamelines;
+                                whoistalking = jpCharacters[date].date2postWhoistalking;
+                            }
+                        }     
                     }
                     //Next Date
                     else {
-                        if (isChristmas)
-                        {
-                            currentlines = characters[date].christmasdate3pregamelines;
-                            whoistalking = characters[date].christmasdate3preWhoistalking;
+                        if (language == 0) {
+                            if (isChristmas)
+                            {
+                                currentlines = characters[date].christmasdate3pregamelines;
+                                whoistalking = characters[date].christmasdate3preWhoistalking;
+                            }
+                            else
+                            {
+                                currentlines = characters[date].date3pregamelines;
+                                whoistalking = characters[date].date3preWhoistalking;
+                            }
                         }
-                        else
-                        {
-                            currentlines = characters[date].date3pregamelines;
-                            whoistalking = characters[date].date3preWhoistalking;
-                        }
-                                                    
+                        else {
+                            if (isChristmas)
+                            {
+                                currentlines = jpCharacters[date].christmasdate3pregamelines;
+                                whoistalking = jpCharacters[date].christmasdate3preWhoistalking;
+                            }
+                            else
+                            {
+                                currentlines = jpCharacters[date].date3pregamelines;
+                                whoistalking = jpCharacters[date].date3preWhoistalking;
+                            }
+                        }                            
                     }
                 break;
                 //After playing 3 games
                 case 3:
                     if (playedGame) {
-                        if (isChristmas)
-                        {
-                            currentlines = characters[date].christmasdate3postgamelines;
-                            whoistalking = characters[date].christmasdate3postWhoistalking;
+                        if (language == 0) {
+                            if (isChristmas)
+                            {
+                                currentlines = characters[date].christmasdate3postgamelines;
+                                whoistalking = characters[date].christmasdate3postWhoistalking;
+                            }
+                            else
+                            {
+                                currentlines = characters[date].date3postgamelines;
+                                whoistalking = characters[date].date3postWhoistalking;
+                            }
                         }
-                        else
-                        {
-                            currentlines = characters[date].date3postgamelines;
-                            whoistalking = characters[date].date3postWhoistalking;
-                        }
-                            
+                        else {
+                            if (isChristmas)
+                            {
+                                currentlines = jpCharacters[date].christmasdate3postgamelines;
+                                whoistalking = jpCharacters[date].christmasdate3postWhoistalking;
+                            }
+                            else
+                            {
+                                currentlines = jpCharacters[date].date3postgamelines;
+                                whoistalking = jpCharacters[date].date3postWhoistalking;
+                            }
+                        }   
                     }
                 break;
                 
@@ -231,7 +346,8 @@ public class VisNovelDialogueController : MonoBehaviour
             clicked = click.WasPressedThisFrame();
             if (cutscene) {
                 if (clicked) {
-                    if (isEnglish) {
+                    if (language == 0) {
+                        //FOR ENGLISH DIALOGUE
                         if (whoistalking[index] == false) {
                             if (textbox.text == currentlines[index]) {
                                 NextPage();
@@ -274,15 +390,48 @@ public class VisNovelDialogueController : MonoBehaviour
                         }
                     }
                     else {
-                        if (jptextbox.text == currentlines[index]) {
-                            NextPage();
+                        //FOR JAPANESE DIALOGUE
+                        if (whoistalking[index] == false) {
+                            if (jptextbox.text == currentlines[index]) {
+                                NextPage();
+                            }
+                            else {
+                                StopAllCoroutines();
+                                jptextbox.text = currentlines[index];
+                            }
                         }
                         else {
-                            StopAllCoroutines();
-                            jptextbox.text = currentlines[index];
+                            switch (playerdata.GetPlayerBot()) {
+                                case 3:
+                                    if (jppinktextbox.text == currentlines[index]) {
+                                        NextPage();
+                                    }
+                                    else {
+                                        StopAllCoroutines();
+                                        jppinktextbox.text = currentlines[index];
+                                    } 
+                                break;
+                                case 1:
+                                    if (jpbluetextbox.text == currentlines[index]) {
+                                        NextPage();
+                                    }
+                                    else {
+                                        StopAllCoroutines();
+                                        jpbluetextbox.text = currentlines[index];
+                                    }
+                                break;
+                                case 2:
+                                    if (jpyellowtextbox.text == currentlines[index]) {
+                                        NextPage();
+                                    }
+                                    else {
+                                        StopAllCoroutines();
+                                        jpyellowtextbox.text = currentlines[index];
+                                    }
+                                break;
+                            }
                         }
-                    }
-                    
+                    }   
                 }
             }
         }
@@ -292,7 +441,7 @@ public class VisNovelDialogueController : MonoBehaviour
     void NextPage() {
         if (index < currentlines.Length - 1) {
             index ++;
-            if (isEnglish) {
+            if (language == 0) {
                 textbox.text = string.Empty;
                 bluetextbox.text = string.Empty;
                 pinktextbox.text = string.Empty;
@@ -300,6 +449,9 @@ public class VisNovelDialogueController : MonoBehaviour
             }
             else {
                 jptextbox.text = string.Empty;
+                jpbluetextbox.text = string.Empty;
+                jppinktextbox.text = string.Empty;
+                jpyellowtextbox.text = string.Empty;
             }
             
             StartCoroutine(TypeOutCharacters());
@@ -318,12 +470,16 @@ public class VisNovelDialogueController : MonoBehaviour
         bluetextbox.text = "";
         pinktextbox.text = "";
         yellowtextbox.text = "";
+        jpbluetextbox.text = "";
+        jppinktextbox.text = "";
+        jpyellowtextbox.text = "";
         dialoguestarted = false;
     }
 
     IEnumerator TypeOutCharacters() {
         foreach (char c in currentlines[index].ToCharArray()) {
-            if (isEnglish) {
+            if (language == 0) {
+                //FOR ENGLISH DIALOGUE
                 if (whoistalking[index] == false) {
                     textbox.text += c;
                 } else {
@@ -341,7 +497,22 @@ public class VisNovelDialogueController : MonoBehaviour
                 }
             }
             else {
-                jptextbox.text += c;
+                //FOR JAPANESE DIALOGUE
+                if (whoistalking[index] == false) {
+                    jptextbox.text += c;
+                } else {
+                    switch (playerdata.GetPlayerBot()) {
+                        case 3:
+                            jppinktextbox.text += c;
+                        break;
+                        case 1:
+                            jpbluetextbox.text += c;
+                        break;
+                        case 2:
+                            jpyellowtextbox.text += c;
+                        break;
+                    }
+                }
             }
             yield return new WaitForSeconds(textspeed);
         }

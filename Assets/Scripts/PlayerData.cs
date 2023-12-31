@@ -26,6 +26,7 @@ public class PlayerData : MonoBehaviour
     public static int rhythmgamesplayed = 0;
     public static int shootinggamesplayed = 0;
     public static int endlesslivesleft = 0;
+    public static int language = 0;
     
     public bool loadingdata = false;
     public bool restarting = false;
@@ -62,6 +63,7 @@ public class PlayerData : MonoBehaviour
         gameData.endlessgameshiscore = endlessgameshiscore;
         gameData.isChristmas = isChristmas;
         gameData.playerChibiOutfit = playerChibiOutfit;
+        gameData.language = language;
 
         string json = JsonUtility.ToJson(gameData,false);
         File.WriteAllText(Application.dataPath + "/PlayerDataFile.json",json);
@@ -94,6 +96,7 @@ public class PlayerData : MonoBehaviour
         endlessgameshiscore = gameData.endlessgameshiscore;
         isChristmas = gameData.isChristmas;
         playerChibiOutfit = gameData.playerChibiOutfit;
+        language = gameData.language;
         int money = gameData.money;
         moneyScript.SetMoney(money);
 
@@ -214,6 +217,14 @@ public class PlayerData : MonoBehaviour
     {
         isChristmas = time;
     }
+    public void SetLanguage(int newlanguage)
+    {
+        language = newlanguage;
+    }
+    public void ResetLanguage()
+    {
+        language = 0;
+    }
 
     public void WonGame() 
     {
@@ -329,6 +340,11 @@ public class PlayerData : MonoBehaviour
     public bool IsEndlessMode() 
     {
         return isendlessmode;
+    }
+    public int GetLanguage()
+    {
+        //Lanuage 0: English, Language 1: Japanese
+        return language;
     }
 
     public float PlayerLikeRating(int dateNum)
@@ -512,6 +528,7 @@ public class PlayerData : MonoBehaviour
         snakegamehiscore = 0;
         shootinggamehiscore = 0;
         endlessgameshiscore = 0;
+        language = 0;
         moneyScript.SetMoney(0);
     }
 

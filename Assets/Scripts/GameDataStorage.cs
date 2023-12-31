@@ -11,6 +11,7 @@ public class GameDataStorage
     public bool isChristmas;
     public int playerChibiOutfit;
     public int money;
+    public int language;
 
     public int rhythmgamehiscore;
     public int snakegamehiscore;
