@@ -13,11 +13,11 @@ public class HOLODAYAnimations : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        if(AngryChara.active)
+        if(AngryChara.activeSelf)
         {
             isAngry = true;
         }
-        if(HappyChara.active)
+        if(HappyChara.activeSelf)
         {
             isHappy = true;
         }

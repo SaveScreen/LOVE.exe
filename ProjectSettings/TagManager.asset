@@ -11,6 +11,7 @@ TagManager:
   - SnakeFood
   - ShootTarget
   - crims
+  - Ground
   layers:
   - Default
   - TransparentFX
